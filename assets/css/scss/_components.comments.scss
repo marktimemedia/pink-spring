@@ -1,0 +1,118 @@
+section.comments {
+    margin-top: 2em;
+    border-top: 1px solid $Nlighter;
+    padding-top: 1em;
+}
+
+    .comments--list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        ul.comment,
+        ol.comment {
+            margin-left: 0;
+            margin-bottom: 0;
+            padding: 0;
+            @include rem-px('padding-left', 2.5rem);
+            border-left: 1px solid $Nlighter;
+            border-top: 1px solid $Nlightest;
+            border-bottom: 1px solid $Nlightest;
+            list-style: none;
+        }
+    }
+
+    .comments--form-row {
+         
+         textarea, input {
+            margin-top: .5em;
+         }
+    }
+
+        .comment {
+            @include clearfix();
+            clear: both;
+            margin-top: .5em;
+
+            &:first-of-type {
+                margin-top:0;
+            }
+
+            .avatar {
+                float: left;
+                @include rem-px('width', 2rem);
+                @include rem-px('height', 2rem);
+                @include rem-px('margin-right', .25rem);
+            }
+        }
+
+            .comment--body {
+                float: right;
+                width: 60%;
+                @include css3-calc('width', '100% - 2.5rem');
+                margin-bottom: 1.5em;
+
+
+            }
+
+                .comment--name {
+                    @include rem-px('font-size', 1rem);
+                    font-weight: bold;
+                    margin-bottom: .5em;
+
+                    a {
+                        font-weight: bold;
+                    }
+                }
+
+                .comment--byline {
+                    @include rem-px('margin', 0, 0, .375rem, 0);
+
+                    a {
+                        font-style: italic;
+                    }
+                }
+
+                .bypostauthor {
+                    img.avatar {
+                        border: 2px solid $springColor1;
+                    }
+                }
+
+    .comments--respond {
+        margin-top: 2em;
+        border-top: 1px solid $Nlighter;
+        padding-top: 1em;
+    }
+        .comment-subscription-form {
+            margin-bottom: 0;
+            
+            &:first-of-type {
+                margin-top: 1em;
+            }
+
+            label.subscribe-label {
+                font-size: 1em;
+            }
+        }
+
+@media only screen and (min-width: #{$midBreakpoint}) {
+    .comments--list {
+        ol.comment,
+        ul.comment {
+            @include rem-px('padding-left', 5rem);
+        }
+    }
+
+        .comment {
+            .avatar {
+                @include rem-px('width', 4rem);
+                @include rem-px('height', 4rem);
+                @include rem-px('margin-right', 1rem);
+            }
+        }
+
+            .comment--body {
+                @include css3-calc('width', '100% - 5rem');
+            }
+}

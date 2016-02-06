@@ -1,0 +1,6 @@
+.table-striped {
+    tbody tr:nth-child(odd) td,
+    tbody tr:nth-child(odd) th {
+        background-color: $tableStripe;
+    }
+}

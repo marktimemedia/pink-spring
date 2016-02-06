@@ -1,0 +1,44 @@
+/* TABLES */
+table {
+    height: 100%;
+    width: 100%;
+    margin-bottom: $baselineHeight / 2;
+    background-color: $tableBackground;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: $tableCellPadding;
+    vertical-align: middle;
+    line-height: $baselineHeight;
+    text-align: left;
+    font-size: .875em;
+}
+
+th {
+    font-weight: bold;
+}
+
+td {
+    border-top: $tableBorderWidth $tableBorderStyle $tableBorderColor;
+}
+
+thead th {
+    vertical-align: bottom;
+}
+
+thead:first-child tr:first-child th,
+thead:first-child tr-first-child td {
+    border-top: 0;
+}
+
+tbody tr td,
+tbody tr th {
+    @include transition(background-color .25s 0 ease);
+}
+
+tbody tr:hover td,
+tbody tr:hover th {
+    background-color: $tableHover;
+}

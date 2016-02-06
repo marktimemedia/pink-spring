@@ -1,0 +1,305 @@
+p {
+    font-family: $baseFont;
+    font-size: $baseFontSize;
+    line-height: $baselineHeight;
+    color: $textColor;
+    letter-spacing: $baseLetterSpace;
+    font-weight: $baseFontWeight;
+    text-rendering:  optimizeLegibility;
+}
+
+/* Links */
+
+a {
+    color: $linkColor;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color .3s;
+
+    &:hover {
+        color: $linkHover;
+        text-decoration: none;
+        border: 0;
+        outline: 0;
+    }
+
+    // &:visited {
+    //     color: $linkVisited;
+    //     color: $linkVisited;
+    // }
+
+    &:focus,
+    &:active {
+        color: $linkFocus;
+        border: 0;
+        outline: 0;
+    }
+
+    img {
+        border: 0;
+        outline: 0;
+    }
+
+    &.button:hover {
+        color:$buttonColor;
+    }
+}
+
+/* Headings */
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4, 
+h5, .h5,
+h6, .h6 {
+    margin: 0;
+    padding: 0;
+    font-family: $headingFont;
+    line-height: $headingLineHeight;
+    text-rendering:  optimizeLegibility;
+    text-shadow: $headingTextShadow;
+    letter-spacing: $headingLetterSpace;
+
+    * {
+        line-height: $headingLineHeight;
+    }
+}
+
+h1,
+.h1 {
+    margin-bottom: $baselineHeight / 1.8;
+    color: $h1Color;
+    @include rem-px('font-size', $h1Size);
+    font-weight: $h1FontWeight;
+
+    a {
+        font-weight: $h1FontWeight;
+    }
+}
+
+h2,
+.h2 {
+    margin-bottom: $baselineHeight / 1.7;
+    color: $h2Color;
+    @include rem-px('font-size', $h2Size);
+    font-weight: $h2FontWeight;
+
+    a {
+        font-weight: $h2FontWeight;
+    }
+}
+
+h3,
+.h3 {
+    margin-bottom: $baselineHeight / 1.7;
+    color: $h3Color;
+    @include rem-px('font-size', $h3Size);
+    font-weight: $h3FontWeight;
+
+    a {
+        font-weight: $h3FontWeight;
+    }
+}
+
+h4,
+.h4 {
+    margin-bottom: $baselineHeight / 1.9;
+    color: $h4Color;
+    @include rem-px('font-size', $h4Size);
+    font-weight: $h4FontWeight;
+    text-transform:uppercase;
+
+    a {
+        font-weight: $h4FontWeight;
+    }
+}
+
+h5,
+.h5 {
+    margin-bottom: $baselineHeight / 1.4;
+    color: $h5Color;
+    @include rem-px('font-size', $h5Size);
+    font-weight: $h5FontWeight;
+    text-transform:uppercase;
+
+    a {
+        font-weight: $h5FontWeight;
+    }
+}
+
+h6,
+.h6 {
+    margin-bottom: $baselineHeight / 1.3;
+    color: $h6Size;
+    @include rem-px('font-size', $h6Size);
+    text-transform:uppercase;
+
+    a {
+        font-weight: $h6FontWeight;
+    }
+}
+
+/* Lists */
+
+ol,
+ul,
+dl {
+    margin-bottom: $baselineHeight;
+    line-height: $baselineHeight;
+}
+
+p,
+address {
+    margin-bottom: $baselineHeight / 2;
+}
+
+small {
+    font-size: .875em;
+}
+
+ul,
+ol {
+    font-family: $baseFont;
+    font-size: $baseFontSize;
+    color: $textColor;
+    letter-spacing: $baseLetterSpace;
+    margin-left: 1em;
+    padding: 0 0 0 $gutter;
+
+    ul,
+    ol {
+        margin-bottom: 0;
+    }
+}
+
+    li {
+        line-height: $baselineHeight;
+        font-weight: $baseFontWeight;
+        margin: .3em 0;
+    }
+
+blockquote {
+    @include rem-px('margin-bottom', $blockquoteMarginBottom);
+    padding-left: $blockquotePaddingLeft;
+    border-left: $blockquoteBorderWidth $blockquoteBorderStyle $blockquoteBorderColor;
+    color: $blockquoteColor;
+    font-family: $blockquoteFontFamily;
+    @include rem-px('font-size', $blockquoteFontSize);
+    font-style: $blockquoteFontStyle;
+    font-weight: $blockquoteFontWeight;
+    line-height: 1.3em;
+
+    * {
+        font-family: $blockquoteFontFamily;
+        @include rem-px('font-size', $blockquoteFontSize);
+        font-style: $blockquoteFontStyle;
+        font-weight: $blockquoteFontWeight;
+    }
+}
+
+dl,
+dd {
+    margin-bottom: $baselineHeight / 2;
+}
+
+dt {
+    font-weight: bold;
+    margin-bottom:$baselineHeight/4;
+}
+
+b,
+strong {
+    font-weight:  bold;
+
+    a {
+        font-weight: bold;
+    }
+}
+
+i,
+dfn,
+em {
+    font-style: italic;
+    font-weight:inherit;
+
+	a {
+		font-style: italic;
+	}
+}
+
+u {
+    text-decoration: underline;
+}
+
+ins {
+    background-color: $Nlighter;
+    color: $warningColor;
+    text-decoration: none;
+}
+
+mark {
+    background-color: $Nlighter;
+    color: $warningColor;
+    font-style: italic;
+    font-weight: bold;
+}
+
+pre,
+code,
+kdb,
+samp {
+    display: block;
+    margin: $codeMargin;
+    padding: $codePadding;
+    background-color: $codeBackground;
+    border: $codeBorder;
+    font-family: $codeFontFamily;
+    font-size: $codeFontSize;
+    color: $codeColor;
+    line-height: $baselineHeight;
+}
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+sub,
+sup {
+    position: relative;
+    font-size: .75em;
+    line-height: 0;
+    vertical-align: middle;
+}
+
+sup {
+    top: -.5em;
+}
+
+sub {
+    bottom: -.25em;
+}
+
+hr {
+    display: block;
+    margin: 1em 0;
+    padding: 0;
+    height: 1px;
+    border: 0;
+    background-color: $Nlighter;
+}
+
+/* SELECTION */
+::-moz-selection {
+    background-color: $Nlighter;
+    color: $Nlightest;
+    text-shadow: none;
+}
+
+::selection {
+    background-color: $Nlighter;
+    color: $Nlightest;
+    text-shadow: none;
+}

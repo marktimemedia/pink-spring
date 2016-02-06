@@ -1,0 +1,33 @@
+.alignright,
+.alignleft,
+.aligncenter,
+.alignnone {
+    display: block;
+    max-width: 100%;
+    margin: 0 0 .5em 0;
+}
+
+@media only screen and (min-width: #{$smallBreakpoint}) {
+    .alignright {
+        float: right;
+        max-width: 50%;
+        margin: 0 0 .5em .5em;
+    }
+
+    .alignleft {
+        float: left;
+        max-width: 50%;
+        margin: 0 .5em .5em 0;
+    }
+
+    .aligncenter {
+        display: block;
+        margin: .5em auto;
+    }
+
+    .alignnone {
+        float: none;
+        max-width: 100%;
+        margin: 0 .5em .5em 0;
+    }
+}

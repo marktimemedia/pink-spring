@@ -1,0 +1,74 @@
+.header-main {
+	margin-bottom: 2em;
+}
+    .header--inner {
+        padding: 0;
+    }
+
+    .header--quicklinks {
+        padding: .5em $smallPadding;
+    }
+
+    .header--blog-name {
+        margin: 0 auto;
+        @include rem-px('padding', 1rem, 1rem);
+        height: 100%;
+        box-sizing: border-box;
+        text-align: center;
+
+        a {
+            display: block;
+        }
+    }
+
+    .header--extra-text {
+        clear: both;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+
+
+@media only screen and (min-width: #{$smallBreakpoint}) {
+    .header--blog-name {
+        width: inherit;
+        @include rem-px('padding', 1rem, 0);
+        
+        img {
+            max-width:9em;
+         }
+    }
+}
+
+
+
+@media only screen and (min-width: #{$midBreakpoint}) {
+    .header-main {
+        margin-bottom: 0;
+    }
+
+        .header--inner, .header--quicklinks {
+            @include clearfix();
+            @include rem-px('max-width', $boxedMax);
+            padding-left: $maxPadding;
+            padding-right: $maxPadding;
+        }
+            .header--blog-name {
+                float: left;
+                margin-top: 0;
+                text-align: left;
+            }
+
+            .header--extra-text {
+                text-align: left;
+                padding: 0;
+            }
+}
+
+
+
+@media only screen and (min-width: #{$widescreenBreakpoint}) {
+    .header--inner, .header--quicklinks {
+        @include center-block;
+    }
+}

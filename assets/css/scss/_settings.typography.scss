@@ -1,0 +1,80 @@
+// Root
+$textColor: $Ndarker;
+$columnMargin: .5em;
+$gutter: 1em;
+$textFontSize: 1rem;
+
+// Typography
+$baseFont: 'Source Sans Pro', "source-sans-pro", sans-serif;
+$baseFontSize: 100%;
+$baselineHeight: 1.625em;
+$baseLetterSpace: 0px;
+$baseFontWeight: 300;
+
+$headingFont: $baseFont;
+$headingLineHeight: 1.1;
+$headingLetterSpace: 0px;
+
+$subheadingFont: $baseFont;
+$subheadingLineHeight: 1.1;
+$subheadingLetterSpace: 0px;
+
+$h1Color: $Ndarkest;
+$h1Size: 2.25em;
+$h1FontWeight: 200;
+
+$h2Color: $Ndark;
+$h2Size: 1.75em;
+$h2FontWeight: 200;
+
+$h3Color: $Nmid;
+$h3Size: 1.5em;
+$h3FontWeight: 300;
+
+$h4Color: $Nmid;
+$h4Size: 1.2em;
+$h4FontWeight: 500;
+
+$h5Color: $Nlight;
+$h5Size: 1.2em;
+$h5FontWeight: 300;
+
+$h6Color: $Nlight;
+$h6Size: .875em;
+$h6FontWeight: 500;
+
+$headingTextShadow: none;
+$codeFont: 'Source Code Pro', "source-code-pro", monospace;
+
+$metaColor: $Nlighter;
+$metaSize: .875em;
+$metaFontWeight: 100;
+
+// Links
+$linkColor: $springColor1;
+$linkHover: lighten($linkColor,20%);
+$linkVisited: darken($linkColor,20%);
+$linkFocus: lighten($linkColor,15%);
+
+// Blockquotes
+$blockquoteMarginBottom: .875rem;
+$blockquotePaddingLeft: 0;
+$blockquoteBorderWidth: 0;
+$blockquoteBorderStyle: solid;
+$blockquoteBorderColor: $Nlighter;
+$blockquoteColor: $Nmid;
+$blockquoteFontFamily: $headingFont;
+$blockquoteFontSize: 1.25rem;
+$blockquoteFontStyle: italic;
+$blockquoteFontWeight: 200;
+
+// Code/Pre blocks
+$codeMargin: 1em 0;
+$codePadding: $gutter / 2;
+$codeBackground: $Nlightest;
+$codeBorder: 0;
+$codeFontFamily: $codeFont;
+$codeFontSize: .875em;
+$codeColor: $textColor;
+
+

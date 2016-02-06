@@ -1,0 +1,35 @@
+/* 01. SETTINGS */
+@import "scss/settings.colors";
+@import "scss/settings.typography";
+@import "scss/settings.inputs";
+@import "scss/settings.tables";
+
+/* 02. TOOLS */
+
+// Third-Party Mixins
+@import "scss/sassquatch/sassquatch";
+
+/* 03. GENERIC */
+
+/* 04. ELEMENTS */
+@import "scss/elements.typography";
+@import "scss/elements.inputs";
+@import "scss/elements.tables";
+@import "scss/elements.media";
+
+/* 05. OBJECTS */
+
+// TinyMCE Overrides to emulate post content
+#tinymce { 
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        margin-top:$baselineHeight/1.4;
+        margin-bottom:$baselineHeight/2.4;
+    }
+
+    dd, blockquote {
+    	margin-left:0;
+    }
+}
+
+// Any specific classes available here for the styles box
+// https://codex.wordpress.org/TinyMCE_Custom_Styles

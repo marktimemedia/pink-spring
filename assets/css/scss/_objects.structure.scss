@@ -1,0 +1,62 @@
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    margin-top: -1px;
+    padding-top: 1px;
+    background: $bodyColor;
+    @include multi-transition('margin-left .2s ease-out, margin-right .2s ease-out, left .2s ease-out');
+    @include rem-px('font-size', $textFontSize);
+}
+
+
+.content {
+    padding: 0;
+    // @include rem-px('max-width', $boxedMax); // for a boxed width background with sidebar only
+    // padding: 0 $smallPadding; // for a boxed width background with sidebar only
+
+    &.inner-padding {
+        padding: 0 $smallPadding;
+    }
+
+    .content-full .content--page {
+        @include rem-px('max-width', $boxedMax); // for a boxed width background with no sidebar
+        padding: $smallPadding; // for a boxed width background with no sidebar
+    }
+}
+
+@media only screen and (min-width: #{$midBreakpoint}) {
+    
+    .content{
+        //padding: 0 $maxPadding; // for a boxed width background with sidebar only
+        padding-bottom:100px; // to account for position absolute footer
+
+        .content-full .content--page {
+            padding: $maxPadding; // for a boxed width background with no sidebar
+        }
+    }
+}
+
+@media only screen and (min-width: #{$largeBreakpoint}) {
+
+    .content-main {
+        padding-right: 1em;
+        @include pinkgrid($colspan:9, $padside:3%);
+        @include pinkrow($rowitems:2)
+    }
+}
+
+@media only screen and (min-width: #{$widescreenBreakpoint}) {
+    .content {
+        margin: 0 auto;
+    }
+
+    .content-full {    
+        margin: 0 auto;
+
+        .content--page {
+            margin: 0 auto;
+        }
+    }
+
+
+}

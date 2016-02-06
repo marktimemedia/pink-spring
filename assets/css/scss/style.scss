@@ -1,0 +1,67 @@
+/*--
+    Theme Name:  NAME Theme
+    Description:  A custom WordPress theme
+    Author: Marktime Media
+    Version: 1.0
+    License: GPLv2
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+--*/
+
+// Methodology from ITCSS http://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731
+
+/* 01. SETTINGS */
+@import "settings.breakpoints";
+@import "settings.colors";
+@import "settings.typography";
+@import "settings.inputs";
+@import "settings.tables";
+
+
+/* 02. TOOLS */
+//@import "tools.placeholders";
+
+// Third-Party Mixins
+@import "sassquatch/sassquatch";
+@import "pink-grid/pinkgrid";
+
+
+/* 03. GENERIC */
+@import "generic.normalize";
+
+
+/* 04. ELEMENTS */
+@import "elements.global";
+@import "elements.typography";
+@import "elements.inputs";
+@import "elements.tables";
+@import "elements.media";
+
+
+/* 05. OBJECTS */
+@import "objects.structure";
+@import "objects.layout";
+@import "objects.inputs";
+@import "objects.tables";
+@import "objects.media";
+@import "objects.wp-objects";
+
+// Grid Mixin
+
+/* 06. COMPONENTS */
+@import "components.panels";
+@import "components.navigation";
+@import "components.navigation--subnav";
+@import "components.header";
+@import "components.mobile-menu";
+@import "components.footer";
+@import "components.sidebar";
+@import "components.sidebar--widgets";
+@import "components.search";
+@import "components.wp-content";
+@import "components.content";
+@import "components.comments";
+@import "components.pagination";
+
+
+/* 07. TRUMPS */
+@import "trumps.admin-bar";

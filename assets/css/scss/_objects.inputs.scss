@@ -1,0 +1,39 @@
+/* BUTTON SIZES */
+.button-xl {
+    padding: .875em 1.75em;
+    font-size: 1.25em;
+    @include border-radius(6px);
+}
+
+.button-lg {
+    padding: .5em 1em;
+    font-size: 1em;
+    @include border-radius(5px);
+}
+
+.button-med {
+    padding: .375em .75em;
+    font-size: .875em;
+    line-height: 1em;
+    @include border-radius(4px);
+}
+
+.button-xs {
+    padding: .25em .5em;
+    font-size: .75em;
+    line-height: .875em;
+    @include border-radius(3px);
+}
+
+.social-icons {
+    display: inline-block;
+    vertical-align: middle;
+}
+    .button-social { // circle button
+        border-radius: 50%; 
+        padding: .5em;
+
+        &:before {
+            content: '\2665 '; // replace with your fallback icon, this is a heart
+        }
+    }

@@ -1,0 +1,30 @@
+.footer-main {
+    border-top: 1px solid $Nlighter;
+    padding: $smallPadding 0;
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+    .footer--inner {
+        @include clearfix();
+        padding: 0 $smallPadding;
+    }
+
+    .footer--copyright {
+        padding-top: .5em;
+    }
+
+@media only screen and (min-width: #{$midBreakpoint}) {
+
+    .footer--inner {
+        @include rem-px('max-width', $boxedMax); 
+        padding: 0 $maxPadding; 
+    }
+}
+
+
+@media only screen and (min-width: #{$widescreenBreakpoint}) {
+    .footer--inner {
+        @include center-block;
+    }
+}

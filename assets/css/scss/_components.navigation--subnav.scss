@@ -1,0 +1,77 @@
+//TODO: CSS for subnav
+@media only screen and (min-width: #{$midBreakpoint}) {
+    .nav-main--menu, .nav-main--menu * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .nav-main--menu {
+        ul.sub-menu {
+            position: absolute;
+            overflow:hidden;
+            display: block;
+            height:auto;
+            max-height:0;
+            left: .5em;
+            top: 100%;
+            padding: 0 .5em;
+            background: $Nlightest;
+            z-index: 99;
+            @include transition(all .2s);
+
+            &:hover {
+                overflow:inherit;
+            }
+
+
+            ul {
+                top: 100%;
+                left: 10%;
+                background: darken($Nlightest, 5%);
+            }
+
+            li {
+                padding: 0em;
+                min-width: 10em;
+                max-width: 15em;
+
+                & > a {
+                    color:$linkColor;
+                    padding:.6em 1em;
+                    text-transform: none;
+                }
+            }
+
+        }
+
+        li {
+            position: relative;
+
+            &:hover,
+            &.sfHover {
+                &>ul {
+                    display: block;
+                    max-height:800px; // change based on your menu height
+                    @include transition(all .5s);
+                }
+            }
+        }
+
+        &>li {
+            //right align last submenu
+            &:last-child {
+                ul {
+                    left: auto;
+                    right: 0;
+                }
+            }
+        }
+
+        a {
+            display: block;
+            position: relative;
+            @include text-overflow();
+        }
+    }
+}

@@ -1,0 +1,115 @@
+/* FORMS */
+label {
+    font-size: $labelFontSize;
+    color: $labelColor;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="url"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="file"],
+input[type="password"],
+select,
+textarea,
+.textbox {
+    display: block;
+    width: 100%;
+    max-width: $textboxMaxWidth;
+    padding: $textboxPadding;
+    margin-bottom: $baselineHeight;
+    background-color: $textboxBackground;
+    border: $textboxBorderWidth $textboxBorderStyle $textboxBorderColor;
+    color: $textboxColor;
+    font-size: .875em;
+
+    &:active,
+    &:focus {
+        outline-color: $textboxBorderColorActive;
+    }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin: 3px 0;
+    padding: 0;
+    *width: 13px;
+    *height: 13px;
+}
+
+button,
+.button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: $buttonPadding;
+    background-color: $buttonBackground;
+    //@include vertical($buttonBackground, $buttonBackground2);
+    border: 0;
+    border-bottom: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor;
+    color: $buttonColor;
+    font-family: $buttonFont;
+    font-size: $buttonFontSize;
+    font-weight: $buttonFontWeight;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $buttonBackground2;
+        //@include vertical($buttonBackground2, $buttonBackground);
+        border-bottom: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor2;
+    }
+
+    &.alt {
+        @include vertical($buttonAltBackground, $buttonAltBackground2);
+
+        &:hover {
+            @include vertical($buttonAltBackground2, $buttonAltBackground);
+        }
+    }
+
+    &:active,
+    &:focus {
+        
+        outline-color: $buttonOutlineColor;
+    }
+}
+
+input[type="hidden"] {
+    display: none;
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+    @include opacity(.5);
+    cursor: not-allowed;
+}
+
+::-webkit-input-placeholder {
+    color: $textboxPlaceholderColor;
+    font-size: $textboxPlaceholderSize;
+    font-style: $textboxPlaceholderStyle;
+}
+
+:-moz-placeholder {
+    color: $textboxPlaceholderColor;
+    font-size: $textboxPlaceholderSize;
+    font-style: $textboxPlaceholderStyle;
+}
+
+:-ms-input-placeholder {
+    color: $textboxPlaceholderColor;
+    font-size: $textboxPlaceholderSize;
+    font-style: $textboxPlaceholderStyle;
+}

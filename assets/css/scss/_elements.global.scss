@@ -1,0 +1,44 @@
+/* BODY */
+@-webkit-viewport {
+    width: device-width;
+}
+
+@-moz-viewport {
+    width: device-width;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@-o-viewport {
+    width: device-width;
+}
+
+@viewport {
+    width: device-width;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    background: $Nlightest;
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    font-family: $baseFont;
+    font-size: $baseFontSize;
+    line-height: $baselineHeight;
+    color: $textColor;
+    letter-spacing: $baseLetterSpace;
+    font-weight: $baseFontWeight;
+}
+
+

@@ -1,0 +1,78 @@
+.content--sidebar {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 80%;
+    padding: 2em;
+}
+
+
+
+@media only screen and (max-width: #{$midBreakpoint}) {
+    .open-the-sidebar {
+        .content--sidebar {
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .admin-bar .content--sidebar {
+            padding-bottom: 4em;
+        }
+    }
+}
+
+
+
+@media only screen and (min-width: #{$midBreakpoint}) {
+    //approximate min-width: 768px
+    .content--sidebar {
+        position: relative;
+        @include flexbox();
+        @include flexbox-justify-content(space-between);
+        @include flexbox-align-items(flex-start);
+        left: auto;
+        top: auto;
+        width: 100%;
+        margin-top: 2em;
+        padding: 0;
+        padding-top: 2em;
+        border-top : 1px solid $Nlighter;
+    }
+
+    .sidebar-main {
+        @include pinkgrid($colspan:12);
+        @include pinkrow($rowitems:1);
+        border: 0;
+        margin-top: 0;
+    }
+
+        .sidebar--leftcol,
+        .sidebar--rightcol {
+            width: 49.5%;
+            display:inline-block;
+            vertical-align:top;
+            margin-top:2em;
+        }
+
+        .sidebar--leftcol {
+            padding-right: 1em;
+        }
+
+        .sidebar--rightcol {
+            padding-left: 1em;
+        }
+
+}
+
+
+
+@media only screen and (min-width: #{$largeBreakpoint}) {
+
+    .sidebar-main {
+        @include pinkgrid($colspan:3);
+        @include pinkrow($rowitems:1);
+        border: 0;
+        margin-top: 0;
+    }
+
+}
