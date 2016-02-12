@@ -171,10 +171,10 @@ h3,
 
 h4,
 .h4 {
-  margin-bottom: 0.85526em;
+  margin-bottom: 1.08333em;
   color: #948790;
-  font-size: 19.2px;
-  font-size: 1.2rem;
+  font-size: 17.6px;
+  font-size: 1.1rem;
   font-weight: 500;
   text-transform: uppercase; }
   h4 a,
@@ -745,6 +745,23 @@ figcaption {
     width: 100% !important;
     height: 100% !important; }
 
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto; }
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 .sticky {
   padding: 1em;
   background: #f2f2f2; }
@@ -1094,7 +1111,7 @@ figcaption {
 .footer-main {
   border-top: 1px solid #d4ccd4;
   padding: 1rem 0;
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%; }
 
@@ -1111,6 +1128,9 @@ figcaption {
   padding-top: .5em; }
 
 @media only screen and (min-width: 48.5em) {
+  .footer-main {
+    position: absolute; }
+
   .footer--inner {
     max-width: 1296px;
     max-width: 81rem;

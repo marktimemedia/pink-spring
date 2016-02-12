@@ -104,7 +104,7 @@ h3,
 
 h4,
 .h4 {
-    margin-bottom: $baselineHeight / 1.9;
+    margin-bottom: $baselineHeight / 1.5;
     color: $h4Color;
     @include rem-px('font-size', $h4Size);
     font-weight: $h4FontWeight;
