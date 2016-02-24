@@ -4,12 +4,13 @@
     }
 
         .open-button {
+            @include drop-shadow($x-axis: 0, $y-axis: 0px, $blur: 0, $alpha: 0);
+            background: none;
             position: absolute;
             top: 0;
-            width: 2em;
-            height: 2em;
-            padding: .375em;
-            background: $Nlighter;
+            width: 2.5em;
+            height: 2.8em;
+            padding: .4em;
             border: 0;
             @include rounded(0);
             overflow: hidden;
@@ -31,22 +32,31 @@
             left: 0;
 
             &:before {
-                content: ' ';
+                color: $linkColor;
+                content: '\2630';
                 display: block;
-                height: 11px;
+                font-size: 1.5em;
                 width: 100%;
-                border-top: 4px solid white;
-                border-bottom: 4px solid white;
-                margin-bottom: 3px;
+            }
+
+            &:hover:before {
+                color: $buttonColor;
             }
 
             &:after {
-                content: ' ';
+                color: $linkColor;
+                content: 'MENU';
                 display: block;
-                height: 0;
+                font-size: .15em;
+                font-weight: 600;
+                letter-spacing: .5px;
                 width: 100%;
-                border-top: 4px solid white;
             }
+
+            &:hover:after {
+                color: $buttonColor;
+            }
+
         }
 
         .open-sidebar {
@@ -56,10 +66,30 @@
             &:before {
                 content: ' ';
                 display: block;
-                height: 100%;
-                border-left: 10px solid white;
-                width: 19px;
-                border-right: 6px solid white;
+                height: 70%;
+                border-left: 12px solid $linkColor;
+                margin-left: 3px;
+                width: 21px;
+                border-right: 6px solid $linkColor;
+            }
+
+            &:hover:before {
+                border-color: $buttonColor;
+            }
+
+            &:after {
+                color: $linkColor;
+                content: 'INFO';
+                display: block;
+                font-size: .15em;
+                font-weight: 600;
+                letter-spacing: .5px;
+                margin-top:.3em;
+                width: 100%;
+            }
+
+            &:hover:after {
+                color: $buttonColor;
             }
         }
 
