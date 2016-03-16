@@ -857,7 +857,7 @@ figcaption {
     position: absolute;
     right: 100%;
     top: 0;
-    width: 80%;
+    width: 60%;
     padding: 2em; }
     .nav-main #closeSidebar {
       display: inline-block;
@@ -868,6 +868,9 @@ figcaption {
       padding: 0 .3em;
       color: #de1e7e;
       border: 1px solid #de1e7e; } }
+@media only screen and (max-width: 30.5em) {
+  .nav-main {
+    width: 80%; } }
 @media only screen and (min-width: 48.5em) {
   .menu-quicklinks-menu-container {
     padding: .5em 0; }
@@ -1097,8 +1100,8 @@ figcaption {
     .open-the-menu .wrapper {
       width: 100%;
       height: 100%;
-      margin-left: 80%;
-      margin-right: -80%; }
+      margin-left: 60%;
+      margin-right: -60%; }
     .open-the-menu .nav-main {
       overflow-y: auto; }
     .open-the-menu .admin-bar .nav-main {
@@ -1112,8 +1115,16 @@ figcaption {
     .open-the-sidebar .wrapper {
       width: 100%;
       height: 100%;
-      margin-left: -80%;
-      margin-right: 80%; } }
+      margin-left: -60%;
+      margin-right: 60%; } }
+@media only screen and (max-width: 30.5em) {
+  .open-the-menu .wrapper {
+    margin-left: 80%;
+    margin-right: -80%; }
+
+  .open-the-sidebar .wrapper {
+    margin-left: -80%;
+    margin-right: 80%; } }
 @media only screen and (min-width: 48.5em) {
   .open-button-wrapper {
     display: none; }
@@ -1169,11 +1180,17 @@ figcaption {
   padding: 2em; }
 
 @media only screen and (max-width: 48.5em) {
+  .content--sidebar {
+    width: 60%; }
+
   .open-the-sidebar .content--sidebar {
     height: 100%;
     overflow-y: auto; }
   .open-the-sidebar .admin-bar .content--sidebar {
     padding-bottom: 4em; } }
+@media only screen and (max-width: 30.5em) {
+  .content--sidebar {
+    width: 80%; } }
 @media only screen and (min-width: 48.5em) {
   .content--sidebar {
     position: relative;

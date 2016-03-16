@@ -113,7 +113,7 @@
         position: absolute;
         right: 100%;
         top: 0;
-        width: 80%;
+        width: $sidebarWidthMid;
         padding: 2em;
 
         #closeSidebar {
@@ -126,6 +126,12 @@
             color: $linkColor;
             border: 1px solid $linkColor;
         }
+    }
+}
+
+@media only screen and (max-width: #{$smallBreakpoint}) {
+    .nav-main {
+        width: $sidebarWidthSmall;
     }
 }
 

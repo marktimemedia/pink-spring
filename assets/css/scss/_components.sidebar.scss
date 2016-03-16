@@ -2,13 +2,18 @@
     position: absolute;
     left: 100%;
     top: 0;
-    width: 80%;
+    width: $sidebarWidthSmall;
     padding: 2em;
 }
 
 
 
 @media only screen and (max-width: #{$midBreakpoint}) {
+    
+    .content--sidebar {
+        width: $sidebarWidthMid;
+    }
+
     .open-the-sidebar {
         .content--sidebar {
             height: 100%;
@@ -21,6 +26,12 @@
     }
 }
 
+@media only screen and (max-width: #{$smallBreakpoint}) {
+    
+    .content--sidebar {
+        width: $sidebarWidthSmall;
+    }
+}
 
 
 @media only screen and (min-width: #{$midBreakpoint}) {

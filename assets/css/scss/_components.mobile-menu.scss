@@ -93,6 +93,7 @@
             }
         }
 
+
 @media only screen and (max-width: #{$midBreakpoint}) {
     .open-the-menu {
         overflow: hidden;
@@ -105,8 +106,8 @@
         .wrapper {
             width: 100%;
             height: 100%;
-            margin-left: 80%;
-            margin-right: -80%;
+            margin-left: $sidebarWidthMid;
+            margin-right: -$sidebarWidthMid;
         }
         .nav-main {
             //height: 100%;
@@ -129,11 +130,27 @@
         .wrapper {
             width: 100%;
             height: 100%;
-            margin-left: -80%;
-            margin-right: 80%;
+            margin-left: -$sidebarWidthMid;
+            margin-right: $sidebarWidthMid;
         }
     }
 
+}
+
+@media only screen and (max-width: #{$smallBreakpoint}) {
+    .open-the-menu {
+        .wrapper {
+            margin-left: $sidebarWidthSmall;
+            margin-right: -$sidebarWidthSmall;
+        }
+    }
+
+    .open-the-sidebar {
+        .wrapper {
+            margin-left: -$sidebarWidthSmall;
+            margin-right: $sidebarWidthSmall;
+        }
+    }
 }
 
 @media only screen and (min-width: #{$midBreakpoint}) {
