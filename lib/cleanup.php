@@ -266,6 +266,15 @@ function spring_get_search_form($form) {
 add_filter('get_search_form', 'spring_get_search_form');
 
 
+// From http://wordpress.stackexchange.com/questions/115368/overide-gallery-default-link-to-settings
+// Default image links in gallery (not the same as image_default_link_type)
+function spring_gallery_default_type_set_link( $settings ) {
+    $settings['galleryDefaults']['link'] = 'file';
+    return $settings;
+}
+add_filter( 'media_view_settings', 'spring_gallery_default_type_set_link');
+
+
 // Gets rid of current_page_parent class mistakenly being applied to Blog pages while on Custom Post Types
 // via https://wordpress.org/support/topic/post-type-and-its-children-show-blog-as-the-current_page_parent
 
