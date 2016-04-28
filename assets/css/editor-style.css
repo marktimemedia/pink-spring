@@ -154,6 +154,8 @@ li {
   line-height: 1.625em;
   font-weight: 300;
   margin: .3em 0; }
+  li h1, li h2, li h3, li h4, li h5, li h6 {
+    margin-bottom: .2em; }
 
 blockquote {
   margin-bottom: 14px;
@@ -285,7 +287,7 @@ textarea,
 .textbox {
   display: block;
   width: 100%;
-  max-width: 30em;
+  max-width: 100%;
   padding: 0.5em;
   margin-bottom: 1.625em;
   background-color: #fff;

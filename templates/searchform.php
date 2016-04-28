@@ -1,4 +1,4 @@
-<section class="search" role="search">
+<section class="search-form" role="search">
     <form role="search" method="get" class="search--form" action="<?php echo home_url( '/' ); ?>">
         <div class="form--group">
             <label for="txtSearch"><?php _e( 'Search for:', 'spring' ); ?></label>

@@ -236,6 +236,8 @@ li {
   line-height: 1.625em;
   font-weight: 300;
   margin: .3em 0; }
+  li h1, li h2, li h3, li h4, li h5, li h6 {
+    margin-bottom: .2em; }
 
 blockquote {
   margin-bottom: 14px;
@@ -367,7 +369,7 @@ textarea,
 .textbox {
   display: block;
   width: 100%;
-  max-width: 30em;
+  max-width: 100%;
   padding: 0.5em;
   margin-bottom: 1.625em;
   background-color: #fff;
@@ -565,6 +567,7 @@ figcaption {
   margin-top: -1px;
   padding-top: 1px;
   background: #fff;
+  overflow: hidden;
   -webkit-transition: margin-left .2s ease-out, margin-right .2s ease-out, left .2s ease-out;
   -moz-transition: margin-left .2s ease-out, margin-right .2s ease-out, left .2s ease-out;
   -ms-transition: margin-left .2s ease-out, margin-right .2s ease-out, left .2s ease-out;
@@ -1101,7 +1104,8 @@ figcaption {
       width: 100%;
       height: 100%;
       margin-left: 60%;
-      margin-right: -60%; }
+      margin-right: -60%;
+      overflow: visible; }
     .open-the-menu .nav-main {
       overflow-y: auto; }
     .open-the-menu .admin-bar .nav-main {
@@ -1257,14 +1261,14 @@ figcaption {
   .widget:last-child {
     margin-bottom: 0; }
 
-.search {
+.search-form {
   position: relative;
   width: -moz-calc(100% - 7em);
   width: -webkit-calc(100% - 7em);
   width: calc(100% - 7em);
   max-width: 30em;
   padding: .5em 0; }
-  .search label {
+  .search-form label {
     display: none; }
 
 .textbox.search--textbox {
@@ -1291,13 +1295,13 @@ figcaption {
   white-space: nowrap;
   overflow: hidden; }
 
-.sidebar .search {
+.sidebar .search-form {
   width: 100%;
   max-width: inherit;
   margin: 0; }
 
 @media only screen and (min-width: 48.5em) {
-  .header-main .search {
+  .header-main .search-form {
     clear: both;
     float: right;
     width: 15em;

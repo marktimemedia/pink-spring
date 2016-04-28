@@ -52,6 +52,21 @@
         }
     }
 
+    function navHeight() {
+        var heights = window.innerHeight;
+        var mq = window.matchMedia( "(max-width: 48.5em)" );
+        
+        mq.addListener(function(changed) {
+            if(changed.matches) {
+                document.querySelectorAll('.nav-main')[0].style.height = heights -50 + "px";
+            } else {
+                document.querySelectorAll('.nav-main')[0].style.height = null;
+            }
+        });
+    }
+
+    navHeight();
+
 var timer;
 
 window.onresize = onResizeFunction;
@@ -60,6 +75,7 @@ function onResizeFunction() {
     clearTimeout(timer);
     timer = setTimeout(function() {
         sizeTest(true);
+        navHeight();
     }, 100);
 }
 

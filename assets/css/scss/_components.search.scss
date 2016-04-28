@@ -1,4 +1,4 @@
-.search {
+.search-form {
     position: relative;
     @include css3-calc('width', '100% - 7em');
     max-width: 30em;
@@ -32,7 +32,7 @@
     }
 
 .sidebar {
-    .search {
+    .search-form {
         width: 100%;
         max-width: inherit;
         margin: 0;
@@ -42,7 +42,7 @@
 
 
 @media only screen and (min-width: #{$midBreakpoint}) {
-    .header-main .search {
+    .header-main .search-form {
         clear: both;
         float: right;
         width: 15em;
