@@ -14,6 +14,7 @@ $baseFontWeight: 300;
 $headingFont: $baseFont;
 $headingLineHeight: 1.1;
 $headingLetterSpace: 0px;
+$headingMargin: $textFontSize;
 
 $subheadingFont: $baseFont;
 $subheadingLineHeight: 1.1;
@@ -27,8 +28,8 @@ $h2Color: $Ndark;
 $h2Size: 1.75em;
 $h2FontWeight: 200;
 
-$h3Color: $Nmid;
-$h3Size: 1.5em;
+$h3Color: $Ndark;
+$h3Size: 1.4em;
 $h3FontWeight: 300;
 
 $h4Color: $Nmid;
@@ -36,8 +37,8 @@ $h4Size: 1.1em;
 $h4FontWeight: 500;
 
 $h5Color: $Nlight;
-$h5Size: 1.2em;
-$h5FontWeight: 300;
+$h5Size: 1.1em;
+$h5FontWeight: 500;
 
 $h6Color: $Nlight;
 $h6Size: .875em;

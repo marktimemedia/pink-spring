@@ -32,9 +32,11 @@
     }
 
     .post--content { 
+        overflow: auto;
+
         h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-            margin-top:$baselineHeight/1.4;
-            margin-bottom:$baselineHeight/2.4;
+            margin-top: $textFontSize * 1.5;
+            margin-bottom: $textFontSize * .8;
         }
     }
 
@@ -58,34 +60,43 @@
             }
         }
 
-
-
         a {
             font-style: italic;
         }
     }
 
-    .single {
-        .post--metadata {
-            margin-top: .25em;
-            margin-bottom: 3em;
-        }
-
-        .post--summary {
-            font-size:1.3em;
-
-            p {
-                line-height:1.3;
-                color:$Nlight;
-            }
-        }
+    .post--metadata--title {
+        font-weight: bold;
     }
-
-        .post--metadata--title {
-            font-weight: bold;
-        }
 
     .post--hr {
         width: 50%;
         margin: 3em auto;
     }
+
+.archive {
+    .post--title {
+        font-size: $h1Size * .85;
+    }
+}
+
+.single {
+
+    .post--metadata {
+        margin-top: .25em;
+        margin-bottom: 3em;
+    }
+
+    .post--summary {
+        font-size:1.3em;
+
+        p {
+            line-height:1.3;
+            color:$Nlight;
+        }
+    }
+}  
+
+.page--title {
+    margin-bottom: $headingMargin * 1.5;
+}

@@ -1,7 +1,7 @@
 // Site Colors
 $springColor1: #de1e7e; // pink
 $springColor1_Lt: #f067ab;
-$springColor1_Dk: #de1e7e;
+$springColor1_Dk: darken( $springColor1, 10% );
 
 $springColor2: #000;
 $springColor2_Lt: #000;

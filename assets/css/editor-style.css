@@ -56,7 +56,7 @@ h6, .h6 {
 
 h1,
 .h1 {
-  margin-bottom: 0.90278em;
+  margin-bottom: 1rem;
   color: #322e2f;
   font-size: 36px;
   font-size: 2.25rem;
@@ -67,7 +67,7 @@ h1,
 
 h2,
 .h2 {
-  margin-bottom: 0.95588em;
+  margin-bottom: 1rem;
   color: #595559;
   font-size: 28px;
   font-size: 1.75rem;
@@ -78,10 +78,10 @@ h2,
 
 h3,
 .h3 {
-  margin-bottom: 0.95588em;
-  color: #948790;
-  font-size: 24px;
-  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #595559;
+  font-size: 22.4px;
+  font-size: 1.4rem;
   font-weight: 300; }
   h3 a,
   .h3 a {
@@ -89,31 +89,29 @@ h3,
 
 h4,
 .h4 {
-  margin-bottom: 1.08333em;
+  margin-bottom: 1rem;
   color: #948790;
   font-size: 17.6px;
   font-size: 1.1rem;
-  font-weight: 500;
-  text-transform: uppercase; }
+  font-weight: 500; }
   h4 a,
   .h4 a {
     font-weight: 500; }
 
 h5,
 .h5 {
-  margin-bottom: 1.16071em;
+  margin-bottom: 1rem;
   color: #B3ACB3;
-  font-size: 19.2px;
-  font-size: 1.2rem;
-  font-weight: 300;
-  text-transform: uppercase; }
+  font-size: 17.6px;
+  font-size: 1.1rem;
+  font-weight: 500; }
   h5 a,
   .h5 a {
-    font-weight: 300; }
+    font-weight: 500; }
 
 h6,
 .h6 {
-  margin-bottom: 1.25em;
+  margin-bottom: 1rem;
   color: 0.875em;
   font-size: 14px;
   font-size: 0.875rem;
@@ -352,8 +350,8 @@ input[type="reset"] {
   input[type="button"]:hover,
   input[type="submit"]:hover,
   input[type="reset"]:hover {
-    background-color: #de1e7e;
-    border-bottom: 1px solid #e95fa4; }
+    background-color: #b11865;
+    border-bottom: 1px solid #e3328b; }
   button.alt,
   .button.alt,
   input[type="button"].alt,
@@ -474,7 +472,7 @@ figure {
 
 figcaption {
   display: block;
-  margin: .25em 0 0 0;
+  margin: .5em 0 0 0;
   padding: 0;
   font-weight: normal; }
 

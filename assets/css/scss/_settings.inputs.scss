@@ -17,7 +17,7 @@ $labelColor: $textColor;
 
 // Buttons
 $buttonBackground: $springColor1;
-$buttonBackground2: $springColor1_Dk; //Uncomment if you want a gradient background on a button. Also uncomment gradient in
+$buttonBackground2: $springColor1_Dk;
 $buttonBorderColor: darken($buttonBackground,15%);
 $buttonBorderColor2: lighten($buttonBackground2, 15%);
 $buttonBorderWidth: 1px;

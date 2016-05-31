@@ -68,7 +68,7 @@ h6, .h6 {
 
 h1,
 .h1 {
-    margin-bottom: $baselineHeight / 1.8;
+    margin-bottom: $headingMargin;
     color: $h1Color;
     @include rem-px('font-size', $h1Size);
     font-weight: $h1FontWeight;
@@ -80,7 +80,7 @@ h1,
 
 h2,
 .h2 {
-    margin-bottom: $baselineHeight / 1.7;
+    margin-bottom: $headingMargin;
     color: $h2Color;
     @include rem-px('font-size', $h2Size);
     font-weight: $h2FontWeight;
@@ -92,7 +92,7 @@ h2,
 
 h3,
 .h3 {
-    margin-bottom: $baselineHeight / 1.7;
+    margin-bottom: $headingMargin;
     color: $h3Color;
     @include rem-px('font-size', $h3Size);
     font-weight: $h3FontWeight;
@@ -104,11 +104,10 @@ h3,
 
 h4,
 .h4 {
-    margin-bottom: $baselineHeight / 1.5;
+    margin-bottom: $headingMargin;
     color: $h4Color;
     @include rem-px('font-size', $h4Size);
     font-weight: $h4FontWeight;
-    text-transform:uppercase;
 
     a {
         font-weight: $h4FontWeight;
@@ -117,11 +116,10 @@ h4,
 
 h5,
 .h5 {
-    margin-bottom: $baselineHeight / 1.4;
+    margin-bottom: $headingMargin;
     color: $h5Color;
     @include rem-px('font-size', $h5Size);
     font-weight: $h5FontWeight;
-    text-transform:uppercase;
 
     a {
         font-weight: $h5FontWeight;
@@ -130,7 +128,7 @@ h5,
 
 h6,
 .h6 {
-    margin-bottom: $baselineHeight / 1.3;
+    margin-bottom: $headingMargin;
     color: $h6Size;
     @include rem-px('font-size', $h6Size);
     text-transform:uppercase;

@@ -11,23 +11,24 @@
     .alignright {
         float: right;
         max-width: 50%;
-        margin: 0 0 .5em .5em;
+        margin: 0 0 .5em 1em;
     }
 
     .alignleft {
         float: left;
         max-width: 50%;
-        margin: 0 .5em .5em 0;
+        margin: 0 1em .5em 0;
     }
 
     .aligncenter {
         display: block;
         margin: .5em auto;
+        clear: both;
     }
 
     .alignnone {
         float: none;
         max-width: 100%;
-        margin: 0 .5em .5em 0;
+        margin: .5em 0;
     }
 }
