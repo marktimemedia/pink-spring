@@ -120,11 +120,39 @@ function spring_register_required_plugins() {
   $plugins = array(
 
     array(
-        'name'          => 'ACF Options Page',
-        'slug'          => 'mtm-options-page',
-        'source'        => 'https://github.com/marktimemedia/acf-theme-settings/archive/master.zip',
-        'external_url'  => 'https://github.com/marktimemedia/acf-theme-settings', // If set, overrides default API URL and points to an external URL.
-      ),
+      'name'               => 'ACF Options Page',
+      'slug'               => 'mtm-options-page',
+      'source'             => 'https://github.com/marktimemedia/acf-theme-settings/archive/master.zip',
+      'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+      'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+      'external_url'       => 'https://github.com/marktimemedia/acf-theme-settings', // If set, overrides default API URL and points to an external URL.
+    ),
+    
+    array(
+      'name'               => 'ACF Function Check',
+      'slug'               => 'mtm-safe-acf',
+      'source'             => WP_PLUGIN_DIR . '/mtm-safe-acf',
+      'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+      'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+    ),
+
+    array(
+      'name'               => 'Advanced Custom Fields Pro', // The plugin name.
+      'slug'               => 'advanced-custom-fields-pro', // The plugin slug (typically the folder name).
+      'source'             => WP_PLUGIN_DIR . '/advanced-custom-fields-pro', // The plugin source.
+      'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+      'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+      //'external_url'       => 'http://www.advancedcustomfields.com/pro/', // If set, overrides default API URL and points to an external URL.
+    ),
+
+    array(
+      'name'               => 'Page Components for ACF',
+      'slug'               => 'mtm-page-components',
+      'source'             => 'https://github.com/marktimemedia/page-components-for-wordpress-themes/archive/master.zip',
+      'required'           => false, // If false, the plugin is only 'recommended' instead of required.
+      'external_url'       => 'https://github.com/marktimemedia/page-components-for-wordpress-themes', // If set, overrides default API URL and points to an external URL.
+    ),
+
   );
 
   /*
