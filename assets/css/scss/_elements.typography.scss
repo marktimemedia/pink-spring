@@ -200,6 +200,15 @@ blockquote {
     }
 }
 
+q {
+    font-weight: inherit;
+    font-style: italic;
+}
+
+cite {
+    font-weight: inherit;
+}
+
 dl,
 dd {
     margin-bottom: $baselineHeight / 2;
@@ -235,23 +244,28 @@ u {
 }
 
 ins {
-    background-color: $Nlighter;
+    background-color: $Nlightest;
     color: $warningColor;
     text-decoration: none;
 }
 
 mark {
-    background-color: $Nlighter;
+    background-color: $Nlightest;
     color: $warningColor;
     font-style: italic;
     font-weight: bold;
 }
 
+del, strike {
+    font-weight: inherit;
+}
+
 pre,
 code,
-kdb,
-samp {
-    display: block;
+kbd,
+samp,
+var,
+tt {
     margin: $codeMargin;
     padding: $codePadding;
     background-color: $codeBackground;
@@ -260,6 +274,14 @@ samp {
     font-size: $codeFontSize;
     color: $codeColor;
     line-height: $baselineHeight;
+}
+
+code, kbd, var, tt {
+    display: inline-block;
+}
+
+pre, samp {
+    display: block;
 }
 
 pre {
@@ -291,6 +313,15 @@ hr {
     height: 1px;
     border: 0;
     background-color: $Nlighter;
+}
+
+abbr, acronym {
+    font-weight: inherit;
+}
+
+address {
+    font-weight: inherit;
+    line-height: inherit;
 }
 
 /* SELECTION */

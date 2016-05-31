@@ -5,13 +5,13 @@ $gutter: 1em;
 $textFontSize: 1rem;
 
 // Typography
-$baseFont: 'Source Sans Pro', "source-sans-pro", sans-serif;
+$baseFont: sans-serif;
 $baseFontSize: 100%;
 $baselineHeight: 1.625em;
 $baseLetterSpace: 0px;
 $baseFontWeight: 300;
 
-$headingFont: $baseFont;
+$headingFont: sans-serif;
 $headingLineHeight: 1.1;
 $headingLetterSpace: 0px;
 $headingMargin: $textFontSize;
@@ -45,7 +45,7 @@ $h6Size: .875em;
 $h6FontWeight: 500;
 
 $headingTextShadow: none;
-$codeFont: 'Source Code Pro', "source-code-pro", monospace;
+$codeFont: monospace;
 
 $metaColor: $Nlighter;
 $metaSize: .875em;
@@ -71,7 +71,7 @@ $blockquoteFontWeight: 200;
 
 // Code/Pre blocks
 $codeMargin: 1em 0;
-$codePadding: $gutter / 2;
+$codePadding: $gutter/2;
 $codeBackground: $Nlightest;
 $codeBorder: 0;
 $codeFontFamily: $codeFont;
