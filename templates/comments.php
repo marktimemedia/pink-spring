@@ -44,11 +44,11 @@ if ( have_comments() && !is_page() && post_type_supports( get_post_type(), 'comm
         <?php if ( get_option( 'comment_registration' ) && !is_user_logged_in() ) : ?>
             <p><?php printf( __( 'You must be <a href="%s">logged in</a> to post a comment.', 'spring' ), wp_login_url( get_permalink() ) ); ?></p>
         <?php else : ?>
-            <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
+            <form action="<?php echo get_option( 'siteurl' ); ?>/wp-comments-post.php" method="post" id="commentform">
                 <?php if ( is_user_logged_in() ) : ?>
                     <p>
                         <?php printf( __( 'Logged in as <a href="%s/wp-admin/profile.php">%s</a>.', 'spring' ), get_option( 'siteurl' ), $user_identity); ?>
-                        <a href="<?php echo wp_logout_url(get_permalink()); ?>"
+                        <a href="<?php echo wp_logout_url( get_permalink() ); ?>"
                            title="<?php __( 'Log out of this account', 'spring' ); ?>"><?php _e( 'Log out &raquo;', 'spring' ); ?></a>
                     </p>
                 <?php else : ?>

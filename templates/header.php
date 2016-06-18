@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?>>
 <head>
-    <title><?php wp_title('|', true, 'right'); ?></title>
+    <title><?php wp_title( '|', true, 'right' ); ?></title>
     <meta name="description" content="<?php wp_title(); echo ' | '; bloginfo( 'description' ); ?>" />
     <meta charset="utf-8">
     <meta name="HandheldFriendly" content="True">

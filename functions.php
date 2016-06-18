@@ -2,7 +2,19 @@
 /**
  * Spring includes
  */
-require_once locate_template('/lib/class-tgm-plugin-activation.php');           // Plugin dependencies
+
+// Create a landing Page redirect, remove when site is live
+
+// if( !is_user_logged_in() ) {
+
+// 	if( '/welcome/' != $_SERVER['REQUEST_URI'] && '/xmlrpc.php' != $_SERVER['REQUEST_URI'] && '/wp-login.php' != $_SERVER['REQUEST_URI'] ) {
+// 		wp_safe_redirect( trailingslashit( '/welcome' ) );
+// 		exit;
+// 	}
+	
+// } 
+
+require_once locate_template('/lib/class-tgm-plugin-activation.php');  // Plugin dependencies
 
 require_once locate_template('/lib/utils.php');           // Utility functions
 require_once locate_template('/lib/init.php');            // Initial theme setup and constants

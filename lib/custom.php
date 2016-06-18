@@ -43,4 +43,20 @@ function custom_taxonomies_terms_links(){
 
   return implode( '', $out );
 }
+
+
+// Use this to remove access to specific page templates
+//'FILE_PATH_AND_NAME' => 'TEMPLATE_TITLE'
+
+// function mtm_theme_templates( $templates ) {
+  
+//   $templates = array(
+//           '../templates/template-components.php' => 'Components Page',
+//           '../templates/template-home.php' => 'Landing Page Builder',
+//           '../templates/template-modules.php' => 'Modular Content Page',
+//   );
+
+//   return $templates;
+// }
+// add_filter( 'mtm_filter_templates', 'mtm_theme_templates' );
 ?>
