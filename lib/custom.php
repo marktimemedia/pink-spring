@@ -51,12 +51,17 @@ function custom_taxonomies_terms_links(){
 // function mtm_theme_templates( $templates ) {
   
 //   $templates = array(
-//           '../templates/template-components.php' => 'Components Page',
-//           '../templates/template-home.php' => 'Landing Page Builder',
-//           '../templates/template-modules.php' => 'Modular Content Page',
-//   );
+      //         '../templates/template-components.php' => 'Components Page',
+      //         '../templates/template-home.php' => 'Landing Page',
+      //         '../templates/template-news.php' => 'News Page',
+      //         '../templates/template-modules.php' => 'Modular Content',
+      // );
 
 //   return $templates;
 // }
 // add_filter( 'mtm_filter_templates', 'mtm_theme_templates' );
+
+
+// Filter Yoast Meta Priority
+//add_filter( 'wpseo_metabox_prio', function() { return 'low';});
 ?>
