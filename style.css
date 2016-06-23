@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*--
     Theme Name:  NAME Theme
     Description:  A custom WordPress theme
@@ -927,6 +928,33 @@ figcaption {
     margin-top: 0; }
     .footer--menu .menu-item:first-child a {
       padding-left: 0; } }
+@media only screen and (max-width: 48.5em) {
+  .nav-main--menu .menu-item {
+    position: relative; }
+  .nav-main--menu .menu-item-has-children a {
+    position: relative; }
+  .nav-main--menu .menu-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    width: 2em;
+    height: 100%;
+    background: #f9cfe4;
+    display: inline-block; }
+    .nav-main--menu .menu-toggle:after {
+      content: '+';
+      color: #de1e7e;
+      font-size: 1.2em;
+      padding: .3em 0;
+      display: inline-block;
+      width: 100%;
+      text-align: center; }
+  .nav-main--menu .menu-toggle-active:after {
+    content: "–"; }
+  .nav-main--menu ul.sub-menu.menu-collapse {
+    height: 0;
+    overflow: hidden; } }
 @media only screen and (min-width: 48.5em) {
   .nav-main--menu, .nav-main--menu * {
     margin: 0;

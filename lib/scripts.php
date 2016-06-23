@@ -20,6 +20,8 @@ function spring_scripts() {
     wp_register_script( 'modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.7.0.min.js', false, null, false );
     wp_enqueue_script( 'modernizr' );
     wp_enqueue_script( 'jquery' );
+
+    wp_enqueue_script( 'mobile-menu-toggle', get_template_directory_uri() . '/assets/js/build/mobile-menu-toggle.js', '', '', true );
     
 }
 

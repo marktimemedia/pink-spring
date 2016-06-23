@@ -1,4 +1,55 @@
-//TODO: CSS for subnav
+@media only screen and (max-width: #{$midBreakpoint}) {
+    .nav-main--menu {
+
+        .menu-item {
+            position:relative;
+        }
+
+        .menu-item-has-children {
+
+            a {
+                position:relative;
+            }
+            
+        }
+
+        .menu-toggle {
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+            width: 2em;
+            height: 100%;
+            background: lighten($linkColor, 40%);
+            display:inline-block;
+
+            &:after {
+                content: '+';
+                color: $linkColor;
+                font-size: 1.2em;
+                padding: .3em 0;
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .menu-toggle-active {
+            &:after {
+                content: "–";
+            }
+        }
+
+
+        ul.sub-menu {
+             &.menu-collapse {
+                height: 0;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
 @media only screen and (min-width: #{$midBreakpoint}) {
     .nav-main--menu, .nav-main--menu * {
         margin: 0;
