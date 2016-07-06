@@ -286,9 +286,13 @@ function is_blog() {
 
 function fix_blog_link_on_cpt( $classes, $item, $args ) {
   if( !is_blog() ) {
-    $blog_page_id = intval( get_option('page_for_posts') );
-    if( $blog_page_id != 0 && $item->object_id == $blog_page_id )
-      unset( $classes[ array_search( 'current_page_parent', $classes ) ] );
+    $blog_page_id = intval( get_option( 'page_for_posts' ) );
+    
+    if( $blog_page_id != 0 && $item->object_id == $blog_page_id ) {
+      if ( in_array( 'current_page_parent', $classes ) ) {
+        unset( $classes[ array_search( 'current_page_parent', $classes ) ] );      
+      }
+    }
   }
   return $classes;
 }

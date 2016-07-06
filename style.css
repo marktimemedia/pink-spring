@@ -1556,7 +1556,11 @@ section.comments {
   float: right; }
 
 .post--pager {
-  margin-top: 2em; }
+  margin: 2em auto 0 auto;
+  text-align: center; }
+
+.post--pager-all {
+  padding: 0 1em; }
 
 /* 07. TRUMPS */
 /*

@@ -15,6 +15,7 @@
         </div>
         <?php wp_link_pages(array( 'before' => '<nav class="nav-pager post--pager">' . __( 'Pages:', 'spring'), 'after' => '</nav>' ) ); ?>
         <?php get_template_part( 'templates/post-meta' ); ?>
+        <?php get_template_part( 'templates/nav-pager' ); ?>
         <?php comments_template( '/templates/comments.php' ); ?>
     </article>
 <?php endwhile; ?>

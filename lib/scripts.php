@@ -27,6 +27,12 @@ function spring_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'spring_scripts', 100 );
 
+// Admin Scripts
+function spring_admin_scripts() {
+    wp_enqueue_style( 'admin-styles', get_template_directory_uri() . '/assets/css/admin-style.css', false );
+}
+
+add_action( 'admin_enqueue_scripts', 'spring_admin_scripts' );
 
 /**
 * decide whether to enqueue sidebar or non-sidebar scripts
