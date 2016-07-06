@@ -90,6 +90,7 @@
             <?php //get_template_part( 'templates/searchform' ); ?>
             <h1 class="header--blog-name">
                 <?php the_mtm_header_logo(); ?>
+                <?php the_mtm_mobile_logo(); ?>
             </h1>
             <div class="header--extra-text">
                 <?php the_mtm_header_text(); ?>

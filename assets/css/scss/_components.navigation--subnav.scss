@@ -67,6 +67,7 @@
             left: .5em;
             top: 100%;
             padding: 0 .5em;
+            text-align: left;
             background: $Nlightest;
             z-index: 99;
             @include transition(all .2s);
