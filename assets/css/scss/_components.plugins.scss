@@ -1,0 +1,29 @@
+// WooCommerce Tabbed Account Page
+
+.woocommerce-MyAccount-navigation {
+    ul {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    li {
+        border-bottom: 1px solid $Nlighter;
+
+        &.is-active a {
+            font-weight: bold;
+            &:after {
+                content: ' »';
+            }
+        }
+    }
+}
+    li.woocommerce-MyAccount-navigation-link--customer-logout {
+        display: block;
+        border-bottom: 0;
+
+        a {
+            margin-top: 1em;
+            @extend .button;
+        }
+    }

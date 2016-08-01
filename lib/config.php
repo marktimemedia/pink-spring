@@ -4,7 +4,7 @@
  */
 add_theme_support('root-relative-urls');            // Enable relative URLs
 add_theme_support('nice-search');                   // Enable /?s= to /search/ redirect
-add_theme_support('jquery-cdn');                    // Enable to load jQuery from the Google CDN
+//add_theme_support('jquery-cdn');                    // Enable to load jQuery from the Google CDN
 add_theme_support('html5', array('search-form'));   // Enable HTML in the search form
 add_editor_style( 'assets/css/editor-style.css' );  // Add editor styles
 
