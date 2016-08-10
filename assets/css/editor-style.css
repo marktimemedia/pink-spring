@@ -354,6 +354,7 @@ input[type="radio"] {
 
 button,
 .button,
+.global-button,
 input[type="button"],
 input[type="submit"],
 input[type="reset"] {
@@ -371,6 +372,7 @@ input[type="reset"] {
   cursor: pointer; }
   button:hover,
   .button:hover,
+  .global-button:hover,
   input[type="button"]:hover,
   input[type="submit"]:hover,
   input[type="reset"]:hover {
@@ -378,35 +380,47 @@ input[type="reset"] {
     border-bottom: 1px solid #e33284; }
   button.alt,
   .button.alt,
+  .global-button.alt,
   input[type="button"].alt,
   input[type="submit"].alt,
   input[type="reset"].alt {
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#635d61), to(#d4ccd4));
-    background-image: -webkit-linear-gradient(top, #635d61, #d4ccd4);
-    background-color: #d4ccd4;
-    background-image: -moz-linear-gradient(top, #635d61, #d4ccd4);
-    background-image: -ms-linear-gradient(top, #635d61, #d4ccd4);
-    background-image: -o-linear-gradient(top, #635d61, #d4ccd4);
-    background-image: linear-gradient(top, #635d61, #d4ccd4);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#635d61', endColorstr='#d4ccd4',GradientType=0 );
-    background-repeat: repeat-x; }
-    button.alt:hover,
+    background-color: #635d61; }
+    button.alt:hover, button.alt:focus,
     .button.alt:hover,
+    .button.alt:focus,
+    .global-button.alt:hover,
+    .global-button.alt:focus,
     input[type="button"].alt:hover,
+    input[type="button"].alt:focus,
     input[type="submit"].alt:hover,
-    input[type="reset"].alt:hover {
-      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#d4ccd4), to(#635d61));
-      background-image: -webkit-linear-gradient(top, #d4ccd4, #635d61);
-      background-color: #635d61;
-      background-image: -moz-linear-gradient(top, #d4ccd4, #635d61);
-      background-image: -ms-linear-gradient(top, #d4ccd4, #635d61);
-      background-image: -o-linear-gradient(top, #d4ccd4, #635d61);
-      background-image: linear-gradient(top, #d4ccd4, #635d61);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4ccd4', endColorstr='#635d61',GradientType=0 );
-      background-repeat: repeat-x; }
+    input[type="submit"].alt:focus,
+    input[type="reset"].alt:hover,
+    input[type="reset"].alt:focus {
+      background-color: #d4ccd4; }
+  button.neutral,
+  .button.neutral,
+  .global-button.neutral,
+  input[type="button"].neutral,
+  input[type="submit"].neutral,
+  input[type="reset"].neutral {
+    background-color: #948b90; }
+    button.neutral:hover, button.neutral:focus,
+    .button.neutral:hover,
+    .button.neutral:focus,
+    .global-button.neutral:hover,
+    .global-button.neutral:focus,
+    input[type="button"].neutral:hover,
+    input[type="button"].neutral:focus,
+    input[type="submit"].neutral:hover,
+    input[type="submit"].neutral:focus,
+    input[type="reset"].neutral:hover,
+    input[type="reset"].neutral:focus {
+      background-color: #635d61; }
   button:active, button:focus,
   .button:active,
   .button:focus,
+  .global-button:active,
+  .global-button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
   input[type="submit"]:active,

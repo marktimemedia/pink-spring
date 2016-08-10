@@ -1,6 +1,8 @@
 .nav-quicklinks {
     width: 100%;
     background: $Ndark;
+    position: relative;
+    z-index:1000;
 
     .menu-item {
 
@@ -138,7 +140,7 @@
 
 @media only screen and (min-width: #{$midBreakpoint}) {
     .menu-quicklinks-menu-container {
-        padding: .5em 0;
+        padding: 0;
     }
 
     .nav-main {

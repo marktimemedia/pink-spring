@@ -120,7 +120,7 @@ h1, .h1,
 h2, .h2,
 h3, .h3,
 h4, .h4,
-h5, .h5,
+h5, .h5, #tribe-events .tribe-events-list-separator-month span, #tribe-events-day .tribe-events-day-time-slot h5,
 h6, .h6 {
   margin: 0;
   padding: 0;
@@ -133,7 +133,7 @@ h6, .h6 {
   h2 *, .h2 *,
   h3 *, .h3 *,
   h4 *, .h4 *,
-  h5 *, .h5 *,
+  h5 *, .h5 *, #tribe-events .tribe-events-list-separator-month span *, #tribe-events-day .tribe-events-day-time-slot h5 *,
   h6 *, .h6 * {
     line-height: 1.1; }
 
@@ -182,14 +182,18 @@ h4,
     font-weight: 500; }
 
 h5,
-.h5 {
+.h5,
+#tribe-events .tribe-events-list-separator-month span,
+#tribe-events-day .tribe-events-day-time-slot h5 {
   margin-bottom: 1rem;
   color: #afa8af;
   font-size: 17.6px;
   font-size: 1.1rem;
   font-weight: 500; }
   h5 a,
-  .h5 a {
+  .h5 a,
+  #tribe-events .tribe-events-list-separator-month span a,
+  #tribe-events-day .tribe-events-day-time-slot h5 a {
     font-weight: 500; }
 
 h6,
@@ -438,6 +442,9 @@ input[type="radio"] {
 button,
 .button,
 li.woocommerce-MyAccount-navigation-link--customer-logout a,
+.global-button,
+#tribe-events .tribe-events-button,
+#tribe-bar-form .tribe-bar-submit input[type=submit],
 input[type="button"],
 input[type="submit"],
 input[type="reset"] {
@@ -456,6 +463,9 @@ input[type="reset"] {
   button:hover,
   .button:hover,
   li.woocommerce-MyAccount-navigation-link--customer-logout a:hover,
+  .global-button:hover,
+  #tribe-events .tribe-events-button:hover,
+  #tribe-bar-form .tribe-bar-submit input[type=submit]:hover,
   input[type="button"]:hover,
   input[type="submit"]:hover,
   input[type="reset"]:hover {
@@ -464,38 +474,70 @@ input[type="reset"] {
   button.alt,
   .button.alt,
   li.woocommerce-MyAccount-navigation-link--customer-logout a.alt,
+  .global-button.alt,
+  #tribe-events .alt.tribe-events-button,
+  #tribe-bar-form .tribe-bar-submit input.alt[type=submit],
   input[type="button"].alt,
   input[type="submit"].alt,
   input[type="reset"].alt {
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#635d61), to(#d4ccd4));
-    background-image: -webkit-linear-gradient(top, #635d61, #d4ccd4);
-    background-color: #d4ccd4;
-    background-image: -moz-linear-gradient(top, #635d61, #d4ccd4);
-    background-image: -ms-linear-gradient(top, #635d61, #d4ccd4);
-    background-image: -o-linear-gradient(top, #635d61, #d4ccd4);
-    background-image: linear-gradient(top, #635d61, #d4ccd4);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#635d61', endColorstr='#d4ccd4',GradientType=0 );
-    background-repeat: repeat-x; }
-    button.alt:hover,
+    background-color: #635d61; }
+    button.alt:hover, button.alt:focus,
     .button.alt:hover,
     li.woocommerce-MyAccount-navigation-link--customer-logout a.alt:hover,
+    .button.alt:focus,
+    li.woocommerce-MyAccount-navigation-link--customer-logout a.alt:focus,
+    .global-button.alt:hover,
+    #tribe-events .alt.tribe-events-button:hover,
+    #tribe-bar-form .tribe-bar-submit input.alt[type=submit]:hover,
+    .global-button.alt:focus,
+    #tribe-events .alt.tribe-events-button:focus,
+    #tribe-bar-form .tribe-bar-submit input.alt[type=submit]:focus,
     input[type="button"].alt:hover,
+    input[type="button"].alt:focus,
     input[type="submit"].alt:hover,
-    input[type="reset"].alt:hover {
-      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#d4ccd4), to(#635d61));
-      background-image: -webkit-linear-gradient(top, #d4ccd4, #635d61);
-      background-color: #635d61;
-      background-image: -moz-linear-gradient(top, #d4ccd4, #635d61);
-      background-image: -ms-linear-gradient(top, #d4ccd4, #635d61);
-      background-image: -o-linear-gradient(top, #d4ccd4, #635d61);
-      background-image: linear-gradient(top, #d4ccd4, #635d61);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4ccd4', endColorstr='#635d61',GradientType=0 );
-      background-repeat: repeat-x; }
+    input[type="submit"].alt:focus,
+    input[type="reset"].alt:hover,
+    input[type="reset"].alt:focus {
+      background-color: #d4ccd4; }
+  button.neutral,
+  .button.neutral,
+  li.woocommerce-MyAccount-navigation-link--customer-logout a.neutral,
+  .global-button.neutral,
+  #tribe-events .tribe-events-button,
+  #tribe-bar-form .tribe-bar-submit input[type=submit],
+  input[type="button"].neutral,
+  input[type="submit"].neutral,
+  input[type="reset"].neutral {
+    background-color: #948b90; }
+    button.neutral:hover, button.neutral:focus,
+    .button.neutral:hover,
+    li.woocommerce-MyAccount-navigation-link--customer-logout a.neutral:hover,
+    .button.neutral:focus,
+    li.woocommerce-MyAccount-navigation-link--customer-logout a.neutral:focus,
+    .global-button.neutral:hover,
+    #tribe-events .tribe-events-button:hover,
+    #tribe-bar-form .tribe-bar-submit input[type=submit]:hover,
+    .global-button.neutral:focus,
+    #tribe-events .tribe-events-button:focus,
+    #tribe-bar-form .tribe-bar-submit input[type=submit]:focus,
+    input[type="button"].neutral:hover,
+    input[type="button"].neutral:focus,
+    input[type="submit"].neutral:hover,
+    input[type="submit"].neutral:focus,
+    input[type="reset"].neutral:hover,
+    input[type="reset"].neutral:focus {
+      background-color: #635d61; }
   button:active, button:focus,
   .button:active,
   li.woocommerce-MyAccount-navigation-link--customer-logout a:active,
   .button:focus,
   li.woocommerce-MyAccount-navigation-link--customer-logout a:focus,
+  .global-button:active,
+  #tribe-events .tribe-events-button:active,
+  #tribe-bar-form .tribe-bar-submit input[type=submit]:active,
+  .global-button:focus,
+  #tribe-events .tribe-events-button:focus,
+  #tribe-bar-form .tribe-bar-submit input[type=submit]:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
   input[type="submit"]:active,
@@ -606,7 +648,8 @@ figcaption {
   font-size: 1rem; }
 
 .content {
-  padding: 0; }
+  padding: 0;
+  padding-top: 150px; }
   .content.inner-padding {
     padding: 0 1rem; }
   .content .content-full .content--page {
@@ -615,8 +658,10 @@ figcaption {
     padding: 1rem; }
 
 @media only screen and (min-width: 48.5em) {
-  .content .content-full .content--page {
-    padding: 3rem; } }
+  .content {
+    padding-top: 150px; }
+    .content .content-full .content--page {
+      padding: 3rem; } }
 @media only screen and (min-width: 62.5em) {
   .content-main {
     padding-right: 1em;
@@ -631,7 +676,8 @@ figcaption {
       padding-right: 0; } }
 @media only screen and (min-width: 83.5em) {
   .content {
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding-top: 150px; }
 
   .content-full {
     margin: 0 auto; }
@@ -815,7 +861,9 @@ figcaption {
 /* 06. COMPONENTS */
 .nav-quicklinks {
   width: 100%;
-  background: #635d61; }
+  background: #635d61;
+  position: relative;
+  z-index: 1000; }
   .nav-quicklinks .menu-item a, .nav-quicklinks .menu-item a:visited {
     color: #d4ccd4;
     font-weight: 200;
@@ -904,7 +952,7 @@ figcaption {
     width: 80%; } }
 @media only screen and (min-width: 48.5em) {
   .menu-quicklinks-menu-container {
-    padding: .5em 0; }
+    padding: 0; }
 
   .nav-main {
     float: right;
@@ -1019,20 +1067,35 @@ figcaption {
     text-overflow: ellipsis;
     white-space: nowrap; } }
 .header-main {
-  margin-bottom: 2em; }
+  position: fixed;
+  width: 100%;
+  z-index: 999; }
 
 .header--inner {
-  padding: 0; }
+  background-color: #fff;
+  border-bottom: 1px solid #f4f2f3;
+  padding: 0;
+  position: relative;
+  top: 0;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+  z-index: 999; }
 
 .header--quicklinks {
-  padding: 0.5em 1rem; }
+  padding: 0.5em 1rem;
+  position: relative;
+  z-index: 1000; }
 
 .header--blog-name {
-  margin: 0 auto;
+  box-sizing: border-box;
   padding: 16px 16px;
   padding: 1rem 1rem;
+  font-size: 2rem;
   height: 100%;
-  box-sizing: border-box;
+  margin: 0 auto;
   text-align: center; }
   .header--blog-name a {
     display: block; }
@@ -1047,6 +1110,25 @@ figcaption {
   padding: 0 1rem;
   text-align: center; }
 
+.header-main-small .header--quicklinks {
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden; }
+.header-main-small .header--inner {
+  top: -130px;
+  overflow: hidden;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s; }
+.header-main-small .header--blog-name {
+  -webkit-transition: font-size 0.6s;
+  -moz-transition: font-size 0.6s;
+  -ms-transition: font-size 0.6s;
+  -o-transition: font-size 0.6s;
+  transition: font-size 0.6s; }
+
 @media only screen and (min-width: 30.5em) {
   .header--blog-name {
     width: inherit;
@@ -1056,7 +1138,8 @@ figcaption {
       max-width: 9em; } }
 @media only screen and (min-width: 48.5em) {
   .header-main {
-    margin-bottom: 0; }
+    background-color: #fff;
+    border-bottom: 1px solid #f4f2f3; }
 
   .header--inner, .header--quicklinks {
     *zoom: 1;
@@ -1070,6 +1153,9 @@ figcaption {
     .header--inner:after, .header--quicklinks:after {
       clear: both; }
 
+  .header--inner {
+    border: 0; }
+
   .header--blog-name {
     float: left;
     margin-top: 0;
@@ -1081,12 +1167,54 @@ figcaption {
 
   .header--extra-text {
     text-align: left;
-    padding: 0; } }
+    padding: 0; }
+
+  .header-main-small .header--inner {
+    height: 2.2em;
+    top: 0;
+    overflow: visible;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    transition: all 0.8s; }
+  .header-main-small .header--blog-name {
+    font-size: 1.3em;
+    padding-top: .4em;
+    -webkit-transition: font-size 0.5s;
+    -moz-transition: font-size 0.5s;
+    -ms-transition: font-size 0.5s;
+    -o-transition: font-size 0.5s;
+    transition: font-size 0.5s; }
+  .header-main-small .header--extra-text {
+    display: none; }
+  .header-main-small .nav-main {
+    height: auto;
+    top: 0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
+    .header-main-small .nav-main .menu-item a {
+      padding: .6em 0 .5em;
+      margin: 0 .3em;
+      -webkit-transition: padding .5s, margin .5s;
+      -moz-transition: padding .5s, margin .5s;
+      -ms-transition: padding .5s, margin .5s;
+      -o-transition: padding .5s, margin .5s;
+      transition: padding .5s, margin .5s; } }
 @media only screen and (min-width: 83.5em) {
   .header--inner, .header--quicklinks {
     display: block;
     margin-left: auto;
-    margin-right: auto; } }
+    margin-right: auto; }
+
+  .header-main-small .header--blog-name {
+    display: inline-block;
+    width: 25%; }
+  .header-main-small .nav-main {
+    width: 74%; } }
 .open-button-wrapper {
   position: relative;
   width: 100%; }
@@ -1393,11 +1521,11 @@ figcaption {
   margin-bottom: 12px;
   margin-bottom: 0.75rem; }
 
-.post--byline {
+.post--byline, #tribe-events .tribe-event-schedule-details {
   margin: 0 0 12px 0;
   margin: 0 0 0.75rem 0;
   font-style: italic; }
-  .post--byline a {
+  .post--byline a, #tribe-events .tribe-event-schedule-details a {
     font-style: italic; }
 
 .post--summary {
@@ -1410,7 +1538,7 @@ figcaption {
 
 .post--content {
   overflow: auto; }
-  .post--content h1, .post--content h2, .post--content h3, .post--content h4, .post--content h5, .post--content h6, .post--content .h1, .post--content .h2, .post--content .h3, .post--content .h4, .post--content .h5, .post--content .h6 {
+  .post--content h1, .post--content h2, .post--content h3, .post--content h4, .post--content h5, .post--content h6, .post--content .h1, .post--content .h2, .post--content .h3, .post--content .h4, .post--content .h5, .post--content #tribe-events .tribe-events-list-separator-month span, #tribe-events .tribe-events-list-separator-month .post--content span, .post--content #tribe-events-day .tribe-events-day-time-slot h5, #tribe-events-day .tribe-events-day-time-slot .post--content h5, .post--content .h6 {
     margin-top: 1.5rem;
     margin-bottom: 0.8rem; }
 
@@ -1570,6 +1698,123 @@ li.woocommerce-MyAccount-navigation-link--customer-logout {
   li.woocommerce-MyAccount-navigation-link--customer-logout a {
     margin-top: 1em; }
 
+#tribe-events table.tribe-events-calendar {
+  color: #322e2f; }
+  #tribe-events table.tribe-events-calendar th {
+    background-color: #d4ccd4;
+    border-color: #d4ccd4;
+    color: #322e2f; }
+  #tribe-events table.tribe-events-calendar td {
+    border-color: #d4ccd4; }
+  #tribe-events table.tribe-events-calendar div[id*=tribe-events-daynum-], #tribe-events table.tribe-events-calendar div[id*=tribe-events-daynum-] a {
+    color: #322e2f;
+    background-color: #f4f2f3; }
+#tribe-events .tribe-events-single h1, #tribe-events .tribe-events-single h2 {
+  margin-top: 0; }
+#tribe-events .tribe-events-single .tribe-events-schedule {
+  padding: 0;
+  background: transparent;
+  border: 0; }
+  #tribe-events .tribe-events-single .tribe-events-schedule h2 {
+    display: inline-block; }
+#tribe-events .tribe-events-single .tribe-events-event-meta {
+  background: #f4f2f3;
+  border: 0;
+  display: block; }
+#tribe-events .tribe-events-single .tribe-events-venue-map {
+  background: transparent;
+  border: 0; }
+#tribe-events .tribe-events-list .type-tribe_events {
+  border-bottom-color: #f4f2f3; }
+#tribe-events .tribe-events-event-meta {
+  margin-bottom: 0.8125em; }
+#tribe-events .tribe-events-meta-group {
+  margin-bottom: 1em; }
+#tribe-events .tribe-events-cal-links a, #tribe-events .tribe-events-ical {
+  font-size: .8em; }
+#tribe-events .tribe-events-cost, #tribe-events .tribe-events-event-cost {
+  background-color: #f4f2f3;
+  border: 0;
+  display: inline-block;
+  font-weight: bold;
+  padding: .5em; }
+  #tribe-events .tribe-events-cost span, #tribe-events .tribe-events-event-cost span {
+    background: transparent;
+    border: 0;
+    padding: 0; }
+#tribe-events .tribe-events-list-separator-month {
+  background-color: #f4f2f3; }
+
+#tribe-events-day h2 {
+  display: block;
+  margin-top: 0; }
+#tribe-events-day .tribe-events-content {
+  float: none;
+  width: 100%; }
+#tribe-events-day .tribe-events-event-meta {
+  background: transparent;
+  border: 0;
+  padding: 0; }
+#tribe-events-day .time-details, #tribe-events-day .tribe-events-venue-details {
+  padding-left: 0;
+  border: 0; }
+#tribe-events-day .tribe-events-day-time-slot h5 {
+  background-color: #f4f2f3;
+  padding: 6px 10px; }
+
+#tribe-bar-form {
+  background: #f4f2f3; }
+  #tribe-bar-form .tribe-bar-collapse-toggle {
+    background: #f4f2f3; }
+  #tribe-bar-form .tribe-bar-views-inner {
+    background: #d4ccd4; }
+  #tribe-bar-form .tribe-bar-views-list .tribe-bar-views-option a, #tribe-bar-form .tribe-bar-views-list .tribe-bar-views-option.tribe-bar-active a {
+    background: #d4ccd4; }
+    #tribe-bar-form .tribe-bar-views-list .tribe-bar-views-option a:hover, #tribe-bar-form .tribe-bar-views-list .tribe-bar-views-option.tribe-bar-active a:hover {
+      background: #afa8af; }
+
+.tribe-events-notices {
+  background: #cdeefc;
+  border-radius: 0;
+  border: 0;
+  padding: 1em;
+  text-shadow: none;
+  color: #322e2f; }
+
+@media only screen and (min-width: 30.5em) {
+  #tribe-events .tribe-events-event-meta {
+    display: inline-block; }
+  #tribe-events .tribe-events-cost, #tribe-events .tribe-events-event-cost {
+    float: right; }
+
+  #tribe-events-day h2 {
+    display: inline-block;
+    float: left; }
+  #tribe-events-day .tribe-events-event-meta {
+    float: left; } }
+@media only screen and (min-width: 48.5em) {
+  #tribe-events .tribe-events-single .tribe-events-event-meta {
+    padding: 0 2%; }
+    #tribe-events .tribe-events-single .tribe-events-event-meta .tribe-events-meta-group {
+      padding: 0 4% 0 0; }
+  #tribe-events .tribe-events-event-cost {
+    float: right; }
+  #tribe-events .tribe-events-event-meta {
+    display: inline-block; }
+  #tribe-events .tribe-ticket.quantity {
+    width: 30%; }
+  #tribe-events .tribe-events-tickets td {
+    padding: .75em 1em .75em 0;
+    vertical-align: top; }
+  #tribe-events .tickets_name {
+    font-weight: 500; }
+
+  #tribe-events-day .tribe-events-event-meta {
+    float: left;
+    width: 30%; }
+  #tribe-events-day .tribe-events-content {
+    float: right;
+    width: 67%; } }
 .nav-pager {
   *zoom: 1; }
   .nav-pager:before, .nav-pager:after {
@@ -1583,11 +1828,11 @@ li.woocommerce-MyAccount-navigation-link--customer-logout {
   margin: 0;
   padding: 0; }
 
-.pager--previous {
-  float: left; }
+.pager--previous:before, a[rel="prev"]:before {
+  content: '← '; }
 
-.pager--next {
-  float: right; }
+.pager--next:after, a[rel="next"]:after {
+  content: ' →'; }
 
 .post--pager {
   margin: 2em auto 0 auto;

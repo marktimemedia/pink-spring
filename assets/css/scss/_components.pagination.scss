@@ -7,12 +7,20 @@
         padding: 0;
     }
 
-        .pager--previous {
-            float: left;
+        .pager--previous, a[rel="prev"] {
+            //float: left;
+            
+            &:before {
+                content: '← ';
+            }
         }
 
-        .pager--next {
-            float: right;
+        .pager--next, a[rel="next"] {
+           // float: right;
+            
+            &:after {
+                content:' →';
+            }
         }
 
  .post--pager {

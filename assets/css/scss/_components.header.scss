@@ -1,19 +1,30 @@
 .header-main {
-	margin-bottom: 2em;
+	position:fixed; // for header scroll
+    width: 100%;
+    z-index:999;
 }
     .header--inner {
-        padding: 0;
+        background-color: $bodyColor;
+        border-bottom: 1px solid $Nlightest;
+        padding: 0; 
+        position: relative;  
+        top: 0;
+        @include transition(all .8s); 
+        z-index:999;
     }
 
     .header--quicklinks {
         padding: .5em $smallPadding;
+        position: relative;
+        z-index:1000;
     }
 
     .header--blog-name {
-        margin: 0 auto;
-        @include rem-px('padding', 1rem, 1rem);
-        height: 100%;
         box-sizing: border-box;
+        @include rem-px('padding', 1rem, 1rem);
+        font-size: 2rem;
+        height: 100%;
+        margin: 0 auto;
         text-align: center;
 
         a {
@@ -36,6 +47,29 @@
         text-align: center;
     }
 
+    .header-main-small {
+        
+        .header--quicklinks {
+            padding-top:0;
+            padding-bottom:0;
+            overflow: hidden;
+        }
+
+        .header--inner {
+            top:-130px;
+            overflow:hidden;
+            @include transition(all .8s);
+        }
+
+        .header--blog-name {
+            @include transition(font-size .6s);
+
+            img {
+                //@include transition(all 1s);
+            }
+        }
+    }
+
 
 
 @media only screen and (min-width: #{$smallBreakpoint}) {
@@ -53,7 +87,8 @@
 
 @media only screen and (min-width: #{$midBreakpoint}) {
     .header-main {
-        margin-bottom: 0;
+        background-color: $bodyColor;
+        border-bottom: 1px solid $Nlightest;
     }
 
         .header--inner, .header--quicklinks {
@@ -61,6 +96,10 @@
             @include rem-px('max-width', $boxedMax);
             padding-left: $maxPadding;
             padding-right: $maxPadding;
+        }
+
+        .header--inner {
+            border: 0;
         }
             .header--blog-name {
                 float: left;
@@ -80,6 +119,40 @@
                 text-align: left;
                 padding: 0;
             }
+
+        .header-main-small {
+
+            .header--inner {
+                height:2.2em;
+                top: 0;
+                overflow: visible;
+                @include transition(all .8s);
+            }
+
+            .header--blog-name {
+                //display: none;
+                font-size:1.3em;
+                padding-top: .4em;
+                @include transition(font-size .5s);
+
+            }
+
+            .header--extra-text {
+                display: none;
+            }
+
+            .nav-main {
+                height:auto;
+                top: 0;
+                @include transition(all .5s);
+
+                .menu-item a {
+                    padding:.6em 0 .5em;
+                    margin: 0 .3em;
+                    @include multi-transition("padding .5s, margin .5s");
+                }
+            }
+        }
 }
 
 
@@ -87,5 +160,17 @@
 @media only screen and (min-width: #{$widescreenBreakpoint}) {
     .header--inner, .header--quicklinks {
         @include center-block;
+    }
+
+    .header-main-small {
+
+        .header--blog-name {
+            display: inline-block;
+            width: 25%;
+        }
+
+        .nav-main {
+            width: 74%;
+        }
     }
 }
