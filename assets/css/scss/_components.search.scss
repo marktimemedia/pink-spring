@@ -10,7 +10,7 @@
     .textbox.search--textbox {
         margin: 0;
         padding: .5em 2.25em .5em .25em;
-        border: 1px solid $Nlighter;
+        border: 0;
     }
 
     .search--button {
@@ -21,10 +21,8 @@
         //width: 2em;
         padding: .5em;
         @include clearIeGradient();
-        background: $Nlightest;
-        border: 1px solid $Nlighter;
-        border-left: 0;
-        color: $Nmid;
+        background: $linkColor;
+        color: $white;
         font-size: .7em;
         font-weight: bold;
         //@include hide-text();
@@ -59,14 +57,20 @@
 .header-main .search-form {
     max-height: 0;
     margin: 0;
+    padding-bottom: 0;
     overflow: hidden;
     @include transition(all .8s);
 }
 
     .header-main .search-form.search-expanded {
         max-height: 3em;
-        margin: .4em 0;
+        margin: .4em 0 0;
+        padding-bottom: .4em;
         @include transition(all .8s);
+
+        .search--button {
+            margin-bottom: .4em;
+        }
     }
 
 

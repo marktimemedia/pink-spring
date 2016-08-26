@@ -1530,7 +1530,7 @@ figcaption {
 .textbox.search--textbox {
   margin: 0;
   padding: .5em 2.25em .5em .25em;
-  border: 1px solid #d4ccd4; }
+  border: 0; }
 
 .search--button {
   position: absolute;
@@ -1539,10 +1539,8 @@ figcaption {
   bottom: 0;
   padding: .5em;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  background: #f4f2f3;
-  border: 1px solid #d4ccd4;
-  border-left: 0;
-  color: #948b90;
+  background: #de1e7e;
+  color: #fff;
   font-size: .7em;
   font-weight: bold; }
   .search--button:hover {
@@ -1571,6 +1569,7 @@ figcaption {
 .header-main .search-form {
   max-height: 0;
   margin: 0;
+  padding-bottom: 0;
   overflow: hidden;
   -webkit-transition: all 0.8s;
   -moz-transition: all 0.8s;
@@ -1580,12 +1579,15 @@ figcaption {
 
 .header-main .search-form.search-expanded {
   max-height: 3em;
-  margin: .4em 0;
+  margin: .4em 0 0;
+  padding-bottom: .4em;
   -webkit-transition: all 0.8s;
   -moz-transition: all 0.8s;
   -ms-transition: all 0.8s;
   -o-transition: all 0.8s;
   transition: all 0.8s; }
+  .header-main .search-form.search-expanded .search--button {
+    margin-bottom: .4em; }
 
 @media only screen and (min-width: 48.5em) {
   .search-toggle {
