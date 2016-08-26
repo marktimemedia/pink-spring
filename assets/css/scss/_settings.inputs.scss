@@ -29,5 +29,7 @@ $buttonFontSize: 1em;
 $buttonFontWeight: 200;
 $buttonPadding: .5em 2em;
 
-$buttonAltBackground: $Ndark;
-$buttonAltBackground2: $Nlighter;
+$buttonAltBackground: $springColor2;
+$buttonAltBackground2: $springColor2_Dk;
+$buttonAltBorderColor: darken($buttonAltBackground,15%);
+$buttonAltBorderColor2: lighten($buttonAltBackground2, 15%);

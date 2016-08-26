@@ -41,7 +41,6 @@ h5, .h5,
 h6, .h6 {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
   line-height: 1.1;
   text-rendering: optimizeLegibility;
   text-shadow: none;
@@ -56,6 +55,7 @@ h6, .h6 {
 
 h1,
 .h1 {
+  font-family: sans-serif;
   margin-bottom: 1rem;
   color: #322e2f;
   font-size: 36px;
@@ -67,6 +67,7 @@ h1,
 
 h2,
 .h2 {
+  font-family: sans-serif;
   margin-bottom: 1rem;
   color: #635d61;
   font-size: 28px;
@@ -78,6 +79,7 @@ h2,
 
 h3,
 .h3 {
+  font-family: sans-serif;
   margin-bottom: 1rem;
   color: #635d61;
   font-size: 22.4px;
@@ -89,6 +91,7 @@ h3,
 
 h4,
 .h4 {
+  font-family: sans-serif;
   margin-bottom: 1rem;
   color: #948b90;
   font-size: 17.6px;
@@ -100,6 +103,7 @@ h4,
 
 h5,
 .h5 {
+  font-family: sans-serif;
   margin-bottom: 1rem;
   color: #afa8af;
   font-size: 17.6px;
@@ -111,8 +115,9 @@ h5,
 
 h6,
 .h6 {
+  font-family: sans-serif;
   margin-bottom: 1rem;
-  color: 0.875em;
+  color: #afa8af;
   font-size: 14px;
   font-size: 0.875rem;
   text-transform: uppercase; }
@@ -384,7 +389,8 @@ input[type="reset"] {
   input[type="button"].alt,
   input[type="submit"].alt,
   input[type="reset"].alt {
-    background-color: #635d61; }
+    background-color: #10aded;
+    border-color: #0b79a5; }
     button.alt:hover, button.alt:focus,
     .button.alt:hover,
     .button.alt:focus,
@@ -396,7 +402,8 @@ input[type="reset"] {
     input[type="submit"].alt:focus,
     input[type="reset"].alt:hover,
     input[type="reset"].alt:focus {
-      background-color: #d4ccd4; }
+      background-color: #0d8abd;
+      border-color: #26b6f0; }
   button.neutral,
   .button.neutral,
   .global-button.neutral,

@@ -82,6 +82,19 @@ function spring_display_sidebar() {
   return apply_filters( 'spring_display_sidebar', $sidebar_config->display);
 }
 
+/** 
+* Display and output search bar
+*/
+function spring_search_scripts() {
+  wp_enqueue_script( 'search-toggle', get_template_directory_uri() . '/assets/js/build/search-toggle.js', array( 'jquery' ), false, true );
+}
+add_action( 'wp_enqueue_scripts', 'spring_search_scripts', 100 );
+
+function spring_search_bar() {
+  echo '<button class="fa fa-search search-toggle run-toggle"></button>';
+  get_template_part( 'templates/searchform' );
+}
+
 /**
  * $content_width is a global variable used by WordPress for max image upload sizes
  * and media embeds (in pixels).

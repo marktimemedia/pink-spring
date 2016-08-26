@@ -4,6 +4,8 @@
 	$('.menu-item-has-children > a').append('<span class="menu-toggle"></span>');
 	 
 	$('.menu-toggle').on('click', function(e) {
+
+		e.preventDefault();
   
 	    if ($(this).parent().next('.sub-menu').hasClass('menu-collapse')) {
 	        $(this).parent().next('.sub-menu').removeClass('menu-collapse');

@@ -1,3 +1,26 @@
+.woocommerce {
+    .content {
+        @include clearfix();
+    }
+
+    .button, a.button, button, input.button {
+
+        @extend .global-button;
+
+        &.alt {
+            @extend .alt;
+        }
+    }
+
+    div.product {
+        div.images {
+            img {
+                max-height: 40em;
+            }
+        }
+    }
+}
+
 // WooCommerce Tabbed Account Page
 
 .woocommerce-MyAccount-navigation {

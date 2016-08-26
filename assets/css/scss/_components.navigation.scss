@@ -1,6 +1,5 @@
 .nav-quicklinks {
     width: 100%;
-    background: $Ndark;
     position: relative;
     z-index:1000;
 
@@ -104,8 +103,12 @@
         margin-right: 1em;
     }
 
-    a {
+     a, a:visited {
         padding: 0;
+    }
+
+    ul.sub-menu {
+        display: none;
     }
 }
 

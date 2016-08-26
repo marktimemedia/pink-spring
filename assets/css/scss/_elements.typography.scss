@@ -55,7 +55,6 @@ h5, .h5,
 h6, .h6 {
     margin: 0;
     padding: 0;
-    font-family: $headingFont;
     line-height: $headingLineHeight;
     text-rendering:  optimizeLegibility;
     text-shadow: $headingTextShadow;
@@ -68,6 +67,7 @@ h6, .h6 {
 
 h1,
 .h1 {
+    font-family: $headingFont;
     margin-bottom: $headingMargin;
     color: $h1Color;
     @include rem-px('font-size', $h1Size);
@@ -80,6 +80,7 @@ h1,
 
 h2,
 .h2 {
+    font-family: $headingFont;
     margin-bottom: $headingMargin;
     color: $h2Color;
     @include rem-px('font-size', $h2Size);
@@ -92,6 +93,7 @@ h2,
 
 h3,
 .h3 {
+    font-family: $subheadingFont;
     margin-bottom: $headingMargin;
     color: $h3Color;
     @include rem-px('font-size', $h3Size);
@@ -104,6 +106,7 @@ h3,
 
 h4,
 .h4 {
+    font-family: $subheadingFont;
     margin-bottom: $headingMargin;
     color: $h4Color;
     @include rem-px('font-size', $h4Size);
@@ -116,6 +119,7 @@ h4,
 
 h5,
 .h5 {
+    font-family: $subheadingFont;
     margin-bottom: $headingMargin;
     color: $h5Color;
     @include rem-px('font-size', $h5Size);
@@ -128,8 +132,9 @@ h5,
 
 h6,
 .h6 {
+    font-family: $subheadingFont;
     margin-bottom: $headingMargin;
-    color: $h6Size;
+    color: $h6Color;
     @include rem-px('font-size', $h6Size);
     text-transform:uppercase;
 

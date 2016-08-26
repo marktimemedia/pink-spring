@@ -70,9 +70,11 @@ input[type="reset"] {
 
     &.alt {
         background-color: $buttonAltBackground;
+        border-color: $buttonAltBorderColor;
 
         &:hover, &:focus {
             background-color: $buttonAltBackground2;
+            border-color: $buttonAltBorderColor2;
         }
     }
 

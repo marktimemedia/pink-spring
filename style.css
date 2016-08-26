@@ -124,7 +124,6 @@ h5, .h5, #tribe-events .tribe-events-list-separator-month span, #tribe-events-da
 h6, .h6 {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
   line-height: 1.1;
   text-rendering: optimizeLegibility;
   text-shadow: none;
@@ -139,6 +138,7 @@ h6, .h6 {
 
 h1,
 .h1 {
+  font-family: sans-serif;
   margin-bottom: 1rem;
   color: #322e2f;
   font-size: 36px;
@@ -150,6 +150,7 @@ h1,
 
 h2,
 .h2 {
+  font-family: sans-serif;
   margin-bottom: 1rem;
   color: #635d61;
   font-size: 28px;
@@ -161,6 +162,7 @@ h2,
 
 h3,
 .h3 {
+  font-family: sans-serif;
   margin-bottom: 1rem;
   color: #635d61;
   font-size: 22.4px;
@@ -172,6 +174,7 @@ h3,
 
 h4,
 .h4 {
+  font-family: sans-serif;
   margin-bottom: 1rem;
   color: #948b90;
   font-size: 17.6px;
@@ -185,6 +188,7 @@ h5,
 .h5,
 #tribe-events .tribe-events-list-separator-month span,
 #tribe-events-day .tribe-events-day-time-slot h5 {
+  font-family: sans-serif;
   margin-bottom: 1rem;
   color: #afa8af;
   font-size: 17.6px;
@@ -198,8 +202,9 @@ h5,
 
 h6,
 .h6 {
+  font-family: sans-serif;
   margin-bottom: 1rem;
-  color: 0.875em;
+  color: #afa8af;
   font-size: 14px;
   font-size: 0.875rem;
   text-transform: uppercase; }
@@ -443,6 +448,12 @@ button,
 .button,
 li.woocommerce-MyAccount-navigation-link--customer-logout a,
 .global-button,
+.woocommerce .button,
+.woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a,
+li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce a,
+.woocommerce a.button,
+.woocommerce button,
+.woocommerce input.button,
 #tribe-events .tribe-events-button,
 #tribe-bar-form .tribe-bar-submit input[type=submit],
 input[type="button"],
@@ -464,6 +475,10 @@ input[type="reset"] {
   .button:hover,
   li.woocommerce-MyAccount-navigation-link--customer-logout a:hover,
   .global-button:hover,
+  .woocommerce .button:hover,
+  .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a:hover,
+  li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce a:hover,
+  .woocommerce button:hover,
   #tribe-events .tribe-events-button:hover,
   #tribe-bar-form .tribe-bar-submit input[type=submit]:hover,
   input[type="button"]:hover,
@@ -471,25 +486,52 @@ input[type="reset"] {
   input[type="reset"]:hover {
     background-color: #b1185f;
     border-bottom: 1px solid #e33284; }
-  button.alt,
+  button.alt, .woocommerce button.button.alt, .woocommerce button.alt,
   .button.alt,
+  .woocommerce .button.alt,
+  .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a.alt,
+  li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce a.alt,
+  .woocommerce a.button.alt,
+  .woocommerce input.button.alt,
   li.woocommerce-MyAccount-navigation-link--customer-logout a.alt,
   .global-button.alt,
+  .woocommerce .button.alt,
+  .woocommerce a.button.alt,
+  .woocommerce input.button.alt,
+  .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a.alt,
+  li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce a.alt,
+  .woocommerce button.alt,
   #tribe-events .alt.tribe-events-button,
   #tribe-bar-form .tribe-bar-submit input.alt[type=submit],
   input[type="button"].alt,
+  .woocommerce input[type="button"].button.alt,
   input[type="submit"].alt,
-  input[type="reset"].alt {
-    background-color: #635d61; }
+  .woocommerce input[type="submit"].button.alt,
+  input[type="reset"].alt,
+  .woocommerce input[type="reset"].button.alt {
+    background-color: #10aded;
+    border-color: #0b79a5; }
     button.alt:hover, button.alt:focus,
     .button.alt:hover,
+    .woocommerce a.button.alt:hover,
+    .woocommerce input.button.alt:hover,
     li.woocommerce-MyAccount-navigation-link--customer-logout a.alt:hover,
     .button.alt:focus,
+    .woocommerce a.button.alt:focus,
+    .woocommerce input.button.alt:focus,
     li.woocommerce-MyAccount-navigation-link--customer-logout a.alt:focus,
     .global-button.alt:hover,
+    .woocommerce .button.alt:hover,
+    .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a.alt:hover,
+    li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce a.alt:hover,
+    .woocommerce button.alt:hover,
     #tribe-events .alt.tribe-events-button:hover,
     #tribe-bar-form .tribe-bar-submit input.alt[type=submit]:hover,
     .global-button.alt:focus,
+    .woocommerce .button.alt:focus,
+    .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a.alt:focus,
+    li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce a.alt:focus,
+    .woocommerce button.alt:focus,
     #tribe-events .alt.tribe-events-button:focus,
     #tribe-bar-form .tribe-bar-submit input.alt[type=submit]:focus,
     input[type="button"].alt:hover,
@@ -498,11 +540,16 @@ input[type="reset"] {
     input[type="submit"].alt:focus,
     input[type="reset"].alt:hover,
     input[type="reset"].alt:focus {
-      background-color: #d4ccd4; }
+      background-color: #0d8abd;
+      border-color: #26b6f0; }
   button.neutral,
   .button.neutral,
   li.woocommerce-MyAccount-navigation-link--customer-logout a.neutral,
   .global-button.neutral,
+  .woocommerce .neutral.button,
+  .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a.neutral,
+  li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce a.neutral,
+  .woocommerce button.neutral,
   #tribe-events .tribe-events-button,
   #tribe-bar-form .tribe-bar-submit input[type=submit],
   input[type="button"].neutral,
@@ -515,9 +562,17 @@ input[type="reset"] {
     .button.neutral:focus,
     li.woocommerce-MyAccount-navigation-link--customer-logout a.neutral:focus,
     .global-button.neutral:hover,
+    .woocommerce .neutral.button:hover,
+    .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a.neutral:hover,
+    li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce a.neutral:hover,
+    .woocommerce button.neutral:hover,
     #tribe-events .tribe-events-button:hover,
     #tribe-bar-form .tribe-bar-submit input[type=submit]:hover,
     .global-button.neutral:focus,
+    .woocommerce .neutral.button:focus,
+    .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a.neutral:focus,
+    li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce a.neutral:focus,
+    .woocommerce button.neutral:focus,
     #tribe-events .tribe-events-button:focus,
     #tribe-bar-form .tribe-bar-submit input[type=submit]:focus,
     input[type="button"].neutral:hover,
@@ -533,9 +588,17 @@ input[type="reset"] {
   .button:focus,
   li.woocommerce-MyAccount-navigation-link--customer-logout a:focus,
   .global-button:active,
+  .woocommerce .button:active,
+  .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a:active,
+  li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce a:active,
+  .woocommerce button:active,
   #tribe-events .tribe-events-button:active,
   #tribe-bar-form .tribe-bar-submit input[type=submit]:active,
   .global-button:focus,
+  .woocommerce .button:focus,
+  .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a:focus,
+  li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce a:focus,
+  .woocommerce button:focus,
   #tribe-events .tribe-events-button:focus,
   #tribe-bar-form .tribe-bar-submit input[type=submit]:focus,
   input[type="button"]:active,
@@ -674,7 +737,7 @@ figcaption {
       padding-left: 0; }
     .content-main:nth-of-type(2n+2) {
       padding-right: 0; } }
-@media only screen and (min-width: 83.5em) {
+@media only screen and (min-width: 75.5em) {
   .content {
     margin: 0 auto;
     padding-top: 150px; }
@@ -822,7 +885,7 @@ figcaption {
     width: 100% !important;
     height: 100% !important; }
 
-.embed-container {
+.embed-container, .entry-content-asset {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
@@ -861,7 +924,6 @@ figcaption {
 /* 06. COMPONENTS */
 .nav-quicklinks {
   width: 100%;
-  background: #635d61;
   position: relative;
   z-index: 1000; }
   .nav-quicklinks .menu-item a, .nav-quicklinks .menu-item a:visited {
@@ -928,8 +990,10 @@ figcaption {
   .footer--menu li {
     display: inline-block;
     margin-right: 1em; }
-  .footer--menu a {
+  .footer--menu a, .footer--menu a:visited {
     padding: 0; }
+  .footer--menu ul.sub-menu {
+    display: none; }
 
 @media only screen and (max-width: 48.5em) {
   .nav-main {
@@ -1086,6 +1150,7 @@ figcaption {
 
 .header--quicklinks {
   padding: 0.5em 1rem;
+  background: #635d61;
   position: relative;
   z-index: 1000; }
 
@@ -1204,8 +1269,8 @@ figcaption {
       -ms-transition: padding .5s, margin .5s;
       -o-transition: padding .5s, margin .5s;
       transition: padding .5s, margin .5s; } }
-@media only screen and (min-width: 83.5em) {
-  .header--inner, .header--quicklinks {
+@media only screen and (min-width: 75.5em) {
+  .header--inner, .nav-quicklinks {
     display: block;
     margin-left: auto;
     margin-right: auto; }
@@ -1362,7 +1427,7 @@ figcaption {
     max-width: 1296px;
     max-width: 81rem;
     padding: 0 3rem; } }
-@media only screen and (min-width: 83.5em) {
+@media only screen and (min-width: 75.5em) {
   .footer--inner {
     display: block;
     margin-left: auto;
@@ -1458,17 +1523,11 @@ figcaption {
 
 .search-form {
   position: relative;
-  width: -moz-calc(100% - 7em);
-  width: -webkit-calc(100% - 7em);
-  width: calc(100% - 7em);
-  max-width: 30em;
-  padding: .5em 0; }
+  width: 100%; }
   .search-form label {
     display: none; }
 
 .textbox.search--textbox {
-  max-width: 480px;
-  max-width: 30rem;
   margin: 0;
   padding: .5em 2.25em .5em .25em;
   border: 1px solid #d4ccd4; }
@@ -1478,29 +1537,70 @@ figcaption {
   right: 0;
   top: 0;
   bottom: 0;
-  width: 2em;
-  padding: 0;
-  margin: .5em 0;
+  padding: .5em;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  background: url(assets/img/search-icon.png) no-repeat 50% 45%;
+  background: #f4f2f3;
   border: 1px solid #d4ccd4;
   border-left: 0;
-  text-shadow: none;
-  text-indent: 1000%;
-  white-space: nowrap;
-  overflow: hidden; }
+  color: #948b90;
+  font-size: .7em;
+  font-weight: bold; }
+  .search--button:hover {
+    color: #fff; }
 
 .sidebar .search-form {
   width: 100%;
   max-width: inherit;
   margin: 0; }
 
+.search-toggle {
+  padding: .5em;
+  background-color: #de1e7e;
+  border: none;
+  float: right;
+  color: #fff;
+  -webkit-transition: padding 0.8s;
+  -moz-transition: padding 0.8s;
+  -ms-transition: padding 0.8s;
+  -o-transition: padding 0.8s;
+  transition: padding 0.8s; }
+  .search-toggle:hover {
+    background-color: #b11865;
+    border: none; }
+
+.header-main .search-form {
+  max-height: 0;
+  margin: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s; }
+
+.header-main .search-form.search-expanded {
+  max-height: 3em;
+  margin: .4em 0;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s; }
+
 @media only screen and (min-width: 48.5em) {
+  .search-toggle {
+    display: none !important; }
+
   .header-main .search-form {
     clear: both;
     float: right;
-    width: 15em;
-    margin-right: 1.375em; } }
+    width: 20em;
+    max-height: 3em;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    transition: all 0.8s; } }
 .post, .archive {
   *zoom: 1;
   margin-bottom: 5em; }
@@ -1681,6 +1781,16 @@ section.comments {
     width: -moz-calc(100% - 5rem);
     width: -webkit-calc(100% - 5rem);
     width: calc(100% - 5rem); } }
+.woocommerce .content {
+  *zoom: 1; }
+  .woocommerce .content:before, .woocommerce .content:after {
+    display: table;
+    content: ""; }
+  .woocommerce .content:after {
+    clear: both; }
+.woocommerce div.product div.images img {
+  max-height: 40em; }
+
 .woocommerce-MyAccount-navigation ul {
   list-style: none;
   margin-left: 0;

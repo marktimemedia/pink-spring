@@ -2,20 +2,22 @@
 // Does not affect the colors shown in User Profile color selector (st-admin-color-scheme.php on line 39)
 // Additional variables found in admin/_variables.scss
 
+@import "assets/css/scss/settings.colors";
+
 // Generic neutral color
-$neutral-color: #000;
+$neutral-color: $Ndarkest;
 
 // Admin Menu main background color
 $base-color: $neutral-color;
 
 // Admin Menu main highlight color
-$highlight-color: #de1e7e;
+$highlight-color: $springColor1;
 
 // Admin menu default text color
-$text-color: #aaa;
+$text-color: $Nlighter;
 
 // Primary admin menu highlighted text color
-$current-text-color: $neutral-color;
+$current-text-color: $Nlightest;
 
 // Primary admin menu icon color
 $icon-color: $text-color;
@@ -36,14 +38,11 @@ $link-focus: lighten( $link, 20% );
 $button-color: $action-color;
 
 // Global Error Color (usually red)
-$error-color: red;
+$error-color: $warningColor;
 
 
 
 
-
-// Primary Admin menu selected text color
-$current-text-color: $neutral-color;
 
 // Primary Admin menu hover color
 $menu-highlight-text: $link-focus;
@@ -61,10 +60,10 @@ $menu-submenu-background: darken( $highlight-color, 55% );
 
 
 // Body background color (by default based off base color)
-$body-background: lighten($base-color, 10%);
+$body-background: $Nlightest;
 
 // Body text color (by default based off neutral color)
-$body-text: lighten($neutral-color, 75%);
+$body-text: lighten($neutral-color, 15%);
 $body-secondary-text: darken($body-text, 20%);
 
 // Metaboxes

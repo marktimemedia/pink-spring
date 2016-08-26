@@ -1,8 +1,6 @@
 .search-form {
     position: relative;
-    @include css3-calc('width', '100% - 7em');
-    max-width: 30em;
-    padding:.5em 0;
+    width: 100%;
 
     label {
         display: none;
@@ -10,7 +8,6 @@
 }
 
     .textbox.search--textbox {
-        @include rem-px('max-width', 30rem);
         margin: 0;
         padding: .5em 2.25em .5em .25em;
         border: 1px solid $Nlighter;
@@ -21,14 +18,20 @@
         right: 0;
         top: 0;
         bottom: 0;
-        width: 2em;
-        padding: 0;
-        margin:.5em 0;
+        //width: 2em;
+        padding: .5em;
         @include clearIeGradient();
-        background: url(assets/img/search-icon.png) no-repeat 50% 45%;
+        background: $Nlightest;
         border: 1px solid $Nlighter;
         border-left: 0;
-        @include hide-text();
+        color: $Nmid;
+        font-size: .7em;
+        font-weight: bold;
+        //@include hide-text();
+
+        &:hover {
+            color: $white;
+        }
     }
 
 .sidebar {
@@ -39,13 +42,45 @@
     }
 }
 
+.search-toggle {
+    padding: .5em;
+    background-color: $linkColor;
+    border: none;
+    float: right;
+    color: $white;
+    @include transition(padding .8s);
+
+    &:hover {
+        background-color: darken($linkColor, 10%);
+        border: none;
+    }
+}
+
+.header-main .search-form {
+    max-height: 0;
+    margin: 0;
+    overflow: hidden;
+    @include transition(all .8s);
+}
+
+    .header-main .search-form.search-expanded {
+        max-height: 3em;
+        margin: .4em 0;
+        @include transition(all .8s);
+    }
 
 
 @media only screen and (min-width: #{$midBreakpoint}) {
+
+    .search-toggle {
+        display: none !important;
+    }
+
     .header-main .search-form {
         clear: both;
         float: right;
-        width: 15em;
-        margin-right: 1.375em;
+        width: 20em;
+        max-height: 3em;
+        @include transition(all .8s);
     }
 }
