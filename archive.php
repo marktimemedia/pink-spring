@@ -10,4 +10,4 @@
     <?php if ( $wp_query->max_num_pages > 1 ) : ?>
         <?php get_template_part( 'templates/pagination' ); ?>
     <?php endif; ?>
-<section class="content--page">
+</section>

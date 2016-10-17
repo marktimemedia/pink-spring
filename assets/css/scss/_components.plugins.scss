@@ -51,6 +51,13 @@
         }
     }
 
+// Gravity Forms
+.gform_wrapper {
+    .field_sublabel_below .ginput_complex.ginput_container label, .field_sublabel_below div[class*=gfield_time_].ginput_container label {
+        margin-bottom: 1.2em;
+    }
+}
+
 // Events Calendar
 
 #tribe-events {

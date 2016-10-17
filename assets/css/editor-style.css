@@ -296,6 +296,8 @@ address {
 /* FORMS */
 label {
   font-size: 1.125em;
+  font-family: sans-serif;
+  font-weight: 300;
   color: #464144; }
 
 input[type="text"],
@@ -316,11 +318,13 @@ textarea,
   width: 100%;
   max-width: 100%;
   padding: 0.5em;
-  margin-bottom: 1.625em;
+  margin-bottom: .7em;
   background-color: #fff;
-  border: 1px solid #d4ccd4;
+  border: 1px solid #afa8af;
   color: #464144;
-  font-size: .875em; }
+  font-size: .875em;
+  font-family: sans-serif;
+  font-weight: 300; }
   input[type="text"]:active, input[type="text"]:focus,
   input[type="date"]:active,
   input[type="date"]:focus,

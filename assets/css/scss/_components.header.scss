@@ -6,8 +6,7 @@
     .header--inner {
         background-color: $bodyColor;
         border-bottom: 1px solid $Nlightest;
-        padding: 0; 
-        position: relative;  
+        padding: 0;  
         top: 0;
         @include transition(all .8s); 
         z-index:999;
@@ -31,6 +30,10 @@
         a {
             display: block;
         }
+
+        img {
+            max-width:9em;
+         }
 
         .header-logo {
             display: none;
@@ -77,10 +80,6 @@
     .header--blog-name {
         width: inherit;
         @include rem-px('padding', 1rem, 0);
-        
-        img {
-            max-width:9em;
-         }
     }
 }
 
@@ -92,7 +91,7 @@
         border-bottom: 1px solid $Nlightest;
     }
 
-        .header--inner, .header--quicklinks {
+        .header--inner, .nav-quicklinks {
             @include clearfix();
             @include rem-px('max-width', $boxedMax);
             padding-left: $maxPadding;
@@ -101,6 +100,7 @@
 
         .header--inner {
             border: 0;
+            position: relative; 
         }
             .header--blog-name {
                 float: left;

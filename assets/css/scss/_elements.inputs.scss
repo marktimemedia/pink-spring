@@ -1,6 +1,8 @@
 /* FORMS */
 label {
     font-size: $labelFontSize;
+    font-family: $subheadingFont;
+    font-weight: $baseFontWeight;
     color: $labelColor;
 }
 
@@ -22,11 +24,13 @@ textarea,
     width: 100%;
     max-width: $textboxMaxWidth;
     padding: $textboxPadding;
-    margin-bottom: $baselineHeight;
+    margin-bottom: .7em;
     background-color: $textboxBackground;
     border: $textboxBorderWidth $textboxBorderStyle $textboxBorderColor;
     color: $textboxColor;
     font-size: .875em;
+    font-family: $baseFont;
+    font-weight: $baseFontWeight;
 
     &:active,
     &:focus {
