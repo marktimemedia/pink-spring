@@ -160,6 +160,8 @@ li {
   margin: .3em 0; }
   li h1, li h2, li h3, li h4, li h5, li h6 {
     margin-bottom: .2em; }
+  li span {
+    vertical-align: text-top; }
 
 blockquote {
   border-left: 0 solid #d4ccd4;
@@ -284,8 +286,7 @@ address {
   line-height: inherit; }
 
 span {
-  display: inline-block;
-  vertical-align: text-top; }
+  display: inline-block; }
 
 /* SELECTION */
 ::-moz-selection {
