@@ -3,19 +3,19 @@
 /* 03. GENERIC */
 /* 04. ELEMENTS */
 p {
+  color: #464144;
   font-family: sans-serif;
   font-size: 100%;
-  line-height: 1.625em;
-  color: #464144;
-  letter-spacing: 0px;
   font-weight: 300;
+  letter-spacing: 0px;
+  line-height: 1.625em;
   text-rendering: optimizeLegibility; }
 
 /* Links */
 a {
   color: #de1e7e;
-  text-decoration: none;
   cursor: pointer;
+  text-decoration: none;
   transition: color .3s; }
   a:hover {
     color: #ec76b1;
@@ -23,8 +23,8 @@ a {
     border: 0;
     outline: 0; }
   a:focus, a:active {
-    color: #e95fa4;
     border: 0;
+    color: #e95fa4;
     outline: 0; }
   a img {
     border: 0;
@@ -39,12 +39,12 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
+  letter-spacing: 0px;
+  line-height: 1.1;
   margin: 0;
   padding: 0;
-  line-height: 1.1;
   text-rendering: optimizeLegibility;
-  text-shadow: none;
-  letter-spacing: 0px; }
+  text-shadow: none; }
   h1 *, .h1 *,
   h2 *, .h2 *,
   h3 *, .h3 *,
@@ -55,72 +55,73 @@ h6, .h6 {
 
 h1,
 .h1 {
-  font-family: sans-serif;
-  margin-bottom: 1rem;
   color: #322e2f;
+  font-family: sans-serif;
+  font-weight: 200;
+  margin-bottom: 1rem;
   font-size: 36px;
-  font-size: 2.25rem;
-  font-weight: 200; }
+  font-size: 2.25rem; }
   h1 a,
   .h1 a {
     font-weight: 200; }
 
 h2,
 .h2 {
-  font-family: sans-serif;
-  margin-bottom: 1rem;
   color: #635d61;
+  font-family: sans-serif;
+  font-weight: 200;
+  margin-bottom: 1rem;
   font-size: 28px;
-  font-size: 1.75rem;
-  font-weight: 200; }
+  font-size: 1.75rem; }
   h2 a,
   .h2 a {
     font-weight: 200; }
 
 h3,
 .h3 {
-  font-family: sans-serif;
-  margin-bottom: 1rem;
   color: #635d61;
+  font-family: sans-serif;
+  font-weight: 300;
+  margin-bottom: 1rem;
   font-size: 22.4px;
-  font-size: 1.4rem;
-  font-weight: 300; }
+  font-size: 1.4rem; }
   h3 a,
   .h3 a {
     font-weight: 300; }
 
 h4,
 .h4 {
-  font-family: sans-serif;
-  margin-bottom: 1rem;
   color: #948b90;
+  font-family: sans-serif;
+  font-weight: 500;
+  margin-bottom: 1rem;
   font-size: 17.6px;
-  font-size: 1.1rem;
-  font-weight: 500; }
+  font-size: 1.1rem; }
   h4 a,
   .h4 a {
     font-weight: 500; }
 
 h5,
 .h5 {
-  font-family: sans-serif;
-  margin-bottom: 1rem;
   color: #afa8af;
+  font-family: sans-serif;
+  font-weight: 500;
+  margin-bottom: 1rem;
   font-size: 17.6px;
-  font-size: 1.1rem;
-  font-weight: 500; }
+  font-size: 1.1rem; }
   h5 a,
   .h5 a {
     font-weight: 500; }
 
 h6,
 .h6 {
-  font-family: sans-serif;
-  margin-bottom: 1rem;
   color: #afa8af;
+  font-family: sans-serif;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
   font-size: 14px;
-  font-size: 0.875rem;
-  text-transform: uppercase; }
+  font-size: 0.875rem; }
   h6 a,
   .h6 a {
     font-weight: 500; }
@@ -129,8 +130,8 @@ h6,
 ol,
 ul,
 dl {
-  margin-bottom: 1.625em;
-  line-height: 1.625em; }
+  line-height: 1.625em;
+  margin-bottom: 1.625em; }
 
 p,
 address {
@@ -141,9 +142,9 @@ small {
 
 ul,
 ol {
+  color: #464144;
   font-family: sans-serif;
   font-size: 100%;
-  color: #464144;
   letter-spacing: 0px;
   margin-left: 1em;
   padding: 0 0 0 1em; }
@@ -154,34 +155,34 @@ ol {
     margin-bottom: 0; }
 
 li {
-  line-height: 1.625em;
   font-weight: 300;
+  line-height: 1.625em;
   margin: .3em 0; }
   li h1, li h2, li h3, li h4, li h5, li h6 {
     margin-bottom: .2em; }
 
 blockquote {
-  margin-bottom: 14px;
-  margin-bottom: 0.875rem;
-  padding-left: 0;
   border-left: 0 solid #d4ccd4;
   color: #948b90;
   font-family: sans-serif;
-  font-size: 20px;
-  font-size: 1.25rem;
   font-style: italic;
   font-weight: 200;
-  line-height: 1.3em; }
+  line-height: 1.3em;
+  padding-left: 0;
+  font-size: 20px;
+  font-size: 1.25rem;
+  margin-bottom: 14px;
+  margin-bottom: 0.875rem; }
   blockquote * {
     font-family: sans-serif;
-    font-size: 20px;
-    font-size: 1.25rem;
     font-style: italic;
-    font-weight: 200; }
+    font-weight: 200;
+    font-size: 20px;
+    font-size: 1.25rem; }
 
 q {
-  font-weight: inherit;
-  font-style: italic; }
+  font-style: italic;
+  font-weight: inherit; }
 
 cite {
   font-weight: inherit; }
@@ -234,14 +235,14 @@ kbd,
 samp,
 var,
 tt {
-  margin: 1em 0;
-  padding: 0.5em;
   background-color: #f4f2f3;
   border: 0;
+  color: #464144;
   font-family: monospace;
   font-size: 0.875em;
-  color: #464144;
-  line-height: 1.625em; }
+  line-height: 1.625em;
+  margin: 1em 0;
+  padding: 0.5em; }
 
 code, kbd, var, tt {
   display: inline-block; }
@@ -256,9 +257,9 @@ pre {
 
 sub,
 sup {
-  position: relative;
   font-size: .75em;
   line-height: 0;
+  position: relative;
   vertical-align: middle; }
 
 sup {
@@ -268,12 +269,12 @@ sub {
   bottom: -.25em; }
 
 hr {
-  display: block;
-  margin: 1em 0;
-  padding: 0;
-  height: 1px;
+  background-color: #d4ccd4;
   border: 0;
-  background-color: #d4ccd4; }
+  display: block;
+  height: 1px;
+  margin: 1em 0;
+  padding: 0; }
 
 abbr, acronym {
   font-weight: inherit; }
@@ -281,6 +282,10 @@ abbr, acronym {
 address {
   font-weight: inherit;
   line-height: inherit; }
+
+span {
+  display: inline-block;
+  vertical-align: text-top; }
 
 /* SELECTION */
 ::-moz-selection {

@@ -1,10 +1,10 @@
-p {
+p {  
+    color: $textColor;
     font-family: $baseFont;
     font-size: $baseFontSize;
-    line-height: $baselineHeight;
-    color: $textColor;
-    letter-spacing: $baseLetterSpace;
     font-weight: $baseFontWeight;
+    letter-spacing: $baseLetterSpace;
+    line-height: $baselineHeight;
     text-rendering:  optimizeLegibility;
 }
 
@@ -12,8 +12,8 @@ p {
 
 a {
     color: $linkColor;
-    text-decoration: none;
     cursor: pointer;
+    text-decoration: none;
     transition: color .3s;
 
     &:hover {
@@ -30,8 +30,8 @@ a {
 
     &:focus,
     &:active {
-        color: $linkFocus;
         border: 0;
+        color: $linkFocus;
         outline: 0;
     }
 
@@ -53,12 +53,12 @@ h3, .h3,
 h4, .h4, 
 h5, .h5,
 h6, .h6 {
+    letter-spacing: $headingLetterSpace;
+    line-height: $headingLineHeight;
     margin: 0;
     padding: 0;
-    line-height: $headingLineHeight;
     text-rendering:  optimizeLegibility;
-    text-shadow: $headingTextShadow;
-    letter-spacing: $headingLetterSpace;
+    text-shadow: $headingTextShadow; 
 
     * {
         line-height: $headingLineHeight;
@@ -67,11 +67,11 @@ h6, .h6 {
 
 h1,
 .h1 {
-    font-family: $headingFont;
-    margin-bottom: $headingMargin;
     color: $h1Color;
-    @include rem-px('font-size', $h1Size);
+    font-family: $headingFont;
     font-weight: $h1FontWeight;
+    margin-bottom: $headingMargin;
+    @include rem-px('font-size', $h1Size);
 
     a {
         font-weight: $h1FontWeight;
@@ -80,11 +80,11 @@ h1,
 
 h2,
 .h2 {
-    font-family: $headingFont;
-    margin-bottom: $headingMargin;
     color: $h2Color;
-    @include rem-px('font-size', $h2Size);
+    font-family: $headingFont;
     font-weight: $h2FontWeight;
+    margin-bottom: $headingMargin;
+    @include rem-px('font-size', $h2Size);
 
     a {
         font-weight: $h2FontWeight;
@@ -93,11 +93,11 @@ h2,
 
 h3,
 .h3 {
-    font-family: $subheadingFont;
-    margin-bottom: $headingMargin;
     color: $h3Color;
-    @include rem-px('font-size', $h3Size);
+    font-family: $subheadingFont;
     font-weight: $h3FontWeight;
+    margin-bottom: $headingMargin;
+    @include rem-px('font-size', $h3Size);
 
     a {
         font-weight: $h3FontWeight;
@@ -106,11 +106,11 @@ h3,
 
 h4,
 .h4 {
-    font-family: $subheadingFont;
-    margin-bottom: $headingMargin;
     color: $h4Color;
-    @include rem-px('font-size', $h4Size);
+    font-family: $subheadingFont;
     font-weight: $h4FontWeight;
+    margin-bottom: $headingMargin;
+    @include rem-px('font-size', $h4Size);
 
     a {
         font-weight: $h4FontWeight;
@@ -119,11 +119,11 @@ h4,
 
 h5,
 .h5 {
-    font-family: $subheadingFont;
-    margin-bottom: $headingMargin;
     color: $h5Color;
-    @include rem-px('font-size', $h5Size);
+    font-family: $subheadingFont;
     font-weight: $h5FontWeight;
+    margin-bottom: $headingMargin;
+    @include rem-px('font-size', $h5Size);
 
     a {
         font-weight: $h5FontWeight;
@@ -132,11 +132,12 @@ h5,
 
 h6,
 .h6 {
-    font-family: $subheadingFont;
-    margin-bottom: $headingMargin;
     color: $h6Color;
-    @include rem-px('font-size', $h6Size);
+    font-family: $subheadingFont;
+    font-weight: $h6FontWeight;
+    margin-bottom: $headingMargin;
     text-transform:uppercase;
+    @include rem-px('font-size', $h6Size);
 
     a {
         font-weight: $h6FontWeight;
@@ -148,8 +149,8 @@ h6,
 ol,
 ul,
 dl {
-    margin-bottom: $baselineHeight;
     line-height: $baselineHeight;
+    margin-bottom: $baselineHeight; 
 }
 
 p,
@@ -163,9 +164,9 @@ small {
 
 ul,
 ol {
+    color: $textColor;
     font-family: $baseFont;
     font-size: $baseFontSize;
-    color: $textColor;
     letter-spacing: $baseLetterSpace;
     margin-left: 1em;
     padding: 0 0 0 $gutter;
@@ -177,8 +178,8 @@ ol {
 }
 
     li {
-        line-height: $baselineHeight;
         font-weight: $baseFontWeight;
+        line-height: $baselineHeight;
         margin: .3em 0;
 
         h1, h2, h3, h4, h5, h6 {
@@ -187,27 +188,27 @@ ol {
     }
 
 blockquote {
-    @include rem-px('margin-bottom', $blockquoteMarginBottom);
-    padding-left: $blockquotePaddingLeft;
     border-left: $blockquoteBorderWidth $blockquoteBorderStyle $blockquoteBorderColor;
     color: $blockquoteColor;
     font-family: $blockquoteFontFamily;
-    @include rem-px('font-size', $blockquoteFontSize);
     font-style: $blockquoteFontStyle;
     font-weight: $blockquoteFontWeight;
     line-height: 1.3em;
+    padding-left: $blockquotePaddingLeft;
+    @include rem-px('font-size', $blockquoteFontSize);
+    @include rem-px('margin-bottom', $blockquoteMarginBottom);
 
     * {
         font-family: $blockquoteFontFamily;
-        @include rem-px('font-size', $blockquoteFontSize);
         font-style: $blockquoteFontStyle;
         font-weight: $blockquoteFontWeight;
+        @include rem-px('font-size', $blockquoteFontSize);
     }
 }
 
 q {
-    font-weight: inherit;
     font-style: italic;
+    font-weight: inherit;
 }
 
 cite {
@@ -271,14 +272,14 @@ kbd,
 samp,
 var,
 tt {
-    margin: $codeMargin;
-    padding: $codePadding;
     background-color: $codeBackground;
     border: $codeBorder;
+    color: $codeColor;
     font-family: $codeFontFamily;
     font-size: $codeFontSize;
-    color: $codeColor;
     line-height: $baselineHeight;
+    margin: $codeMargin;
+    padding: $codePadding;
 }
 
 code, kbd, var, tt {
@@ -297,9 +298,9 @@ pre {
 
 sub,
 sup {
-    position: relative;
     font-size: .75em;
     line-height: 0;
+    position: relative;
     vertical-align: middle;
 }
 
@@ -312,12 +313,12 @@ sub {
 }
 
 hr {
-    display: block;
-    margin: 1em 0;
-    padding: 0;
-    height: 1px;
-    border: 0;
     background-color: $Nlighter;
+    border: 0;
+    display: block;
+    height: 1px;
+    margin: 1em 0;
+    padding: 0; 
 }
 
 abbr, acronym {
@@ -327,6 +328,11 @@ abbr, acronym {
 address {
     font-weight: inherit;
     line-height: inherit;
+}
+
+span {
+    display: inline-block;
+    vertical-align: text-top;
 }
 
 /* SELECTION */
