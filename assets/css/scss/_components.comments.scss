@@ -1,24 +1,24 @@
 section.comments {
-    margin-top: 2em;
     border-top: 1px solid $Nlighter;
+    margin-top: 2em;
     padding-top: 1em;
 }
 
     .comments--list {
+        list-style: none;
         margin: 0;
         padding: 0;
-        list-style: none;
 
         ul.comment,
         ol.comment {
-            margin-left: 0;
-            margin-bottom: 0;
-            padding: 0;
-            @include rem-px('padding-left', 2.5rem);
             border-left: 1px solid $Nlighter;
             border-top: 1px solid $Nlightest;
             border-bottom: 1px solid $Nlightest;
             list-style: none;
+            margin-left: 0;
+            margin-bottom: 0;
+            padding: 0;
+            @include rem-px('padding-left', 2.5rem);
         }
     }
 
@@ -40,19 +40,17 @@ section.comments {
 
             .avatar {
                 float: left;
-                @include rem-px('width', 2rem);
                 @include rem-px('height', 2rem);
                 @include rem-px('margin-right', .25rem);
+                @include rem-px('width', 2rem);
             }
         }
 
             .comment--body {
                 float: right;
+                margin-bottom: 1.5em;
                 width: 60%;
                 @include css3-calc('width', '100% - 2.5rem');
-                margin-bottom: 1.5em;
-
-
             }
 
                 .comment--name {
@@ -80,8 +78,8 @@ section.comments {
                 }
 
     .comments--respond {
-        margin-top: 2em;
         border-top: 1px solid $Nlighter;
+        margin-top: 2em;
         padding-top: 1em;
     }
         .comment-subscription-form {
@@ -106,9 +104,9 @@ section.comments {
 
         .comment {
             .avatar {
-                @include rem-px('width', 4rem);
                 @include rem-px('height', 4rem);
                 @include rem-px('margin-right', 1rem);
+                @include rem-px('width', 4rem);
             }
         }
 

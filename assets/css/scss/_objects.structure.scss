@@ -1,12 +1,12 @@
 .wrapper {
-    position: relative;
+    background: $bodyColor;
+    @include rem-px('font-size', $textFontSize);
     min-height: 100%;
     margin-top: -1px;
-    padding-top: 1px;
-    background: $bodyColor;
     overflow: hidden;
-    @include multi-transition('margin-left .2s ease-out, margin-right .2s ease-out, left .2s ease-out');
-    @include rem-px('font-size', $textFontSize);
+    padding-top: 1px;
+    position: relative;
+    @include multi-transition('margin-left .2s ease-out, margin-right .2s ease-out, left .2s ease-out'); 
 }
 
 

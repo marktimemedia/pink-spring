@@ -28,7 +28,7 @@ class Spring_Sidebar {
   }
 
   private function check_conditional_tag( $conditional_tag ) {
-    if (is_array( $conditional_tag ) ) {
+    if ( is_array( $conditional_tag ) ) {
       return $conditional_tag[0]( $conditional_tag[1] );
     } else {
       return $conditional_tag();

@@ -24,7 +24,7 @@ if ( have_comments() && !is_page() && post_type_supports( get_post_type(), 'comm
             </nav>
         <?php endif; ?>
 
-        <?php if ( !comments_open() && !is_page() && post_type_supports( get_post_type(), 'comments') ) : ?>
+        <?php if ( !comments_open() && !is_page() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
             <div class="alert alert-warning">
                 <?php _e( 'Comments are closed.', 'spring' ); ?>
             </div>

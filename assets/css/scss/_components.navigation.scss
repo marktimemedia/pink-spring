@@ -1,7 +1,7 @@
 .nav-quicklinks {
     width: 100%;
     position: relative;
-    z-index:1000;
+    z-index: 1000;
 
     .menu-item {
 
@@ -48,11 +48,11 @@
     }
 
 .nav-main {
+    padding: 1em;
 	position: absolute;
     right: 100%;
     top: 0;
     width: 80%;
-    padding: 1em;
 
     ul {
         list-style: none;
@@ -78,10 +78,10 @@
 
             a,
             a:visited {
+                color: $linkColor;
                 display: block;
                 padding: .5em 0;
                 @include transition(color .2s);
-                color: $linkColor;
 
                 &:hover {
                     color: darken($linkColor, 10%);
@@ -94,9 +94,9 @@
         }
 
 .footer--menu {
+    list-style: none;
     margin: 1em 0 0 0;
     padding: 0;
-    list-style: none;
 
     li {
         display: inline-block;
@@ -115,21 +115,21 @@
 
 @media only screen and (max-width: #{$midBreakpoint}) {
     .nav-main {
+        padding: 2em;
         position: absolute;
         right: 100%;
         top: 0;
         width: $sidebarWidthMid;
-        padding: 2em;
 
         #closeSidebar {
-            display:inline-block;
-            font-size: 1.8em;
-            margin-top: .75em;
-            border-radius: 50%;
-            line-height:1;
-            padding:0 .3em;
-            color: $linkColor;
             border: 1px solid $linkColor;
+            border-radius: 50%;
+            color: $linkColor;
+            display: inline-block;
+            font-size: 1.8em;
+            line-height: 1;
+            margin-top: .75em;
+            padding: 0 .3em;
         }
     }
 }
@@ -148,14 +148,14 @@
 
     .nav-main {
         float: right;
-        position: relative;
+        height: 3em;
         left: auto;
-        right: auto;
-        top: auto;
-        width: auto;
-        text-transform: uppercase;
         padding: 0;
-        height:3em;
+        position: relative;
+        right: auto;
+        text-transform: uppercase;
+        top: auto;
+        width: auto;  
     }
          .menu-main-menu-container {
             height:100%;

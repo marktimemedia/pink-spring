@@ -8,24 +8,22 @@
 }
 
     .textbox.search--textbox {
-        margin: 0;
-        padding: .5em 2.25em .5em .25em;
         border: 0;
+        margin: 0;
+        padding: .5em 2.25em .5em .25em;  
     }
 
     .search--button {
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        //width: 2em;
-        padding: .5em;
-        @include clearIeGradient();
         background: $linkColor;
+        bottom: 0;
         color: $white;
         font-size: .7em;
         font-weight: bold;
         //@include hide-text();
+        padding: .5em;
+        position: absolute;
+        right: 0;
+        top: 0;
 
         &:hover {
             color: $white;
@@ -33,19 +31,19 @@
     }
 
 .sidebar {
-    .search-form {
-        width: 100%;
+    .search-form { 
         max-width: inherit;
         margin: 0;
+        width: 100%;
     }
 }
 
 .search-toggle {
-    padding: .5em;
     background-color: $linkColor;
     border: none;
-    float: right;
     color: $white;
+    float: right;
+    padding: .5em;
     @include transition(padding .8s);
 
     &:hover {
@@ -55,16 +53,16 @@
 }
 
 .header-main .search-form {
-    max-height: 0;
     margin: 0;
-    padding-bottom: 0;
+    max-height: 0;
     overflow: hidden;
+    padding-bottom: 0;
     @include transition(all .8s);
 }
 
     .header-main .search-form.search-expanded {
-        max-height: 3em;
         margin: .4em 0 0;
+        max-height: 3em;
         padding-bottom: .4em;
         @include transition(all .8s);
 
@@ -83,8 +81,8 @@
     .header-main .search-form {
         clear: both;
         float: right;
-        width: 20em;
         max-height: 3em;
         @include transition(all .8s);
+        width: 20em;
     }
 }

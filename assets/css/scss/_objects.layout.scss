@@ -10,14 +10,14 @@
 @media only screen and (min-width: #{$smallBreakpoint}) {
     .alignright {
         float: right;
+        @include rem-px('margin', 0, 0, .5rem, 1rem);
         max-width: 50%;
-        margin: 0 0 .5em 1em;
     }
 
     .alignleft {
         float: left;
+        @include rem-px('margin', 0, 1rem, .5rem, 0);
         max-width: 50%;
-        margin: 0 1em .5em 0;
     }
 
     .aligncenter {
@@ -28,7 +28,7 @@
 
     .alignnone {
         float: none;
+        @include rem-px('margin', .5em, 0);
         max-width: 100%;
-        margin: .5em 0;
     }
 }

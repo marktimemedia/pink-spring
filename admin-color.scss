@@ -8,7 +8,7 @@
 $neutral-color: $Ndarkest;
 
 // Admin Menu main background color
-$base-color: $neutral-color;
+$base-color: darken($neutral-color, 5%);
 
 // Admin Menu main highlight color
 $highlight-color: $springColor1;
@@ -40,6 +40,11 @@ $button-color: $action-color;
 // Global Error Color (usually red)
 $error-color: $warningColor;
 
+// Global Positive Color (usually green)
+$positive-color: green;
+
+// Global Alert Color (usually orange)
+$alert-color: orange;
 
 
 
@@ -60,11 +65,12 @@ $menu-submenu-background: darken( $highlight-color, 55% );
 
 
 // Body background color (by default based off base color)
-$body-background: $Nlightest;
+$body-background: $Ndarkest;
 
 // Body text color (by default based off neutral color)
-$body-text: lighten($neutral-color, 15%);
+$body-text: $Nlightest;
 $body-secondary-text: darken($body-text, 20%);
+$body-icon: $body-secondary-text;
 
 // Metaboxes
 $body-metabox: lighten($body-background, 5%);

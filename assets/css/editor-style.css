@@ -18,10 +18,10 @@ a {
   text-decoration: none;
   transition: color .3s; }
   a:hover {
-    color: #ec76b1;
-    text-decoration: none;
     border: 0;
-    outline: 0; }
+    color: #ec76b1;
+    outline: 0;
+    text-decoration: none; }
   a:focus, a:active {
     border: 0;
     color: #e95fa4;
@@ -57,10 +57,10 @@ h1,
 .h1 {
   color: #322e2f;
   font-family: sans-serif;
-  font-weight: 200;
-  margin-bottom: 1rem;
   font-size: 36px;
-  font-size: 2.25rem; }
+  font-size: 2.25rem;
+  font-weight: 200;
+  margin-bottom: 1rem; }
   h1 a,
   .h1 a {
     font-weight: 200; }
@@ -69,10 +69,10 @@ h2,
 .h2 {
   color: #635d61;
   font-family: sans-serif;
-  font-weight: 200;
-  margin-bottom: 1rem;
   font-size: 28px;
-  font-size: 1.75rem; }
+  font-size: 1.75rem;
+  font-weight: 200;
+  margin-bottom: 1rem; }
   h2 a,
   .h2 a {
     font-weight: 200; }
@@ -81,10 +81,10 @@ h3,
 .h3 {
   color: #635d61;
   font-family: sans-serif;
-  font-weight: 300;
-  margin-bottom: 1rem;
   font-size: 22.4px;
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 1rem; }
   h3 a,
   .h3 a {
     font-weight: 300; }
@@ -93,10 +93,10 @@ h4,
 .h4 {
   color: #948b90;
   font-family: sans-serif;
-  font-weight: 500;
-  margin-bottom: 1rem;
   font-size: 17.6px;
-  font-size: 1.1rem; }
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1rem; }
   h4 a,
   .h4 a {
     font-weight: 500; }
@@ -105,10 +105,10 @@ h5,
 .h5 {
   color: #afa8af;
   font-family: sans-serif;
-  font-weight: 500;
-  margin-bottom: 1rem;
   font-size: 17.6px;
-  font-size: 1.1rem; }
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1rem; }
   h5 a,
   .h5 a {
     font-weight: 500; }
@@ -117,11 +117,11 @@ h6,
 .h6 {
   color: #afa8af;
   font-family: sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   margin-bottom: 1rem;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-size: 0.875rem; }
+  text-transform: uppercase; }
   h6 a,
   .h6 a {
     font-weight: 500; }
@@ -144,7 +144,8 @@ ul,
 ol {
   color: #464144;
   font-family: sans-serif;
-  font-size: 100%;
+  font-size: 1600px;
+  font-size: 100rem;
   letter-spacing: 0px;
   margin-left: 1em;
   padding: 0 0 0 1em; }
@@ -178,9 +179,9 @@ blockquote {
   blockquote * {
     font-family: sans-serif;
     font-style: italic;
-    font-weight: 200;
     font-size: 20px;
-    font-size: 1.25rem; }
+    font-size: 1.25rem;
+    font-weight: 200; }
 
 q {
   font-style: italic;
@@ -241,7 +242,8 @@ tt {
   border: 0;
   color: #464144;
   font-family: monospace;
-  font-size: 0.875em;
+  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.625em;
   margin: 1em 0;
   padding: 0.5em; }
@@ -259,7 +261,8 @@ pre {
 
 sub,
 sup {
-  font-size: .75em;
+  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 0;
   position: relative;
   vertical-align: middle; }
@@ -301,10 +304,10 @@ span {
 
 /* FORMS */
 label {
-  font-size: 1.125em;
+  color: #464144;
   font-family: sans-serif;
-  font-weight: 300;
-  color: #464144; }
+  font-size: 1.125em;
+  font-weight: 300; }
 
 input[type="text"],
 input[type="date"],
@@ -320,17 +323,18 @@ input[type="password"],
 select,
 textarea,
 .textbox {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  padding: 0.5em;
-  margin-bottom: .7em;
   background-color: #fff;
   border: 1px solid #afa8af;
   color: #464144;
-  font-size: .875em;
+  display: block;
   font-family: sans-serif;
-  font-weight: 300; }
+  font-size: .875em;
+  font-weight: 300;
+  margin-bottom: 11.2px;
+  margin-bottom: 0.7rem;
+  max-width: 100%;
+  padding: 0.5em;
+  width: 100%; }
   input[type="text"]:active, input[type="text"]:focus,
   input[type="date"]:active,
   input[type="date"]:focus,
@@ -373,18 +377,18 @@ button,
 input[type="button"],
 input[type="submit"],
 input[type="reset"] {
-  display: inline-block;
-  width: auto;
-  height: auto;
-  padding: 0.5em 2em;
+  color: #fff;
+  cursor: pointer;
   background-color: #de1e7e;
   border: 0;
   border-bottom: 1px solid #9b1558;
-  color: #fff;
+  display: inline-block;
   font-family: sans-serif;
   font-size: 1em;
   font-weight: 200;
-  cursor: pointer; }
+  height: auto;
+  padding: 0.5em 2em;
+  width: auto; }
   button:hover,
   .button:hover,
   .global-button:hover,
@@ -455,9 +459,9 @@ textarea[disabled],
 input[readonly],
 select[readonly],
 textarea[readonly] {
+  cursor: not-allowed;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-  opacity: 0.5;
-  cursor: not-allowed; }
+  opacity: 0.5; }
 
 ::-webkit-input-placeholder {
   color: #d4ccd4;
@@ -476,19 +480,19 @@ textarea[readonly] {
 
 /* TABLES */
 table {
-  height: 100%;
-  width: 100%;
-  margin-bottom: 0.8125em;
   background-color: transparent;
-  border-spacing: 0; }
+  border-spacing: 0;
+  height: 100%;
+  margin-bottom: 0.8125em;
+  width: 100%; }
 
 th,
 td {
-  padding: 0.25em;
-  vertical-align: middle;
+  font-size: .875em;
   line-height: 1.625em;
+  padding: 0.25em;
   text-align: left;
-  font-size: .875em; }
+  vertical-align: middle; }
 
 th {
   font-weight: bold; }
@@ -516,24 +520,27 @@ tbody tr:hover th {
   background-color: transparent; }
 
 img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
   border: 0;
-  -ms-interpolation-mode: bicubic; }
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  max-width: 100%;
+  vertical-align: middle; }
 
 figure {
   margin-bottom: 1.625em; }
 
 figcaption {
   display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-style: italic;
+  font-weight: normal;
   margin: .5em 0 0 0;
-  padding: 0;
-  font-weight: normal; }
+  padding: 0; }
 
 /* 05. OBJECTS */
 #tinymce h1, #tinymce h2, #tinymce h3, #tinymce h4, #tinymce h5, #tinymce h6, #tinymce .h1, #tinymce .h2, #tinymce .h3, #tinymce .h4, #tinymce .h5, #tinymce .h6 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.8rem; }
+  margin-bottom: 0.8rem;
+  margin-top: 1.5rem; }
 #tinymce dd, #tinymce blockquote {
   margin-left: 0; }

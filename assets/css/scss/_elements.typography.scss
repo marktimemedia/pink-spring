@@ -17,14 +17,13 @@ a {
     transition: color .3s;
 
     &:hover {
-        color: $linkHover;
-        text-decoration: none;
         border: 0;
+        color: $linkHover;
         outline: 0;
+        text-decoration: none;
     }
 
     // &:visited {
-    //     color: $linkVisited;
     //     color: $linkVisited;
     // }
 
@@ -69,9 +68,10 @@ h1,
 .h1 {
     color: $h1Color;
     font-family: $headingFont;
+    @include rem-px('font-size', $h1Size);
     font-weight: $h1FontWeight;
     margin-bottom: $headingMargin;
-    @include rem-px('font-size', $h1Size);
+    
 
     a {
         font-weight: $h1FontWeight;
@@ -82,9 +82,9 @@ h2,
 .h2 {
     color: $h2Color;
     font-family: $headingFont;
+    @include rem-px('font-size', $h2Size);
     font-weight: $h2FontWeight;
     margin-bottom: $headingMargin;
-    @include rem-px('font-size', $h2Size);
 
     a {
         font-weight: $h2FontWeight;
@@ -95,9 +95,9 @@ h3,
 .h3 {
     color: $h3Color;
     font-family: $subheadingFont;
+    @include rem-px('font-size', $h3Size);
     font-weight: $h3FontWeight;
     margin-bottom: $headingMargin;
-    @include rem-px('font-size', $h3Size);
 
     a {
         font-weight: $h3FontWeight;
@@ -108,9 +108,9 @@ h4,
 .h4 {
     color: $h4Color;
     font-family: $subheadingFont;
+    @include rem-px('font-size', $h4Size);
     font-weight: $h4FontWeight;
     margin-bottom: $headingMargin;
-    @include rem-px('font-size', $h4Size);
 
     a {
         font-weight: $h4FontWeight;
@@ -121,9 +121,9 @@ h5,
 .h5 {
     color: $h5Color;
     font-family: $subheadingFont;
+    @include rem-px('font-size', $h5Size);
     font-weight: $h5FontWeight;
     margin-bottom: $headingMargin;
-    @include rem-px('font-size', $h5Size);
 
     a {
         font-weight: $h5FontWeight;
@@ -134,10 +134,10 @@ h6,
 .h6 {
     color: $h6Color;
     font-family: $subheadingFont;
+    @include rem-px('font-size', $h6Size);
     font-weight: $h6FontWeight;
     margin-bottom: $headingMargin;
-    text-transform:uppercase;
-    @include rem-px('font-size', $h6Size);
+    text-transform: uppercase;
 
     a {
         font-weight: $h6FontWeight;
@@ -166,7 +166,7 @@ ul,
 ol {
     color: $textColor;
     font-family: $baseFont;
-    font-size: $baseFontSize;
+    @include rem-px('font-size', $baseFontSize);
     letter-spacing: $baseLetterSpace;
     margin-left: 1em;
     padding: 0 0 0 $gutter;
@@ -205,8 +205,8 @@ blockquote {
     * {
         font-family: $blockquoteFontFamily;
         font-style: $blockquoteFontStyle;
-        font-weight: $blockquoteFontWeight;
         @include rem-px('font-size', $blockquoteFontSize);
+        font-weight: $blockquoteFontWeight; 
     }
 }
 
@@ -280,7 +280,7 @@ tt {
     border: $codeBorder;
     color: $codeColor;
     font-family: $codeFontFamily;
-    font-size: $codeFontSize;
+    @include rem-px('font-size', $codeFontSize);
     line-height: $baselineHeight;
     margin: $codeMargin;
     padding: $codePadding;
@@ -302,7 +302,7 @@ pre {
 
 sub,
 sup {
-    font-size: .75em;
+    @include rem-px('font-size', .75rem);
     line-height: 0;
     position: relative;
     vertical-align: middle;

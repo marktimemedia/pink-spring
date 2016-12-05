@@ -1,12 +1,11 @@
 .sticky {
+	background: darken($bodyColor, 5%);
     padding: 1em;
-    background: darken($bodyColor, 5%);
-
 }
 
 .alert {
+	color: $springColor1;
     font-weight: bold;
-    color: $springColor1;
 }
 
 .error-404 {

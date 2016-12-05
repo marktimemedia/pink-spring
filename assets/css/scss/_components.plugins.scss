@@ -81,8 +81,8 @@
         }
 
         div[id*=tribe-events-daynum-], div[id*=tribe-events-daynum-] a {
-            color: $Ndarkest;
             background-color: $Nlightest;
+            color: $Ndarkest;    
         }
     }
 
@@ -93,9 +93,9 @@
         }
 
         .tribe-events-schedule {
-            padding: 0;
             background: transparent;
             border: 0;
+            padding: 0;
 
             h2 {
                 display: inline-block;

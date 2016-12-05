@@ -1,12 +1,10 @@
 .content--sidebar {
-    position: absolute;
     left: 100%;
+    @include rem-px('padding', 2em);
+    position: absolute;
     top: 0;
-    width: $sidebarWidthSmall;
-    padding: 2em;
+    width: $sidebarWidthSmall;  
 }
-
-
 
 @media only screen and (max-width: #{$midBreakpoint}) {
     
@@ -33,44 +31,43 @@
     }
 }
 
-
 @media only screen and (min-width: #{$midBreakpoint}) {
     //approximate min-width: 768px
     .content--sidebar {
-        position: relative;
+        border-top : 1px solid $Nlighter;
         @include flexbox();
         @include flexbox-justify-content(space-between);
         @include flexbox-align-items(flex-start);
         left: auto;
-        top: auto;
-        width: 100%;
         margin-top: 2em;
         padding: 0;
         padding-top: 2em;
-        border-top : 1px solid $Nlighter;
+        position: relative;
+        top: auto;
+        width: 100%;
     }
 
     .sidebar-main {
-        @include pinkgrid($colspan:12);
-        @include pinkrow($rowitems:1);
         border: 0;
+        @include pinkgrid($colspan:12);
+        @include pinkrow($rowitems:1);  
         margin-top: 0;
     }
 
         .sidebar--leftcol,
         .sidebar--rightcol {
+            display: inline-block;
+            margin-top: 2em;
+            vertical-align: top;
             width: 49.5%;
-            display:inline-block;
-            vertical-align:top;
-            margin-top:2em;
         }
 
         .sidebar--leftcol {
-            padding-right: 1em;
+            @include rem-px('padding-right', 1rem);
         }
 
         .sidebar--rightcol {
-            padding-left: 1em;
+            @include rem-px('padding-left', 1rem);
         }
 
 }
@@ -82,13 +79,11 @@
     .sidebar-main {
         @include pinkgrid($colspan:3);
         @include pinkrow($rowitems:1);
-        border: 0;
-        margin-top: 0;
     }
 
     .sidebar--leftcol,
     .sidebar--rightcol {
-        margin-top:0;
+        margin-top: 0;
     }
 
 }

@@ -22,8 +22,8 @@
 // TinyMCE Overrides to emulate post content
 #tinymce { 
     h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-       margin-top: $textFontSize * 1.5;
        margin-bottom: $textFontSize * .8;
+       margin-top: $textFontSize * 1.5;
     }
 
     dd, blockquote {

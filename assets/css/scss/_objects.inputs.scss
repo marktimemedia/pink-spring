@@ -1,28 +1,28 @@
 /* BUTTON SIZES */
 .button-xl {
-    padding: .875em 1.75em;
-    font-size: 1.25em;
     @include border-radius(6px);
+    @include rem-px('font-size', 1.25rem);
+    @include rem-px('padding', .875rem, 1.75rem); 
 }
 
 .button-lg {
-    padding: .5em 1em;
-    font-size: 1em;
     @include border-radius(5px);
+    @include rem-px('font-size', 1rem);
+    @include rem-px('padding', .5em, 1em); 
 }
 
 .button-med {
-    padding: .375em .75em;
-    font-size: .875em;
-    line-height: 1em;
     @include border-radius(4px);
+    @include rem-px('font-size', .875rem);
+    @include rem-px('line-height', 1em);
+    @include rem-px('padding', .375em, .75em); 
 }
 
 .button-xs {
-    padding: .25em .5em;
-    font-size: .75em;
-    line-height: .875em;
     @include border-radius(3px);
+    @include rem-px('font-size', .75rem);
+    @include rem-px('line-height', .875em);
+    @include rem-px('padding', .25em, .5em); 
 }
 
 .social-icons {
@@ -32,8 +32,8 @@
 }
     .button-social { // circle button
         border-radius: 50%; 
-        padding: .5em;
-
+        @include rem-px('padding', .5rem);
+        
         &:before {
             content: '\2665 '; // replace with your fallback icon, this is a heart
         }

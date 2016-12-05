@@ -1,19 +1,19 @@
 /* TABLES */
 table {
-    height: 100%;
-    width: 100%;
-    margin-bottom: $baselineHeight / 2;
     background-color: $tableBackground;
     border-spacing: 0;
+    height: 100%;
+    margin-bottom: $baselineHeight / 2;
+    width: 100%;
 }
 
 th,
 td {
-    padding: $tableCellPadding;
-    vertical-align: middle;
-    line-height: $baselineHeight;
-    text-align: left;
     font-size: .875em;
+    line-height: $baselineHeight;
+    padding: $tableCellPadding;
+    text-align: left;
+    vertical-align: middle;
 }
 
 th {

@@ -2,26 +2,26 @@
     .nav-main--menu {
 
         .menu-item {
-            position:relative;
+            position: relative;
         }
 
         .menu-item-has-children {
 
             a {
-                position:relative;
+                position: relative;
             }
             
         }
 
         .menu-toggle {
+            background: lighten($linkColor, 40%);
+            cursor: pointer;
+            display:inline-block;
+            height: 100%;
             position: absolute;
             right: 0;
             top: 0;
-            cursor: pointer;
             width: 2em;
-            height: 100%;
-            background: lighten($linkColor, 40%);
-            display:inline-block;
 
             &:after {
                 content: '+';
@@ -40,7 +40,6 @@
             }
         }
 
-
         ul.sub-menu {
              &.menu-collapse {
                 height: 0;
@@ -52,28 +51,28 @@
 
 @media only screen and (min-width: #{$midBreakpoint}) {
     .nav-main--menu, .nav-main--menu * {
-        margin: 0;
-        padding: 0;
         list-style: none;
+        margin: 0;
+        padding: 0;  
     }
 
     .nav-main--menu {
         ul.sub-menu {
-            position: absolute;
-            overflow:hidden;
-            display: block;
-            height:auto;
-            max-height:0;
-            left: .5em;
-            top: 100%;
-            padding: 0 .5em;
-            text-align: left;
             background: $Nlightest;
-            z-index: 99;
+            display: block;
+            height: auto;
+            left: .5em;
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 .5em;
+            position: absolute;
+            text-align: left;
+            top: 100%;
             @include transition(all .2s);
+            z-index: 99;
 
             &:hover {
-                overflow:inherit;
+                overflow: inherit;
             }
 
 
@@ -89,12 +88,11 @@
                 max-width: 15em;
 
                 & > a {
-                    color:$linkColor;
-                    padding:.6em 1em;
+                    color: $linkColor;
+                    @include rem-px('padding', .6rem, 1rem);
                     text-transform: none;
                 }
             }
-
         }
 
         li {
@@ -104,13 +102,13 @@
             &.sfHover {
                 &>ul {
                     display: block;
-                    max-height:800px; // change based on your menu height
+                    max-height: 800px; // change based on your menu height
                     @include transition(all .5s);
                 }
             }
         }
 
-        &>li {
+        & > li {
             //right align last submenu
             &:last-child {
                 ul {

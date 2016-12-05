@@ -1,9 +1,9 @@
 /* FORMS */
 label {
-    font-size: $labelFontSize;
-    font-family: $subheadingFont;
-    font-weight: $baseFontWeight;
     color: $labelColor;
+    font-family: $subheadingFont;
+    font-size: $labelFontSize;
+    font-weight: $baseFontWeight;
 }
 
 input[type="text"],
@@ -20,17 +20,17 @@ input[type="password"],
 select,
 textarea,
 .textbox {
-    display: block;
-    width: 100%;
-    max-width: $textboxMaxWidth;
-    padding: $textboxPadding;
-    margin-bottom: .7em;
     background-color: $textboxBackground;
     border: $textboxBorderWidth $textboxBorderStyle $textboxBorderColor;
     color: $textboxColor;
-    font-size: .875em;
+    display: block;
     font-family: $baseFont;
+    font-size: .875em;
     font-weight: $baseFontWeight;
+    @include rem-px('margin-bottom', .7em);
+    max-width: $textboxMaxWidth;
+    padding: $textboxPadding;
+    width: 100%;
 
     &:active,
     &:focus {
@@ -52,19 +52,19 @@ button,
 input[type="button"],
 input[type="submit"],
 input[type="reset"] {
-    display: inline-block;
-    width: auto;
-    height: auto;
-    padding: $buttonPadding;
+    color: $buttonColor;
+    cursor: pointer;
     background-color: $buttonBackground;
     //@include vertical($buttonBackground, $buttonBackground2);
     border: 0;
     border-bottom: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor;
-    color: $buttonColor;
+    display: inline-block;
     font-family: $buttonFont;
     font-size: $buttonFontSize;
     font-weight: $buttonFontWeight;
-    cursor: pointer;
+    height: auto;
+    padding: $buttonPadding;
+    width: auto;
 
     &:hover {
         background-color: $buttonBackground2;
@@ -92,7 +92,6 @@ input[type="reset"] {
 
     &:active,
     &:focus {
-        
         outline-color: $buttonOutlineColor;
     }
 }
@@ -107,8 +106,8 @@ textarea[disabled],
 input[readonly],
 select[readonly],
 textarea[readonly] {
-    @include opacity(.5);
     cursor: not-allowed;
+    @include opacity(.5);
 }
 
 ::-webkit-input-placeholder {

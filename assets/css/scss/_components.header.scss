@@ -21,10 +21,10 @@
 
     .header--blog-name {
         box-sizing: border-box;
-        @include rem-px('padding', 1rem, 1rem);
         font-size: 2rem;
         height: 100%;
         margin: 0 auto;
+        @include rem-px('padding', 1rem, 1rem);
         text-align: center;
 
         a {
@@ -47,21 +47,21 @@
 
     .header--extra-text {
         clear: both;
-        padding: 0 1rem;
+        @include rem-px('padding', 0, 1rem);
         text-align: center;
     }
 
     .header-main-small {
         
         .header--quicklinks {
-            padding-top:0;
-            padding-bottom:0;
+            padding-top: 0;
+            padding-bottom: 0;
             overflow: hidden;
         }
 
         .header--inner {
-            top:-130px;
-            overflow:hidden;
+            top: -130px;
+            overflow: hidden;
             @include transition(all .8s);
         }
 
@@ -78,8 +78,8 @@
 
 @media only screen and (min-width: #{$smallBreakpoint}) {
     .header--blog-name {
-        width: inherit;
         @include rem-px('padding', 1rem, 0);
+        width: inherit;     
     }
 }
 
@@ -124,15 +124,15 @@
         .header-main-small {
 
             .header--inner {
-                height:2.2em;
-                top: 0;
+                height: 2.2em;
                 overflow: visible;
+                 top: 0;
                 @include transition(all .8s);
             }
 
             .header--blog-name {
                 //display: none;
-                font-size:1.3em;
+                font-size: 1.3em;
                 padding-top: .4em;
                 @include transition(font-size .5s);
 
@@ -143,13 +143,13 @@
             }
 
             .nav-main {
-                height:auto;
+                height: auto;
                 top: 0;
                 @include transition(all .5s);
 
                 .menu-item a {
-                    padding:.6em 0 .5em;
                     margin: 0 .3em;
+                    padding: .6em 0 .5em;
                     @include multi-transition("padding .5s, margin .5s");
                 }
             }

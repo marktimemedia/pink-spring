@@ -14,13 +14,13 @@
     }
 
     .post--thumbnail {
-        width: 100%;
         @include rem-px('margin-bottom', .75rem);
+        width: 100%;
     }
 
     .post--byline {
-        @include rem-px('margin', 0, 0, .75rem, 0);
         font-style: italic;
+        @include rem-px('margin', 0, 0, .75rem, 0);
 
         a {
             font-style: italic;
@@ -41,22 +41,22 @@
     }
 
     .post--metadata {
-        margin-top: 1em;
-        padding-top: .25em;
-        font-size: .875em;
         border-top: 1px solid $Nlighter;
+        @include rem-px('font-size', .875rem);
         font-style: italic;
+        @include rem-px('margin-top', 1rem);
+        @include rem-px('padding-top', .25rem);
 
         ul {
-            display:inline-block;
-            margin: 0 1em 0 0;
-            padding:0;
+            display: inline-block;
+            @include rem-px('margin', 0, 1rem, 0, 0);
+            padding: 0;
 
             li {
-                display:inline-block;
-                list-style:none;
+                display: inline-block;
+                list-style: none;
                 margin: 0;
-                padding:0 .1em 0 0;
+                @include rem-px('padding', 0, .1rem, 0, 0);
             }
         }
 
@@ -76,27 +76,27 @@
 
 .archive {
     .post--title {
-        font-size: $h1Size * .85;
+        @include rem-px('font-size', $h1Size * .85);
     }
 }
 
 .single {
 
     .post--metadata {
-        margin-top: .25em;
-        margin-bottom: 3em;
+        @include rem-px('margin-bottom', .3rem);
+        @include rem-px('margin-top', .25rem);
     }
 
     .post--summary {
-        font-size:1.3em;
+        @include rem-px('font-size', 1.3rem);
 
         p {
-            line-height:1.3;
-            color:$Nlight;
+            color: $Nlight;
+            line-height: 1.3;
         }
     }
 }  
 
 .page--title {
-    margin-bottom: $headingMargin * 1.5;
+    @include rem-px('margin-bottom', $headingMargin * 1.5);
 }
