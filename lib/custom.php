@@ -4,10 +4,12 @@
  */
 
 /**
-* Comment out the following line to enable the admin bar
+* WooCommerce Support
 */
-// add_filter('show_admin_bar', '__return_false');
-
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
 
 /**
 * Filter Yoast Meta Priority

@@ -2,16 +2,16 @@
 /**
  * Enable theme features
  */
-add_theme_support('root-relative-urls');            // Enable relative URLs
-add_theme_support('nice-search');                   // Enable /?s= to /search/ redirect
-//add_theme_support('jquery-cdn');                    // Enable to load jQuery from the Google CDN
-add_theme_support('html5', array('search-form'));   // Enable HTML in the search form
+add_theme_support( 'root-relative-urls' );            // Enable relative URLs
+add_theme_support( 'nice-search' );                   // Enable /?s= to /search/ redirect
+//add_theme_support( 'jquery-cdn' );                    // Enable to load jQuery from the Google CDN
+add_theme_support( 'html5', array( 'search-form' ) );   // Enable HTML in the search form
 add_editor_style( 'assets/css/editor-style.css' );  // Add editor styles
 
 /**
  * Configuration values
  */
-define('POST_EXCERPT_LENGTH', 55); // Length in words for excerpt_length filter (http://codex.wordpress.org/Plugin_API/Filter_Reference/excerpt_length)
+define( 'POST_EXCERPT_LENGTH', 55 ); // Length in words for excerpt_length filter (http://codex.wordpress.org/Plugin_API/Filter_Reference/excerpt_length)
 
 /**
  * .main classes
@@ -53,7 +53,7 @@ function spring_sidebar_button() {
 /**
  * Define which pages shouldn't have the sidebar
  *
- * See lib/sidebar.php for more details
+ * @see lib/sidebar.php for more details
  */
 function spring_display_sidebar() {
   $sidebar_config = new Spring_Sidebar(
@@ -79,7 +79,7 @@ function spring_display_sidebar() {
     )
   );
 
-  return apply_filters( 'spring_display_sidebar', $sidebar_config->display);
+  return apply_filters( 'spring_display_sidebar', $sidebar_config->display );
 }
 
 /** 
@@ -105,11 +105,10 @@ function spring_search_bar() {
 if ( !isset( $content_width ) ) { $content_width = 1140; }
 
 
-// WooCommerce Support
-add_action( 'after_setup_theme', 'woocommerce_support' );
-function woocommerce_support() {
-    add_theme_support( 'woocommerce' );
-}
+/**
+* Comment out the following line to enable the admin bar
+*/
+// add_filter('show_admin_bar', '__return_false');
 
 
 /**
