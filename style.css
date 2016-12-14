@@ -231,8 +231,7 @@ ul,
 ol {
   color: #464144;
   font-family: sans-serif;
-  font-size: 1600px;
-  font-size: 100rem;
+  font-size: 100%;
   letter-spacing: 0px;
   margin-left: 1em;
   padding: 0 0 0 1em; }
@@ -1190,8 +1189,8 @@ figcaption {
   font-size: 2rem;
   height: 100%;
   margin: 0 auto;
-  padding: 16px 16px;
-  padding: 1rem 1rem;
+  padding: 16px 40px;
+  padding: 1rem 2.5rem;
   text-align: center; }
   .header--blog-name a {
     display: block; }
@@ -1600,6 +1599,8 @@ figcaption {
   .search-toggle:hover {
     background-color: #b11865;
     border: none; }
+  .search-toggle:before {
+    content: "⚲"; }
 
 .header-main .search-form {
   margin: 0;

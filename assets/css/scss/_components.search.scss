@@ -50,6 +50,10 @@
         background-color: darken($linkColor, 10%);
         border: none;
     }
+
+    &:before {
+        content:"⚲";
+    }
 }
 
 .header-main .search-form {

@@ -24,7 +24,7 @@
         font-size: 2rem;
         height: 100%;
         margin: 0 auto;
-        @include rem-px('padding', 1rem, 1rem);
+        @include rem-px('padding', 1rem, 2.5rem);
         text-align: center;
 
         a {

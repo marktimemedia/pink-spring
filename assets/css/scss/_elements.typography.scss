@@ -166,7 +166,7 @@ ul,
 ol {
     color: $textColor;
     font-family: $baseFont;
-    @include rem-px('font-size', $baseFontSize);
+    font-size: $baseFontSize;
     letter-spacing: $baseLetterSpace;
     margin-left: 1em;
     padding: 0 0 0 $gutter;
