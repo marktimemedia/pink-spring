@@ -39,8 +39,6 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  letter-spacing: 0px;
-  line-height: 1.1;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -57,9 +55,11 @@ h1,
 .h1 {
   color: #322e2f;
   font-family: sans-serif;
-  font-size: 36px;
-  font-size: 2.25rem;
+  font-size: 32.4px;
+  font-size: 2.025rem;
   font-weight: 200;
+  letter-spacing: 0px;
+  line-height: 1.1;
   margin-bottom: 1rem; }
   h1 a,
   .h1 a {
@@ -69,9 +69,11 @@ h2,
 .h2 {
   color: #635d61;
   font-family: sans-serif;
-  font-size: 28px;
-  font-size: 1.75rem;
+  font-size: 25.2px;
+  font-size: 1.575rem;
   font-weight: 200;
+  letter-spacing: 0px;
+  line-height: 1.1;
   margin-bottom: 1rem; }
   h2 a,
   .h2 a {
@@ -81,9 +83,11 @@ h3,
 .h3 {
   color: #635d61;
   font-family: sans-serif;
-  font-size: 22.4px;
-  font-size: 1.4rem;
+  font-size: 20.16px;
+  font-size: 1.26rem;
   font-weight: 300;
+  letter-spacing: 0px;
+  line-height: 1.1;
   margin-bottom: 1rem; }
   h3 a,
   .h3 a {
@@ -93,9 +97,11 @@ h4,
 .h4 {
   color: #948b90;
   font-family: sans-serif;
-  font-size: 17.6px;
-  font-size: 1.1rem;
+  font-size: 15.84px;
+  font-size: 0.99rem;
   font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 1.1;
   margin-bottom: 1rem; }
   h4 a,
   .h4 a {
@@ -105,9 +111,11 @@ h5,
 .h5 {
   color: #afa8af;
   font-family: sans-serif;
-  font-size: 17.6px;
-  font-size: 1.1rem;
+  font-size: 15.84px;
+  font-size: 0.99rem;
   font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 1.1;
   margin-bottom: 1rem; }
   h5 a,
   .h5 a {
@@ -117,9 +125,11 @@ h6,
 .h6 {
   color: #afa8af;
   font-family: sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 12.6px;
+  font-size: 0.7875rem;
   font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 1.1;
   margin-bottom: 1rem;
   text-transform: uppercase; }
   h6 a,
@@ -301,6 +311,36 @@ span {
   color: #f4f2f3;
   text-shadow: none; }
 
+@media only screen and (min-width: 48.5em) {
+  h1,
+  .h1 {
+    font-size: 36px;
+    font-size: 2.25rem; }
+
+  h2,
+  .h2 {
+    font-size: 28px;
+    font-size: 1.75rem; }
+
+  h3,
+  .h3 {
+    font-size: 22.4px;
+    font-size: 1.4rem; }
+
+  h4,
+  .h4 {
+    font-size: 17.6px;
+    font-size: 1.1rem; }
+
+  h5,
+  .h5 {
+    font-size: 17.6px;
+    font-size: 1.1rem; }
+
+  h6,
+  .h6 {
+    font-size: 14px;
+    font-size: 0.875rem; } }
 /* FORMS */
 label {
   color: #464144;

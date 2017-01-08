@@ -27,23 +27,5 @@ function spring_setup() {
 add_action('after_setup_theme', 'spring_setup');
 
 
-/**
-* Remove access to specific page templates
-* 'FILE_PATH_AND_NAME' => 'TEMPLATE_TITLE'
-*/
-
-// function mtm_theme_templates( $templates ) {
-  
-//   $templates = array(
-      //         '../templates/template-components.php' => 'Components Page',
-      //         '../templates/template-home.php' => 'Landing Page',
-      //         '../templates/template-news.php' => 'News Page',
-      //         '../templates/template-modules.php' => 'Modular Content',
-      // );
-
-//   return $templates;
-// }
-// add_filter( 'mtm_filter_templates', 'mtm_theme_templates' );
-
 // Backwards compatibility for older than PHP 5.3.0
 if ( !defined( '__DIR__' ) ) { define( '__DIR__', dirname( __FILE__ ) ); }

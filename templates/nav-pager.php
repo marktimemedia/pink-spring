@@ -1,16 +1,19 @@
 <?php // Nav Pager (single)
-$posttype = get_post_type( $post );
-$all = get_post_type_object( $posttype )->labels->all_items;
+$post_type = get_post_type( $post );
+$all = get_post_type_object( $post_type )->labels->all_items;
+$slug = get_post_type_object( $post_type )->rewrite['slug'];
 
 if( is_singular( 'post' ) ) :
-	$postlink = get_permalink( get_option( 'page_for_posts' ) );
+	$post_link = get_permalink( get_option( 'page_for_posts' ) );
+elseif ( $slug) :
+	$post_link = '/' . $slug;
 else :
-	$postlink = '/' . $posttype;
+	$post_link = '/' . $post_type;
 endif;
 ?>
 
 <nav class="nav-pager post--pager">
     <?php previous_post_link( '%link', 'Previous' ); ?>
-    <a class="post--pager-all" href="<?php echo $postlink; ?>"><?php _e( $all, 'spring' ); ?></a>
+    <a class="post--pager-all" href="<?php echo $post_link; ?>"><?php _e( $all, 'spring' ); ?></a>
     <?php next_post_link(  '%link', 'Next' ); ?></a>
 </nav>

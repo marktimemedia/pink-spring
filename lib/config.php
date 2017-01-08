@@ -112,6 +112,25 @@ if ( !isset( $content_width ) ) { $content_width = 1140; }
 
 
 /**
+* Remove access to specific page templates
+* 'FILE_PATH_AND_NAME' => 'TEMPLATE_TITLE'
+*/
+
+//   function mtm_theme_templates( $templates ) {
+    
+//     $templates = array(
+//         //    '../templates/template-components.php' => 'Components Page',
+//         //    '../templates/template-home.php' => 'Landing Page',
+//         //    '../templates/template-news.php' => 'News Page',
+//         //    '../templates/template-modules.php' => 'Modular Content',
+//         // );
+
+//     return $templates;
+//   }
+//   add_filter( 'mtm_filter_templates', 'mtm_theme_templates' );
+
+
+/**
  * Theme code to register the required plugins.
  *
  * @see http://tgmpluginactivation.com/configuration/ for detailed documentation.

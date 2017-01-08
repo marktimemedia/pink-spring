@@ -52,8 +52,6 @@ h3, .h3,
 h4, .h4, 
 h5, .h5,
 h6, .h6 {
-    letter-spacing: $headingLetterSpace;
-    line-height: $headingLineHeight;
     margin: 0;
     padding: 0;
     text-rendering:  optimizeLegibility;
@@ -68,8 +66,10 @@ h1,
 .h1 {
     color: $h1Color;
     font-family: $headingFont;
-    @include rem-px('font-size', $h1Size);
+    @include rem-px('font-size', $h1Size * .9);
     font-weight: $h1FontWeight;
+    letter-spacing: $headingLetterSpace;
+    line-height: $headingLineHeight;
     margin-bottom: $headingMargin;
     
 
@@ -82,8 +82,10 @@ h2,
 .h2 {
     color: $h2Color;
     font-family: $headingFont;
-    @include rem-px('font-size', $h2Size);
+    @include rem-px('font-size', $h2Size * .9);
     font-weight: $h2FontWeight;
+    letter-spacing: $headingLetterSpace;
+    line-height: $headingLineHeight;
     margin-bottom: $headingMargin;
 
     a {
@@ -95,8 +97,10 @@ h3,
 .h3 {
     color: $h3Color;
     font-family: $subheadingFont;
-    @include rem-px('font-size', $h3Size);
+    @include rem-px('font-size', $h3Size * .9);
     font-weight: $h3FontWeight;
+    letter-spacing: $subheadingLetterSpace;
+    line-height: $subheadingLineHeight;
     margin-bottom: $headingMargin;
 
     a {
@@ -108,8 +112,10 @@ h4,
 .h4 {
     color: $h4Color;
     font-family: $subheadingFont;
-    @include rem-px('font-size', $h4Size);
+    @include rem-px('font-size', $h4Size * .9);
     font-weight: $h4FontWeight;
+    letter-spacing: $subheadingLetterSpace;
+    line-height: $subheadingLineHeight;
     margin-bottom: $headingMargin;
 
     a {
@@ -121,8 +127,10 @@ h5,
 .h5 {
     color: $h5Color;
     font-family: $subheadingFont;
-    @include rem-px('font-size', $h5Size);
+    @include rem-px('font-size', $h5Size * .9);
     font-weight: $h5FontWeight;
+    letter-spacing: $subheadingLetterSpace;
+    line-height: $subheadingLineHeight;
     margin-bottom: $headingMargin;
 
     a {
@@ -134,8 +142,10 @@ h6,
 .h6 {
     color: $h6Color;
     font-family: $subheadingFont;
-    @include rem-px('font-size', $h6Size);
+    @include rem-px('font-size', $h6Size * .9);
     font-weight: $h6FontWeight;
+    letter-spacing: $subheadingLetterSpace;
+    line-height: $subheadingLineHeight;
     margin-bottom: $headingMargin;
     text-transform: uppercase;
 
@@ -349,4 +359,36 @@ span {
     background-color: $Nlighter;
     color: $Nlightest;
     text-shadow: none;
+}
+
+@media only screen and (min-width: #{$midBreakpoint}) {
+    h1,
+    .h1 {
+        @include rem-px('font-size', $h1Size);
+    }
+
+    h2,
+    .h2 {
+        @include rem-px('font-size', $h2Size);
+    }
+
+    h3,
+    .h3 {
+        @include rem-px('font-size', $h3Size);
+    }
+
+    h4,
+    .h4 {
+        @include rem-px('font-size', $h4Size);
+    }
+
+    h5,
+    .h5 {
+        @include rem-px('font-size', $h5Size);
+    }
+
+    h6,
+    .h6 {
+        @include rem-px('font-size', $h6Size);
+    }
 }

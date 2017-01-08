@@ -120,17 +120,6 @@
         right: 100%;
         top: 0;
         width: $sidebarWidthMid;
-
-        #closeSidebar {
-            border: 1px solid $linkColor;
-            border-radius: 50%;
-            color: $linkColor;
-            display: inline-block;
-            font-size: 1.8em;
-            line-height: 1;
-            margin-top: .75em;
-            padding: 0 .3em;
-        }
     }
 }
 

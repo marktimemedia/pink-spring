@@ -67,6 +67,7 @@
 
     .post--metadata--title {
         font-weight: bold;
+        margin-right: .25em;
     }
 
     .post--hr {
@@ -95,7 +96,11 @@
             line-height: 1.3;
         }
     }
-}  
+} 
+
+.page--header {
+    @include rem-px('margin-bottom', $headingMargin * 2);
+} 
 
 .page--title {
     @include rem-px('margin-bottom', $headingMargin * 1.5);
