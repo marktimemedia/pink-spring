@@ -21,6 +21,10 @@
                 outline: 0;
             }
 
+            &:hover {
+                border: 0;
+            }
+
             span {
                 display: inline-block;
                 left: 100%;
@@ -143,6 +147,7 @@
             height: 100%;
             margin-left: -$sidebarWidthMid;
             margin-right: $sidebarWidthMid;
+            overflow: visible;
         }
     }
 

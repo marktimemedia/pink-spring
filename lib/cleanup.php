@@ -275,6 +275,12 @@ function spring_gallery_default_type_set_link( $settings ) {
 }
 add_filter( 'media_view_settings', 'spring_gallery_default_type_set_link' );
 
+/**
+* Remove the overly opinionated gallery styles
+*/
+add_filter( 'use_default_gallery_style', '__return_false' );
+
+
 
 /**
 * Gets rid of current_page_parent class mistakenly being applied to Blog pages while on Custom Post Types

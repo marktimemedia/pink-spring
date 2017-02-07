@@ -106,6 +106,21 @@ if ( !isset( $content_width ) ) { $content_width = 1140; }
 
 
 /**
+* Email Notification Defaults
+*/
+// add_filter( 'wp_mail_from', 'mtm_mail_from' );
+// add_filter( 'wp_mail_from_name', 'mtm_mail_name' );
+
+// function mtm_mail_from ($email ){
+//   return 'sample@wordpress.com'; // new email address from sender.
+// }
+
+// function mtm_mail_name( $email ){
+//   return 'Sample'; // new email name from sender.
+// }
+
+
+/**
 * Comment out the following line to enable the admin bar
 */
 // add_filter('show_admin_bar', '__return_false');
@@ -116,19 +131,31 @@ if ( !isset( $content_width ) ) { $content_width = 1140; }
 * 'FILE_PATH_AND_NAME' => 'TEMPLATE_TITLE'
 */
 
-//   function mtm_theme_templates( $templates ) {
+  // function mtm_theme_templates( $templates ) {
     
-//     $templates = array(
-//         //    '../templates/template-components.php' => 'Components Page',
-//         //    '../templates/template-home.php' => 'Landing Page',
-//         //    '../templates/template-news.php' => 'News Page',
-//         //    '../templates/template-modules.php' => 'Modular Content',
-//         // );
+  //   $templates = array(
+  //       //    '../templates/template-components.php' => 'Components Page',
+  //       //    '../templates/template-home.php' => 'Landing Page',
+  //       //    '../templates/template-news.php' => 'News Page',
+  //       // '../templates/template-modules.php' => 'Modular Content',
+  //       );
 
-//     return $templates;
-//   }
-//   add_filter( 'mtm_filter_templates', 'mtm_theme_templates' );
+  //   return $templates;
+  // }
+  // add_filter( 'mtm_filter_templates', 'mtm_theme_templates' );
 
+
+/**
+* Deregister sidebars from plugin
+*/
+
+// function mtm_theme_sidebars( $templates ) {
+    
+//   // unregister_sidebar( 'news-page-sidebar' );
+//   // unregister_sidebar( 'modular-page-sidebar' );
+
+// }
+// add_action( 'widgets_init', 'mtm_theme_sidebars', 11 );
 
 /**
  * Theme code to register the required plugins.

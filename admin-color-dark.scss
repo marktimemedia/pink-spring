@@ -65,15 +65,15 @@ $menu-submenu-background: darken( $highlight-color, 55% );
 
 
 // Body background color (by default based off base color)
-$body-background: lighten($Nlighter, 5%);
+$body-background: $Ndarkest;
 
 // Body text color (by default based off neutral color)
-$body-text: $neutral-color;
-$body-secondary-text: lighten($body-text, 20%);
+$body-text: $Nlightest;
+$body-secondary-text: darken($body-text, 20%);
 $body-icon: $body-secondary-text;
 
 // Metaboxes
 $body-metabox: lighten($body-background, 5%);
-$body-metabox-border: darken($body-metabox, 10%);
+$body-metabox-border: lighten($body-metabox, 10%);
 
-@import "../../plugins/super-thorough-admin-color-scheme/admin/admin";
+@import "../../plugins/st-admin-color-scheme/admin/admin";

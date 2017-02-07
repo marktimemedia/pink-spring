@@ -41,7 +41,11 @@
         }
 
         ul.sub-menu {
+            border-bottom: 1px solid $Ndark;
+            margin-left: 0;
+
              &.menu-collapse {
+                border: 0;
                 height: 0;
                 overflow: hidden;
             }
@@ -59,6 +63,7 @@
     .nav-main--menu {
         ul.sub-menu {
             background: $Nlightest;
+            border: 0;
             display: block;
             height: auto;
             left: .5em;
@@ -103,6 +108,7 @@
                 &>ul {
                     display: block;
                     max-height: 800px; // change based on your menu height
+                    padding: .5em;
                     @include transition(all .5s);
                 }
             }

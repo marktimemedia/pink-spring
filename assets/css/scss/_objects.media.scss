@@ -7,6 +7,7 @@
     @include rem-px('font-size', .75rem);
     font-style: italic;
     line-height: 1.4em;
+    margin-top: .5em;
 }
 
 .youtube {
@@ -28,6 +29,47 @@
         width: 100% !important;
     }
 }
+
+.gallery {
+
+    dl, dt, dd { // Definition lists elements
+        margin: 0;
+    }
+
+    br+br { // Pick the second line break if two line breaks are adjacent
+        display: none; 
+    }
+
+    img:hover {
+        
+    }
+
+    .gallery-item {
+
+    }
+
+    .gallery-caption {
+        text-align: center;
+    }
+}
+
+    .gallery-columns-2 {
+        .gallery-item {
+            @include pinkmagic( $rowitems: 2 );
+        }
+    }
+
+    .gallery-columns-3 {
+        .gallery-item {
+            @include pinkmagic( $rowitems: 3 );
+        }
+    }
+
+    .gallery-columns-4 {
+        .gallery-item {
+            @include pinkmagic( $rowitems: 4 );
+        }
+    }
 
 .embed-container, .entry-content-asset { 
         height: auto;
