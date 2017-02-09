@@ -159,7 +159,7 @@ h6,
 ol,
 ul,
 dl {
-    line-height: $baselineHeight;
+    line-height: 1.1em;
     margin-bottom: $baselineHeight; 
 }
 
@@ -189,7 +189,7 @@ ol {
 
     li {
         font-weight: $baseFontWeight;
-        line-height: $baselineHeight;
+        line-height: 1.3em;
         margin: .3em 0;
 
         h1, h2, h3, h4, h5, h6 {
@@ -348,6 +348,13 @@ span {
     display: inline-block;
 }
 
+nav {
+    ul {
+        line-height: 1;
+        list-style: none;
+    }
+}
+
 /* SELECTION */
 ::-moz-selection {
     background-color: $Nlighter;
@@ -390,5 +397,11 @@ span {
     h6,
     .h6 {
         @include rem-px('font-size', $h6Size);
+    }
+
+    nav {   
+        li {
+            line-height: 1;
+        }
     }
 }

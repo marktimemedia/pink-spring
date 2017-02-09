@@ -15,10 +15,7 @@
     }
 
 @media only screen and (min-width: #{$midBreakpoint}) {
-    
-    .footer-main {
-        //position: absolute;
-    }
+
 
     .footer--inner {
         @include rem-px('max-width', $boxedMax); 
@@ -26,6 +23,11 @@
     }
 }
 
+@media only screen and (min-width: #{$largeBreakpoint}) {
+    .footer-main {
+        //position: absolute;
+    }
+}
 
 @media only screen and (min-width: #{$widescreenBreakpoint}) {
     .footer--inner {

@@ -55,7 +55,6 @@
 
 @media only screen and (min-width: #{$midBreakpoint}) {
     .nav-main--menu, .nav-main--menu * {
-        list-style: none;
         margin: 0;
         padding: 0;  
     }
@@ -90,7 +89,6 @@
             li {
                 padding: 0em;
                 min-width: 10em;
-                max-width: 15em;
 
                 & > a {
                     color: $linkColor;

@@ -17,6 +17,7 @@
         padding: .5em $smallPadding;
         background: $Ndark;
         position: relative;
+        @include transition(all .8s);
         z-index:1000;
     }
 
@@ -27,6 +28,7 @@
         margin: 0 auto;
         @include rem-px('padding', 1rem, 2.5rem);
         text-align: center;
+        @include transition(all .8s);
 
         a {
             display: block;
@@ -58,6 +60,7 @@
             padding-top: 0;
             padding-bottom: 0;
             overflow: hidden;
+            @include transition(all .8s);
         }
 
         .header--inner {
@@ -67,7 +70,7 @@
         }
 
         .header--blog-name {
-            @include transition(font-size .6s);
+            @include transition(font-size .2s);
 
             img {
                 //@include transition(all 1s);
@@ -128,15 +131,12 @@
                 height: 2.2em;
                 overflow: visible;
                  top: 0;
-                @include transition(all .8s);
             }
 
             .header--blog-name {
                 //display: none;
                 font-size: 1.3em;
                 padding-top: .4em;
-                @include transition(font-size .5s);
-
             }
 
             .header--extra-text {
@@ -146,7 +146,7 @@
             .nav-main {
                 height: auto;
                 top: 0;
-                @include transition(all .5s);
+                @include transition(all .2s);
 
                 .menu-item a {
                     margin: 0 .3em;

@@ -41,6 +41,10 @@
 
 @media only screen and (min-width: #{$largeBreakpoint}) {
 
+    .content {
+        //padding-bottom: 150px; // to account for position absolute footer
+    }
+
     .content-main {
         padding-right: 1em;
         @include pinkgrid($colspan:9, $padside:3%);

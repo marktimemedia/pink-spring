@@ -39,7 +39,6 @@
         li {
             display: inline-block;
             margin: 0;
-            list-style: none;
         }
     }
 
@@ -52,6 +51,7 @@
 	position: absolute;
     right: 100%;
     top: 0;
+    @include transition(all .8s);
     width: 80%;
 
     ul {
@@ -94,7 +94,6 @@
         }
 
 .footer--menu {
-    list-style: none;
     margin: 1em 0 0 0;
     padding: 0;
 
@@ -137,7 +136,7 @@
 
     .nav-main {
         float: right;
-        height: 3em;
+        height: auto;
         left: auto;
         padding: 0;
         position: relative;
@@ -161,7 +160,7 @@
                     & > a {
                         height: 100%;
                         display: inline-block;
-                        padding: 1.25em .5em;
+                        padding: .5em;
                     }
                 }
             }
