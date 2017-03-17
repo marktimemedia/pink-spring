@@ -14,13 +14,12 @@
     }
 
     .post--thumbnail {
-        @include rem-px('margin-bottom', .75rem);
         width: 100%;
     }
 
     .post--byline {
         font-style: italic;
-        @include rem-px('margin', 0, 0, .75rem, 0);
+        @include rem-px('margin', 0, 0, 1.5rem, 0);
 
         a {
             font-style: italic;

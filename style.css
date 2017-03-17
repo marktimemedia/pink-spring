@@ -1025,15 +1025,12 @@ figcaption {
   overflow: hidden;
   position: relative;
   padding-bottom: 56.25%; }
-
-.embed-container iframe,
-.embed-container object,
-.embed-container embed {
-  height: 100%;
-  left: 0;
-  top: 0;
-  position: absolute;
-  width: 100%; }
+  .embed-container iframe, .embed-container object, .embed-container embed, .entry-content-asset iframe, .entry-content-asset object, .entry-content-asset embed {
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%; }
 
 .sticky {
   background: #f2f2f2;
@@ -1236,12 +1233,13 @@ figcaption {
       background: #e8e4e6; }
     .nav-main--menu ul.sub-menu li {
       padding: 0em;
-      min-width: 10em; }
+      width: 100%; }
       .nav-main--menu ul.sub-menu li > a {
         color: #de1e7e;
         padding: 9.6px 16px;
         padding: 0.6rem 1rem;
-        text-transform: none; }
+        text-transform: none;
+        width: 100%; }
   .nav-main--menu li {
     position: relative; }
     .nav-main--menu li:hover > ul, .nav-main--menu li.sfHover > ul {
@@ -1595,6 +1593,8 @@ figcaption {
   .content--sidebar {
     width: 60%; }
 
+  .open-the-sidebar .wrapper {
+    overflow: visible; }
   .open-the-sidebar .content--sidebar {
     height: 100%;
     overflow-y: auto; }
@@ -1772,14 +1772,12 @@ figcaption {
     text-decoration: none; }
 
 .post--thumbnail {
-  margin-bottom: 12px;
-  margin-bottom: 0.75rem;
   width: 100%; }
 
 .post--byline, #tribe-events .tribe-event-schedule-details {
   font-style: italic;
-  margin: 0 0 12px 0;
-  margin: 0 0 0.75rem 0; }
+  margin: 0 0 24px 0;
+  margin: 0 0 1.5rem 0; }
   .post--byline a, #tribe-events .tribe-event-schedule-details a {
     font-style: italic; }
 

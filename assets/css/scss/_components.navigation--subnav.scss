@@ -73,12 +73,12 @@
             text-align: left;
             top: 100%;
             @include transition(all .2s);
+            //width: 10em // if you want a fixed width menu with text wrap
             z-index: 99;
 
             &:hover {
                 overflow: inherit;
             }
-
 
             ul {
                 top: 100%;
@@ -88,12 +88,14 @@
 
             li {
                 padding: 0em;
-                min-width: 10em;
+                width: 100%;
 
                 & > a {
                     color: $linkColor;
                     @include rem-px('padding', .6rem, 1rem);
                     text-transform: none;
+                    width: 100%;
+                    // white-space: normal // if you want a fixed width menu with text wrap
                 }
             }
         }

@@ -18,7 +18,7 @@ function spring_setup() {
   set_post_thumbnail_size( 500, 370, false );
 
   // Add and Modify Image Sizes
-  // add_image_size( 'custom_size', 1800, 1800 );
+  add_image_size( 'custom_size', 1400, 1400 );
 
   // Add post formats (http://codex.wordpress.org/Post_Formats)
   // add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));

@@ -72,19 +72,17 @@
     }
 
 .embed-container, .entry-content-asset { 
-        height: auto;
-        max-width: 100%;
-        overflow: hidden;
-        position: relative; 
-        padding-bottom: 56.25%;
-    } 
+    height: auto;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative; 
+    padding-bottom: 56.25%;
 
-    .embed-container iframe,
-    .embed-container object,
-    .embed-container embed { 
+    iframe, object, embed {
         height: 100%;
         left: 0;
         top: 0;
         position: absolute;
         width: 100%;   
     }
+} 

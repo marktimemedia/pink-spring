@@ -13,6 +13,9 @@
     }
 
     .open-the-sidebar {
+        .wrapper {
+            overflow: visible;
+        }
         .content--sidebar {
             height: 100%;
             overflow-y: auto;
