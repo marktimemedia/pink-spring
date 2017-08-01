@@ -1432,10 +1432,6 @@ figcaption {
   overflow: hidden;
   padding: .4em;
   position: absolute;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  background-clip: padding-box;
   top: 0;
   width: 2.5em; }
   .open-button:active, .open-button:focus {

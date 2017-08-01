@@ -55,6 +55,12 @@
     function navHeight() {
         var heights = window.innerHeight;
         var mq = window.matchMedia( "(max-width: 48.5em)" );
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (mq.matches) {
+              document.querySelectorAll('.nav-main')[0].style.height = heights -50 + "px";
+            } 
+        }, false); 
         
         mq.addListener(function(changed) {
             if(changed.matches) {
@@ -66,6 +72,10 @@
     }
 
     navHeight();
+
+document.addEventListener('DOMContentLoaded', function() {
+    navHeight();
+}, false);
 
 var timer;
 
