@@ -376,8 +376,8 @@ textarea,
   font-family: sans-serif;
   font-size: .875em;
   font-weight: 300;
-  margin-bottom: 11.2px;
-  margin-bottom: 0.7rem;
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
   max-width: 100%;
   padding: 0.5em;
   width: 100%; }
@@ -414,8 +414,8 @@ input[type="checkbox"],
 input[type="radio"] {
   margin: 3px 0;
   padding: 0;
-  *width: 13px;
-  *height: 13px; }
+  *width: 1em;
+  *height: 1em; }
 
 button,
 .button,

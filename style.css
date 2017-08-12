@@ -462,8 +462,8 @@ textarea,
   font-family: sans-serif;
   font-size: .875em;
   font-weight: 300;
-  margin-bottom: 11.2px;
-  margin-bottom: 0.7rem;
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
   max-width: 100%;
   padding: 0.5em;
   width: 100%; }
@@ -500,8 +500,8 @@ input[type="checkbox"],
 input[type="radio"] {
   margin: 3px 0;
   padding: 0;
-  *width: 13px;
-  *height: 13px; }
+  *width: 1em;
+  *height: 1em; }
 
 button,
 .button,
@@ -818,13 +818,13 @@ figcaption {
 
 @media only screen and (min-width: 30.5em) {
   .alignright {
-    float: right;
+    float: right !important;
     margin: 0 0 8px 16px;
     margin: 0 0 0.5rem 1rem;
     max-width: 50%; }
 
   .alignleft {
-    float: left;
+    float: left !important;
     margin: 0 16px 8px 0;
     margin: 0 1rem 0.5rem 0;
     max-width: 50%; }
@@ -835,7 +835,7 @@ figcaption {
     clear: both; }
 
   .alignnone {
-    float: none;
+    float: none !important;
     margin: 8px 0;
     margin: 0.5rem 0;
     max-width: 100%; } }
@@ -1055,7 +1055,7 @@ figcaption {
 .nav-quicklinks {
   width: 100%;
   position: relative;
-  z-index: 1000; }
+  z-index: 999; }
   .nav-quicklinks .menu-item a, .nav-quicklinks .menu-item a:visited {
     color: #d4ccd4;
     font-weight: 200;
@@ -1433,7 +1433,8 @@ figcaption {
   padding: .4em;
   position: absolute;
   top: 0;
-  width: 2.5em; }
+  width: 2.5em;
+  z-index: 1000; }
   .open-button:active, .open-button:focus {
     outline: 0; }
   .open-button:hover {
@@ -2125,12 +2126,6 @@ li.woocommerce-MyAccount-navigation-link--customer-logout {
   list-style: none;
   margin: 0;
   padding: 0; }
-
-.pager--previous:before, a[rel="prev"]:before {
-  content: '← '; }
-
-.pager--next:after, a[rel="next"]:after {
-  content: ' →'; }
 
 .post--pager {
   margin: 2em auto 0 auto;

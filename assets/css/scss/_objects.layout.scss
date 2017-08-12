@@ -9,13 +9,13 @@
 
 @media only screen and (min-width: #{$smallBreakpoint}) {
     .alignright {
-        float: right;
+        float: right !important;
         @include rem-px('margin', 0, 0, .5rem, 1rem);
         max-width: 50%;
     }
 
     .alignleft {
-        float: left;
+        float: left !important;
         @include rem-px('margin', 0, 1rem, .5rem, 0);
         max-width: 50%;
     }
@@ -27,7 +27,7 @@
     }
 
     .alignnone {
-        float: none;
+        float: none !important;
         @include rem-px('margin', .5em, 0);
         max-width: 100%;
     }

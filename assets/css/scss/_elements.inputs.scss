@@ -27,7 +27,7 @@ textarea,
     font-family: $baseFont;
     font-size: .875em;
     font-weight: $baseFontWeight;
-    @include rem-px('margin-bottom', .7em);
+    @include rem-px('margin-bottom', .5em);
     max-width: $textboxMaxWidth;
     padding: $textboxPadding;
     width: 100%;
@@ -42,8 +42,8 @@ input[type="checkbox"],
 input[type="radio"] {
     margin: 3px 0;
     padding: 0;
-    *width: 13px;
-    *height: 13px;
+    *width: 1em;
+    *height: 1em;
 }
 
 button,
