@@ -13,7 +13,7 @@ endif;
 ?>
 
 <nav class="nav-pager post--pager">
-    <?php previous_post_link( '%link', 'Previous' ); ?>
+    <?php previous_post_link( '%link', '&larr; Previous' ); ?>
     <a class="post--pager-all" href="<?php echo $post_link; ?>"><?php _e( $all, 'spring' ); ?></a>
-    <?php next_post_link(  '%link', 'Next' ); ?></a>
+    <?php next_post_link(  '%link', 'Next &rarr;' ); ?>
 </nav>
