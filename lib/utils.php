@@ -16,11 +16,11 @@ function is_element_empty( $element ) {
 /**
 * Custom Taxonomy Term Links
 * From http://codex.wordpress.org/Function_Reference/get_the_terms
-* echo custom_taxonomies_terms_links(); in your template file
+* echo mtm_custom_taxonomies_terms_links(); in your template file
 */
 
 // get taxonomies terms links
-function custom_taxonomies_terms_links(){
+function mtm_custom_taxonomies_terms_links(){
   // get post by post id
   $post = get_post( $post->ID );
 
