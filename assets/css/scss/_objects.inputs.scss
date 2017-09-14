@@ -30,7 +30,7 @@
     vertical-align: middle;
     //float: right;
 }
-    .button-social { // circle button
+    a.button-social { // circle button
         border-radius: 50%; 
         @include rem-px('padding', .5rem);
         

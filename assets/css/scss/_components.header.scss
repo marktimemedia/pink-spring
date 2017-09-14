@@ -151,7 +151,7 @@
                 .menu-item a {
                     margin: 0 .3em;
                     padding: .6em 0 .5em;
-                    @include multi-transition("padding .5s, margin .5s");
+                    @include transition(all .3s);
                 }
             }
         }

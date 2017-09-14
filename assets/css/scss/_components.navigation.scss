@@ -1,3 +1,30 @@
+.menu-item {
+    padding: 0;
+    margin-bottom: 0;
+    @include transition(all .3s);
+
+    &:last-child {
+        border-bottom: 0;
+    }
+
+    a,
+    a:visited {
+        color: $linkColor;
+        display: block;
+        padding: .5em 0;
+        @include transition(all .3s);
+
+        &:hover {
+            color: darken($linkColor, 10%);
+            @include transition(all .3s);
+        }
+    }
+
+    &.current-menu-item a, &.current-menu-parent a {
+        color: darken($linkColor, 10%);
+    }
+}
+
 .nav-quicklinks {
     width: 100%;
     position: relative;
@@ -68,30 +95,7 @@
         padding: 0;
     }
 
-        .menu-item {
-            padding: 0;
-            margin-bottom: 0;
-
-            &:last-child {
-                border-bottom: 0;
-            }
-
-            a,
-            a:visited {
-                color: $linkColor;
-                display: block;
-                padding: .5em 0;
-                @include transition(color .2s);
-
-                &:hover {
-                    color: darken($linkColor, 10%);
-                }
-            }
-
-            &.current-menu-item a {
-                //font-weight: 700;
-            }
-        }
+        
 
 .footer--menu {
     margin: 1em 0 0 0;

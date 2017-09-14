@@ -64,12 +64,14 @@ input[type="reset"] {
     font-weight: $buttonFontWeight;
     height: auto;
     padding: $buttonPadding;
+    @include transition(all .3s);
     width: auto;
 
     &:hover {
         background-color: $buttonBackground2;
         //@include vertical($buttonBackground2, $buttonBackground);
         border-bottom: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor2;
+        @include transition(all .3s);
     }
 
     &.alt {

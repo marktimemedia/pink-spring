@@ -434,6 +434,11 @@ input[type="reset"] {
   font-weight: 200;
   height: auto;
   padding: 0.5em 2em;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   width: auto; }
   button:hover,
   .button:hover,
@@ -442,7 +447,12 @@ input[type="reset"] {
   input[type="submit"]:hover,
   input[type="reset"]:hover {
     background-color: #b1185f;
-    border-bottom: 1px solid #e33284; }
+    border-bottom: 1px solid #e33284;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
   button.alt,
   .button.alt,
   .global-button.alt,
