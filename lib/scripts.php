@@ -11,7 +11,8 @@
  * 3. /theme/assets/js/main.min.js (in footer)
  */
 function spring_scripts() {
-    wp_enqueue_style( 'spring_main', get_template_directory_uri() . '/style.css', false );
+    // this is adding an extra element for cache-busting purposes on file update
+    wp_enqueue_style('spring_main', get_template_directory_uri() . '/style.css', array(), filemtime( get_stylesheet_directory() . '/style.css' ));
 
     if ( is_single() && comments_open() && get_option('thread_comments') ) {
         wp_enqueue_script('comment-reply');

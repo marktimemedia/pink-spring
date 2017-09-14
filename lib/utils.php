@@ -20,7 +20,7 @@ function is_element_empty( $element ) {
 */
 
 // get taxonomies terms links
-function mtm_custom_taxonomies_terms_links(){
+function custom_taxonomies_terms_links(){
   // get post by post id
   $post = get_post( $post->ID );
 
@@ -39,20 +39,20 @@ function mtm_custom_taxonomies_terms_links(){
       $terms = get_the_terms( $post->ID, $taxonomy_slug );
 
       if ( !empty( $terms ) ) {
-        $out[] = '<div class="post--metadata-group"><span class="post--metadata--title">' . $taxonomy->label . ': </span><ul>';
+        $open = '<div class="post--metadata-group"><span class="post--metadata--title">' . $taxonomy->label . ': </span><ul>';
         foreach ( $terms as $term ) {
           $out[] =
-            '  <li><a href="'
+            '<li><a href="'
           .    get_term_link( $term->slug, $taxonomy_slug ) .'">'
           .    $term->name
-          . "</a></li>\n";
+          . "</a>";
         }
-        $out[] = "</ul></div>\n";
+        $close = "</ul></div>\n";
       }
     }
   }
 
-  return implode( '', $out );
+  return $open . implode( ',&nbsp</li>', $out ) . $close;
 }
 
 /**
