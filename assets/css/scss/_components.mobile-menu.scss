@@ -113,19 +113,28 @@
             margin-right: -$sidebarWidthMid;
             overflow: visible;
         }
+
+        .header--inner {
+            position: static;
+        }
+
         .nav-main {
             //height: 100%;
             overflow-y: auto;
 
             #closeSidebar {
-                border: 1px solid $linkColor;
+                background-color: $buttonBackground;
                 border-radius: 50%;
-                color: $linkColor;
+                color: $buttonColor;
                 display: inline-block;
                 font-size: 1.8em;
                 line-height: 1;
-                margin-top: .75em;
-                padding: 0 .29em .1em .25em;
+                margin: .5em;
+                padding: .1em .3em;
+
+                &:hover, &:focus, &:active {
+                    background-color: $buttonBackground2;
+                }
             }
         }
 

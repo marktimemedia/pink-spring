@@ -1,9 +1,14 @@
 .footer-main {
+    background-color: $Ndarker;
     bottom: 0;
-    border-top: 1px solid $Nlighter;
+    color: $Nlightest;
     padding: $smallPadding 0;
     position: relative;
     width: 100%;
+
+    p, h1, h2, h3 {
+        color: $Nlightest;
+    }
 }
     .footer--inner {
         @include clearfix();

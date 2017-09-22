@@ -14,7 +14,7 @@
         }
 
         .menu-toggle {
-            background: lighten($linkColor, 40%);
+            background: transparent;
             cursor: pointer;
             display:inline-block;
             height: 100%;
@@ -22,6 +22,17 @@
             right: 0;
             top: 0;
             width: 2em;
+            @include transition(all .3s);
+
+            &:hover, &:focus, &:active {
+                background-color: $buttonBackground;
+                @include transition(all .3s);
+
+                &:after {
+                    color: $buttonColor;
+                    @include transition(all .3s);
+                }
+            }
 
             &:after {
                 content: '+';
@@ -31,6 +42,7 @@
                 display: inline-block;
                 width: 100%;
                 text-align: center;
+                @include transition(all .3s);
             }
         }
 
@@ -41,7 +53,7 @@
         }
 
         ul.sub-menu {
-            border-bottom: 1px solid $Ndark;
+            background-color: $Nlighter;
             margin-left: 0;
 
              &.menu-collapse {
@@ -61,7 +73,7 @@
 
     .nav-main--menu {
         ul.sub-menu {
-            background: $Nlightest;
+            background-color: $Nlightest;
             border: 0;
             display: block;
             height: auto;

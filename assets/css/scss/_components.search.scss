@@ -14,7 +14,8 @@
     }
 
     .search--button {
-        background: $linkColor;
+        background: $buttonAltBackground;
+        border: 0;
         bottom: 0;
         color: $white;
         font-size: .7em;
@@ -26,6 +27,8 @@
         top: 0;
 
         &:hover {
+            background: $buttonAltBackground2;
+            border: 0;
             color: $white;
         }
     }
