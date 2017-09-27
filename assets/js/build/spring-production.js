@@ -111,7 +111,7 @@ function reorderWidgets() {
     if (matching === false) {
         matching = true;
 
-        var widgets = document.querySelectorAll('.widget'),
+        var widgets = document.querySelectorAll('aside .widget'),
             widgetsLength = widgets.length,
             col1 = document.querySelectorAll('.sidebar--leftcol')[0],
             col2 = document.querySelectorAll('.sidebar--rightcol')[0],
@@ -136,7 +136,7 @@ function reorderWidgets() {
 function unorderWidgets() {
     if (matching === true) {
         matching = false;
-        var widgets = document.querySelectorAll('.widget'),
+        var widgets = document.querySelectorAll('aside .widget'),
             widgetsLength = widgets.length,
             sidebar = document.querySelectorAll('.content--sidebar')[0];
 
@@ -155,7 +155,7 @@ function unorderWidgets() {
 
 function dataAttributeAdd() {
 
-    var widgets = document.querySelectorAll('.widget'),
+    var widgets = document.querySelectorAll('aside .widget'),
         widgetsLength = widgets.length;
 
     for(var i = 0; i < widgetsLength; i++) {
