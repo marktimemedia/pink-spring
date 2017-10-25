@@ -1091,7 +1091,7 @@ a.button-social {
       -ms-transition: all 0.3s;
       -o-transition: all 0.3s;
       transition: all 0.3s; }
-  .menu-item.current-menu-item > a, .menu-item.current-menu-parent > a {
+  .menu-item.current-menu-item > a, .menu-item.current-menu-parent > a, .menu-item.current-menu-ancestor > a {
     color: #ec76b1; }
 
 .nav-quicklinks {
@@ -1190,6 +1190,8 @@ a.button-social {
         height: 100%;
         display: inline-block;
         padding: .5em; }
+      .nav-main--menu .menu-item:hover > a, .nav-main--menu .menu-item:focus > a {
+        color: #ec76b1; }
 
   .footer--menu {
     margin-top: 0; }

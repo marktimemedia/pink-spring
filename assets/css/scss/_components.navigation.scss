@@ -20,7 +20,7 @@
         }
     }
 
-    &.current-menu-item > a, &.current-menu-parent > a {
+    &.current-menu-item > a, &.current-menu-parent > a, &.current-menu-ancestor > a {
         color: $linkHover;
     }
 }
@@ -164,6 +164,12 @@
                         height: 100%;
                         display: inline-block;
                         padding: .5em;
+                    }
+
+                    &:hover, &:focus {
+                        & > a {
+                            color: $linkHover;
+                        }
                     }
                 }
             }
