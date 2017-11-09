@@ -27,12 +27,14 @@ License: GPLv2
 		//var headerWrap = $('.header-main'); // only because header is outside of site wrap
 		var searchToggle = $('.search-toggle'); // button
 		var searchBar = $('.header-main .search-form'); // search
+		var search = $('.header-main .search--form .textbox'); // search input
 
 	    $(document).on('click', '.run-toggle', function(){ // if toggle is closed, click button or to open
 	    	bodyWrap.addClass('search-open');
 	    	//headerWrap.addClass('search-open-header');
 	    	searchToggle.removeClass('run-toggle').addClass('search-open');
 	    	searchBar.addClass('search-expanded');
+	    	search.focus();
 	    });
 
 	    $(document).on('click', '.search-open', function(){ // if toggle is open, close by clicking anywhere on the body
