@@ -2016,6 +2016,23 @@ section.comments {
 .woocommerce div.product div.images img {
   max-height: 40em; }
 
+.woocommerce ul.products, .woocommerce-page ul.products {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap; }
+  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .woocommerce ul.products li.product a, .woocommerce-page ul.products li.product a {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: center; }
+    .woocommerce ul.products li.product .button, .woocommerce ul.products li.product li.woocommerce-MyAccount-navigation-link--customer-logout a, li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce ul.products li.product a, .woocommerce-page ul.products li.product .button, .woocommerce-page ul.products li.product li.woocommerce-MyAccount-navigation-link--customer-logout a, li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce-page ul.products li.product a {
+      flex-grow: 0;
+      text-align: center; }
+
 .woocommerce-MyAccount-navigation ul {
   list-style: none;
   margin-left: 0;
@@ -2171,6 +2188,10 @@ li.woocommerce-MyAccount-navigation-link--customer-logout {
   #tribe-events-day .tribe-events-content {
     float: right;
     width: 67%; } }
+@media only screen and (max-width: 768px) {
+  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product, .woocommerce-page[class*=columns-] ul.products li.product, .woocommerce[class*=columns-] ul.products li.product {
+    margin: 0 2% 3em;
+    width: 46%; } }
 .nav-pager {
   *zoom: 1; }
   .nav-pager:before, .nav-pager:after {

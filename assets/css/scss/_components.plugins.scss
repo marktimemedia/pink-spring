@@ -21,6 +21,33 @@
     }
 }
 
+// Make products display flex by default, with fallback to their floats.
+.woocommerce, .woocommerce-page {
+    ul.products {
+        align-items: stretch;
+        display: flex;
+        flex-wrap: wrap;
+
+        li.product {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            a {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                justify-content: center;
+            }
+
+            .button {
+                flex-grow: 0;
+                text-align: center;
+            }
+        }
+    }
+}
+
 // WooCommerce Tabbed Account Page
 
 .woocommerce-MyAccount-navigation {
@@ -321,4 +348,12 @@
             width: 67%;
         }
     } 
+}
+
+// fix for weird WooCommerce margin/spacing issues
+@media only screen and (max-width:768px) {
+    .woocommerce ul.products li.product, .woocommerce-page ul.products li.product, .woocommerce-page[class*=columns-] ul.products li.product, .woocommerce[class*=columns-] ul.products li.product {
+        margin: 0 2% 3em;
+        width: 46%;
+    }
 }
