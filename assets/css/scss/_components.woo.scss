@@ -1,0 +1,168 @@
+.woocommerce {
+    .content {
+        @include clearfix();
+    }
+
+    .button, a.button, button, input.button {
+
+        @extend .global-button;
+
+        &.alt {
+            @extend .alt;
+        }
+
+        &:disabled, &:disabled[disabled] {
+            color: $white;
+        }
+    }
+
+    .added {
+        &:after {
+            position: absolute;
+        }
+    }
+
+    div.product {
+        div.images {
+            img {
+                max-height: 40em;
+                width: auto;
+            }
+
+            .flex-control-thumbs li {
+                padding: .5em .5em .5em 0;
+            }
+        }
+
+        p.price {
+            color: $springColor3;
+        }
+    }
+
+    span.onsale {
+        background-color: $springColor3;
+        padding: 0;
+    }
+
+    .woocommerce-breadcrumb {
+        margin: 0;
+
+        a {
+            color:$linkColor;
+
+            &:hover, &:focus {
+                color: $linkHover;
+            }
+        }
+    }
+}
+
+// Make products display flex by default, with fallback to their floats.
+.woocommerce, .woocommerce-page {
+    ul.products {
+        align-items: stretch;
+        display: flex;
+        flex-wrap: wrap;
+
+        li.product {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            a {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                //justify-content: center;
+
+                &.added_to_cart.wc-forward {
+                    @extend .global-button;
+                    background-color: $springColor3;
+                    flex-grow: 0;
+                    margin-top: .5em;
+                    text-align: center;
+                }
+
+                h2 {
+                    @include transition(all .2s);
+                    
+                    &:hover, &:focus {
+                        color: $linkColor;
+                        @include transition(all .2s);
+                    }       
+                } 
+            }
+
+            .button {
+                flex-grow: 0;
+                text-align: center;
+            }
+
+            .price {
+                color: $textColor;
+
+                del {
+                    display: inline-block;
+                    margin-right: .5em;
+                }
+            }
+        }
+    }
+}
+
+// With Sidebar, fewer products per row
+// Don't forget to update custom function in woo.php
+.woocommerce, .woocommerce-page {
+    & .has_sidebar {
+        ul.products {
+            li.product {
+                width:30.8%;
+            }
+        }
+    }
+    .cart-collaterals .cross-sells {
+        ul.products {
+            li.product {
+                width: 48%;
+            }
+        }
+    }
+}
+
+// WooCommerce Tabbed Account Page
+
+.woocommerce-MyAccount-navigation {
+    ul {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    li {
+        border-bottom: 1px solid $Nlighter;
+
+        &.is-active a {
+            font-weight: bold;
+            &:after {
+                content: ' »';
+            }
+        }
+    }
+}
+    li.woocommerce-MyAccount-navigation-link--customer-logout {
+        display: block;
+        border-bottom: 0;
+
+        a {
+            margin-top: 1em;
+            @extend .button;
+        }
+    }
+
+// fix for weird WooCommerce margin/spacing issues
+@media only screen and (max-width:768px) {
+    .woocommerce ul.products li.product, .woocommerce-page ul.products li.product, .woocommerce-page[class*=columns-] ul.products li.product, .woocommerce[class*=columns-] ul.products li.product {
+        margin: 0 2% 3em;
+        width: 46%;
+    }
+}

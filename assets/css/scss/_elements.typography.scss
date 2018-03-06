@@ -1,11 +1,9 @@
 p {  
-    color: $textColor;
     font-family: $baseFont;
     font-size: $baseFontSize;
     font-weight: $baseFontWeight;
     letter-spacing: $baseLetterSpace;
     line-height: $baselineHeight;
-    text-rendering:  optimizeLegibility;
 }
 
 /* Links */
@@ -54,7 +52,6 @@ h5, .h5,
 h6, .h6 {
     margin: 0;
     padding: 0;
-    text-rendering:  optimizeLegibility;
     text-shadow: $headingTextShadow; 
 
     * {
@@ -174,7 +171,6 @@ small {
 
 ul,
 ol {
-    color: $textColor;
     font-family: $baseFont;
     font-size: $baseFontSize;
     letter-spacing: $baseLetterSpace;

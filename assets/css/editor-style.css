@@ -3,13 +3,11 @@
 /* 03. GENERIC */
 /* 04. ELEMENTS */
 p {
-  color: #464144;
   font-family: sans-serif;
   font-size: 100%;
   font-weight: 300;
   letter-spacing: 0px;
-  line-height: 1.625em;
-  text-rendering: optimizeLegibility; }
+  line-height: 1.625em; }
 
 /* Links */
 a {
@@ -41,7 +39,6 @@ h5, .h5,
 h6, .h6 {
   margin: 0;
   padding: 0;
-  text-rendering: optimizeLegibility;
   text-shadow: none; }
   h1 *, .h1 *,
   h2 *, .h2 *,
@@ -152,7 +149,6 @@ small {
 
 ul,
 ol {
-  color: #464144;
   font-family: sans-serif;
   font-size: 100%;
   letter-spacing: 0px;
@@ -366,6 +362,7 @@ input[type="number"],
 input[type="search"],
 input[type="file"],
 input[type="password"],
+input[type="tel"],
 select,
 textarea,
 .textbox {
@@ -402,6 +399,8 @@ textarea,
   input[type="file"]:focus,
   input[type="password"]:active,
   input[type="password"]:focus,
+  input[type="tel"]:active,
+  input[type="tel"]:focus,
   select:active,
   select:focus,
   textarea:active,
@@ -428,6 +427,7 @@ input[type="reset"] {
   background-color: #de1e7e;
   border: 0;
   border-bottom: 1px solid #9b1558;
+  border-radius: 0;
   display: inline-block;
   font-family: sans-serif;
   font-size: 1em;

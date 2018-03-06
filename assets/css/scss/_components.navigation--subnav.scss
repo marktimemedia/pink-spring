@@ -115,8 +115,7 @@
         li {
             position: relative;
 
-            &:hover,
-            &.sfHover {
+            &:hover, &.sfHover, &:focus {
                 &>ul {
                     display: block;
                     max-height: 800px; // change based on your menu height

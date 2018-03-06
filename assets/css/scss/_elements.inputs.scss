@@ -17,6 +17,7 @@ input[type="number"],
 input[type="search"],
 input[type="file"],
 input[type="password"],
+input[type="tel"],
 select,
 textarea,
 .textbox {
@@ -58,6 +59,7 @@ input[type="reset"] {
     //@include vertical($buttonBackground, $buttonBackground2);
     border: 0;
     border-bottom: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor;
+    border-radius: 0;
     display: inline-block;
     font-family: $buttonFont;
     font-size: $buttonFontSize;

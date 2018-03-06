@@ -15,10 +15,10 @@ function spring_setup() {
 
   // Add post thumbnails (http://codex.wordpress.org/Post_Thumbnails)
   add_theme_support( 'post-thumbnails' );
-  set_post_thumbnail_size( 500, 370, false );
+  // set_post_thumbnail_size( 500, 370, false );
 
   // Add and Modify Image Sizes
-  add_image_size( 'custom_size', 1400, 1400 );
+  // add_image_size( 'square', 800, 800, array( 'center', 'center' ) );
 
   // Add post formats (http://codex.wordpress.org/Post_Formats)
   // add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));

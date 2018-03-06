@@ -8,7 +8,7 @@
 }
 
     .textbox.search--textbox {
-        border: 0;
+        border-color: $Nlighter;
         margin: 0;
         padding: .5em 2.25em .5em .25em;  
     }
@@ -65,6 +65,10 @@
     overflow: hidden;
     padding-bottom: 0;
     @include transition(all .8s);
+
+    .textbox.search--textbox {
+        border: 0;
+    }
 }
 
     .header-main .search-form.search-expanded {
