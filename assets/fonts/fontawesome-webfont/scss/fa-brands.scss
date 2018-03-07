@@ -16,6 +16,6 @@
   url('#{$fa-font-path}/fa-brands-400.svg#fontawesome') format('svg');
 }
 
-.fab {
+.fab, .fab:before {
   font-family: 'Font Awesome 5 Brands';
 }

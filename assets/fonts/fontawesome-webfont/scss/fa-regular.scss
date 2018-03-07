@@ -16,7 +16,7 @@
   url('#{$fa-font-path}/fa-regular-400.svg#fontawesome') format('svg');
 }
 
-.far {
+.far, .far:before {
   font-family: 'Font Awesome 5 Pro';
   font-weight: 400;
 }

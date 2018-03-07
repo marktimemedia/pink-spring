@@ -23,6 +23,10 @@ class Spring_Sidebar {
     $templates    = array_map( array( $this, 'check_page_template' ), $this->templates );
 
     if ( in_array( true, $conditionals ) || in_array( true, $templates ) ) {
+      $this->display = true;
+    }
+
+    if( is_page_template() && !in_array( true, $templates ) ) {
       $this->display = false;
     }
   }
@@ -38,5 +42,4 @@ class Spring_Sidebar {
   private function check_page_template( $page_template ) {
     return is_page_template( $page_template );
   }
-
 }

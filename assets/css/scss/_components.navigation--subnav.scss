@@ -72,7 +72,7 @@
     }
 
     .nav-main--menu {
-        ul.sub-menu {
+        ul.sub-menu { // secondary menu
             background-color: $Nlightest;
             border: 0;
             display: block;
@@ -92,9 +92,9 @@
                 overflow: inherit;
             }
 
-            ul {
-                top: 100%;
-                left: 10%;
+            ul { // tertiary menu
+                top: 0;
+                left: 100%;
                 background: darken($Nlightest, 5%);
             }
 
@@ -112,16 +112,17 @@
             }
         }
 
-        li {
+        li { // all menu LI items
             position: relative;
 
             &:hover, &.sfHover, &:focus {
-                &>ul {
+                
+                &>ul { // submenu on LI hover
                     display: block;
                     max-height: 800px; // change based on your menu height
                     //min-width: 10em; // if you're not using text overflow
                     padding: .5em;
-                    @include transition(all .5s);
+                    @include transition(all .5s linear .3s);
                 }
             }
         }

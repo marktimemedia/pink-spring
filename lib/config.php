@@ -59,7 +59,7 @@ function spring_display_sidebar() {
   $sidebar_config = new Spring_Sidebar(
     /**
      * Conditional tag checks (http://codex.wordpress.org/Conditional_Tags)
-     * Any of these conditional tags that return true won't show the sidebar
+     * Any of these conditional tags that return true will show the sidebar
      *
      * To use a function that accepts arguments, use the following format:
      *
@@ -72,7 +72,8 @@ function spring_display_sidebar() {
     ),
     /**
      * Page template checks (via is_page_template())
-     * Any of these page templates that return true won't show the sidebar
+     * By default, page templates do not show the sidebar
+     * Any of these page templates that return true will show the sidebar
      */
     array(
       'template-custom.php'

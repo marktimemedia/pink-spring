@@ -10,6 +10,6 @@
 	    <li><?php _e( 'a mistyped address', 'spring' ); ?></li>
 	    <li><?php _e( 'an out-of-date link', 'spring' ); ?></li>
 	</ul>
-
+	<p><?php _e( 'Would you like to try to search for something else?', 'spring' ); ?></p>
 	<?php get_template_part( 'templates/searchform' ) ?>
 </section>

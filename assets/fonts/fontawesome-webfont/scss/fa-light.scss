@@ -5,7 +5,7 @@
 //@import 'variables';
 
 @font-face {
-  font-family: 'Font Awesome 5 Pro';
+  font-family: 'Font Awesome 5 Light';
   font-style: normal;
   font-weight: 300;
   src: url('#{$fa-font-path}/fa-light-300.eot');
@@ -16,7 +16,7 @@
   url('#{$fa-font-path}/fa-light-300.svg#fontawesome') format('svg');
 }
 
-.fal {
-  font-family: 'Font Awesome 5 Pro';
+.fal, .fal:before {
+  font-family: 'Font Awesome 5 Light';
   font-weight: 300;
 }
