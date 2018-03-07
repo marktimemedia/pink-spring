@@ -22,6 +22,7 @@ function spring_scripts() {
     wp_enqueue_script( 'modernizr' );
     wp_enqueue_script( 'jquery' );
 
+    //wp_enqueue_script( 'ie-fixes', get_template_directory_uri() . '/assets/js/build/ie-fixes.js', '', '', true );
     wp_enqueue_script( 'mobile-menu-toggle', get_template_directory_uri() . '/assets/js/build/mobile-menu-toggle.js', '', '', true );
     wp_enqueue_script( 'header-resize', get_template_directory_uri() . '/assets/js/build/header-resize.js', '', false, true );
 }

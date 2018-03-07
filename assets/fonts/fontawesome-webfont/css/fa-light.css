@@ -1,14 +1,72 @@
-/*!
- * Font Awesome Pro 5.0.8 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license (Commercial License)
- */
-@font-face {
-  font-family: 'Font Awesome 5 Pro';
-  font-style: normal;
-  font-weight: 300;
-  src: url("../webfonts/fa-light-300.eot");
-  src: url("../webfonts/fa-light-300.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-light-300.woff2") format("woff2"), url("../webfonts/fa-light-300.woff") format("woff"), url("../webfonts/fa-light-300.ttf") format("truetype"), url("../webfonts/fa-light-300.svg#fontawesome") format("svg"); }
+/*
+Error: Undefined variable: "$fa-font-path".
+        on line 11 of /Users/michelleschulp/Documents/Dropbox (Marktime Media)/WEBSITES/site-pink-spring-demo/app/public/wp-content/themes/pink-spring-theme/assets/fonts/fontawesome-webfont/scss/fa-light.scss
 
-.fal {
-  font-family: 'Font Awesome 5 Pro';
-  font-weight: 300; }
+6: 
+7: @font-face {
+8:   font-family: 'Font Awesome 5 Pro';
+9:   font-style: normal;
+10:   font-weight: 300;
+11:   src: url('#{$fa-font-path}/fa-light-300.eot');
+12:   src: url('#{$fa-font-path}/fa-light-300.eot?#iefix') format('embedded-opentype'),
+13:   url('#{$fa-font-path}/fa-light-300.woff2') format('woff2'),
+14:   url('#{$fa-font-path}/fa-light-300.woff') format('woff'),
+15:   url('#{$fa-font-path}/fa-light-300.ttf') format('truetype'),
+16:   url('#{$fa-font-path}/fa-light-300.svg#fontawesome') format('svg');
+
+Backtrace:
+/Users/michelleschulp/Documents/Dropbox (Marktime Media)/WEBSITES/site-pink-spring-demo/app/public/wp-content/themes/pink-spring-theme/assets/fonts/fontawesome-webfont/scss/fa-light.scss:11
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/node.rb:50:in `perform'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/string_interpolation.rb:93:in `_perform'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/node.rb:50:in `perform'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/funcall.rb:170:in `perform_arg'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/funcall.rb:124:in `block in _perform'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/funcall.rb:124:in `each'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/funcall.rb:124:in `each_with_index'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/funcall.rb:124:in `each'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/funcall.rb:124:in `map'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/funcall.rb:124:in `_perform'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/node.rb:50:in `perform'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:115:in `with_frame'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `with_base'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:502:in `block (2 levels) in visit_directive'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:502:in `map'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:502:in `block in visit_directive'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:501:in `visit_directive'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:115:in `with_frame'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `with_base'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `map'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/root_node.rb:20:in `render'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/engine.rb:278:in `render'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/sass_scss.rb:423:in `run'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/base.rb:52:in `parse'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/base.rb:19:in `parse!'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/bin/scss:13:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$fa-font-path\".\A         on line 11 of /Users/michelleschulp/Documents/Dropbox (Marktime Media)/WEBSITES/site-pink-spring-demo/app/public/wp-content/themes/pink-spring-theme/assets/fonts/fontawesome-webfont/scss/fa-light.scss\A \A 6: \A 7: @font-face {\A 8:   font-family: 'Font Awesome 5 Pro';\A 9:   font-style: normal;\A 10:   font-weight: 300;\A 11:   src: url('#{$fa-font-path}/fa-light-300.eot');\A 12:   src: url('#{$fa-font-path}/fa-light-300.eot?#iefix') format('embedded-opentype'),\A 13:   url('#{$fa-font-path}/fa-light-300.woff2') format('woff2'),\A 14:   url('#{$fa-font-path}/fa-light-300.woff') format('woff'),\A 15:   url('#{$fa-font-path}/fa-light-300.ttf') format('truetype'),\A 16:   url('#{$fa-font-path}/fa-light-300.svg#fontawesome') format('svg');"; }
