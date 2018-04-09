@@ -1,8 +1,4 @@
 p {  
-    font-family: $baseFont;
-    font-size: $baseFontSize;
-    font-weight: $baseFontWeight;
-    letter-spacing: $baseLetterSpace;
     line-height: $baselineHeight;
 }
 
@@ -11,6 +7,7 @@ p {
 a {
     color: $linkColor;
     cursor: pointer;
+    font-weight: inherit;
     text-decoration: none;
     transition: color .3s;
 
@@ -71,7 +68,7 @@ h1,
     
 
     a {
-        font-weight: $h1FontWeight;
+        //font-weight: inherit;
     }
 }
 
@@ -86,7 +83,7 @@ h2,
     margin-bottom: $headingMargin;
 
     a {
-        font-weight: $h2FontWeight;
+        //font-weight: inherit;
     }
 }
 
@@ -101,7 +98,7 @@ h3,
     margin-bottom: $headingMargin;
 
     a {
-        font-weight: $h3FontWeight;
+        //font-weight: inherit;
     }
 }
 
@@ -116,7 +113,7 @@ h4,
     margin-bottom: $headingMargin;
 
     a {
-        font-weight: $h4FontWeight;
+        //font-weight: inherit;
     }
 }
 
@@ -131,7 +128,7 @@ h5,
     margin-bottom: $headingMargin;
 
     a {
-        font-weight: $h5FontWeight;
+        //font-weight: inherit;
     }
 }
 
@@ -147,7 +144,7 @@ h6,
     text-transform: uppercase;
 
     a {
-        font-weight: $h6FontWeight;
+        //font-weight: inherit;
     }
 }
 
@@ -171,9 +168,9 @@ small {
 
 ul,
 ol {
-    font-family: $baseFont;
-    font-size: $baseFontSize;
-    letter-spacing: $baseLetterSpace;
+    //font-family: $baseFont;
+    font-size: inherit;
+    //letter-spacing: $baseLetterSpace;
     margin-left: 1em;
     padding: 0 0 0 $gutter;
 

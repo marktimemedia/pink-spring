@@ -32,6 +32,6 @@ function spring_title() {
   } elseif ( is_404() ) {
     return __( 'Page Not Found', 'spring' );
   } else {
-    return get_the_title();
+    return esc_html( get_the_title() );
   }
 }

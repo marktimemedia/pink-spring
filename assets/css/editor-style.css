@@ -3,16 +3,13 @@
 /* 03. GENERIC */
 /* 04. ELEMENTS */
 p {
-  font-family: sans-serif;
-  font-size: 100%;
-  font-weight: 300;
-  letter-spacing: 0px;
   line-height: 1.625em; }
 
 /* Links */
 a {
   color: #de1e7e;
   cursor: pointer;
+  font-weight: inherit;
   text-decoration: none;
   transition: color .3s; }
   a:hover {
@@ -58,9 +55,6 @@ h1,
   letter-spacing: 0px;
   line-height: 1.1;
   margin-bottom: 1rem; }
-  h1 a,
-  .h1 a {
-    font-weight: 200; }
 
 h2,
 .h2 {
@@ -72,9 +66,6 @@ h2,
   letter-spacing: 0px;
   line-height: 1.1;
   margin-bottom: 1rem; }
-  h2 a,
-  .h2 a {
-    font-weight: 200; }
 
 h3,
 .h3 {
@@ -86,9 +77,6 @@ h3,
   letter-spacing: 0px;
   line-height: 1.1;
   margin-bottom: 1rem; }
-  h3 a,
-  .h3 a {
-    font-weight: 300; }
 
 h4,
 .h4 {
@@ -100,9 +88,6 @@ h4,
   letter-spacing: 0px;
   line-height: 1.1;
   margin-bottom: 1rem; }
-  h4 a,
-  .h4 a {
-    font-weight: 500; }
 
 h5,
 .h5 {
@@ -114,9 +99,6 @@ h5,
   letter-spacing: 0px;
   line-height: 1.1;
   margin-bottom: 1rem; }
-  h5 a,
-  .h5 a {
-    font-weight: 500; }
 
 h6,
 .h6 {
@@ -129,9 +111,6 @@ h6,
   line-height: 1.1;
   margin-bottom: 1rem;
   text-transform: uppercase; }
-  h6 a,
-  .h6 a {
-    font-weight: 500; }
 
 /* Lists */
 ol,
@@ -149,9 +128,7 @@ small {
 
 ul,
 ol {
-  font-family: sans-serif;
-  font-size: 100%;
-  letter-spacing: 0px;
+  font-size: inherit;
   margin-left: 1em;
   padding: 0 0 0 1em; }
   ul ul,
@@ -431,6 +408,7 @@ input[type="reset"] {
   display: inline-block;
   font-family: sans-serif;
   font-size: 1em;
+  -webkit-font-smoothing: auto;
   font-weight: 200;
   height: auto;
   padding: 0.5em 2em;

@@ -1,20 +1,22 @@
 .woocommerce {
-    .content {
+    .content, .content & {
         @include clearfix();
+
+        .button, a.button, button, input.button {
+
+            @extend .global-button;
+
+            &.alt {
+                @extend .alt;
+            }
+
+            &:disabled, &:disabled[disabled] {
+                color: $white;
+            }
+        }
     }
 
-    .button, a.button, button, input.button {
-
-        @extend .global-button;
-
-        &.alt {
-            @extend .alt;
-        }
-
-        &:disabled, &:disabled[disabled] {
-            color: $white;
-        }
-    }
+    
 
     .added {
         &:after {
@@ -33,9 +35,22 @@
                 padding: .5em .5em .5em 0;
             }
         }
+    }
 
-        p.price {
+    .price {
+        color: $springColor3;
+
+        del { // old pre-sale price
+            & > span {
+                text-decoration: line-through;
+                color: $Nmid;
+            }
+        }
+
+        ins { // new sale price
+            background-color: transparent;
             color: $springColor3;
+            font-weight: bold;
         }
     }
 
@@ -53,6 +68,32 @@
             &:hover, &:focus {
                 color: $linkHover;
             }
+        }
+    }
+
+    nav.woocommerce-pagination  {
+        ul li {
+            a:focus, a:hover, span.current {
+                background: $linkColor;
+                color: $white;
+            }
+        }
+    }
+
+    .widget_price_filter {
+        .ui-slider {
+            &.ui-widget-content {
+                background-color: $springColor1_Dk;
+            } 
+            .ui-slider-handle, .ui-slider-range {
+                background-color: $springColor1;
+            }
+        }
+    }
+
+    .widget_shopping_cart_content {
+        .button:not(.checkout) {
+            background-color: $springColor3;
         }
     }
 }

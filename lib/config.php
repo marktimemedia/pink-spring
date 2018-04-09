@@ -68,7 +68,7 @@ function spring_display_sidebar() {
      * The second element must be an array even if there's only 1 argument.
      */
     array(
-      'is_404'  
+  'is_archive'
     ),
     /**
      * Page template checks (via is_page_template())
@@ -76,7 +76,7 @@ function spring_display_sidebar() {
      * Any of these page templates that return true will show the sidebar
      */
     array(
-      'template-custom.php'
+      //'template-custom.php'
     )
   );
 

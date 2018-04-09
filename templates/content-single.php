@@ -5,7 +5,7 @@
         <?php endif; ?>
         <header >
            <?php if( get_the_title() ) : ?>
-                <h1 class="post--title"><?php the_title(); ?><?php edit_post_link( '(Edit)', ' • ' ); ?></h1>
+                <h1 class="post--title"><?php echo esc_html( get_the_title() ); ?><?php edit_post_link( '(Edit)', ' • ' ); ?></h1>
             <?php endif; ?>
             <?php get_template_part( 'templates/entry-meta' ); ?>
             <?php if( has_excerpt() ) : ?>

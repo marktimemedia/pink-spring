@@ -20,7 +20,7 @@ function is_element_empty( $element ) {
 */
 
 // get taxonomies terms links
-function custom_taxonomies_terms_links(){
+function mtm_custom_taxonomies_terms_links( $post ){
   // get post by post id
   $post = get_post( $post->ID );
 
@@ -39,20 +39,32 @@ function custom_taxonomies_terms_links(){
       $terms = get_the_terms( $post->ID, $taxonomy_slug );
 
       if ( !empty( $terms ) ) {
-        $open = '<div class="post--metadata-group"><span class="post--metadata--title">' . $taxonomy->label . ': </span><ul>';
+        $numItems = count( $terms ); // how many terms are there
+        $i = 0;
+        
+        $open = '<div class="post--metadata-group">';
+        $out[] = '<span class="post--metadata--title">' . $taxonomy->label . ': </span><ul>';
         foreach ( $terms as $term ) {
-          $out[] =
-            '<li><a href="'
-          .    get_term_link( $term->slug, $taxonomy_slug ) .'">'
-          .    $term->name
-          . "</a>";
+          if( ++$i === $numItems ) { // if this is the last one
+            $out[] = sprintf( '<li><a href="%1$s" data-id="%3$s">%2$s</a></li></ul>',
+                    esc_url( get_term_link( $term->slug, $taxonomy_slug ) ),
+                    esc_html( $term->name ),
+                    esc_html( $term->term_id )
+                  );
+          } else {
+            $out[] = sprintf( '<li><a href="%1$s" data-id="%3$s">%2$s</a>,</li> ',
+                    esc_url( get_term_link( $term->slug, $taxonomy_slug ) ),
+                    esc_html( $term->name ),
+                    esc_html( $term->term_id )
+                  );
+          }  
         }
-        $close = "</ul></div>\n";
+        $close = "</div>\n";
       }
     }
   }
 
-  return $open . implode( ',&nbsp</li>', $out ) . $close;
+  return $open . implode( '', $out ) . $close;
 }
 
 /**

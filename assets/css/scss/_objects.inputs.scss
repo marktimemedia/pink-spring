@@ -38,3 +38,16 @@
             content: '\2665 '; // replace with your fallback icon, this is a heart
         }
     }
+
+.checkbox {
+        span {
+            display: inline;
+        }
+    }
+
+.select2 {
+    & > span {
+        width: 100%;
+        display: inline;
+    }
+}

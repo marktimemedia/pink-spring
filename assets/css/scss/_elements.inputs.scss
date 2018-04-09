@@ -63,6 +63,7 @@ input[type="reset"] {
     display: inline-block;
     font-family: $buttonFont;
     font-size: $buttonFontSize;
+     -webkit-font-smoothing: auto;
     font-weight: $buttonFontWeight;
     height: auto;
     padding: $buttonPadding;

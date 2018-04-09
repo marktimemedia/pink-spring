@@ -187,6 +187,10 @@
     color: $Ndarkest;
 }
 
+.tribe-address {
+    display: inline;
+}
+
 @media only screen and (max-width: 768px) {
     #tribe-events-content .tribe-events-calendar td.tribe-events-present.mobile-active:hover, .tribe-events-calendar td.tribe-events-present.mobile-active, .tribe-events-calendar td.tribe-events-present.mobile-active div[id*=tribe-events-daynum-], .tribe-events-calendar td.tribe-events-present.mobile-active div[id*=tribe-events-daynum-] a {
         background-color: $springColor1;

@@ -13,6 +13,7 @@
 function spring_scripts() {
     // this is adding an extra element for cache-busting purposes on file update
     wp_enqueue_style('spring_main', get_template_directory_uri() . '/style.css', array(), filemtime( get_stylesheet_directory() . '/style.css' ));
+    wp_enqueue_style('spring_client', get_template_directory_uri() . '/client-files/client-style.css', array(), filemtime( get_stylesheet_directory() . '/client-files/client-style.css' ));
 
     if ( is_single() && comments_open() && get_option('thread_comments') ) {
         wp_enqueue_script('comment-reply');

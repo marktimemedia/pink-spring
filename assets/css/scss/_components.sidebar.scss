@@ -1,28 +1,33 @@
 .content--sidebar {
-    left: 100%;
     @include rem-px('padding', 2em);
     position: absolute;
-    top: 0;
     width: $sidebarWidthSmall;  
 }
 
 @media only screen and (max-width: #{$midBreakpoint}) {
     
     .content--sidebar {
+        height: 100%;
+        overflow-y: scroll;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        right: 0;
+        @include transition( all 0.2s ease-out );
         width: $sidebarWidthMid;
     }
 
-    .open-the-sidebar {
-        .wrapper {
-            overflow: visible;
-        }
+    .admin-bar {
         .content--sidebar {
-            height: 100%;
-            overflow-y: auto;
+            top: 45px;
         }
+    }
 
-        .admin-bar .content--sidebar {
-            padding-bottom: 4em;
+    .open-the-sidebar {
+
+        .content--sidebar {
+            right: 0;
+            left: 40%;
         }
     }
 }
@@ -31,6 +36,13 @@
     
     .content--sidebar {
         width: $sidebarWidthSmall;
+    }
+
+    .open-the-sidebar {
+
+        .content--sidebar {
+            left: 20%;
+        }
     }
 }
 
