@@ -28,4 +28,5 @@ add_action('after_setup_theme', 'spring_setup');
 
 
 // Backwards compatibility for older than PHP 5.3.0
+// Comment out if it's PHP 7.0+
 if ( !defined( '__DIR__' ) ) { define( '__DIR__', dirname( __FILE__ ) ); }

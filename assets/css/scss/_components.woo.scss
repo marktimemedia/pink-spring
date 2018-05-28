@@ -202,8 +202,21 @@
 
 // fix for weird WooCommerce margin/spacing issues
 @media only screen and (max-width:768px) {
-    .woocommerce ul.products li.product, .woocommerce-page ul.products li.product, .woocommerce-page[class*=columns-] ul.products li.product, .woocommerce[class*=columns-] ul.products li.product {
-        margin: 0 2% 3em;
-        width: 46%;
+    .woocommerce, .woocommerce-page {
+        ul.products, ul.products[class*=columns-] {
+            li.product {
+                margin-right: 4%;
+                width: 46%;
+            }
+        }
+    }
+    .woocommerce, .woocommerce-page {
+        & .has_sidebar {
+            ul.products, ul.products[class*=columns-] {
+                li.product {
+                    width: 46%;
+                }
+            }
+        }
     }
 }

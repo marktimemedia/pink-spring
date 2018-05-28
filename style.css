@@ -514,7 +514,7 @@ input[type="reset"] {
   -webkit-font-smoothing: auto;
   font-weight: 200;
   height: auto;
-  padding: 0.5em 2em;
+  padding: 0.5em 1em;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
@@ -2367,8 +2367,11 @@ li.woocommerce-MyAccount-navigation-link--customer-logout {
     margin-top: 1em; }
 
 @media only screen and (max-width: 768px) {
-  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product, .woocommerce-page[class*=columns-] ul.products li.product, .woocommerce[class*=columns-] ul.products li.product {
-    margin: 0 2% 3em;
+  .woocommerce ul.products li.product, .woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products li.product, .woocommerce-page ul.products[class*=columns-] li.product {
+    margin-right: 4%;
+    width: 46%; }
+
+  .woocommerce .has_sidebar ul.products li.product, .woocommerce .has_sidebar ul.products[class*=columns-] li.product, .woocommerce-page .has_sidebar ul.products li.product, .woocommerce-page .has_sidebar ul.products[class*=columns-] li.product {
     width: 46%; } }
 /* 07. VENDOR */
 /*!
