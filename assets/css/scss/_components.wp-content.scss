@@ -78,6 +78,10 @@
     .post--title {
         @include rem-px('font-size', $h1Size * .85);
     }
+
+    article.post {
+        margin-bottom: 2em;
+    }
 }
 
 .single {

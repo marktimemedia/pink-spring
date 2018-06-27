@@ -72,7 +72,6 @@
     }
 
 .embed-container, .entry-content-asset { 
-    background-color: rgba(0,0,0, .5);
     height: auto;
     max-width: 100%;
     overflow: hidden;
@@ -80,10 +79,21 @@
     padding-bottom: 56.25%;
 
     iframe, object, embed {
+        background-color: rgba(0,0,0, .5);
+        color: $white;
         height: 100%;
         left: 0;
         top: 0;
-        position: absolute;
-        width: 100%;   
+        margin: 0 !important;
+        position: absolute !important;
+        width: 100% !important;  
     }
-} 
+
+    twitterwidget {
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute !important;
+        width: 100% !important;  
+    }
+}  

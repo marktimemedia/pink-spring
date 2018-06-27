@@ -1107,18 +1107,26 @@ a.button-social {
         width: 23.5%; } }
 
 .embed-container, .entry-content-asset {
-  background-color: rgba(0, 0, 0, 0.5);
   height: auto;
   max-width: 100%;
   overflow: hidden;
   position: relative;
   padding-bottom: 56.25%; }
   .embed-container iframe, .embed-container object, .embed-container embed, .entry-content-asset iframe, .entry-content-asset object, .entry-content-asset embed {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
     height: 100%;
     left: 0;
     top: 0;
-    position: absolute;
-    width: 100%; }
+    margin: 0 !important;
+    position: absolute !important;
+    width: 100% !important; }
+  .embed-container twitterwidget, .entry-content-asset twitterwidget {
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute !important;
+    width: 100% !important; }
 
 .sticky {
   background: #f2f2f2;
@@ -1434,7 +1442,8 @@ a.button-social {
   -o-transition: all 0.8s;
   transition: all 0.8s; }
   .header--blog-name a {
-    display: block; }
+    display: block;
+    line-height: 1; }
   .header--blog-name img {
     max-width: 9em; }
   .header--blog-name .header-logo {
@@ -1977,6 +1986,8 @@ a.button-social {
 .archive .post--title {
   font-size: 30.6px;
   font-size: 1.9125rem; }
+.archive article.post {
+  margin-bottom: 2em; }
 
 .single .post--metadata {
   margin-bottom: 4.8px;

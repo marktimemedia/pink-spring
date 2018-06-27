@@ -4,6 +4,7 @@ if ( post_password_required() ) {
 }
 
 if ( have_comments() && !is_page() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+    <?php do_action( 'comment_form_before', $post->ID ); ?>
     <section class="comments" id="comments">
         <h3 class="comments--title"><?php printf( _n( 'One Response to &ldquo;%2$s&rdquo;', '%1$s Responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'spring' ), number_format_i18n( get_comments_number() ), get_the_title()); ?></h3>
 
@@ -55,26 +56,27 @@ if ( have_comments() && !is_page() && post_type_supports( get_post_type(), 'comm
                     <div class="comments--form-row form-row">
                         <label for="commentsAuthor"><?php _e( 'Name', 'spring' );
                             if ( $req ) _e( ' (required)', 'spring' ); ?></label>
-                        <input type="text" placeholder="Your name..." class="textbox" name="author" id="commentsAuthor"
+                        <input type="text" placeholder="Your Display Name" class="textbox" name="author" id="commentsAuthor"
                                value="<?php echo esc_attr( $comment_author ); ?>"
                                size="22" <?php if ( $req ) echo 'aria-required="true"'; ?>>
                     </div>
                     <div class="comments--form-row form-row">
                         <label for="commentsEmail"><?php _e( 'Email (will not be published)', 'spring' );
                             if ($req) _e( ' (required)', 'spring' ); ?></label>
-                        <input type="email" placeholder="Your email address..." class="textbox" name="email"
+                        <input type="email" placeholder="sample@email.com" class="textbox" name="email"
                                id="commentsEmail" value="<?php echo esc_attr( $comment_author_email ); ?>"
                                size="22" <?php if ( $req ) echo 'aria-required="true"'; ?>>
                     </div>
                     <div class="comments--form-row form-row">
                         <label for="commentsUrl"><?php _e( 'Website', 'spring' ); ?></label>
-                        <input type="url" placeholder="Your homepage..." class="textbox" name="url" id="commentsUrl"
+                        <input type="url" placeholder="http://example.com" class="textbox" name="url" id="commentsUrl"
                                value="<?php echo esc_attr( $comment_author_url ); ?>" size="22">
                     </div>
                 <?php endif; ?>
+                <?php do_action( 'comment_form_after_fields', $post->ID ); ?>
                 <div class="comments--form-row form-row">
                     <label for="commentsComment"><?php _e( 'Comment', 'spring' ); ?></label>
-                    <textarea name="comment" placeholder="The text of your comment..." id="commentsComment"
+                    <textarea name="comment" placeholder="What do you want to say?" id="commentsComment"
                               class="form-control" rows="5" aria-required="true"></textarea>
                 </div>
                 <div class="button-wrapper">
@@ -84,6 +86,7 @@ if ( have_comments() && !is_page() && post_type_supports( get_post_type(), 'comm
                 <?php comment_id_fields(); ?>
                 <?php do_action( 'comment_form', $post->ID ); ?>
             </form>
+            <?php do_action( 'comment_form_after', $post->ID ); ?>
         <?php endif; ?>
     </section><!-- /#respond -->
 <?php endif; ?>
