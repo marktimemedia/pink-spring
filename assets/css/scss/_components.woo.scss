@@ -11,7 +11,7 @@
             }
 
             &:disabled, &:disabled[disabled] {
-                color: $white;
+                opacity: .5;
             }
         }
     }
@@ -95,6 +95,10 @@
         .button:not(.checkout) {
             background-color: $springColor3;
         }
+    }
+
+    .related.products {
+        margin-top: 2em;
     }
 }
 

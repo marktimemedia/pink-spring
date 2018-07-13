@@ -133,6 +133,10 @@
                 ul {
                     left: auto;
                     right: 0;
+
+                    ul { // tertiary menus need to go left instead of right
+                        right: 100%;
+                    }
                 }
             }
         }

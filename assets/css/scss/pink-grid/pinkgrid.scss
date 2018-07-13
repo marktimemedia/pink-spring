@@ -341,7 +341,7 @@ $xl-bp:			75em !default;		// Set your x-large breakpoint
 				width:100%;
 			}
 
-			@if $before > 0 or after > 0 {
+			@if $before > 0 or $after > 0 {
 
 				@for $j from 1 through 5 {
 
@@ -380,7 +380,7 @@ $xl-bp:			75em !default;		// Set your x-large breakpoint
 				width:100%;
 			}
 			
-			@if $before > 0 or after > 0 {
+			@if $before > 0 or $after > 0 {
 
 				@for $j from 1 through 3 {
 					

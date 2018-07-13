@@ -30,6 +30,8 @@ function mtm_custom_taxonomies_terms_links( $post ){
   // get post type taxonomies
   $taxonomies = get_object_taxonomies( $post_type, 'objects' );
 
+  $open = '';
+  $close = '';
   $out = array();
   foreach ( $taxonomies as $taxonomy_slug => $taxonomy ){
 
