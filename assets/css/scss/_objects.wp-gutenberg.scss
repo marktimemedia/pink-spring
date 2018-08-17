@@ -1,0 +1,177 @@
+/* Gutenberg Block Styles */
+
+// Typography
+p.wp-block-subhead {
+    color: $Ndark;
+    font-size: 1.3em;
+    font-style: normal;
+}
+
+blockquote.wp-block-quote {
+    @extend blockquote;
+
+    &.is-large, &.is-style-large {
+        cite {
+            text-align: left;
+        }
+    }
+    &:not(.is-large):not(.is-style-large) {
+        border-left: $blockquoteBorderWidth $blockquoteBorderStyle $blockquoteBorderColor;
+        padding-left: $blockquotePaddingLeft;
+    }
+}
+
+.wp-block-heading {
+    h1 {
+        @include rem-px('font-size', $h1Size);
+    }
+
+    h2 {
+        @include rem-px('font-size', $h2Size);
+    }
+
+    h3 {
+        @include rem-px('font-size', $h3Size);
+    }
+
+    h4 {
+        @include rem-px('font-size', $h4Size);
+    }
+
+    h5 {
+        @include rem-px('font-size', $h5Size);
+    }
+
+    h6 {
+        @include rem-px('font-size', $h6Size);  
+    }
+}
+
+blockquote.wp-block-pullquote {
+    background-color: $Nlightest;
+    border: 0;
+    color: $blockquoteColor;
+    padding: 2em 0;
+}
+
+hr.wp-block-separator {
+    border-bottom: 2px solid $Nmid;
+}
+
+// Buttons
+.wp-block-button {
+    text-align: center;
+    width: 100%;
+
+    .wp-block-button__link, .wp-block-button__link:not(.has-background), .wp-block-button__link:not(.has-text-color) {
+        @extend .button ;
+    }
+
+    &:not(.is-style-squared) {
+        .wp-block-button__link {
+            border-radius: 10px;
+        } 
+    }
+
+    &.is-style-outline {
+        .wp-block-button__link, .wp-block-button__link:not(.has-background), .wp-block-button__link:not(.has-text-color) {
+            @extend .button.outline;
+        }
+    }
+}
+
+// Gutenberg Color Styles 
+.has-spring-color-1-background-color {
+    background-color: $springColor1;
+}
+
+.has-spring-color-1-color {
+    color: $springColor1;
+}
+
+.has-spring-color-2-background-color {
+    background-color: $springColor2;
+}
+
+.has-spring-color-2-color {
+    color: $springColor2;
+}
+
+.has-spring-color-3-background-color {
+    background-color: $springColor3;
+}
+
+.has-spring-color-3-color {
+    color: $springColor3;
+}
+
+.has-spring-color-4-background-color {
+    background-color: $springColor4;
+}
+
+.has-spring-color-4-color {
+    color: $springColor4;
+}
+
+.has-neutral-lightest-background-color {
+    background-color: $Nlightest;
+}
+
+.has-neutral-lightest-color {
+    color: $Nlightest;
+}
+
+.has-neutral-lighter-background-color {
+    background-color: $Nlighter;
+}
+
+.has-neutral-lighter-color {
+    color: $Nlighter;
+}
+
+.has-neutral-light-background-color {
+    background-color: $Nlight;
+}
+
+.has-neutral-light-color {
+    color: $Nlight;
+}
+
+.has-neutral-mid-background-color {
+    background-color: $Nmid;
+}
+
+.has-neutral-mid-color {
+    color: $Nmid;
+}
+
+.has-neutral-dark-background-color {
+    background-color: $Ndark;
+}
+
+.has-neutral-dark-color {
+    color: $Ndark;
+}
+
+.has-neutral-darker-background-color {
+    background-color: $Ndarker;
+}
+
+.has-neutral-darker-color {
+    color: $Ndarker;
+}
+
+.has-neutral-darkest-background-color {
+    background-color: $Ndarkest;
+}
+
+.has-neutral-darkest-color {
+    color: $white;
+}
+.has-white-background-color {
+    background-color: $white;
+}
+
+.has-white-color {
+    color: $white;
+}

@@ -4,19 +4,26 @@
 .alignnone {
     display: block;
     max-width: 100%;
-    margin: 0 0 .5em 0;
+    margin: 0 0 1em 0;
+}
+
+.alignwide,
+.alignfull {
+    margin: 0 -#{$smallPadding} 1rem -#{$smallPadding};
+    max-width: none;
+    width: calc( 100% + (2 * #{$smallPadding}) );
 }
 
 @media only screen and (min-width: #{$smallBreakpoint}) {
     .alignright {
         float: right !important;
-        @include rem-px('margin', 0, 0, .5rem, 1rem);
+        @include rem-px('margin', 0, 0, 1rem, 1rem);
         max-width: 50%;
     }
 
     .alignleft {
         float: left !important;
-        @include rem-px('margin', 0, 1rem, .5rem, 0);
+        @include rem-px('margin', 0, 1rem, 1rem, 0);
         max-width: 50%;
     }
 
@@ -28,7 +35,20 @@
 
     .alignnone {
         float: none !important;
-        @include rem-px('margin', .5em, 0);
+        @include rem-px('margin', 1em, 0);
         max-width: 100%;
+    }
+
+    .alignwide, .alignfull {
+        margin: 0 -#{$maxPadding} 1rem -#{$maxPadding};
+        width: calc( 100% + (2 * #{$maxPadding}) );
+    }
+}
+
+@media only screen and (min-width: #{$boxedMax}) {
+    .alignfull {
+        margin-left: calc(-100vw / 2 + ( #{$boxedMax} - (2 * #{$maxPadding}) ) / 2);
+        margin-right: calc(-100vw / 2 + ( #{$boxedMax} - (2 * #{$maxPadding}) ) / 2);
+        width: 100vw;
     }
 }

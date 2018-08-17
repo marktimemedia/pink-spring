@@ -89,8 +89,8 @@
 /* Module Rules */
 
 .mtm-module {
-	padding-bottom: 1em;
-	padding-top: 1em;
+	padding-bottom: $smallPadding;
+	padding-top: $smallPadding;
 	overflow: auto; // to account for floats inside the modules
 }
 	
@@ -130,15 +130,15 @@
 
 	.mtm_module_call_to_action {
 		padding: 1em;
-		background: #f2f2f2;
+		background: $Nlightest;
 	}
 
 	.mtm-module--content-secondary-image {
 		padding: 1em;
 
 		.mtm-module--content-secondary-wrapper {
-			background-color: rgba(0,0,0,.5);
-			color: #fff;
+			background-color: rgba($Ndarkest,.5);
+			color: $white;
 			padding: 1em;
 		}
 	}
@@ -236,7 +236,7 @@
 /* List Rules */
 
 .mtm-list--single {
-	margin: 1em 0;
+	margin-bottom: 2em;
 }
 
 	.mtm-list--image {
@@ -270,7 +270,7 @@
 	}
 
 	.mtm-tabs--title-accordion {
-		border-top: 1px solid $Nmid;
+		border-top: 1px solid rgba($Nmid, 0.6);
 	}
 
 .mtm-tabs--content {
@@ -283,7 +283,7 @@
 }
 
 
-@media only screen and ( min-width:$sm-bp ) {
+@media only screen and ( min-width:$smallBreakpoint ) {
 
 	.mtm-tabs--title-container {
 		display: block;
@@ -297,7 +297,7 @@
 			display: none;
 		}
 		.mtm-tabs--content {
-			border-top: 1px solid #eee;
+			border-top: 1px solid rgba($Nmid, 0.6);
 		}
 
 	.mtm-module--cta-subheading{
@@ -313,7 +313,7 @@
 /* MEDIA QUERIES */
 
 
-@media only screen and ( min-width: $sm-bp ) and ( max-width: $med-bp ) {
+@media only screen and ( min-width: $smallBreakpoint ) and ( max-width: $midBreakpoint ) {
 	
 	.mtm-list--image {
 		@include pinkgrid( $align: top, $totalcols: $defaultcols, $colspan: 6, $padtop: 0, $padside: $defaultpad );
@@ -323,7 +323,7 @@
 
 }
 
-@media only screen and ( min-width: $med-bp ) and ( max-width: $lg-bp ) {
+@media only screen and ( min-width: $midBreakpoint ) and ( max-width: $largeBreakpoint ) {
 
 	.mtm-list--image {
 		@include pinkgrid( $align: top, $totalcols: $defaultcols, $colspan: 5, $padtop: 0, $padside: $defaultpad );
@@ -358,7 +358,7 @@
 
 }
 
-@media only screen and ( min-width: $med-bp ) {
+@media only screen and ( min-width: $midBreakpoint ) {
 	.mtm-component .content--page {
 		padding: $maxPadding;
 	}
@@ -393,7 +393,7 @@
 }
 
 
-@media only screen and ( min-width: $lg-bp ) {
+@media only screen and ( min-width: $largeBreakpoint ) {
 
 	.mtm-list--image {
 		@include pinkgrid( $align: top, $totalcols: $defaultcols, $colspan: 3, $padtop: 0, $padside: $defaultpad );

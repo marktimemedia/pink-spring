@@ -57,8 +57,7 @@ input[type="reset"] {
     cursor: pointer;
     background-color: $buttonBackground;
     //@include vertical($buttonBackground, $buttonBackground2);
-    border: 0;
-    border-bottom: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor;
+    border: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor;
     border-radius: 0;
     display: inline-block;
     font-family: $buttonFont;
@@ -73,7 +72,8 @@ input[type="reset"] {
     &:hover {
         background-color: $buttonBackground2;
         //@include vertical($buttonBackground2, $buttonBackground);
-        border-bottom: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor2;
+        border: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor2;
+        color: $buttonColor2;
         @include transition(all .3s);
     }
 
@@ -84,6 +84,18 @@ input[type="reset"] {
         &:hover, &:focus {
             background-color: $buttonAltBackground2;
             border-color: $buttonAltBorderColor2;
+        }
+    }
+
+    &.outline {
+        background-color: transparent;
+        border-color: $buttonBackground;
+        color: $buttonBackground;
+
+        &:hover, &:focus {
+            background-color: rgba($buttonBackground, 0.3);
+            border-color: $buttonBackground;
+            color: $buttonBackground;
         }
     }
 

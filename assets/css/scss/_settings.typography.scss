@@ -63,7 +63,7 @@ $blockquotePaddingLeft: 0;
 $blockquoteBorderWidth: 0;
 $blockquoteBorderStyle: solid;
 $blockquoteBorderColor: $Nlighter;
-$blockquoteColor: $Nmid;
+$blockquoteColor: $Ndark;
 $blockquoteFontFamily: $headingFont;
 $blockquoteFontSize: 1.25rem;
 $blockquoteFontStyle: italic;
@@ -71,7 +71,7 @@ $blockquoteFontWeight: 200;
 
 // Code/Pre blocks
 $codeMargin: 1em 0;
-$codePadding: $gutter/2;
+$codePadding: .25em .5em;
 $codeBackground: $Nlightest;
 $codeBorder: 0;
 $codeFontFamily: $codeFont;

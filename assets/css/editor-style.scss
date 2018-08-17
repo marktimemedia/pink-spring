@@ -9,6 +9,7 @@
 
 // Third-Party Mixins
 @import "scss/sassquatch/sassquatch";
+@import "scss/pink-grid/pinkgrid";
 
 /* 03. GENERIC */
 
@@ -20,8 +21,69 @@
 
 /* 05. OBJECTS */
 
-// TinyMCE Overrides to emulate post content
+@import "scss/objects.inputs";
+@import "scss/objects.layout";
+@import "scss/objects.media";
+@import "scss/objects.wp-objects";
+@import "scss/objects.wp-gutenberg";
+
+
+// Gutenberg Editor Styling
+
+/* set to match max width of site minus padding */
+body.gutenberg-editor-page .editor-post-title__block,
+body.gutenberg-editor-page .editor-default-block-appender,
+body.gutenberg-editor-page .editor-block-list__block {
+    max-width: calc( #{$boxedMax} - ( 2 * #{$maxPadding}) );
+}
+
+/* Width of "wide" blocks */
+body.gutenberg-editor-page .editor-block-list__block[data-align="wide"] {
+    max-width: $boxedMax;
+}
+
+/* Width of "full-wide" blocks */
+body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
+    max-width: none;
+}
+
+// styles within the entire visual interface
+#editor {
+
+}
+
+// styles within the visual editor (includes the popup boxes)
+.edit-post-visual-editor {
+	font-family: $baseFont;
+
+	.editor-post-title__block .editor-post-title__input {
+		font-family: $headingFont;
+	}
+
+	p {
+		font-family: $baseFont;
+	}
+	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	   margin-bottom: $textFontSize * .8;
+	   margin-top: $textFontSize * 1.5;
+	}
+
+	dd, blockquote {
+		margin-left:0;
+	}
+
+	p.wp-block-subhead {
+	    color: $Ndark;
+	    font-size: 1.3em;
+	    font-style: normal;
+	}
+}
+
+// TinyMCE Overrides to emulate post content (classic)
 #tinymce { 
+	p {
+		font-family: $baseFont;
+	}
     h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
        margin-bottom: $textFontSize * .8;
        margin-top: $textFontSize * 1.5;
@@ -30,6 +92,17 @@
     dd, blockquote {
     	margin-left:0;
     }
+}
+
+// Resets to not break the menu
+#adminmenu {
+	ul {
+		margin: inherit;
+	}
+
+	span {
+		vertical-align: inherit;
+	}
 }
 
 // Any specific classes available here for the styles box

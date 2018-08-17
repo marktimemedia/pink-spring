@@ -17,19 +17,22 @@ $labelColor: $textColor;
 
 // Buttons
 $buttonBackground: $springColor1;
-$buttonBackground2: $springColor1_Dk;
+$buttonBackground2: $springColor1_Lt;
 $buttonBorderColor: darken($buttonBackground,15%);
 $buttonBorderColor2: lighten($buttonBackground2, 15%);
-$buttonBorderWidth: 1px;
+$buttonBorderWidth: 2px;
 $buttonBorderStyle: solid;
+
 $buttonColor: $white;
+$buttonColor2: $white;
 $buttonOutlineColor: $springColor1;
+
 $buttonFont: $baseFont;
 $buttonFontSize: 1em;
-$buttonFontWeight: 200;
+$buttonFontWeight: 600;
 $buttonPadding: .5em 1em;
 
 $buttonAltBackground: $springColor2;
-$buttonAltBackground2: $springColor2_Dk;
+$buttonAltBackground2: $springColor2_Lt;
 $buttonAltBorderColor: darken($buttonAltBackground,15%);
 $buttonAltBorderColor2: lighten($buttonAltBackground2, 15%);

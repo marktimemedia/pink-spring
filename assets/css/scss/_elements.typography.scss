@@ -42,8 +42,8 @@ a {
 /* Headings */
 
 h1, .h1,
-h2, .h2,
-h3, .h3,
+h2, .h2, 
+h3, .h3, 
 h4, .h4, 
 h5, .h5,
 h6, .h6 {
@@ -201,15 +201,21 @@ blockquote {
     font-style: $blockquoteFontStyle;
     font-weight: $blockquoteFontWeight;
     line-height: 1.3em;
+    margin: 0 0 #{$blockquoteMarginBottom} 0;
     padding-left: $blockquotePaddingLeft;
     @include rem-px('font-size', $blockquoteFontSize);
-    @include rem-px('margin-bottom', $blockquoteMarginBottom);
 
     * {
+        color: $blockquoteColor;
         font-family: $blockquoteFontFamily;
         font-style: $blockquoteFontStyle;
         @include rem-px('font-size', $blockquoteFontSize);
         font-weight: $blockquoteFontWeight; 
+    }
+
+    cite {
+        font-size: 80%;
+        font-style: normal;
     }
 }
 
@@ -285,7 +291,6 @@ tt {
     font-family: $codeFontFamily;
     @include rem-px('font-size', $codeFontSize);
     line-height: $baselineHeight;
-    margin: $codeMargin;
     padding: $codePadding;
 }
 
@@ -295,6 +300,8 @@ code, kbd, var, tt {
 
 pre, samp {
     display: block;
+    margin: $codeMargin;
+    
 }
 
 pre {
@@ -320,7 +327,7 @@ sub {
 }
 
 hr {
-    background-color: $Nlighter;
+    //background-color: $Nlighter;
     border: 0;
     display: block;
     height: 1px;

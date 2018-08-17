@@ -1,4 +1,4 @@
-.woocommerce {
+woocommerce {
     .content, .content & {
         @include clearfix();
 
@@ -16,7 +16,9 @@
         }
     }
 
-    
+    .woocommerce-input-wrapper {
+        width: 100%;
+    }
 
     .added {
         &:after {
@@ -100,6 +102,30 @@
     .related.products {
         margin-top: 2em;
     }
+
+    .woocommerce-error, .woocommerce-info, .woocommerce-message {
+        background-color: $Nlightest;
+        border-top: 3px solid $springColor1;
+        color: $Ndarkest;
+
+        &:before {
+            color: $springColor1;
+        }
+    }
+
+        .woocommerce-error {
+            border-color: $warningColor;
+            &:before {
+                color: $warningColor;
+            }
+        }
+
+        .woocommerce-message {
+            border-color: $Nmid;
+            &:before {
+                color: $Nmid;
+            }
+        }
 }
 
 // Make products display flex by default, with fallback to their floats.

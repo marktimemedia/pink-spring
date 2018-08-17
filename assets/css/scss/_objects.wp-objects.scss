@@ -1,11 +1,14 @@
-.sticky {
+.archive .sticky {
 	background: darken($bodyColor, 5%);
     padding: 1em;
 }
 
 .alert {
-	color: $springColor1;
-    font-weight: bold;
+	background-color: $Nmid;
+	color: $white;
+    font-size: 1.25em;
+    margin-bottom: 1em;
+    padding: 1em;
 }
 
 .error-404 {

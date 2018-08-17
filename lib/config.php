@@ -6,7 +6,84 @@ add_theme_support( 'root-relative-urls' );            // Enable relative URLs
 add_theme_support( 'nice-search' );                   // Enable /?s= to /search/ redirect
 //add_theme_support( 'jquery-cdn' );                    // Enable to load jQuery from the Google CDN
 add_theme_support( 'html5', array( 'search-form' ) );   // Enable HTML in the search form
-add_editor_style( 'assets/css/editor-style.css' );  // Add editor styles
+
+// Gutenberg Support
+add_theme_support( 'align-wide' ); // gutenberg support
+//add_theme_support( 'wp-block-styles' ); // allow default block styles
+
+// Editor Style
+add_editor_style( 'assets/css/editor-style.css' );  // Add classic editor styles
+
+add_action( 'enqueue_block_editor_assets', 'spring_block_editor_styles' ); // Add gutenberg editor styles
+function spring_block_editor_styles() {
+    wp_enqueue_style( 'spring-block-editor-styles', get_theme_file_uri( 'assets/css/editor-style.css' ), false, '1.0', 'all' );
+}
+
+// Gutenberg Color Palette, Update with Spring Colors
+add_theme_support( 'disable-custom-colors' ); // no custom picker
+add_theme_support( 'editor-color-palette', array(
+    array(
+        'name' => __( 'Accent Color 1', 'spring' ),
+        'slug' => 'spring-color-1',
+        'color' => '#de1e7e',
+    ),
+    array(
+        'name' => __( 'Accent Color 2', 'spring' ),
+        'slug' => 'spring-color-2',
+        'color' => '#10aded',
+    ),
+    array(
+        'name' => __( 'Accent Color 3', 'spring' ),
+        'slug' => 'spring-color-3',
+        'color' => '#10ca7e',
+    ),
+    array(
+        'name' => __( 'Accent Color 4', 'spring' ),
+        'slug' => 'spring-color-4',
+        'color' => '#9155ed',
+    ),
+    array(
+        'name' => __( 'White', 'spring' ),
+        'slug' => 'white',
+        'color' => '#fff',
+    ),
+    array(
+        'name' => __( 'Neutral 1', 'spring' ),
+        'slug' => 'neutral-lightest',
+        'color' => '#f4f2f3',
+    ),
+    array(
+        'name' => __( 'Neutral 2', 'spring' ),
+        'slug' => 'neutral-lighter',
+        'color' => '#d4ccd4',
+    ),
+    array(
+        'name' => __( 'Neutral 3', 'spring' ),
+        'slug' => 'neutral-light',
+        'color' => '#afa8af',
+    ),
+    array(
+        'name' => __( 'Neutral 4', 'spring' ),
+        'slug' => 'neutral-mid',
+        'color' => '#948b90',
+    ),
+    array(
+        'name' => __( 'Neutral 5', 'spring' ),
+        'slug' => 'neutral-dark',
+        'color' => '#635d61',
+    ),
+    array(
+        'name' => __( 'Neutral 6', 'spring' ),
+        'slug' => 'neutral-darker',
+        'color' => '#464144',
+    ),
+    array(
+        'name' => __( 'Neutral 7', 'spring' ),
+        'slug' => 'neutral-darkest',
+        'color' => '#322e2f',
+    ),
+    
+) );
 
 /**
  * Configuration values
