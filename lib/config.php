@@ -1,89 +1,4 @@
 <?php
-/**
- * Enable theme features
- */
-add_theme_support( 'root-relative-urls' );            // Enable relative URLs
-add_theme_support( 'nice-search' );                   // Enable /?s= to /search/ redirect
-//add_theme_support( 'jquery-cdn' );                    // Enable to load jQuery from the Google CDN
-add_theme_support( 'html5', array( 'search-form' ) );   // Enable HTML in the search form
-
-// Gutenberg Support
-add_theme_support( 'align-wide' ); // gutenberg support
-//add_theme_support( 'wp-block-styles' ); // allow default block styles
-
-// Editor Style
-add_editor_style( 'assets/css/editor-style.css' );  // Add classic editor styles
-
-add_action( 'enqueue_block_editor_assets', 'spring_block_editor_styles' ); // Add gutenberg editor styles
-function spring_block_editor_styles() {
-    wp_enqueue_style( 'spring-block-editor-styles', get_theme_file_uri( 'assets/css/editor-style.css' ), false, '1.0', 'all' );
-}
-
-// Gutenberg Color Palette, Update with Spring Colors
-add_theme_support( 'disable-custom-colors' ); // no custom picker
-add_theme_support( 'editor-color-palette', array(
-    array(
-        'name' => __( 'Accent Color 1', 'spring' ),
-        'slug' => 'spring-color-1',
-        'color' => '#de1e7e',
-    ),
-    array(
-        'name' => __( 'Accent Color 2', 'spring' ),
-        'slug' => 'spring-color-2',
-        'color' => '#10aded',
-    ),
-    array(
-        'name' => __( 'Accent Color 3', 'spring' ),
-        'slug' => 'spring-color-3',
-        'color' => '#10ca7e',
-    ),
-    array(
-        'name' => __( 'Accent Color 4', 'spring' ),
-        'slug' => 'spring-color-4',
-        'color' => '#9155ed',
-    ),
-    array(
-        'name' => __( 'White', 'spring' ),
-        'slug' => 'white',
-        'color' => '#fff',
-    ),
-    array(
-        'name' => __( 'Neutral 1', 'spring' ),
-        'slug' => 'neutral-lightest',
-        'color' => '#f4f2f3',
-    ),
-    array(
-        'name' => __( 'Neutral 2', 'spring' ),
-        'slug' => 'neutral-lighter',
-        'color' => '#d4ccd4',
-    ),
-    array(
-        'name' => __( 'Neutral 3', 'spring' ),
-        'slug' => 'neutral-light',
-        'color' => '#afa8af',
-    ),
-    array(
-        'name' => __( 'Neutral 4', 'spring' ),
-        'slug' => 'neutral-mid',
-        'color' => '#948b90',
-    ),
-    array(
-        'name' => __( 'Neutral 5', 'spring' ),
-        'slug' => 'neutral-dark',
-        'color' => '#635d61',
-    ),
-    array(
-        'name' => __( 'Neutral 6', 'spring' ),
-        'slug' => 'neutral-darker',
-        'color' => '#464144',
-    ),
-    array(
-        'name' => __( 'Neutral 7', 'spring' ),
-        'slug' => 'neutral-darkest',
-        'color' => '#322e2f',
-    ),
-    
-) );
 
 /**
  * Configuration values
@@ -94,7 +9,7 @@ define( 'POST_EXCERPT_LENGTH', 55 ); // Length in words for excerpt_length filte
  * .main classes
  */
 function spring_main_class() {
-  
+
   if ( spring_display_sidebar() ) {
     // Classes on pages with the sidebar
     $class = 'content-main';
@@ -115,7 +30,7 @@ function spring_sidebar_class() {
 }
 
 function spring_sidebar_button() {
-  
+
   if ( spring_display_sidebar() ) {
     // Show sidebar button on pages where sidebar is enabled
     $sidebar_button = '<button id="openSidebar" class="open-sidebar open-button"><span>Open Sidebar</span></button>';
@@ -160,7 +75,7 @@ function spring_display_sidebar() {
   return apply_filters( 'spring_display_sidebar', $sidebar_config->display );
 }
 
-/** 
+/**
 * Display and output search bar
 */
 function spring_search_scripts() {
@@ -210,7 +125,7 @@ if ( !isset( $content_width ) ) { $content_width = 1140; }
 */
 
   // function mtm_theme_templates( $templates ) {
-    
+
   //   $templates = array(
   //       //    '../templates/template-components.php' => 'Components Page',
   //       //    '../templates/template-home.php' => 'Landing Page',
@@ -222,13 +137,72 @@ if ( !isset( $content_width ) ) { $content_width = 1140; }
   // }
   // add_filter( 'mtm_filter_templates', 'mtm_theme_templates' );
 
+/**
+ * Templates and Page IDs without editor
+ *
+ */
+function spring_disable_editor( $id = false ) {
+
+	$excluded_templates = array(
+		//'page-homepage.php',
+		//'page-timeline.php'
+	);
+
+	$excluded_ids = array(
+		// get_option( 'page_on_front' )
+	);
+
+	if( empty( $id ) )
+		return false;
+
+	$id = intval( $id );
+	$template = get_page_template_slug( $id );
+
+	return in_array( $id, $excluded_ids ) || in_array( $template, $excluded_templates );
+}
+  /**
+ * Disable Gutenberg by template
+ *
+ */
+function spring_disable_gutenberg( $can_edit, $post_type ) {
+
+	if( ! ( is_admin() && !empty( $_GET['post'] ) ) )
+		return $can_edit;
+
+	if( spring_disable_editor( $_GET['post'] ) )
+		$can_edit = false;
+
+	return $can_edit;
+
+}
+add_filter( 'gutenberg_can_edit_post_type', 'spring_disable_gutenberg', 10, 2 );
+add_filter( 'use_block_editor_for_post_type', 'spring_disable_gutenberg', 10, 2 );
+
+/**
+ * Disable Classic Editor by template
+ *
+ */
+function spring_disable_classic_editor() {
+
+	$screen = get_current_screen();
+	if( 'page' !== $screen->id || ! isset( $_GET['post']) )
+		return;
+
+	if( spring_disable_editor( $_GET['post'] ) ) {
+		remove_post_type_support( 'page', 'editor' );
+	}
+
+}
+add_action( 'admin_head', 'spring_disable_classic_editor' );
+
+
 
 /**
 * Deregister sidebars from plugin
 */
 
 // function mtm_theme_sidebars( $templates ) {
-    
+
 //   // unregister_sidebar( 'news-page-sidebar' );
 //   // unregister_sidebar( 'modular-page-sidebar' );
 
@@ -263,7 +237,7 @@ function spring_register_required_plugins() {
       'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
       'external_url'       => 'https://github.com/marktimemedia/acf-theme-settings', // If set, overrides default API URL and points to an external URL.
     ),
-    
+
     array(
       'name'               => 'ACF Function Check',
       'slug'               => 'mtm-safe-acf',

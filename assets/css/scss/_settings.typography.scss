@@ -20,6 +20,9 @@ $subheadingFont: $baseFont;
 $subheadingLineHeight: 1.1;
 $subheadingLetterSpace: 0px;
 
+$iconFont: 'Font Awesome 5 Pro', 'FontAwesome';
+$iconFontWeight: 900; // solid
+
 $h1Color: $Ndarkest;
 $h1Size: 2.25em;
 $h1FontWeight: 200;
@@ -78,5 +81,8 @@ $codeFontFamily: $codeFont;
 $codeFontSize: .875em;
 $codeColor: $textColor;
 
-$fa-font-path: "assets/fonts/fontawesome-webfont/webfonts";
-
+$fa-font-path: 				"assets/fonts/fontawesome-webfont/webfonts";
+$fa-font-size-base:         1em;
+$fa-border-color:           $Nlighter;
+$fa-inverse:                $white;
+$fa-li-width:               2em;

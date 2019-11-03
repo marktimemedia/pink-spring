@@ -93,7 +93,7 @@
 	padding-top: $smallPadding;
 	overflow: auto; // to account for floats inside the modules
 }
-	
+
 		.mtm-module--hero-title {
 			margin: .75em auto;
 		}
@@ -128,6 +128,14 @@
 		text-align: center;
 	}
 
+	.mtm_module_single_content_area {
+		.mtm-module--content-heading, .mtm-module--content-primary {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: $contentMax;
+		}
+	}
+
 	.mtm_module_call_to_action {
 		padding: 1em;
 		background: $Nlightest;
@@ -146,11 +154,11 @@
 	.mtm-module--gallery {
 		display: flex;
 		flex-flow: row wrap;
-		
+
 		list-style: none;
 		margin: 0;
 		padding: 0;
-		
+
 		// grid for supported browsers
 		@supports(display: grid) {
 			display: grid;
@@ -163,12 +171,12 @@
 			// flex fallback
 			flex: 1 0 auto;
 			min-height: $gallery-height;
-			min-width: $gallery-width;	
+			min-width: $gallery-width;
 			margin: ($gallery-gutter/2);
 
 			@supports(display: grid) {
 				margin: 0;
-			}	
+			}
 		}
 
 	}
@@ -177,7 +185,7 @@
 			line-height: 1;
 			margin: 0;
 			overflow: hidden;
-			position: relative;	
+			position: relative;
 			width: 100%;
 
 			figure {
@@ -287,7 +295,7 @@
 
 	.mtm-tabs--title-container {
 		display: block;
-	}	
+	}
 		.mtm-tabs--title {
 			padding: .3em 0;
 			margin-right:1em;
@@ -314,10 +322,10 @@
 
 
 @media only screen and ( min-width: $smallBreakpoint ) and ( max-width: $midBreakpoint ) {
-	
+
 	.mtm-list--image {
 		@include pinkgrid( $align: top, $totalcols: $defaultcols, $colspan: 6, $padtop: 0, $padside: $defaultpad );
-		@include pinkrow( $rowitems: 2, $before: 0, $after: 0 ) 
+		@include pinkrow( $rowitems: 2, $before: 0, $after: 0 )
 	}
 
 
@@ -327,25 +335,25 @@
 
 	.mtm-list--image {
 		@include pinkgrid( $align: top, $totalcols: $defaultcols, $colspan: 5, $padtop: 0, $padside: $defaultpad );
-		@include pinkrow( $rowitems: 2, $before: 0, $after: 0 ) 
+		@include pinkrow( $rowitems: 2, $before: 0, $after: 0 )
 	}
 
 	.mtm-list--post-content {
 		@include pinkgrid( $align: top, $totalcols: $defaultcols, $colspan: 7, $padtop: 0, $padside: 2% );
-		@include pinkrow( $rowitems: 2, $before: 0, $after: 0 ) 
+		@include pinkrow( $rowitems: 2, $before: 0, $after: 0 )
 	}
 
 	.mtm-home-news--content {
 		@include pinkgrid( $colspan: 6 );
-		@include pinkrow( $rowitems: 2 ); 
+		@include pinkrow( $rowitems: 2 );
 
 		&.full {
 			@include pinkgrid( $colspan: 12 );
-			@include pinkrow( $rowitems: 1 ); 
+			@include pinkrow( $rowitems: 1 );
 
 			.mtm-home-sidebar--widget {
 				@include pinkgrid( $colspan: 4 );
-				@include pinkrow( $rowitems: 3 ); 
+				@include pinkrow( $rowitems: 3 );
 				margin: 1.5em 0;
 			}
 		}
@@ -353,7 +361,7 @@
 
 	.mtm-home-featured--story {
 		@include pinkgrid( $colspan: 6 );
-		@include pinkrow( $rowitems: 2 ); 
+		@include pinkrow( $rowitems: 2 );
 	}
 
 }
@@ -365,7 +373,7 @@
 
 	.mtm-home-sidebar--widget {
 		display: block;
-		
+
 		&:first-of-type {
 			margin-top: 1.5em;
 		}
@@ -389,7 +397,7 @@
 			@include pinkrow( $rowitems: 2, $before: 0, $after: 0 )
 		}
 	}
-	
+
 }
 
 
@@ -397,25 +405,25 @@
 
 	.mtm-list--image {
 		@include pinkgrid( $align: top, $totalcols: $defaultcols, $colspan: 3, $padtop: 0, $padside: $defaultpad );
-		@include pinkrow( $rowitems: 2, $before: 0, $after: 0 ) 
+		@include pinkrow( $rowitems: 2, $before: 0, $after: 0 )
 	}
 
 	.mtm-list--post-content {
 		@include pinkgrid( $align: top, $totalcols: $defaultcols, $colspan: 9, $padtop: 0, $padside: $defaultpad );
-		@include pinkrow( $rowitems: 2, $before: 0, $after: 0 ) 
+		@include pinkrow( $rowitems: 2, $before: 0, $after: 0 )
 	}
 
 	.mtm-home-news--content {
 		@include pinkgrid( $colspan: 4 );
-		@include pinkrow( $rowitems: 2 ); 
+		@include pinkrow( $rowitems: 2 );
 
 		&.full {
 			@include pinkgrid( $colspan: 12 );
-			@include pinkrow( $rowitems: 1 ); 
+			@include pinkrow( $rowitems: 1 );
 
 			.mtm-home-sidebar--widget {
 				@include pinkgrid( $colspan: 4 );
-				@include pinkrow( $rowitems: 3 ); 
+				@include pinkrow( $rowitems: 3 );
 				margin: 1.5em 0;
 			}
 		}
@@ -423,7 +431,7 @@
 
 	.mtm-home-featured--story {
 		@include pinkgrid( $colspan: 8 );
-		@include pinkrow( $rowitems: 2 ); 
+		@include pinkrow( $rowitems: 2 );
 	}
-	
+
 }

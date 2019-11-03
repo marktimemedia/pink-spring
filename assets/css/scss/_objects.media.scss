@@ -13,7 +13,7 @@
 .youtube {
     height: 0;
     @include rem-px('margin-bottom', 3rem);
-    padding-top: 56.25%;
+    padding-bottom: 56.25%;
     position: relative;
     width: 100%;
     z-index: 1;
@@ -37,11 +37,11 @@
     }
 
     br+br { // Pick the second line break if two line breaks are adjacent
-        display: none; 
+        display: none;
     }
 
     img:hover {
-        
+
     }
 
     .gallery-item {
@@ -71,12 +71,17 @@
         }
     }
 
-.embed-container, .entry-content-asset { 
-    height: auto;
+.embed-container, .entry-content-asset {
     max-width: 100%;
     overflow: hidden;
-    position: relative; 
-    padding-bottom: 56.25%;
+    position: relative;
+
+    &.video-asset {
+        height: auto;
+        max-width: 100%;
+        overflow: hidden;
+        padding-bottom: 56.25%;
+    }
 
     iframe, object, embed {
         background-color: rgba(0,0,0, .5);
@@ -86,14 +91,28 @@
         top: 0;
         margin: 0 !important;
         position: absolute !important;
-        width: 100% !important;  
+        width: 100% !important;
     }
 
     twitterwidget {
-        height: 100%;
-        left: 0;
-        top: 0;
-        position: absolute !important;
-        width: 100% !important;  
+        // height: 100%;
+        // left: 0;
+        // top: 0;
+        // position: absolute !important;
+        // width: 100% !important;
+
+        .EmbeddedTweet {
+            max-width: 100% !important;
+            min-width: 100% !important;
+        }
     }
-}  
+}
+
+.wp-has-aspect-ratio {
+    .embed-container, .entry-content-asset {
+      position: initial;
+      &.video-asset {
+        padding-top: 0;
+    }
+  }
+}

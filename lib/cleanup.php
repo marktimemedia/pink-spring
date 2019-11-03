@@ -126,14 +126,48 @@ add_filter( 'body_class', 'spring_body_class' );
 
 /**
  * Wrap embedded media as suggested by Readability
+ * Able to change based on URL source
  *
  * @link https://gist.github.com/965956
  * @link http://www.readability.com/publishers/guidelines#publisher
+ * @link https://wordpress.stackexchange.com/questions/254583/add-wrapper-to-only-youtube-videos-via-embed-oembed-html-filter-function
  */
-function spring_embed_wrap( $cache, $url, $attr = '', $post_ID = '' ) {
-  return '<div class="entry-content-asset">' . $cache . '</div>';
+function spring_embed_wrap($cache, $url, $attr = '', $post_ID = '') {
+  $classes = array();
+
+    // Add these classes to all embeds.
+    $classes_all = array(
+        'entry-content-asset',
+    );
+
+    // Check for different providers and add appropriate classes.
+
+    if ( false !== strpos( $url, 'vimeo.com' ) ) {
+        $classes[] = 'vimeo video-asset';
+    }
+
+    if ( false !== strpos( $url, 'youtube.com' ) ) {
+        $classes[] = 'youtube video-asset';
+    }
+
+    $classes = array_merge( $classes, $classes_all );
+
+    return '<div class="' . esc_attr( implode( $classes, ' ' ) ) . '">' . $cache . '</div>';
 }
-add_filter( 'embed_oembed_html', 'spring_embed_wrap', 10, 4 );
+add_filter('embed_oembed_html', 'spring_embed_wrap', 10, 4);
+
+/**
+* Wrap Gutenberg blocks in a container so we can target them with scroll ScrollReveal
+* https://wordpress.stackexchange.com/questions/329587/add-a-containing-div-to-core-gutenberg-blocks
+*/
+
+add_filter( 'render_block', function( $block_content, $block ) {
+    // Uncomment to only target core/* and core-embed/* blocks.
+    //if ( preg_match( '~^core/|core-embed/~', $block['blockName'] ) ) {
+       $block_content = sprintf( '<div class="single--block">%s</div>', $block_content );
+    //}
+    return $block_content;
+}, PHP_INT_MAX - 1, 2 );
 
 /**
  * Add thumbnail styling to images with captions
@@ -295,10 +329,10 @@ function is_blog() {
 function fix_blog_link_on_cpt( $classes, $item, $args ) {
   if( !is_blog() ) {
     $blog_page_id = intval( get_option( 'page_for_posts' ) );
-    
+
     if( $blog_page_id != 0 && $item->object_id == $blog_page_id ) {
       if ( in_array( 'current_page_parent', $classes ) ) {
-        unset( $classes[ array_search( 'current_page_parent', $classes ) ] );      
+        unset( $classes[ array_search( 'current_page_parent', $classes ) ] );
       }
     }
   }

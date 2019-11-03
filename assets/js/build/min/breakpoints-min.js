@@ -1,0 +1,1 @@
+var isVisible=function(i){return $(i).is(":visible")},breakpoints=function(){var i={},n,t,e=function(){$(".bp_checking").each(function(){o($(this).attr("id"))}),$(window).on("resize",function(){$.each(i,function(i){o(i)})})},c=function(n){return i[n]},o=function(e){n="#"+e,t=isVisible(n),i[e]=t};return{init:e,is:c}}();breakpoints.init();

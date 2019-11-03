@@ -14,6 +14,7 @@ add_theme_support( 'wc-product-gallery-slider' );
 
 /**
 * Change number of products per row
+* Will also need to change layout CSS
 */
 // add_filter('loop_shop_columns', 'loop_columns');
 // if (!function_exists('loop_columns')) {
@@ -23,12 +24,26 @@ add_theme_support( 'wc-product-gallery-slider' );
 // }
 
 /**
-* Remove WooCommerce Styles
+* Remove unwanted WooCommerce styles from pages
+* @see https://wordimpress.com/how-to-load-woocommerce-scripts-and-styles-only-in-shop/
 */
-// add_filter( 'woocommerce_enqueue_styles', 'spring_dequeue_styles' );
-// function spring_dequeue_styles( $enqueue_styles ) {
-// 	//unset( $enqueue_styles['woocommerce-general'] );	// Remove the gloss
-// 	//unset( $enqueue_styles['woocommerce-layout'] );		// Remove the layout
-// 	//unset( $enqueue_styles['woocommerce-smallscreen'] );	// Remove the smallscreen optimisation
-// 	return $enqueue_styles;
-// }
+
+//add_action( 'wp_enqueue_scripts', 'mtm_manage_woocommerce_styles', 99 );
+function mtm_manage_woocommerce_styles() {
+	//first check that woo exists to prevent fatal errors
+	if ( function_exists( 'is_woocommerce' ) ) {
+		//dequeue scripts and styles
+		if ( ! is_woocommerce() && ! is_cart() && ! is_checkout() && ! is_account_page() && is_page_template() ) {
+			// wp_dequeue_style( 'woocommerce-layout' ); // layout specific
+			// wp_dequeue_style( 'woocommerce-general' ); // gloss
+			// wp_dequeue_style( 'woocommerce-smallscreen' ); // smallscreen optimizaiton
+			
+			// scripts
+			// wp_dequeue_script( 'wc-add-to-cart' );
+			// wp_dequeue_script( 'wc-cart-fragments' );
+			// wp_dequeue_script( 'woocommerce' );
+			// wp_dequeue_script( 'jquery-blockui' );
+			// wp_dequeue_script( 'jquery-placeholder' );
+		}
+	}
+}

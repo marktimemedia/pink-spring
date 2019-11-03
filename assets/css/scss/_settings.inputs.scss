@@ -1,11 +1,11 @@
 // Forms
 $textboxBackground: $white;
 $textboxBorderColor: $Nlight;
-$textboxBorderColorActive: $springColor1;
+$textboxBorderColorActive: $Nlight;
 $textboxBorderWidth: 1px;
 $textboxBorderStyle: solid;
-$textboxColor: $textColor;
-$textboxPlaceholderColor: $Nlighter;
+$textboxColor: $Ndarkest;
+$textboxPlaceholderColor: $Ndark;
 $textboxPlaceholderSize: .875em;
 $textboxPlaceholderStyle: normal; //Change to italic if you want placeholder text to be italic.
 $textboxPadding: .5em;
@@ -13,7 +13,7 @@ $textboxOutline: none;
 $textboxMaxWidth: 100%;
 
 $labelFontSize: 1.125em;
-$labelColor: $textColor;
+$labelColor: $Ndarkest;
 
 // Buttons
 $buttonBackground: $springColor1;

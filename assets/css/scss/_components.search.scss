@@ -82,6 +82,10 @@
         }
     }
 
+    .fa-search.search-open:before {
+        content:'\f00d'
+    }
+
 
 @media only screen and (min-width: #{$midBreakpoint}) {
 

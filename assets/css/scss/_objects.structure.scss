@@ -6,7 +6,7 @@
     overflow: hidden;
     padding-top: 1px;
     position: relative;
-    @include multi-transition('margin-left .2s ease-out, margin-right .2s ease-out, left .2s ease-out'); 
+    @include multi-transition('margin-left .2s ease-out, margin-right .2s ease-out, left .2s ease-out');
 }
 
 
@@ -14,7 +14,7 @@
     padding: 0;
     // @include rem-px('max-width', $boxedMax); // for a boxed width background with sidebar only
     // padding: 0 $smallPadding; // for a boxed width background with sidebar only
-    padding-top: 150px; // for fixed-position header, adjust to match header size
+    padding-top: $paddingTopMobile; // for fixed-position header, adjust to match header size
 
     &.inner-padding {
         padding: 0 $smallPadding;
@@ -24,17 +24,31 @@
         @include rem-px('max-width', $boxedMax); // for a boxed width background with no sidebar
         padding: $smallPadding; // for a boxed width background with no sidebar
     }
+
+    .content--inner {
+      @include rem-px('max-width', $boxedMax); // for a boxed width background with no sidebar
+    }
+
+    .alignfull .content--inner {
+      padding-left: 2rem; // for a boxed width background with no sidebar
+      padding-right: 2rem; // for a boxed width background with no sidebar
+    }
 }
 
 @media only screen and (min-width: #{$midBreakpoint}) {
-    
+
     .content{
         //padding: 0 $maxPadding; // for a boxed width background with sidebar only
         //padding-bottom:100px; // to account for position absolute footer
-        padding-top: 150px; // for fixed-position header, adjust to match header size
+        padding-top: $paddingTop; // for fixed-position header, adjust to match header size
 
-        .content-full .content--page {
+        .content-full .content--page{
             padding: $maxPadding; // for a boxed width background with no sidebar
+        }
+
+        .alignfull .content--inner {
+          padding-left: $maxPadding; // for a boxed width background with no sidebar
+          padding-right: $maxPadding; // for a boxed width background with no sidebar
         }
     }
 }
@@ -55,10 +69,10 @@
 @media only screen and (min-width: #{$widescreenBreakpoint}) {
     .content {
         margin: 0 auto;
-        padding-top: 150px; // for fixed-position header, adjust to match header size
+       // padding-top: $paddingTop; // for fixed-position header, adjust to match header size
     }
 
-    .content-full {    
+    .content-full {
         margin: 0 auto;
 
         .content--page {
@@ -66,5 +80,8 @@
         }
     }
 
+    .content--inner {
+      margin: 0 auto;
+    }
 
 }
