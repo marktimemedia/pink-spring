@@ -19,5 +19,3 @@ require_once locate_template( '/lib/scripts.php' );         // Scripts and style
 require_once locate_template( '/lib/woo.php' );          	// WooCommerce functions
 require_once locate_template( '/lib/custom.php' );          // Custom functions
 require_once locate_template( '/client-files/client-functions.php' ); // Client functions
-
-?>

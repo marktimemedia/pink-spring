@@ -53,4 +53,4 @@ if ( ! empty( $tabs ) ) : ?>
 
 	</div>
 
-<?php endif; ?>
+<?php endif;
