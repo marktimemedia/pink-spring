@@ -89,4 +89,4 @@ if ( have_comments() && !is_page() && post_type_supports( get_post_type(), 'comm
             <?php do_action( 'comment_form_after', $post->ID ); ?>
         <?php endif; ?>
     </section><!-- /#respond -->
-<?php endif; ?>
+<?php endif;
