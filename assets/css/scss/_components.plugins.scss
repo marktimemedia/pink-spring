@@ -10,8 +10,8 @@
 #tribe-events {
 
     .tribe-events-button {
-        @extend .global-button;
-        @extend .global-button.neutral;
+        @extend %button;
+        @extend %button.neutral;
     }
 
     table.tribe-events-calendar {
@@ -29,7 +29,7 @@
 
         div[id*=tribe-events-daynum-], div[id*=tribe-events-daynum-] a {
             background-color: $Nlightest;
-            color: $Ndarkest;    
+            color: $Ndarkest;
         }
     }
 
@@ -157,8 +157,8 @@
     }
 
     .tribe-bar-submit input[type=submit] {
-        @extend .global-button;
-        @extend .global-button.neutral;
+      @extend %button;
+      @extend %button.neutral;
     }
 
     .tribe-bar-views-inner {
@@ -220,10 +220,10 @@
         }
     }
 }
-    
+
 
 @media only screen and (min-width: #{$midBreakpoint}) {
-    
+
     #tribe-events {
 
         .tribe-events-single {
@@ -244,7 +244,7 @@
         .tribe-events-event-meta {
             display: inline-block;
         }
-        
+
         .tribe-ticket.quantity {
             width: 30%;
         }
@@ -271,5 +271,5 @@
             float: right;
             width: 67%;
         }
-    } 
+    }
 }

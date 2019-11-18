@@ -25,6 +25,10 @@
         padding: $smallPadding; // for a boxed width background with no sidebar
     }
 
+    .content--page.no-title {
+      padding-top: 0;
+    }
+
     .content--inner {
       @include rem-px('max-width', $boxedMax); // for a boxed width background with no sidebar
     }
@@ -46,10 +50,15 @@
             padding: $maxPadding; // for a boxed width background with no sidebar
         }
 
+        .content--page.no-title {
+          padding-top: 0;
+        }
+
         .alignfull .content--inner {
           padding-left: $maxPadding; // for a boxed width background with no sidebar
           padding-right: $maxPadding; // for a boxed width background with no sidebar
         }
+
     }
 }
 

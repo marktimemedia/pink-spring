@@ -409,7 +409,6 @@ nav ul {
 
   nav li {
     line-height: 1; } }
-/* FORMS */
 label {
   color: #322e2f;
   font-family: sans-serif;
@@ -443,67 +442,43 @@ textarea,
   max-width: 100%;
   padding: 0.5em;
   width: 100%; }
-  input[type="text"]:active, input[type="text"]:focus,
+  input[type="text"]:active,
   input[type="date"]:active,
-  input[type="date"]:focus,
   input[type="time"]:active,
-  input[type="time"]:focus,
   input[type="datetime"]:active,
-  input[type="datetime"]:focus,
   input[type="datetime-local"]:active,
-  input[type="datetime-local"]:focus,
   input[type="url"]:active,
-  input[type="url"]:focus,
   input[type="email"]:active,
-  input[type="email"]:focus,
   input[type="number"]:active,
-  input[type="number"]:focus,
   input[type="search"]:active,
-  input[type="search"]:focus,
   input[type="file"]:active,
-  input[type="file"]:focus,
   input[type="password"]:active,
-  input[type="password"]:focus,
   input[type="tel"]:active,
-  input[type="tel"]:focus,
   select:active,
-  select:focus,
   textarea:active,
+  .textbox:active, input[type="text"]:focus,
+  input[type="date"]:focus,
+  input[type="time"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="url"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="file"]:focus,
+  input[type="password"]:focus,
+  input[type="tel"]:focus,
+  select:focus,
   textarea:focus,
-  .textbox:active,
   .textbox:focus {
     outline-color: #afa8af; }
-
-input[type="checkbox"],
-input[type="radio"] {
-  margin: 3px 0;
-  padding: 0;
-  *width: 1em;
-  *height: 1em; }
 
 button,
 .button,
 li.woocommerce-MyAccount-navigation-link--customer-logout a,
-.global-button,
-#tribe-events .tribe-events-button,
-#tribe-bar-form .tribe-bar-submit input[type=submit],
-.woocommerce .content .button,
-.woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a,
-li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce .content a,
-.woocommerce .content a.button,
-.woocommerce .content button,
-.woocommerce .content input.button,
-.content .woocommerce .button,
-.content .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a,
-li.woocommerce-MyAccount-navigation-link--customer-logout .content .woocommerce a,
-.content .woocommerce a.button,
-.content .woocommerce button,
-.content .woocommerce input.button,
-.woocommerce ul.products li.product a.added_to_cart.wc-forward,
-.woocommerce-page ul.products li.product a.added_to_cart.wc-forward,
 input[type="button"],
 input[type="submit"],
-input[type="reset"] {
+input[type="reset"], .global-button, #tribe-events .tribe-events-button, #tribe-bar-form .tribe-bar-submit input[type=submit], .woocommerce .content .button, .woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a, li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce .content a, .woocommerce .content a.button, .woocommerce .content button, .woocommerce .content input.button, .content .woocommerce .button, .content .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a, li.woocommerce-MyAccount-navigation-link--customer-logout .content .woocommerce a, .content .woocommerce a.button, .content .woocommerce button, .content .woocommerce input.button, .woocommerce ul.products li.product a.added_to_cart.wc-forward, .woocommerce-page ul.products li.product a.added_to_cart.wc-forward {
   color: #fff;
   cursor: pointer;
   background-color: #de1e7e;
@@ -525,32 +500,19 @@ input[type="reset"] {
   button:hover,
   .button:hover,
   li.woocommerce-MyAccount-navigation-link--customer-logout a:hover,
-  .global-button:hover,
-  #tribe-events .tribe-events-button:hover,
-  #tribe-bar-form .tribe-bar-submit input[type=submit]:hover,
-  .woocommerce .content .button:hover,
-  .woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a:hover,
-  li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce .content a:hover,
-  .woocommerce .content button:hover,
-  .content .woocommerce .button:hover,
-  .content .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a:hover,
-  li.woocommerce-MyAccount-navigation-link--customer-logout .content .woocommerce a:hover,
-  .content .woocommerce button:hover,
-  .woocommerce ul.products li.product a.added_to_cart.wc-forward:hover,
-  .woocommerce-page ul.products li.product a.added_to_cart.wc-forward:hover,
   input[type="button"]:hover,
   input[type="submit"]:hover,
-  input[type="reset"]:hover {
-    background-color: #f067ab;
-    border: 2px solid #f7add1;
+  input[type="reset"]:hover, .global-button:hover, #tribe-events .tribe-events-button:hover, #tribe-bar-form .tribe-bar-submit input[type=submit]:hover, .woocommerce .content .button:hover, .woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a:hover, li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce .content a:hover, .woocommerce .content button:hover, .content .woocommerce .button:hover, .content .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a:hover, li.woocommerce-MyAccount-navigation-link--customer-logout .content .woocommerce a:hover, .content .woocommerce button:hover, .woocommerce ul.products li.product a.added_to_cart.wc-forward:hover, .woocommerce-page ul.products li.product a.added_to_cart.wc-forward:hover {
+    background-color: #e64998;
+    border: 2px solid #ef8cbe;
     color: #fff;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s; }
-  button.alt, .woocommerce .content button.button.alt, .woocommerce .content button.alt, .content .woocommerce button.button.alt, .content .woocommerce button.alt,
-  .button.alt,
+  button.alt, .woocommerce .content button.alt, .content .woocommerce button.alt,
+  .alt.button,
   .woocommerce .content .button.alt,
   .woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a.alt,
   li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce .content a.alt,
@@ -562,36 +524,13 @@ input[type="reset"] {
   .content .woocommerce a.button.alt,
   .content .woocommerce input.button.alt,
   li.woocommerce-MyAccount-navigation-link--customer-logout a.alt,
-  .global-button.alt,
-  #tribe-events .alt.tribe-events-button,
-  #tribe-bar-form .tribe-bar-submit input.alt[type=submit],
-  .woocommerce .content .button.alt,
-  .woocommerce .content a.button.alt,
-  .woocommerce .content input.button.alt,
-  .woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a.alt,
-  li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce .content a.alt,
-  .woocommerce .content button.alt,
-  .content .woocommerce .button.alt,
-  .content .woocommerce a.button.alt,
-  .content .woocommerce input.button.alt,
-  .content .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a.alt,
-  li.woocommerce-MyAccount-navigation-link--customer-logout .content .woocommerce a.alt,
-  .content .woocommerce button.alt,
-  .woocommerce ul.products li.product a.alt.added_to_cart.wc-forward,
-  .woocommerce-page ul.products li.product a.alt.added_to_cart.wc-forward,
-  input[type="button"].alt,
-  .woocommerce .content input[type="button"].button.alt,
-  .content .woocommerce input[type="button"].button.alt,
-  input[type="submit"].alt,
-  .woocommerce .content input[type="submit"].button.alt,
-  .content .woocommerce input[type="submit"].button.alt,
-  input[type="reset"].alt,
-  .woocommerce .content input[type="reset"].button.alt,
-  .content .woocommerce input[type="reset"].button.alt {
+  input.alt[type="button"],
+  input.alt[type="submit"],
+  input.alt[type="reset"], .alt.global-button, #tribe-events .alt.tribe-events-button, #tribe-bar-form .tribe-bar-submit input.alt[type=submit], .woocommerce ul.products li.product a.alt.added_to_cart.wc-forward, .woocommerce-page ul.products li.product a.alt.added_to_cart.wc-forward {
     background-color: #10aded;
     border-color: #0b79a5; }
-    button.alt:hover, .woocommerce .content button.alt:hover, .content .woocommerce button.alt:hover, button.alt:focus, .woocommerce .content button.alt:focus, .content .woocommerce button.alt:focus,
-    .button.alt:hover,
+    button.alt:hover, .woocommerce .content button.alt:hover, .content .woocommerce button.alt:hover,
+    .alt.button:hover,
     .woocommerce .content .button.alt:hover,
     .woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a.alt:hover,
     li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce .content a.alt:hover,
@@ -599,7 +538,10 @@ input[type="reset"] {
     .content .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a.alt:hover,
     li.woocommerce-MyAccount-navigation-link--customer-logout .content .woocommerce a.alt:hover,
     li.woocommerce-MyAccount-navigation-link--customer-logout a.alt:hover,
-    .button.alt:focus,
+    input.alt[type="button"]:hover,
+    input.alt[type="submit"]:hover,
+    input.alt[type="reset"]:hover, .alt.global-button:hover, #tribe-events .alt.tribe-events-button:hover, #tribe-bar-form .tribe-bar-submit input.alt[type=submit]:hover, .woocommerce ul.products li.product a.alt.added_to_cart.wc-forward:hover, .woocommerce-page ul.products li.product a.alt.added_to_cart.wc-forward:hover, button.alt:focus, .woocommerce .content button.alt:focus, .content .woocommerce button.alt:focus,
+    .alt.button:focus,
     .woocommerce .content .button.alt:focus,
     .woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a.alt:focus,
     li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce .content a.alt:focus,
@@ -607,210 +549,73 @@ input[type="reset"] {
     .content .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a.alt:focus,
     li.woocommerce-MyAccount-navigation-link--customer-logout .content .woocommerce a.alt:focus,
     li.woocommerce-MyAccount-navigation-link--customer-logout a.alt:focus,
-    .global-button.alt:hover,
-    #tribe-events .alt.tribe-events-button:hover,
-    #tribe-bar-form .tribe-bar-submit input.alt[type=submit]:hover,
-    .woocommerce .content .button.alt:hover,
-    .woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a.alt:hover,
-    li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce .content a.alt:hover,
-    .woocommerce .content button.alt:hover,
-    .content .woocommerce .button.alt:hover,
-    .content .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a.alt:hover,
-    li.woocommerce-MyAccount-navigation-link--customer-logout .content .woocommerce a.alt:hover,
-    .content .woocommerce button.alt:hover,
-    .woocommerce ul.products li.product a.alt.added_to_cart.wc-forward:hover,
-    .woocommerce-page ul.products li.product a.alt.added_to_cart.wc-forward:hover,
-    .global-button.alt:focus,
-    #tribe-events .alt.tribe-events-button:focus,
-    #tribe-bar-form .tribe-bar-submit input.alt[type=submit]:focus,
-    .woocommerce .content .button.alt:focus,
-    .woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a.alt:focus,
-    li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce .content a.alt:focus,
-    .woocommerce .content button.alt:focus,
-    .content .woocommerce .button.alt:focus,
-    .content .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a.alt:focus,
-    li.woocommerce-MyAccount-navigation-link--customer-logout .content .woocommerce a.alt:focus,
-    .content .woocommerce button.alt:focus,
-    .woocommerce ul.products li.product a.alt.added_to_cart.wc-forward:focus,
-    .woocommerce-page ul.products li.product a.alt.added_to_cart.wc-forward:focus,
-    input[type="button"].alt:hover,
-    .woocommerce .content input[type="button"].button.alt:hover,
-    .content .woocommerce input[type="button"].button.alt:hover,
-    input[type="button"].alt:focus,
-    .woocommerce .content input[type="button"].button.alt:focus,
-    .content .woocommerce input[type="button"].button.alt:focus,
-    input[type="submit"].alt:hover,
-    .woocommerce .content input[type="submit"].button.alt:hover,
-    .content .woocommerce input[type="submit"].button.alt:hover,
-    input[type="submit"].alt:focus,
-    .woocommerce .content input[type="submit"].button.alt:focus,
-    .content .woocommerce input[type="submit"].button.alt:focus,
-    input[type="reset"].alt:hover,
-    .woocommerce .content input[type="reset"].button.alt:hover,
-    .content .woocommerce input[type="reset"].button.alt:hover,
-    input[type="reset"].alt:focus,
-    .woocommerce .content input[type="reset"].button.alt:focus,
-    .content .woocommerce input[type="reset"].button.alt:focus {
+    input.alt[type="button"]:focus,
+    input.alt[type="submit"]:focus,
+    input.alt[type="reset"]:focus, .alt.global-button:focus, #tribe-events .alt.tribe-events-button:focus, #tribe-bar-form .tribe-bar-submit input.alt[type=submit]:focus, .woocommerce ul.products li.product a.alt.added_to_cart.wc-forward:focus, .woocommerce-page ul.products li.product a.alt.added_to_cart.wc-forward:focus {
       background-color: #3ebef2;
       border-color: #86d6f7; }
   button.outline,
-  .button.outline,
+  .outline.button,
   li.woocommerce-MyAccount-navigation-link--customer-logout a.outline,
-  .global-button.outline,
-  #tribe-events .outline.tribe-events-button,
-  #tribe-bar-form .tribe-bar-submit input.outline[type=submit],
-  .woocommerce .content .outline.button,
-  .woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a.outline,
-  li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce .content a.outline,
-  .woocommerce .content button.outline,
-  .content .woocommerce .outline.button,
-  .content .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a.outline,
-  li.woocommerce-MyAccount-navigation-link--customer-logout .content .woocommerce a.outline,
-  .content .woocommerce button.outline,
-  .woocommerce ul.products li.product a.outline.added_to_cart.wc-forward,
-  .woocommerce-page ul.products li.product a.outline.added_to_cart.wc-forward,
-  input[type="button"].outline,
-  input[type="submit"].outline,
-  input[type="reset"].outline {
+  input.outline[type="button"],
+  input.outline[type="submit"],
+  input.outline[type="reset"], .outline.global-button, #tribe-events .outline.tribe-events-button, #tribe-bar-form .tribe-bar-submit input.outline[type=submit], .woocommerce .content .outline.button, .woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a.outline, li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce .content a.outline, .woocommerce .content button.outline, .content .woocommerce .outline.button, .content .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a.outline, li.woocommerce-MyAccount-navigation-link--customer-logout .content .woocommerce a.outline, .content .woocommerce button.outline, .woocommerce ul.products li.product a.outline.added_to_cart.wc-forward, .woocommerce-page ul.products li.product a.outline.added_to_cart.wc-forward {
     background-color: transparent;
     border-color: #de1e7e;
     color: #de1e7e; }
-    button.outline:hover, button.outline:focus,
-    .button.outline:hover,
+    button.outline:hover,
+    .outline.button:hover,
     li.woocommerce-MyAccount-navigation-link--customer-logout a.outline:hover,
-    .button.outline:focus,
+    input.outline[type="button"]:hover,
+    input.outline[type="submit"]:hover,
+    input.outline[type="reset"]:hover, .outline.global-button:hover, #tribe-events .outline.tribe-events-button:hover, #tribe-bar-form .tribe-bar-submit input.outline[type=submit]:hover, .woocommerce .content a.outline.button:hover, .woocommerce .content input.outline.button:hover, .content .woocommerce a.outline.button:hover, .content .woocommerce input.outline.button:hover, .woocommerce ul.products li.product a.outline.added_to_cart.wc-forward:hover, .woocommerce-page ul.products li.product a.outline.added_to_cart.wc-forward:hover, button.outline:focus,
+    .outline.button:focus,
     li.woocommerce-MyAccount-navigation-link--customer-logout a.outline:focus,
-    .global-button.outline:hover,
-    #tribe-events .outline.tribe-events-button:hover,
-    #tribe-bar-form .tribe-bar-submit input.outline[type=submit]:hover,
-    .woocommerce .content .outline.button:hover,
-    .woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a.outline:hover,
-    li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce .content a.outline:hover,
-    .woocommerce .content button.outline:hover,
-    .content .woocommerce .outline.button:hover,
-    .content .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a.outline:hover,
-    li.woocommerce-MyAccount-navigation-link--customer-logout .content .woocommerce a.outline:hover,
-    .content .woocommerce button.outline:hover,
-    .woocommerce ul.products li.product a.outline.added_to_cart.wc-forward:hover,
-    .woocommerce-page ul.products li.product a.outline.added_to_cart.wc-forward:hover,
-    .global-button.outline:focus,
-    #tribe-events .outline.tribe-events-button:focus,
-    #tribe-bar-form .tribe-bar-submit input.outline[type=submit]:focus,
-    .woocommerce .content .outline.button:focus,
-    .woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a.outline:focus,
-    li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce .content a.outline:focus,
-    .woocommerce .content button.outline:focus,
-    .content .woocommerce .outline.button:focus,
-    .content .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a.outline:focus,
-    li.woocommerce-MyAccount-navigation-link--customer-logout .content .woocommerce a.outline:focus,
-    .content .woocommerce button.outline:focus,
-    .woocommerce ul.products li.product a.outline.added_to_cart.wc-forward:focus,
-    .woocommerce-page ul.products li.product a.outline.added_to_cart.wc-forward:focus,
-    input[type="button"].outline:hover,
-    input[type="button"].outline:focus,
-    input[type="submit"].outline:hover,
-    input[type="submit"].outline:focus,
-    input[type="reset"].outline:hover,
-    input[type="reset"].outline:focus {
+    input.outline[type="button"]:focus,
+    input.outline[type="submit"]:focus,
+    input.outline[type="reset"]:focus, .outline.global-button:focus, #tribe-events .outline.tribe-events-button:focus, #tribe-bar-form .tribe-bar-submit input.outline[type=submit]:focus, .woocommerce .content a.outline.button:focus, .woocommerce .content input.outline.button:focus, .content .woocommerce a.outline.button:focus, .content .woocommerce input.outline.button:focus, .woocommerce ul.products li.product a.outline.added_to_cart.wc-forward:focus, .woocommerce-page ul.products li.product a.outline.added_to_cart.wc-forward:focus {
       background-color: rgba(222, 30, 126, 0.3);
       border-color: #de1e7e;
       color: #de1e7e; }
   button.neutral,
-  .button.neutral,
+  .neutral.button,
   li.woocommerce-MyAccount-navigation-link--customer-logout a.neutral,
-  .global-button.neutral,
-  #tribe-events .tribe-events-button,
-  #tribe-bar-form .tribe-bar-submit input[type=submit],
-  .woocommerce .content .neutral.button,
-  .woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a.neutral,
-  li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce .content a.neutral,
-  .woocommerce .content button.neutral,
-  .content .woocommerce .neutral.button,
-  .content .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a.neutral,
-  li.woocommerce-MyAccount-navigation-link--customer-logout .content .woocommerce a.neutral,
-  .content .woocommerce button.neutral,
-  .woocommerce ul.products li.product a.neutral.added_to_cart.wc-forward,
-  .woocommerce-page ul.products li.product a.neutral.added_to_cart.wc-forward,
-  input[type="button"].neutral,
-  input[type="submit"].neutral,
-  input[type="reset"].neutral {
+  input.neutral[type="button"],
+  input.neutral[type="submit"],
+  input.neutral[type="reset"], .neutral.global-button, #tribe-events .tribe-events-button, #tribe-bar-form .tribe-bar-submit input[type=submit], .woocommerce .content .neutral.button, .woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a.neutral, li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce .content a.neutral, .woocommerce .content button.neutral, .content .woocommerce .neutral.button, .content .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a.neutral, li.woocommerce-MyAccount-navigation-link--customer-logout .content .woocommerce a.neutral, .content .woocommerce button.neutral, .woocommerce ul.products li.product a.neutral.added_to_cart.wc-forward, .woocommerce-page ul.products li.product a.neutral.added_to_cart.wc-forward {
     background-color: #948b90; }
-    button.neutral:hover, button.neutral:focus,
-    .button.neutral:hover,
+    button.neutral:hover,
+    .neutral.button:hover,
     li.woocommerce-MyAccount-navigation-link--customer-logout a.neutral:hover,
-    .button.neutral:focus,
+    input.neutral[type="button"]:hover,
+    input.neutral[type="submit"]:hover,
+    input.neutral[type="reset"]:hover, .neutral.global-button:hover, #tribe-events .tribe-events-button:hover, #tribe-bar-form .tribe-bar-submit input[type=submit]:hover, .woocommerce .content a.neutral.button:hover, .woocommerce .content input.neutral.button:hover, .content .woocommerce a.neutral.button:hover, .content .woocommerce input.neutral.button:hover, .woocommerce ul.products li.product a.neutral.added_to_cart.wc-forward:hover, .woocommerce-page ul.products li.product a.neutral.added_to_cart.wc-forward:hover, button.neutral:focus,
+    .neutral.button:focus,
     li.woocommerce-MyAccount-navigation-link--customer-logout a.neutral:focus,
-    .global-button.neutral:hover,
-    #tribe-events .tribe-events-button:hover,
-    #tribe-bar-form .tribe-bar-submit input[type=submit]:hover,
-    .woocommerce .content .neutral.button:hover,
-    .woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a.neutral:hover,
-    li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce .content a.neutral:hover,
-    .woocommerce .content button.neutral:hover,
-    .content .woocommerce .neutral.button:hover,
-    .content .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a.neutral:hover,
-    li.woocommerce-MyAccount-navigation-link--customer-logout .content .woocommerce a.neutral:hover,
-    .content .woocommerce button.neutral:hover,
-    .woocommerce ul.products li.product a.neutral.added_to_cart.wc-forward:hover,
-    .woocommerce-page ul.products li.product a.neutral.added_to_cart.wc-forward:hover,
-    .global-button.neutral:focus,
-    #tribe-events .tribe-events-button:focus,
-    #tribe-bar-form .tribe-bar-submit input[type=submit]:focus,
-    .woocommerce .content .neutral.button:focus,
-    .woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a.neutral:focus,
-    li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce .content a.neutral:focus,
-    .woocommerce .content button.neutral:focus,
-    .content .woocommerce .neutral.button:focus,
-    .content .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a.neutral:focus,
-    li.woocommerce-MyAccount-navigation-link--customer-logout .content .woocommerce a.neutral:focus,
-    .content .woocommerce button.neutral:focus,
-    .woocommerce ul.products li.product a.neutral.added_to_cart.wc-forward:focus,
-    .woocommerce-page ul.products li.product a.neutral.added_to_cart.wc-forward:focus,
-    input[type="button"].neutral:hover,
-    input[type="button"].neutral:focus,
-    input[type="submit"].neutral:hover,
-    input[type="submit"].neutral:focus,
-    input[type="reset"].neutral:hover,
-    input[type="reset"].neutral:focus {
+    input.neutral[type="button"]:focus,
+    input.neutral[type="submit"]:focus,
+    input.neutral[type="reset"]:focus, .neutral.global-button:focus, #tribe-events .tribe-events-button:focus, #tribe-bar-form .tribe-bar-submit input[type=submit]:focus, .woocommerce .content a.neutral.button:focus, .woocommerce .content input.neutral.button:focus, .content .woocommerce a.neutral.button:focus, .content .woocommerce input.neutral.button:focus, .woocommerce ul.products li.product a.neutral.added_to_cart.wc-forward:focus, .woocommerce-page ul.products li.product a.neutral.added_to_cart.wc-forward:focus {
       background-color: #635d61; }
-  button:active, button:focus,
+  button:active,
   .button:active,
   li.woocommerce-MyAccount-navigation-link--customer-logout a:active,
+  input[type="button"]:active,
+  input[type="submit"]:active,
+  input[type="reset"]:active, .global-button:active, #tribe-events .tribe-events-button:active, #tribe-bar-form .tribe-bar-submit input[type=submit]:active, .woocommerce .content .button:active, .woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a:active, li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce .content a:active, .woocommerce .content button:active, .content .woocommerce .button:active, .content .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a:active, li.woocommerce-MyAccount-navigation-link--customer-logout .content .woocommerce a:active, .content .woocommerce button:active, .woocommerce ul.products li.product a.added_to_cart.wc-forward:active, .woocommerce-page ul.products li.product a.added_to_cart.wc-forward:active, button:focus,
   .button:focus,
   li.woocommerce-MyAccount-navigation-link--customer-logout a:focus,
-  .global-button:active,
-  #tribe-events .tribe-events-button:active,
-  #tribe-bar-form .tribe-bar-submit input[type=submit]:active,
-  .woocommerce .content .button:active,
-  .woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a:active,
-  li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce .content a:active,
-  .woocommerce .content button:active,
-  .content .woocommerce .button:active,
-  .content .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a:active,
-  li.woocommerce-MyAccount-navigation-link--customer-logout .content .woocommerce a:active,
-  .content .woocommerce button:active,
-  .woocommerce ul.products li.product a.added_to_cart.wc-forward:active,
-  .woocommerce-page ul.products li.product a.added_to_cart.wc-forward:active,
-  .global-button:focus,
-  #tribe-events .tribe-events-button:focus,
-  #tribe-bar-form .tribe-bar-submit input[type=submit]:focus,
-  .woocommerce .content .button:focus,
-  .woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a:focus,
-  li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce .content a:focus,
-  .woocommerce .content button:focus,
-  .content .woocommerce .button:focus,
-  .content .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a:focus,
-  li.woocommerce-MyAccount-navigation-link--customer-logout .content .woocommerce a:focus,
-  .content .woocommerce button:focus,
-  .woocommerce ul.products li.product a.added_to_cart.wc-forward:focus,
-  .woocommerce-page ul.products li.product a.added_to_cart.wc-forward:focus,
-  input[type="button"]:active,
   input[type="button"]:focus,
-  input[type="submit"]:active,
   input[type="submit"]:focus,
-  input[type="reset"]:active,
-  input[type="reset"]:focus {
+  input[type="reset"]:focus, .global-button:focus, #tribe-events .tribe-events-button:focus, #tribe-bar-form .tribe-bar-submit input[type=submit]:focus, .woocommerce .content .button:focus, .woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a:focus, li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce .content a:focus, .woocommerce .content button:focus, .content .woocommerce .button:focus, .content .woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a:focus, li.woocommerce-MyAccount-navigation-link--customer-logout .content .woocommerce a:focus, .content .woocommerce button:focus, .woocommerce ul.products li.product a.added_to_cart.wc-forward:focus, .woocommerce-page ul.products li.product a.added_to_cart.wc-forward:focus {
     outline-color: #de1e7e; }
+
+/* FORMS & BUTTONS*/
+input[type="checkbox"],
+input[type="radio"] {
+  margin: 3px 0;
+  padding: 0;
+  *width: 1em;
+  *height: 1em; }
 
 input[type="hidden"] {
   display: none; }
@@ -925,6 +730,8 @@ figcaption {
     max-width: 1296px;
     max-width: 81rem;
     padding: 1rem; }
+  .content .content--page.no-title {
+    padding-top: 0; }
   .content .content--inner {
     max-width: 1296px;
     max-width: 81rem; }
@@ -937,6 +744,8 @@ figcaption {
     padding-top: 150px; }
     .content .content-full .content--page {
       padding: 3rem; }
+    .content .content--page.no-title {
+      padding-top: 0; }
     .content .alignfull .content--inner {
       padding-left: 3rem;
       padding-right: 3rem; } }
@@ -1256,6 +1065,25 @@ a.button-social {
   margin-bottom: 1em;
   margin-top: 1em; }
 
+.wp-block-cover {
+  margin-bottom: 0 !important; }
+
+.wp-block-cover__inner-container, .wp-block-group__inner-container {
+  max-width: 81rem;
+  margin-left: auto;
+  margin-right: auto; }
+  .alignfull .wp-block-cover__inner-container, .alignfull .wp-block-group__inner-container {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem; }
+    .alignfull .wp-block-cover__inner-container .content--inner, .alignfull .wp-block-group__inner-container .content--inner {
+      padding-left: 0;
+      padding-right: 0; }
+    @media only screen and (min-width: 48.5em) {
+      .alignfull .wp-block-cover__inner-container, .alignfull .wp-block-group__inner-container {
+        padding-left: 3rem;
+        padding-right: 3rem; } }
+
 p.wp-block-subhead {
   color: #635d61;
   font-size: 1.3em;
@@ -1325,8 +1153,8 @@ hr.wp-block-separator {
     transition: all 0.3s;
     width: auto; }
     .wp-block-button:not(.components-toolbar) .wp-block-button__link:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link:not(.has-background):hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link:not(.has-text-color):hover, .wp-block-button:not(.components-toolbar) wp-block .button:not(.insert-media):not(.acf-button):hover, .wp-block-button:not(.components-toolbar) wp-block li.woocommerce-MyAccount-navigation-link--customer-logout a:not(.insert-media):not(.acf-button):hover, li.woocommerce-MyAccount-navigation-link--customer-logout .wp-block-button:not(.components-toolbar) wp-block a:not(.insert-media):not(.acf-button):hover {
-      background-color: #f067ab;
-      border: 2px solid #f7add1;
+      background-color: #e64998;
+      border: 2px solid #ef8cbe;
       color: #fff;
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
@@ -1346,80 +1174,91 @@ hr.wp-block-separator {
     .wp-block-button:not(.components-toolbar) .wp-block-button__link:active, .wp-block-button:not(.components-toolbar) .wp-block-button__link:focus, .wp-block-button:not(.components-toolbar) .wp-block-button__link:not(.has-background):active, .wp-block-button:not(.components-toolbar) .wp-block-button__link:not(.has-background):focus, .wp-block-button:not(.components-toolbar) .wp-block-button__link:not(.has-text-color):active, .wp-block-button:not(.components-toolbar) .wp-block-button__link:not(.has-text-color):focus, .wp-block-button:not(.components-toolbar) wp-block .button:not(.insert-media):not(.acf-button):active, .wp-block-button:not(.components-toolbar) wp-block li.woocommerce-MyAccount-navigation-link--customer-logout a:not(.insert-media):not(.acf-button):active, li.woocommerce-MyAccount-navigation-link--customer-logout .wp-block-button:not(.components-toolbar) wp-block a:not(.insert-media):not(.acf-button):active, .wp-block-button:not(.components-toolbar) wp-block .button:not(.insert-media):not(.acf-button):focus, .wp-block-button:not(.components-toolbar) wp-block li.woocommerce-MyAccount-navigation-link--customer-logout a:not(.insert-media):not(.acf-button):focus, li.woocommerce-MyAccount-navigation-link--customer-logout .wp-block-button:not(.components-toolbar) wp-block a:not(.insert-media):not(.acf-button):focus {
       outline-color: #de1e7e; }
 
+.has-custom-background-color {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+  @media only screen and (min-width: 48.5em) {
+    .has-custom-background-color {
+      padding-top: 3rem;
+      padding-bottom: 3rem; } }
+
 .has-spring-color-1-background-color {
-  background-color: #de1e7e; }
+  background-color: #de1e7e !important; }
 
 .has-spring-color-1-color {
-  color: #de1e7e; }
+  color: #de1e7e !important; }
 
 .has-spring-color-2-background-color {
-  background-color: #10aded; }
+  background-color: #10aded !important; }
 
 .has-spring-color-2-color {
-  color: #10aded; }
+  color: #10aded !important; }
 
 .has-spring-color-3-background-color {
-  background-color: #10ca7e; }
+  background-color: #10ca7e !important; }
 
 .has-spring-color-3-color {
-  color: #10ca7e; }
+  color: #10ca7e !important; }
 
 .has-spring-color-4-background-color {
-  background-color: #9155ed; }
+  background-color: #9155ed !important; }
 
 .has-spring-color-4-color {
-  color: #9155ed; }
+  color: #9155ed !important; }
 
 .has-neutral-lightest-background-color {
-  background-color: #f4f2f3; }
+  background-color: #f4f2f3 !important; }
 
 .has-neutral-lightest-color {
-  color: #f4f2f3; }
+  color: #f4f2f3 !important; }
 
 .has-neutral-lighter-background-color {
-  background-color: #d4ccd4; }
+  background-color: #d4ccd4 !important; }
 
 .has-neutral-lighter-color {
-  color: #d4ccd4; }
+  color: #d4ccd4 !important; }
 
 .has-neutral-light-background-color {
-  background-color: #afa8af; }
+  background-color: #afa8af !important; }
 
 .has-neutral-light-color {
-  color: #afa8af; }
+  color: #afa8af !important; }
 
 .has-neutral-mid-background-color {
-  background-color: #948b90; }
+  background-color: #948b90 !important; }
 
 .has-neutral-mid-color {
-  color: #948b90; }
+  color: #948b90 !important; }
 
 .has-neutral-dark-background-color {
-  background-color: #635d61; }
+  background-color: #635d61 !important; }
 
 .has-neutral-dark-color {
-  color: #635d61; }
+  color: #635d61 !important; }
 
 .has-neutral-darker-background-color {
-  background-color: #464144; }
+  background-color: #464144 !important; }
 
 .has-neutral-darker-color {
-  color: #464144; }
+  color: #464144 !important; }
 
 .has-neutral-darkest-background-color {
-  background-color: #322e2f; }
+  background-color: #322e2f !important; }
 
 .has-neutral-darkest-color {
-  color: #fff; }
+  color: #fff !important; }
 
 .has-white-background-color {
-  background-color: #fff; }
+  background-color: #fff !important; }
 
 .has-white-color {
-  color: #fff; }
+  color: #fff !important; }
 
 .editor-styles-wrapper span {
   display: inherit; }
+.editor-styles-wrapper .content--inner {
+  max-width: 1296px;
+  max-width: 81rem; }
 
 @media screen and (min-width: 768px) {
   .wp-block {
@@ -1751,7 +1590,7 @@ hr.wp-block-separator {
 .mtm-module--hero-subtitle {
   margin-bottom: .75em; }
 
-.mtm-hero-image {
+.mtm-hero-image, .wp-block-cover {
   padding: 2em;
   background-size: cover;
   background-position: center center;
@@ -1849,6 +1688,8 @@ hr.wp-block-separator {
 /* Button Rules */
 .mtm-home-buttons {
   margin-bottom: 1em; }
+  .mtm-home-buttons p {
+    display: inline-block; }
 
 .button.mtm-button, li.woocommerce-MyAccount-navigation-link--customer-logout a.mtm-button {
   display: inline-block;
@@ -2594,7 +2435,7 @@ hr.wp-block-separator {
         margin: .5em;
         padding: .1em .3em; }
         .open-the-menu .nav-main #closeSidebar:hover, .open-the-menu .nav-main #closeSidebar:focus, .open-the-menu .nav-main #closeSidebar:active {
-          background-color: #f067ab; }
+          background-color: #e64998; }
     .open-the-menu .admin-bar .nav-main {
       padding-bottom: 4em; }
 
@@ -3257,7 +3098,7 @@ section.comments {
   background: #de1e7e;
   color: #fff; }
 .woocommerce .widget_price_filter .ui-slider.ui-widget-content {
-  background-color: #b1185f; }
+  background-color: #b11865; }
 .woocommerce .widget_price_filter .ui-slider .ui-slider-handle, .woocommerce .widget_price_filter .ui-slider .ui-slider-range {
   background-color: #de1e7e; }
 .woocommerce .widget_shopping_cart_content .button:not(.checkout), .woocommerce .widget_shopping_cart_content li.woocommerce-MyAccount-navigation-link--customer-logout a:not(.checkout), li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce .widget_shopping_cart_content a:not(.checkout) {

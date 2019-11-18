@@ -1,0 +1,14 @@
+/* Forms & Buttons */
+.editor-block-list__block-edit div[data-block] {
+  label {
+      @extend %label;
+  }
+
+.textbox {
+      @extend %textbox;
+  }
+
+  .button:not(.wp-color-result) {
+      @extend %button;
+  }
+}

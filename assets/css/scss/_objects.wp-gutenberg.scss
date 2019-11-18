@@ -12,6 +12,32 @@
   }
 }
 
+.wp-block-cover {
+  margin-bottom: 0 !important;
+}
+
+.wp-block-cover__inner-container, .wp-block-group__inner-container {
+  max-width: $boxedMax;
+  margin-left: auto;
+  margin-right: auto;
+
+  .alignfull & {
+    width: 100%;
+    padding-left: 2rem; // for a boxed width background with no sidebar
+    padding-right: 2rem; // for a boxed width background with no sidebar
+
+    .content--inner {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @media only screen and (min-width: $midBreakpoint) {
+      padding-left: $maxPadding; // for a boxed width background with no sidebar
+      padding-right: $maxPadding; // for a boxed width background with no sidebar
+    }
+  }
+}
+
 // Typography
 p.wp-block-subhead {
     color: $Ndark;
@@ -144,104 +170,120 @@ hr.wp-block-separator {
     }
 }
 
+.has-custom-background-color {
+  padding-top: $smallPadding;
+  padding-bottom: $smallPadding;
+
+  @media only screen and (min-width: $midBreakpoint) {
+    padding-top: $maxPadding;
+    padding-bottom: $maxPadding;
+  }
+}
+
 // Gutenberg Color Styles
 .has-spring-color-1-background-color {
-    background-color: $springColor1;
+    background-color: $springColor1 !important;
 }
 
 .has-spring-color-1-color {
-    color: $springColor1;
+    color: $springColor1 !important;
 }
 
 .has-spring-color-2-background-color {
-    background-color: $springColor2;
+    background-color: $springColor2 !important;
 }
 
 .has-spring-color-2-color {
-    color: $springColor2;
+    color: $springColor2 !important;
 }
 
 .has-spring-color-3-background-color {
-    background-color: $springColor3;
+    background-color: $springColor3 !important;
 }
 
 .has-spring-color-3-color {
-    color: $springColor3;
+    color: $springColor3 !important;
 }
 
 .has-spring-color-4-background-color {
-    background-color: $springColor4;
+    background-color: $springColor4 !important;
 }
 
 .has-spring-color-4-color {
-    color: $springColor4;
+    color: $springColor4 !important;
 }
 
 .has-neutral-lightest-background-color {
-    background-color: $Nlightest;
+    background-color: $Nlightest !important;
 }
 
 .has-neutral-lightest-color {
-    color: $Nlightest;
+    color: $Nlightest !important;
 }
 
 .has-neutral-lighter-background-color {
-    background-color: $Nlighter;
+    background-color: $Nlighter !important;
 }
 
 .has-neutral-lighter-color {
-    color: $Nlighter;
+    color: $Nlighter !important;
 }
 
 .has-neutral-light-background-color {
-    background-color: $Nlight;
+    background-color: $Nlight !important;
 }
 
 .has-neutral-light-color {
-    color: $Nlight;
+    color: $Nlight !important;
 }
 
 .has-neutral-mid-background-color {
-    background-color: $Nmid;
+    background-color: $Nmid !important;
 }
 
 .has-neutral-mid-color {
-    color: $Nmid;
+    color: $Nmid !important;
 }
 
 .has-neutral-dark-background-color {
-    background-color: $Ndark;
+    background-color: $Ndark !important;
 }
 
 .has-neutral-dark-color {
-    color: $Ndark;
+    color: $Ndark !important;
 }
 
 .has-neutral-darker-background-color {
-    background-color: $Ndarker;
+    background-color: $Ndarker !important;
 }
 
 .has-neutral-darker-color {
-    color: $Ndarker;
+    color: $Ndarker !important;
 }
 
 .has-neutral-darkest-background-color {
-    background-color: $Ndarkest;
+    background-color: $Ndarkest !important;
 }
 
 .has-neutral-darkest-color {
-    color: $white;
+    color: $white !important;
 }
 .has-white-background-color {
-    background-color: $white;
+    background-color: $white !important;
 }
 
 .has-white-color {
-    color: $white;
+    color: $white !important;
 }
 
-.editor-styles-wrapper span {
-  display: inherit;
+.editor-styles-wrapper {
+  span {
+    display: inherit;
+  }
+
+  .content--inner {
+    @include rem-px('max-width', $boxedMax); // for a boxed width background with no sidebar
+  }
 }
 
 @media screen and ( min-width: 768px ) {

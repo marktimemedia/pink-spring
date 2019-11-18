@@ -4,7 +4,7 @@
 
         .button, a.button, button, input.button {
 
-            @extend .global-button;
+            @extend %button;
 
             &.alt {
                 @extend .alt;
@@ -86,7 +86,7 @@
         .ui-slider {
             &.ui-widget-content {
                 background-color: $springColor1_Dk;
-            } 
+            }
             .ui-slider-handle, .ui-slider-range {
                 background-color: $springColor1;
             }
@@ -147,7 +147,7 @@
                 //justify-content: center;
 
                 &.added_to_cart.wc-forward {
-                    @extend .global-button;
+                    @extend %button;
                     background-color: $springColor3;
                     flex-grow: 0;
                     margin-top: .5em;
@@ -156,12 +156,12 @@
 
                 h2 {
                     @include transition(all .2s);
-                    
+
                     &:hover, &:focus {
                         color: $linkColor;
                         @include transition(all .2s);
-                    }       
-                } 
+                    }
+                }
             }
 
             .button {

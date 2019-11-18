@@ -2,27 +2,31 @@
 .button-xl {
     @include border-radius(6px);
     @include rem-px('font-size', 1.25rem);
-    @include rem-px('padding', .875rem, 1.75rem); 
+    @include rem-px('padding', .875rem, 1.75rem);
 }
 
 .button-lg {
     @include border-radius(5px);
     @include rem-px('font-size', 1rem);
-    @include rem-px('padding', .5em, 1em); 
+    @include rem-px('padding', .5em, 1em);
 }
 
 .button-med {
     @include border-radius(4px);
     @include rem-px('font-size', .875rem);
     @include rem-px('line-height', 1em);
-    @include rem-px('padding', .375em, .75em); 
+    @include rem-px('padding', .375em, .75em);
 }
 
 .button-xs {
     @include border-radius(3px);
     @include rem-px('font-size', .75rem);
     @include rem-px('line-height', .875em);
-    @include rem-px('padding', .25em, .5em); 
+    @include rem-px('padding', .25em, .5em);
+}
+
+.global-button {
+  @extend %button;
 }
 
 .social-icons {
@@ -31,9 +35,9 @@
     //float: right;
 }
     a.button-social { // circle button
-        border-radius: 50%; 
+        border-radius: 50%;
         @include rem-px('padding', .5rem);
-        
+
         &:before {
             content: '\2665 '; // replace with your fallback icon, this is a heart
         }

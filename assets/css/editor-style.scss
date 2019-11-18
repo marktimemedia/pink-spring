@@ -15,13 +15,15 @@
 
 /* 04. ELEMENTS */
 @import "scss/elements.typography";
-//@import "scss/elements.inputs";
+@import "scss/elements.inputs-variables";
+@import "scss/elements.inputs-gutenberg";
 @import "scss/elements.tables";
 @import "scss/elements.media";
 
 /* 05. OBJECTS */
-
+@import "scss/objects.structure";
 @import "scss/objects.layout";
+@import "scss/objects.inputs";
 @import "scss/objects.media";
 @import "scss/objects.wp-objects";
 @import "scss/objects.wp-gutenberg";

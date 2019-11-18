@@ -17,3 +17,5 @@
 //    return $url;
 // }
 // add_filter( 'wpseo_canonical', 'mtb_canonical_ssl' );
+
+?>

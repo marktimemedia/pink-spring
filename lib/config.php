@@ -124,7 +124,7 @@ if ( !isset( $content_width ) ) { $content_width = 1140; }
 * 'FILE_PATH_AND_NAME' => 'TEMPLATE_TITLE'
 */
 
-  // function mtm_theme_templates( $templates ) {
+  // function spring_theme_templates( $templates ) {
 
   //   $templates = array(
   //       //    '../templates/template-components.php' => 'Components Page',
@@ -135,7 +135,7 @@ if ( !isset( $content_width ) ) { $content_width = 1140; }
 
   //   return $templates;
   // }
-  // add_filter( 'mtm_filter_templates', 'mtm_theme_templates' );
+  // add_filter( 'mtm_filter_templates', 'spring_theme_templates' );
 
 /**
  * Templates and Page IDs without editor

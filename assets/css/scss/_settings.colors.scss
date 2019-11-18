@@ -1,7 +1,7 @@
 // Site Colors
 $springColor1: #de1e7e; // pink
-$springColor1_Lt: #f067ab;
-$springColor1_Dk: #b1185f;
+$springColor1_Lt: lighten( $springColor1, 10% );
+$springColor1_Dk: darken( $springColor1, 10% );
 
 $springColor2: #10aded;
 $springColor2_Lt: lighten( $springColor2, 10% );
@@ -17,13 +17,13 @@ $springColor4_Dk: darken( $springColor4, 10% );
 
 
 // Neutrals
-$Ndarkest: #322e2f; 
+$Ndarkest: #322e2f;
 $Ndarker: #464144;
-$Ndark: #635d61; 
-$Nmid: #948b90; 
-$Nlight: #afa8af; 
+$Ndark: #635d61;
+$Nmid: #948b90;
+$Nlight: #afa8af;
 $Nlighter: #d4ccd4;
-$Nlightest: #f4f2f3; 
+$Nlightest: #f4f2f3;
 $white: #fff;
 
 $warningColor: #e22025; //red

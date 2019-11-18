@@ -26,4 +26,4 @@ global $post;
 
 ?>
 
-<?php the_content();
+<?php the_content(); ?>
