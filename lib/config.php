@@ -256,11 +256,11 @@ function spring_register_required_plugins() {
     ),
 
     array(
-      'name'               => 'Page Components for ACF',
-      'slug'               => 'mtm-page-components',
-      'source'             => 'https://github.com/marktimemedia/page-components-for-wordpress-themes/archive/master.zip',
+      'name'               => 'ACF Block Components',
+      'slug'               => 'mtm-block-components',
+      'source'             => 'https://github.com/marktimemedia/acf-component-blocks/archive/master.zip',
       'required'           => false, // If false, the plugin is only 'recommended' instead of required.
-      'external_url'       => 'https://github.com/marktimemedia/page-components-for-wordpress-themes', // If set, overrides default API URL and points to an external URL.
+      'external_url'       => 'https://github.com/marktimemedia/acf-component-blocks', // If set, overrides default API URL and points to an external URL.
     ),
 
   );

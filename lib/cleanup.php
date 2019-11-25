@@ -163,9 +163,9 @@ add_filter('embed_oembed_html', 'spring_embed_wrap', 10, 4);
 
 add_filter( 'render_block', function( $block_content, $block ) {
     // Uncomment to only target core/* and core-embed/* blocks.
-    //if ( preg_match( '~^core/|core-embed/~', $block['blockName'] ) ) {
+    if ( preg_match( '~^core|core-embed|mtm~', $block['blockName'] )  && !preg_match( '(column)', $block['blockName'] ) ) {
        $block_content = sprintf( '<div class="single--block">%s</div>', $block_content );
-    //}
+    }
     return $block_content;
 }, PHP_INT_MAX - 1, 2 );
 

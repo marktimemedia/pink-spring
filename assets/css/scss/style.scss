@@ -18,21 +18,17 @@
 
 
 /* 02. TOOLS */
-//@import "tools.placeholders";
-
-// Third-Party Mixins
 @import "sassquatch/sassquatch";
 @import "pink-grid/pinkgrid";
 
 
 /* 03. GENERIC */
 @import "generic.normalize";
-
+@import "tools.placeholders";
 
 /* 04. ELEMENTS */
 @import "elements.global";
 @import "elements.typography";
-@import "elements.inputs-variables";
 @import "elements.inputs";
 @import "elements.tables";
 @import "elements.media";

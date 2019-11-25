@@ -1,0 +1,100 @@
+// Gutenberg Editor Styling
+
+/* set to match max width of site minus padding */
+.wp-block {
+    max-width: calc( #{$boxedMax} - ( 2 * #{$maxPadding}) );
+}
+
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+    max-width: $boxedMax;
+}
+
+/* Width of "full-wide" blocks */
+.wp-block[data-align="full"] {
+    max-width: none;
+}
+
+/* "alignright" and "alignleft" blocks should not float unless theme says so */
+.wp-block[data-align="right"], .wp-block[data-align="left"] {
+  & > .block-editor-block-list__block-edit {
+    float: none !important;
+  }
+}
+
+// styles within the visual editor (includes the popup boxes)
+.editor-block-list__layout {
+	font-family: $baseFont !important;
+
+  & span {
+    .editor-block-mover__description, &.block-editor-block-mover__description {
+      display: none;
+    }
+  }
+}
+
+	.editor-post-title__block .editor-post-title__input, .wp-block-cover h2 {
+		font-family: $headingFont !important;
+    font-weight: $h1FontWeight !important;
+	}
+
+	p {
+		font-family: $baseFont !important;
+	}
+	h1, h2, h3, .h1, .h2, .h3 {
+		font-family: $headingFont !important;
+	   margin-bottom: $textFontSize * .8;
+	   margin-top: $textFontSize * 1.5;
+	}
+
+	h4, h5, h6, .h4, .h5, .h6 {
+		font-family: $subheadingFont !important;
+	   margin-bottom: $textFontSize * .8;
+	   margin-top: $textFontSize * 1.5;
+	}
+
+	dd, blockquote {
+		margin-left:0;
+	}
+
+	p.wp-block-subhead {
+	    font-family: $subheadingFont !important;
+	    font-size: 1.3em;
+	    font-style: normal;
+	}
+
+.iris-picker {
+  .iris-strip {
+    margin-left: -5px;
+    max-height: 180px;
+  }
+}
+
+// TinyMCE Overrides to emulate post content (classic)
+#tinymce {
+	p {
+		font-family: $baseFont;
+	}
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+       margin-bottom: $textFontSize * .8;
+       margin-top: $textFontSize * 1.5;
+    }
+
+    dd, blockquote {
+    	margin-left:0;
+    }
+}
+
+// Resets to not break the menu
+#adminmenu {
+	ul {
+		margin: inherit;
+	}
+
+	span {
+		vertical-align: inherit;
+	}
+}
+
+// Any specific classes available here for the styles box
+// https://codex.wordpress.org/TinyMCE_Custom_Styles

@@ -55,3 +55,31 @@
         display: inline;
     }
 }
+
+.back-to-top {
+  background-color: transparent;
+  border: 0;
+  clear: both;
+  height: 29px;
+  overflow: hidden;
+  padding: 0;
+  width: 29px;
+
+  @extend %iconlight;
+
+  &:before {
+    content: "\f0aa";
+    color: $linkColor;
+    font-size: 30px;
+    line-height: 1;
+
+    &:hover, &:focus {
+        color: $linkHover;
+      }
+    }
+
+    &:hover, &:focus {
+      background-color: transparent;
+      border: 0;
+    }
+}

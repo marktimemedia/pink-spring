@@ -8,7 +8,7 @@
       @extend %textbox;
   }
 
-  .button:not(.wp-color-result) {
+  .button:not(.wp-color-result):not(.ed_button):not(.acf-button):not(.add_media):not(.wp-picker-clear) {
       @extend %button;
   }
 }

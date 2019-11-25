@@ -1,4 +1,144 @@
-%max-width {
-    @include css3-calc('padding-left', '(100% - 83.5rem) / 2');
-    @include css3-calc('padding-right', '(100% - 83.5rem) / 2');
+%label {
+    color: $labelColor;
+    font-family: $subheadingFont;
+    font-size: $labelFontSize;
+    font-weight: $baseFontWeight;
+}
+
+%textbox {
+    background-color: $textboxBackground;
+    border: $textboxBorderWidth $textboxBorderStyle $textboxBorderColor;
+    color: $textboxColor;
+    display: block;
+    font-family: $baseFont;
+    font-size: .875em;
+    font-weight: $baseFontWeight;
+    @include rem-px('margin-bottom', .5em);
+    max-width: $textboxMaxWidth;
+    padding: $textboxPadding;
+    width: 100%;
+
+    &:active,
+    &:focus {
+        outline-color: $textboxBorderColorActive;
+    }
+}
+
+
+%button {
+    color: $buttonColor;
+    cursor: pointer;
+    background-color: $buttonBackground;
+    //@include vertical($buttonBackground, $buttonBackground2);
+    border: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor;
+    border-radius: 0;
+    display: inline-block;
+    font-family: $buttonFont;
+    font-size: $buttonFontSize;
+     -webkit-font-smoothing: auto;
+    font-weight: $buttonFontWeight;
+    height: auto;
+    padding: $buttonPadding;
+    @include transition(all .3s);
+    width: auto;
+
+    &:hover {
+        background-color: $buttonBackground2;
+        //@include vertical($buttonBackground2, $buttonBackground);
+        border: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor2;
+        color: $buttonColor2;
+        @include transition(all .3s);
+    }
+
+    &.alt {
+        background-color: $buttonAltBackground;
+        border-color: $buttonAltBorderColor;
+
+        &:hover, &:focus {
+            background-color: $buttonAltBackground2;
+            border-color: $buttonAltBorderColor2;
+        }
+    }
+
+    &.outline {
+        background-color: transparent;
+        border-color: $buttonBackground;
+        color: $buttonBackground;
+
+        &:hover, &:focus {
+            background-color: rgba($buttonBackground, 0.3);
+            border-color: $buttonBackground;
+            color: $buttonBackground;
+        }
+    }
+
+    &.neutral {
+        background-color: $Nmid;
+
+        &:hover, &:focus {
+            background-color: $Ndark;
+        }
+    }
+
+    &:active,
+    &:focus {
+        outline-color: $buttonOutlineColor;
+    }
+}
+
+%nofloats {
+  float: none !important;
+  max-width: none;
+  width: 100%;
+}
+
+%iconlight {
+  font-family: 'Font Awesome 5 Light';
+  font-weight: 300;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+
+  &:before {
+    font-family: 'Font Awesome 5 Light';
+    font-weight: 300;
+  }
+}
+
+%iconbrand {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+
+  &:before {
+    font-family: 'Font Awesome 5 Brands';
+    font-weight: 400;
+  }
+}
+
+%icon {
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 400;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+
+  &:before {
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: 400;
+  }
 }

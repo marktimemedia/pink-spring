@@ -121,52 +121,7 @@ hr.wp-block-separator {
     }
 
     .wp-block-button__link, .wp-block-button__link:not(.has-background), .wp-block-button__link:not(.has-text-color), wp-block .button:not(.insert-media):not(.acf-button) {
-        color: $buttonColor;
-        cursor: pointer;
-        background-color: $buttonBackground;
-        //@include vertical($buttonBackground, $buttonBackground2);
-        border: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor;
-        border-radius: 0;
-        display: inline-block;
-        font-family: $buttonFont;
-        font-size: $buttonFontSize;
-         -webkit-font-smoothing: auto;
-        font-weight: $buttonFontWeight;
-        height: auto;
-        padding: $buttonPadding;
-        @include transition(all .3s);
-        width: auto;
-
-        &:hover {
-            background-color: $buttonBackground2;
-            //@include vertical($buttonBackground2, $buttonBackground);
-            border: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor2;
-            color: $buttonColor2;
-            @include transition(all .3s);
-        }
-
-        &.alt {
-            background-color: $buttonAltBackground;
-            border-color: $buttonAltBorderColor;
-
-            &:hover, &:focus {
-                background-color: $buttonAltBackground2;
-                border-color: $buttonAltBorderColor2;
-            }
-        }
-
-        &.neutral {
-            background-color: $Nmid;
-
-            &:hover, &:focus {
-                background-color: $Ndark;
-            }
-        }
-
-        &:active,
-        &:focus {
-            outline-color: $buttonOutlineColor;
-        }
+        @extend %button;
     }
 }
 
