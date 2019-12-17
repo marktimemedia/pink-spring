@@ -92,6 +92,7 @@ blockquote.wp-block-quote {
 
 hr.wp-block-separator {
     border-bottom: 2px solid $Nmid;
+    clear: both;
 }
 
 // Buttons
@@ -138,6 +139,7 @@ hr.wp-block-separator {
 // Gutenberg Color Styles
 .has-spring-color-1-background-color {
     background-color: $springColor1 !important;
+    @extend %reverse;
 }
 
 .has-spring-color-1-color {
@@ -146,6 +148,7 @@ hr.wp-block-separator {
 
 .has-spring-color-2-background-color {
     background-color: $springColor2 !important;
+    @extend %reverse;
 }
 
 .has-spring-color-2-color {
@@ -154,6 +157,7 @@ hr.wp-block-separator {
 
 .has-spring-color-3-background-color {
     background-color: $springColor3 !important;
+    @extend %reverse;
 }
 
 .has-spring-color-3-color {
@@ -162,6 +166,7 @@ hr.wp-block-separator {
 
 .has-spring-color-4-background-color {
     background-color: $springColor4 !important;
+    @extend %reverse;
 }
 
 .has-spring-color-4-color {
@@ -194,6 +199,7 @@ hr.wp-block-separator {
 
 .has-neutral-mid-background-color {
     background-color: $Nmid !important;
+    @extend %reverse;
 }
 
 .has-neutral-mid-color {
@@ -202,6 +208,7 @@ hr.wp-block-separator {
 
 .has-neutral-dark-background-color {
     background-color: $Ndark !important;
+    @extend %reverse;
 }
 
 .has-neutral-dark-color {
@@ -210,6 +217,7 @@ hr.wp-block-separator {
 
 .has-neutral-darker-background-color {
     background-color: $Ndarker !important;
+    @extend %reverse;
 }
 
 .has-neutral-darker-color {
@@ -218,6 +226,7 @@ hr.wp-block-separator {
 
 .has-neutral-darkest-background-color {
     background-color: $Ndarkest !important;
+    @extend %reverse;
 }
 
 .has-neutral-darkest-color {

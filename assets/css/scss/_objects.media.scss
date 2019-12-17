@@ -10,7 +10,7 @@
     margin-top: .5em;
 }
 
-.youtube {
+.youtube, .embed-youtube {
     height: 0;
     @include rem-px('margin-bottom', 3rem);
     padding-bottom: 56.25%;

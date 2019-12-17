@@ -70,6 +70,15 @@
   }
 }
 
+// panel overrides just for editor-styles-wrapper
+.mtm-tabs--content.current {
+  display: none;
+
+  &:first-of-type {
+    display: inherit;
+  }
+}
+
 // TinyMCE Overrides to emulate post content (classic)
 #tinymce {
 	p {

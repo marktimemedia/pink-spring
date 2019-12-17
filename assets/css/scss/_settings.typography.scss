@@ -62,7 +62,8 @@ $linkFocus: lighten($linkColor,15%);
 
 // Blockquotes
 $blockquoteMarginBottom: .875rem;
-$blockquotePaddingLeft: 0;
+$blockquotePadding: 0;
+$blockquotePaddingLeft: $blockquotePadding;
 $blockquoteBorderWidth: 0;
 $blockquoteBorderStyle: solid;
 $blockquoteBorderColor: $Nlighter;

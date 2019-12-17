@@ -3,6 +3,10 @@ label {
     @extend %label;
 }
 
+form {
+  max-width: 800px;
+}
+
 input[type="text"],
 input[type="date"],
 input[type="time"],

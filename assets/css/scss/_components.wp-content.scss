@@ -30,7 +30,7 @@
         @include clearfix();
     }
 
-    .post--content { 
+    .post--content {
         overflow: visible;
 
         h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -74,13 +74,13 @@
         margin: 3em auto;
     }
 
-.archive {
+.archive, .blog {
     .post--title {
         @include rem-px('font-size', $h1Size * .85);
     }
 
     article.post {
-        margin-bottom: 2em;
+        margin-bottom: 3em;
     }
 }
 
@@ -99,12 +99,13 @@
             line-height: 1.3;
         }
     }
-} 
+}
 
 .page--header {
     @include rem-px('margin-bottom', $headingMargin * 2);
-} 
+}
 
 .page--title {
+    @extend .h1;
     @include rem-px('margin-bottom', $headingMargin * 1.5);
 }

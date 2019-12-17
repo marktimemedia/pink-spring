@@ -14,7 +14,7 @@ function spring_title() {
     if ( $term ) {
       return apply_filters( 'single_term_title', $term->name );
     } elseif ( is_post_type_archive() ) {
-      return apply_filters( 'the_title', get_queried_object()->labels->name );
+      return apply_filters('the_title', get_queried_object()->labels->name, get_queried_object_id());
     } elseif ( is_day() ) {
       return sprintf(__( 'Daily Archives: %s', 'spring'), get_the_date() );
     } elseif ( is_month() ) {

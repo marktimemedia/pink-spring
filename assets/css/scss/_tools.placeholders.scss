@@ -142,3 +142,20 @@
     font-weight: 400;
   }
 }
+
+%reverse {
+  color: $white !important;
+
+  h1, h2, h3, h4, h5, h6, p {
+    color: $white !important;
+  }
+  a {
+    color: $white !important;
+    &:hover, &:focus {
+      opacity: 0.9;
+    }
+  }
+  label {
+    color: $white !important;
+  }
+}
