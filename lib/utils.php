@@ -1,6 +1,7 @@
 <?php
 /**
  * Utility functions
+ * Functions to be used within the theme
  */
 function add_filters( $tags, $function ) {
   foreach( $tags as $tag ) {
@@ -43,7 +44,7 @@ function mtm_custom_taxonomies_terms_links( $post ){
       if ( !empty( $terms ) ) {
         $numItems = count( $terms ); // how many terms are there
         $i = 0;
-        
+
         $open = '<div class="post--metadata-group">';
         $out[] = '<span class="post--metadata--title">' . $taxonomy->label . ': </span><ul>';
         foreach ( $terms as $term ) {
@@ -59,7 +60,7 @@ function mtm_custom_taxonomies_terms_links( $post ){
                     esc_html( $term->name ),
                     esc_html( $term->term_id )
                   );
-          }  
+          }
         }
         $close = "</div>\n";
       }

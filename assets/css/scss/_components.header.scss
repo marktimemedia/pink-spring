@@ -6,16 +6,16 @@
     .header--inner {
         background-color: $bodyColor;
         border-bottom: 1px solid $Nlightest;
-        padding: 0;  
+        padding: 0;
         position: relative;
         top: 0;
-        @include transition(all .8s); 
+        @include transition(all .8s);
         z-index:999;
     }
 
     .header--quicklinks {
         padding: .5em $smallPadding;
-        background: $Ndark;
+        background: $Ndarker;
         position: relative;
         @include transition(all .8s);
         z-index:1000;
@@ -56,7 +56,7 @@
     }
 
     .header-main-small {
-        
+
         .header--quicklinks {
             padding-top: 0;
             padding-bottom: 0;
@@ -84,7 +84,7 @@
 @media only screen and (min-width: #{$smallBreakpoint}) {
     .header--blog-name {
         @include rem-px('padding', 1rem, 0);
-        width: inherit;     
+        width: inherit;
     }
 }
 
@@ -105,7 +105,7 @@
 
         .header--inner {
             border: 0;
-            position: relative; 
+            position: relative;
         }
             .header--blog-name {
                 float: left;

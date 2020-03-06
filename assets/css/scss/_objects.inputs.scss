@@ -1,28 +1,26 @@
 /* BUTTON SIZES */
-.button-xl {
-    @include border-radius(6px);
-    @include rem-px('font-size', 1.25rem);
-    @include rem-px('padding', .875rem, 1.75rem);
+.button-xs {
+	font-size: .75em !important;
+	line-height: .75em !important;
+	padding: .4em .75em !important;
 }
 
 .button-lg {
-    @include border-radius(5px);
-    @include rem-px('font-size', 1rem);
-    @include rem-px('padding', .5em, 1em);
+	font-size: 1.3em !important;
+	line-height: 1em !important;
+	padding: .5em, 1em !important;
 }
 
 .button-med {
-    @include border-radius(4px);
-    @include rem-px('font-size', .875rem);
-    @include rem-px('line-height', 1em);
-    @include rem-px('padding', .375em, .75em);
+	font-size: 1em !important;
+	line-height: 1em !important;
+	padding: .375em, .75em !important;
 }
 
-.button-xs {
-    @include border-radius(3px);
-    @include rem-px('font-size', .75rem);
-    @include rem-px('line-height', .875em);
-    @include rem-px('padding', .25em, .5em);
+.button-xl {
+	font-size: 1.6em !important;
+	line-height: 1em !important;
+	padding: .875rem 1.75rem !important;
 }
 
 .global-button {

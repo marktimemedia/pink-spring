@@ -1,9 +1,53 @@
+.mtm-per-row-2 {
+	@include pinkmagic( $rowitems: 2, $padside: 4% );
+}
+
+.mtm-per-row-3 {
+	@include pinkmagic( $rowitems: 3, $padside: 4% );
+}
+
+.mtm-per-row-4 {
+	@include pinkmagic( $rowitems: 4, $padside: 4% );
+}
+
+.mtm-per-row-5 {
+	@include pinkmagic( $rowitems: 5, $padside: 4% );
+}
+
+.mtm-per-row-6 {
+	@include pinkmagic( $rowitems: 6, $padside: 4% );
+}
+
+.mtm-per-row-7 {
+	@include pinkmagic( $rowitems: 7, $padside: 3% );
+}
+
+.mtm-per-row-8 {
+	@include pinkmagic( $rowitems: 8, $padside: 3% );
+}
+
+.mtm-per-row-9 {
+	@include pinkmagic( $rowitems: 9, $padside: 3% );
+}
+
+.mtm-per-row-10 {
+	@include pinkmagic( $rowitems: 10, $padside: 3% );
+}
+
+.mtm-per-row-11 {
+	@include pinkmagic( $rowitems: 11, $padside: 3% );
+}
+
+.mtm-per-row-12 {
+	@include pinkmagic( $rowitems: 12, $padside: 3% );
+}
+
 .alignright,
 .alignleft,
 .aligncenter {
-    display: block;
+    display: block !important;
     max-width: 100%;
-    margin: 0 0 1em 0;
+    margin-bottom: 1em;
 }
 .content:not(.has_sidebar) {
   .alignwide,
@@ -17,20 +61,22 @@
 @media only screen and (min-width: #{$smallBreakpoint}) {
     .alignright {
         float: right !important;
-        margin: 0 0 1rem 1rem !important;
-        max-width: 50%;
+        margin-left: 1rem !important;
+        //max-width: 50%;
     }
 
     .alignleft {
         float: left !important;
-        margin: 0 1rem 1rem 0 !important;
-        max-width: 50%;
+        margin-right: 1rem !important;
+        //max-width: 50%;
     }
 
     .aligncenter {
         display: block;
-        margin: .5em auto;
+        margin-left: auto;
+				margin-right: auto;
         clear: both;
+				text-align: center;
     }
 
     .alignnone {

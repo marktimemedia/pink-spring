@@ -12,7 +12,6 @@
 
 .content {
     padding: 0;
-    // @include rem-px('max-width', $boxedMax); // for a boxed width background with sidebar only
     // padding: 0 $smallPadding; // for a boxed width background with sidebar only
     padding-top: $paddingTopMobile; // for fixed-position header, adjust to match header size
 
@@ -37,12 +36,20 @@
       padding-left: 2rem; // for a boxed width background with no sidebar
       padding-right: 2rem; // for a boxed width background with no sidebar
     }
+
+    &.has_sidebar {
+      @include rem-px('max-width', $boxedMax); // for a boxed width background with sidebar only
+      padding: $paddingTopMobile $smallPadding 0 $smallPadding; // for a boxed width background with sidebar only
+
+      .content--inner {
+        max-width: none;
+      }
+    }
 }
 
 @media only screen and (min-width: #{$midBreakpoint}) {
 
     .content{
-        //padding: 0 $maxPadding; // for a boxed width background with sidebar only
         //padding-bottom:100px; // to account for position absolute footer
         padding-top: $paddingTop; // for fixed-position header, adjust to match header size
 
@@ -57,6 +64,10 @@
         .alignfull .content--inner {
           padding-left: $maxPadding; // for a boxed width background with no sidebar
           padding-right: $maxPadding; // for a boxed width background with no sidebar
+        }
+
+        &.has_sidebar {
+          padding: $paddingTop $maxPadding 0 $maxPadding; // for a boxed width background with sidebar only
         }
 
     }

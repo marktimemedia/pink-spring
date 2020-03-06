@@ -25,12 +25,15 @@
 // styles within the visual editor (includes the popup boxes)
 .editor-block-list__layout {
 	font-family: $baseFont !important;
+}
 
-  & span {
-    .editor-block-mover__description, &.block-editor-block-mover__description {
+.block-editor-block-toolbar {
+  span {
+    &.editor-block-mover__description, &.block-editor-block-mover__description {
       display: none;
     }
   }
+
 }
 
 	.editor-post-title__block .editor-post-title__input, .wp-block-cover h2 {
@@ -70,12 +73,55 @@
   }
 }
 
+.iris-picker {
+    height: auto !important;
+    overflow: hidden;
+    padding: 20px 20px 10px !important;
+  }
+
+  .iris-border .iris-palette-container {
+    bottom: unset;
+    left: unset;
+    overflow: hidden;
+    position: relative;
+    top: unset;
+  }
+
+  .iris-picker .iris-palette {
+    height: 40px !important;
+    margin-bottom: 5%;
+    margin-left: 0 !important;
+    margin-right: 10px;
+    width: calc(25% - 10px) !important;
+  }
+
+  .iris-picker .iris-palette:nth-child(4n) {
+    margin-right: 0;
+  }
+
+
+  .iris-picker-inner {
+    display: none;
+  }
+
 // panel overrides just for editor-styles-wrapper
 .mtm-tabs--content.current {
   display: none;
 
-  &:first-of-type {
+  &#tab-1 {
     display: inherit;
+  }
+}
+
+ul.slides {
+  list-style: none;
+  margin-left: auto;
+  padding: 0;
+  li {
+    display: none;
+    &:first-of-type {
+      display: block;
+    }
   }
 }
 

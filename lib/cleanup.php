@@ -93,17 +93,6 @@ function spring_wp_title( $title ) {
 add_filter( 'wp_title', 'spring_wp_title', 10 );
 
 /**
- * Clean up output of stylesheet <link> tags
- */
-// function spring_clean_style_tag( $input ) {
-//   preg_match_all( "!<link rel='stylesheet'\s?(id='[^']+')?\s+href='(.*)' type='text/css' media='(.*)' />!", $input, $matches );
-//   // Only display media if it is meaningful
-//   $media = $matches[3][0] !== '' && $matches[3][0] !== 'all' ? ' media="' . $matches[3][0] . '"' : '';
-//   return '<link rel="stylesheet" href="' . $matches[2][0] . '"' . $media . '>' . "\n";
-// }
-// add_filter( 'style_loader_tag', 'spring_clean_style_tag' );
-
-/**
  * Add and remove body_class() classes
  */
 function spring_body_class( $classes ) {
@@ -163,7 +152,7 @@ add_filter('embed_oembed_html', 'spring_embed_wrap', 10, 4);
 
 add_filter( 'render_block', function( $block_content, $block ) {
     // Uncomment to only target core/* and core-embed/* blocks.
-    if ( preg_match( '~^core|core-embed|mtm~', $block['blockName'] )  && !preg_match( '(column)', $block['blockName'] ) ) {
+    if ( preg_match( '~^core|core-embed|mtm~', $block['blockName'] )  && !preg_match( '(button)', $block['blockName'] ) && !preg_match( '(column)', $block['blockName'] ) ) {
        $block_content = sprintf( '<div class="single--block">%s</div>', $block_content );
     }
     return $block_content;

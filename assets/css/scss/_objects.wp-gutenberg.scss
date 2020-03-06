@@ -98,7 +98,7 @@ hr.wp-block-separator {
 // Buttons
 .wp-block-button:not(.components-toolbar) {
     text-align: center;
-    width: 100%;
+    //width: 100%;
 
     &:not(.is-style-squared) {
         .wp-block-button__link {
@@ -124,6 +124,13 @@ hr.wp-block-separator {
     .wp-block-button__link, .wp-block-button__link:not(.has-background), .wp-block-button__link:not(.has-text-color), wp-block .button:not(.insert-media):not(.acf-button) {
         @extend %button;
     }
+}
+
+// mutliple buttons
+.wp-block-buttons {
+  .wp-block-button {
+    width: auto;
+  }
 }
 
 .has-custom-background-color {

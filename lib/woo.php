@@ -1,6 +1,6 @@
 <?php
 /**
-* WooCommerce Support
+* WooCommerce Support & Functions
 */
 add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
@@ -37,7 +37,7 @@ function mtm_manage_woocommerce_styles() {
 			// wp_dequeue_style( 'woocommerce-layout' ); // layout specific
 			// wp_dequeue_style( 'woocommerce-general' ); // gloss
 			// wp_dequeue_style( 'woocommerce-smallscreen' ); // smallscreen optimizaiton
-			
+
 			// scripts
 			// wp_dequeue_script( 'wc-add-to-cart' );
 			// wp_dequeue_script( 'wc-cart-fragments' );
