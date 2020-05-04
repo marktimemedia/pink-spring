@@ -4,6 +4,9 @@
 
     var sidebarBtn = document.getElementById('openSidebar');
 
+    var mediaQuerySmall = '48.9em';
+    var mediaQueryLarge = '62em';
+
     if (menuBtn.attachEvent) {
         menuBtn.attachEvent('onclick', openCloseMenu);
 
@@ -54,14 +57,14 @@
 
     function navHeight() {
         var heights = window.innerHeight;
-        var mq = window.matchMedia( "(max-width: 48.5em)" );
+        var mq = window.matchMedia( '(max-width: ' + mediaQuerySmall + ')' );
 
         document.addEventListener('DOMContentLoaded', function() {
             if (mq.matches) {
               document.querySelectorAll('.nav-main')[0].style.height = heights -50 + "px";
-            } 
-        }, false); 
-        
+            }
+        }, false);
+
         mq.addListener(function(changed) {
             if(changed.matches) {
                 document.querySelectorAll('.nav-main')[0].style.height = heights -50 + "px";
@@ -99,9 +102,9 @@ document.querySelectorAll('.content--sidebar')[0].insertAdjacentHTML('beforeend'
 sizeTest(false);
 
 function sizeTest(resize) {
-    if(Modernizr.mq('(min-width: 48.5em) and (max-width: 62.5em)')) {
+    if(Modernizr.mq('(min-width: ' + mediaQuerySmall + ') and (max-width: ' + mediaQueryLarge + ')')) {
         reorderWidgets();
-        console.log('order widgets');
+        // console.log('order widgets');
     } else if (resize) {
         unorderWidgets();
     }

@@ -48,11 +48,13 @@
     display: block !important;
     max-width: 100%;
     margin-bottom: 1em;
+		position: relative;
+		z-index: 2; // dealing with gutenberg issues
 }
 .content:not(.has_sidebar) {
   .alignwide,
   .alignfull {
-      margin: 0 -#{$smallPadding} 1rem -#{$smallPadding};
+      margin: 0 -#{$smallPadding};
       max-width: none;
       width: calc( 100% + (2 * #{$smallPadding}) );
   }
@@ -86,10 +88,19 @@
     }
     .content:not(.has_sidebar) {
       .alignwide, .alignfull {
-          margin: 0 -#{$maxPadding} 1rem -#{$maxPadding};
-          width: calc( 100% + (2 * #{$maxPadding}) );
+          margin: 0 -2rem;
+          width: calc( 100% + (2 * 2rem) );
       }
     }
+}
+
+@media only screen and (min-width: #{$midBreakpoint}) {
+	.content:not(.has_sidebar) {
+		.alignwide, .alignfull {
+				margin: 0 -#{$maxPadding};
+				width: calc( 100% + (2 * #{$maxPadding}) );
+		}
+	}
 }
 
 @media only screen and (min-width: #{$boxedMax}) {

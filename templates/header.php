@@ -16,31 +16,32 @@
 <body <?php body_class(); ?>>
 <div class="wrapper" role="document">
     <header class="header-main">
+      <a class="screen-reader-text skip-link" href="#content">Skip to content</a>
         <div class="header--quicklinks">
-            <nav class="nav-quicklinks" role="navigation">
+            <nav aria-label="Quicklinks" class="nav-quicklinks" role="navigation">
                 <?php
                 if ( has_nav_menu( 'quicklink_navigation' ) ) :
                     wp_nav_menu(array( 'theme_location' => 'quicklink_navigation', 'menu_class' => 'quicklinks-menu' ) );
                 endif;
                 ?>
                 <?php //the_mtm_social_icons( '' ); ?>
-                <?php spring_search_bar(); ?> 
+                <?php spring_search_bar(); ?>
             </nav>
         </div>
         <div class="header--inner">
             <section class="open-button-wrapper">
-                <button id="openMainMenu" class="open-main-menu open-button"><span>Open Main Menu</span></button>
+                <button aria-label="Open Menu" id="openMainMenu" class="open-main-menu open-button"><span>Open Main Menu</span></button>
                 <?php echo spring_sidebar_button(); ?>
             </section>
-            <nav class="nav-main" role="navigation">
+            <nav aria-label="Primary" class="nav-main" role="navigation">
                 <?php
                 if ( has_nav_menu( 'primary_navigation' ) ) :
                     wp_nav_menu( array( 'theme_location' => 'primary_navigation', 'menu_class' => 'nav-main--menu' ) );
                 endif;
                 ?>
-                <a id="closeSidebar"> × </a>
+                <button aria-label="Close Menu" id="closeSidebar"> × </button>
             </nav>
-            
+
             <h1 class="header--blog-name">
                 <?php the_mtm_header_logo(); ?>
                 <?php the_mtm_mobile_logo(); ?>

@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 <section class="content--page">
-	<?php get_template_part( 'templates/page', 'header' ); ?>
+	<?php //get_template_part( 'templates/page', 'header' ); ?>
 	<div class="post--content">
     <main id="tribe-events-pg-template" class="tribe-events-pg-template">
     	<?php tribe_events_before_html(); ?>

@@ -40,11 +40,11 @@
     }
 
     .post--metadata {
-        border-top: 1px solid $Nlighter;
-        @include rem-px('font-size', .875rem);
-        font-style: italic;
-        @include rem-px('margin-top', 1rem);
-        @include rem-px('padding-top', .25rem);
+      border-bottom: 1px solid rgba($Ndarkest, 0.4);
+      @include rem-px('font-size', .875rem);
+      font-style: italic;
+      @include rem-px('margin-bottom', 1rem);
+      @include rem-px('padding-bottom', .25rem);
 
         ul {
             display: inline-block;

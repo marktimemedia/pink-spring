@@ -1,7 +1,7 @@
 // Forms
 $textboxBackground: $white;
 $textboxBorderColor: $Nlight;
-$textboxBorderColorActive: $Nlight;
+$textboxBorderColorActive: $linkColor;
 $textboxBorderWidth: 1px;
 $textboxBorderStyle: solid;
 $textboxColor: $Ndarkest;
@@ -17,9 +17,9 @@ $labelColor: $Ndarkest;
 
 // Buttons
 $buttonBackground: $springColor1;
-$buttonBackground2: $springColor1_Lt;
+$buttonBackground2: $springColor1_Dk;
 $buttonBorderColor: darken($buttonBackground,15%);
-$buttonBorderColor2: lighten($buttonBackground2, 15%);
+$buttonBorderColor2: darken($buttonBackground2, 15%);
 $buttonBorderWidth: 2px;
 $buttonBorderStyle: solid;
 
@@ -33,6 +33,6 @@ $buttonFontWeight: 600;
 $buttonPadding: .5em 1em;
 
 $buttonAltBackground: $springColor2;
-$buttonAltBackground2: $springColor2_Lt;
+$buttonAltBackground2: $springColor2_Dk;
 $buttonAltBorderColor: darken($buttonAltBackground,15%);
-$buttonAltBorderColor2: lighten($buttonAltBackground2, 15%);
+$buttonAltBorderColor2: darken($buttonAltBackground2, 15%);

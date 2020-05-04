@@ -1,5 +1,5 @@
 .footer-main {
-    background-color: $Ndarker;
+    background-color: $Ndarkest;
     bottom: 0;
     color: $Nlightest;
     padding: $smallPadding 0;
@@ -23,8 +23,8 @@
 
 
     .footer--inner {
-        @include rem-px('max-width', $boxedMax); 
-        padding: 0 $maxPadding; 
+        @include rem-px('max-width', $boxedMax);
+        padding: 0 $maxPadding;
     }
 }
 

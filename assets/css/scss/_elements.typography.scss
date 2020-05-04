@@ -1,4 +1,4 @@
-p {  
+p {
     line-height: $baselineHeight;
 }
 
@@ -8,11 +8,9 @@ a {
     color: $linkColor;
     cursor: pointer;
     font-weight: inherit;
-    text-decoration: none;
     transition: color .3s;
 
     &:hover {
-        border: 0;
         color: $linkHover;
         outline: 0;
         text-decoration: none;
@@ -42,14 +40,14 @@ a {
 /* Headings */
 
 h1, .h1,
-h2, .h2, 
-h3, .h3, 
-h4, .h4, 
+h2, .h2,
+h3, .h3,
+h4, .h4,
 h5, .h5,
 h6, .h6 {
     margin: 0;
     padding: 0;
-    text-shadow: $headingTextShadow; 
+    text-shadow: $headingTextShadow;
 
     * {
         line-height: $headingLineHeight;
@@ -58,14 +56,14 @@ h6, .h6 {
 
 h1,
 .h1 {
-    color: $h1Color;
+    //color: $h1Color;
     font-family: $headingFont;
     @include rem-px('font-size', $h1Size * .9);
     font-weight: $h1FontWeight;
     letter-spacing: $headingLetterSpace;
     line-height: $headingLineHeight;
     margin-bottom: $headingMargin;
-    
+
 
     a {
         //font-weight: inherit;
@@ -74,7 +72,7 @@ h1,
 
 h2,
 .h2 {
-    color: $h2Color;
+    //color: $h2Color;
     font-family: $headingFont;
     @include rem-px('font-size', $h2Size * .9);
     font-weight: $h2FontWeight;
@@ -89,7 +87,7 @@ h2,
 
 h3,
 .h3 {
-    color: $h3Color;
+    //color: $h3Color;
     font-family: $subheadingFont;
     @include rem-px('font-size', $h3Size * .9);
     font-weight: $h3FontWeight;
@@ -104,7 +102,7 @@ h3,
 
 h4,
 .h4 {
-    color: $h4Color;
+    //color: $h4Color;
     font-family: $subheadingFont;
     @include rem-px('font-size', $h4Size * .9);
     font-weight: $h4FontWeight;
@@ -119,7 +117,7 @@ h4,
 
 h5,
 .h5 {
-    color: $h5Color;
+    //color: $h5Color;
     font-family: $subheadingFont;
     @include rem-px('font-size', $h5Size * .9);
     font-weight: $h5FontWeight;
@@ -134,7 +132,7 @@ h5,
 
 h6,
 .h6 {
-    color: $h6Color;
+    //color: $h6Color;
     font-family: $subheadingFont;
     @include rem-px('font-size', $h6Size * .9);
     font-weight: $h6FontWeight;
@@ -154,7 +152,7 @@ ol,
 ul,
 dl {
     line-height: 1.1em;
-    margin-bottom: $baselineHeight; 
+    margin-bottom: $baselineHeight;
 }
 
 p,
@@ -190,13 +188,13 @@ ol {
         }
 
         span {
-            vertical-align: text-top;
+            //vertical-align: text-top;
         }
     }
 
 blockquote {
+    border: 0;
     border-left: $blockquoteBorderWidth $blockquoteBorderStyle $blockquoteBorderColor;
-    color: $blockquoteColor;
     font-family: $blockquoteFontFamily;
     font-style: $blockquoteFontStyle;
     font-weight: $blockquoteFontWeight;
@@ -206,11 +204,10 @@ blockquote {
     @include rem-px('font-size', $blockquoteFontSize);
 
     * {
-        color: $blockquoteColor;
         font-family: $blockquoteFontFamily;
         font-style: $blockquoteFontStyle;
         @include rem-px('font-size', $blockquoteFontSize);
-        font-weight: $blockquoteFontWeight; 
+        font-weight: $blockquoteFontWeight;
     }
 
     cite {
@@ -301,7 +298,7 @@ code, kbd, var, tt {
 pre, samp {
     display: block;
     margin: $codeMargin;
-    
+
 }
 
 pre {
@@ -332,7 +329,7 @@ hr {
     display: block;
     height: 1px;
     margin: 1em 0;
-    padding: 0; 
+    padding: 0;
 }
 
 abbr, acronym {
@@ -399,7 +396,7 @@ nav {
         @include rem-px('font-size', $h6Size);
     }
 
-    nav {   
+    nav {
         li {
             line-height: 1;
         }

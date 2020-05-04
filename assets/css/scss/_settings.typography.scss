@@ -9,7 +9,7 @@ $baseFont: sans-serif;
 $baseFontSize: 100%;
 $baselineHeight: 1.625em;
 $baseLetterSpace: 0px;
-$baseFontWeight: 300;
+$baseFontWeight: 500;
 
 $headingFont: sans-serif;
 $headingLineHeight: 1.1;
@@ -50,21 +50,21 @@ $h6FontWeight: 500;
 $headingTextShadow: none;
 $codeFont: monospace;
 
-$metaColor: $Nmid;
+$metaColor: $Ndark;
 $metaSize: .875em;
-$metaFontWeight: 100;
+$metaFontWeight: 300;
 
 // Links
 $linkColor: $springColor1;
-$linkHover: lighten($linkColor,20%);
+$linkHover: darken($linkColor,20%);
 $linkVisited: darken($linkColor,20%);
-$linkFocus: lighten($linkColor,15%);
+$linkFocus: darken($linkColor,15%);
 
 // Blockquotes
 $blockquoteMarginBottom: .875rem;
-$blockquotePadding: 0;
+$blockquotePadding: .5em;
 $blockquotePaddingLeft: $blockquotePadding;
-$blockquoteBorderWidth: 0;
+$blockquoteBorderWidth: 4px;
 $blockquoteBorderStyle: solid;
 $blockquoteBorderColor: $Nlighter;
 $blockquoteColor: $Ndark;
@@ -75,11 +75,11 @@ $blockquoteFontWeight: 200;
 
 // Code/Pre blocks
 $codeMargin: 1em 0;
-$codePadding: .25em .5em;
-$codeBackground: $Nlightest;
+$codePadding: .5em 1em;
+$codeBackground: rgba($Ndarkest, 0.1);
 $codeBorder: 0;
 $codeFontFamily: $codeFont;
-$codeFontSize: .875em;
+$codeFontSize: 1em;
 $codeColor: $textColor;
 
 $fa-font-path: 				"assets/fonts/fontawesome-webfont/webfonts";

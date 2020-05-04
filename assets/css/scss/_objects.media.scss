@@ -13,7 +13,7 @@
 .youtube, .embed-youtube {
     height: 0;
     @include rem-px('margin-bottom', 3rem);
-    padding-bottom: 56.25%;
+    padding-top: 56.25%;
     position: relative;
     width: 100%;
     z-index: 1;
@@ -80,7 +80,7 @@
         height: auto;
         max-width: 100%;
         overflow: hidden;
-        padding-bottom: 56.25%;
+        padding-top: 56.25%;
     }
 
     iframe, object, embed {
@@ -114,5 +114,11 @@
       &.video-asset {
         padding-top: 0;
     }
+  }
+}
+
+.mtm-post-thumbnail {
+  & > p {
+    display: none;
   }
 }

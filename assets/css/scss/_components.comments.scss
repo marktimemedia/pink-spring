@@ -23,7 +23,7 @@ section.comments {
     }
 
     .comments--form-row {
-         
+
          textarea, input {
             margin-top: .5em;
          }
@@ -78,13 +78,13 @@ section.comments {
                 }
 
     .comments--respond {
-        border-top: 1px solid $Nlighter;
+        border-top: 1px solid rgba($Ndarkest, 0.4);;
         margin-top: 2em;
         padding-top: 1em;
     }
         .comment-subscription-form {
             margin-bottom: 0;
-            
+
             &:first-of-type {
                 margin-top: 1em;
             }

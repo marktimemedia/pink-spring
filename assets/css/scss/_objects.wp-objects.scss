@@ -4,18 +4,46 @@
 }
 
 .alert {
-	background-color: $Nmid;
+	background-color: $Ndarker;
 	color: $white;
     font-size: 1.25em;
     margin-bottom: 1em;
     padding: 1em;
 }
 
-.error-404 {
-    @include clearfix();
+.error404 {
 
-    img {
-        float: right;
-        margin: 0 0 1em 1em;
-    }
+		.content--page .search-form {
+			margin-bottom: 2em;
+		}
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+.screen-reader-text:focus {
+  background-color: $Nlightest;
+  clip: auto !important;
+  clip-path: none;
+  color: $Nmid;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
 }

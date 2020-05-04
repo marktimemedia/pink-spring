@@ -3,14 +3,21 @@
     width: 100%;
 
     label {
-        display: none;
+      display: block;
+      height: 0;
+      overflow: hidden;
+    }
+
+    input {
+      display: inline-block;
+      width: 69%;
     }
 }
 
     .textbox.search--textbox {
         border-color: $Nlighter;
         margin: 0;
-        padding: .5em 2.25em .5em .25em;  
+        padding: .5em;
     }
 
     .search--button {
@@ -18,13 +25,10 @@
         border: 0;
         bottom: 0;
         color: $white;
-        font-size: .7em;
+        display: inline-block;
         font-weight: bold;
-        //@include hide-text();
         padding: .5em;
-        position: absolute;
-        right: 0;
-        top: 0;
+        width: 29%;
 
         &:hover {
             background: $buttonAltBackground2;
@@ -34,7 +38,7 @@
     }
 
 .sidebar {
-    .search-form { 
+    .search-form {
         max-width: inherit;
         margin: 0;
         width: 100%;
@@ -72,14 +76,9 @@
 }
 
     .header-main .search-form.search-expanded {
-        margin: .4em 0 0;
         max-height: 3em;
-        padding-bottom: .4em;
+        padding: .4em 0;
         @include transition(all .8s);
-
-        .search--button {
-            margin-bottom: .4em;
-        }
     }
 
     .fa-search.search-open:before {

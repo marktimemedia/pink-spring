@@ -23,20 +23,17 @@
 }
 
 // styles within the visual editor (includes the popup boxes)
-.editor-block-list__layout {
+.block-editor-block-list__layout {
 	font-family: $baseFont !important;
 }
 
-.block-editor-block-toolbar {
-  span {
-    &.editor-block-mover__description, &.block-editor-block-mover__description {
-      display: none;
-    }
+span {
+  &.editor-block-mover__description, &.block-editor-block-mover__description {
+    display: none;
   }
-
 }
 
-	.editor-post-title__block .editor-post-title__input, .wp-block-cover h2 {
+	.block-editor-post-title__block .block-editor-post-title__input, .wp-block-cover h2 {
 		font-family: $headingFont !important;
     font-weight: $h1FontWeight !important;
 	}

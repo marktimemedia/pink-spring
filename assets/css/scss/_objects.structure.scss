@@ -47,6 +47,28 @@
     }
 }
 
+@media only screen and (min-width: #{$smallBreakpoint}) {
+  .content {
+      &.inner-padding {
+          padding: 0 $midPadding;
+      }
+
+      .content-full .content--page {
+          padding: $midPadding; // for a boxed width background with no sidebar
+      }
+
+
+      .alignfull .content--inner {
+        padding-left: 2rem; // for a boxed width background with no sidebar
+        padding-right: 2rem; // for a boxed width background with no sidebar
+      }
+
+      &.has_sidebar {
+        padding: $paddingTopMobile $midPadding 0 $midPadding; // for a boxed width background with sidebar only
+      }
+  }
+}
+
 @media only screen and (min-width: #{$midBreakpoint}) {
 
     .content{

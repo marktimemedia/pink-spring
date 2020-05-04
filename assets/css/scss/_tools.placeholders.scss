@@ -39,13 +39,14 @@
     font-weight: $buttonFontWeight;
     height: auto;
     padding: $buttonPadding;
+    text-decoration: none;
     @include transition(all .3s);
     width: auto;
 
     &:hover {
         background-color: $buttonBackground2;
         //@include vertical($buttonBackground2, $buttonBackground);
-        border: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor2;
+        border-color: $buttonBorderColor2;
         color: $buttonColor2;
         @include transition(all .3s);
     }

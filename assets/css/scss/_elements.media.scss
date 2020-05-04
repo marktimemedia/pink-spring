@@ -11,7 +11,7 @@ figure {
 }
 
 figcaption {
-    display: block;
+    display: block !important; // overrides gutenberg issue
     @include rem-px('font-size', .875rem);
     font-style: italic;
     font-weight: normal;

@@ -171,7 +171,7 @@ $xl-bp:			75em !default;		// Set your x-large breakpoint
 
 	@else if $rowitems == 3 { // 3 items per row
 
-		@media only screen and ( min-width: $tiny-bp ) and ( max-width: $sm-bp ) {
+		@media only screen and ( min-width: $sm-bp ) and ( max-width: $med-bp ) {
 
 			$thisrow: 2; // intermediate row value, rounded up to nearest whole number
 			$itemwidth2: ( ( 100%  + $padside ) / $thisrow );
@@ -206,7 +206,7 @@ $xl-bp:			75em !default;		// Set your x-large breakpoint
 
 		} // end $sm-bp
 
-		@media only screen and ( min-width: $sm-bp ) {
+		@media only screen and ( min-width: $med-bp ) {
 
 			width: ( ( 100% + $padside ) / $rowitems );
 			padding-right: $padside;
@@ -549,7 +549,7 @@ $xl-bp:			75em !default;		// Set your x-large breakpoint
 
 	@else if $rowitems == 3 { // 3 items per row
 
-		@media only screen and ( min-width: $tiny-bp ) and ( max-width: $sm-bp ) {
+		@media only screen and ( min-width: $tiny-bp ) and ( max-width: $med-bp ) {
 
 			$thisrow: 2; // intermediate row value, rounded up to nearest whole number
 			$itemwidth2: ( 100% / $thisrow );
@@ -562,7 +562,7 @@ $xl-bp:			75em !default;		// Set your x-large breakpoint
 
 		} // end $sm-bp
 
-		@media only screen and ( min-width: $sm-bp ) {
+		@media only screen and ( min-width: $med-bp ) {
 
 			width: ( 100% / $rowitems );
 

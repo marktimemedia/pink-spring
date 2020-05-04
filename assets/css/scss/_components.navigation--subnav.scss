@@ -1,4 +1,8 @@
-@media only screen and (max-width: #{$midBreakpoint}) {
+.menu-toggle {
+  border: 0;
+}
+
+@media only screen and (max-width: #{$midBreakpoint - 1}) {
     .nav-main--menu {
 
         .menu-item {
@@ -10,14 +14,14 @@
             a {
                 position: relative;
             }
-            
+
         }
 
         .menu-toggle {
             background: transparent;
-            cursor: pointer;
             display:inline-block;
             height: 100%;
+            padding: 0;
             position: absolute;
             right: 0;
             top: 0;
@@ -68,7 +72,7 @@
 @media only screen and (min-width: #{$midBreakpoint}) {
     .nav-main--menu, .nav-main--menu * {
         margin: 0;
-        padding: 0;  
+        padding: 0;
     }
 
     .nav-main--menu {
@@ -116,7 +120,7 @@
             position: relative;
 
             &:hover, &.sfHover, &:focus {
-                
+
                 &>ul { // submenu on LI hover
                     display: block;
                     max-height: 800px; // change based on your menu height

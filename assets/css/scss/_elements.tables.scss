@@ -1,6 +1,7 @@
 /* TABLES */
 table {
     background-color: $tableBackground;
+    border-collapse: collapse;
     border-spacing: 0;
     height: 100%;
     margin-bottom: $baselineHeight / 2;
@@ -9,6 +10,9 @@ table {
 
 th,
 td {
+    border-color: $tableBorderColor;
+    border-style: $tableBorderStyle;
+    border-width: 0;
     font-size: .875em;
     line-height: $baselineHeight;
     padding: $tableCellPadding;
@@ -20,7 +24,7 @@ th {
     font-weight: bold;
 }
 
-td {
+td {  
     border-top: $tableBorderWidth $tableBorderStyle $tableBorderColor;
 }
 

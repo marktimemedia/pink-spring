@@ -4,7 +4,7 @@ Author: Marktime Media
 Author URI: http://marktimemedia.com
 Version: 0.1
 License: GPLv2
- 
+
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License version 2,
  as published by the Free Software Foundation.
@@ -13,7 +13,7 @@ License: GPLv2
  but WITHOUT ANY WARRANTY; without even the implied warranty of
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.See the
  GNU General Public License for more details.
- 
+
  The license for this software can likely be found here:
  http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -21,12 +21,12 @@ License: GPLv2
 (function($) {
 
 	$('.sub-menu').addClass('menu-collapse');
-	$('.menu-item-has-children > a').append('<span class="menu-toggle"></span>');
-	 
+	$('.menu-item-has-children > a').append('<button aria-label="Toggle Submenu" class="menu-toggle"></button>');
+
 	$('.menu-toggle').on('click', function(e) {
 
 		e.preventDefault();
-  
+
 	    if ($(this).parent().next('.sub-menu').hasClass('menu-collapse')) {
 	        $(this).parent().next('.sub-menu').removeClass('menu-collapse');
 	        $(this).addClass('menu-toggle-active');

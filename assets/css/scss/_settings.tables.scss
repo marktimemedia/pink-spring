@@ -1,11 +1,10 @@
 // Tables
 $tableBackground: transparent;
 $tableCellPadding: .25em;
-$tableStripe: $Nlighter;
+$tableStripe: rgba($Ndarkest, 0.1);
 $tableFontSize: .875em;
 $tableLineHeight: 1.4em;
 $tableBorderWidth: 1px;
 $tableBorderStyle: solid;
-$tableBorderColor: $Nlighter;
+$tableBorderColor: rgba($Ndarkest, 0.5);
 $tableHover: transparent;
-

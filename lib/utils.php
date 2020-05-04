@@ -49,13 +49,13 @@ function mtm_custom_taxonomies_terms_links( $post ){
         $out[] = '<span class="post--metadata--title">' . $taxonomy->label . ': </span><ul>';
         foreach ( $terms as $term ) {
           if( ++$i === $numItems ) { // if this is the last one
-            $out[] = sprintf( '<li><a href="%1$s" data-id="%3$s">%2$s</a></li></ul>',
+            $out[] = sprintf( '<li><a aria-label="View all filed under %2$s" href="%1$s" data-id="%3$s">%2$s</a></li></ul>',
                     esc_url( get_term_link( $term->slug, $taxonomy_slug ) ),
                     esc_html( $term->name ),
                     esc_html( $term->term_id )
                   );
           } else {
-            $out[] = sprintf( '<li><a href="%1$s" data-id="%3$s">%2$s</a>,</li> ',
+            $out[] = sprintf( '<li><a aria-label="View all filed under %2$s" href="%1$s" data-id="%3$s">%2$s</a>,</li> ',
                     esc_url( get_term_link( $term->slug, $taxonomy_slug ) ),
                     esc_html( $term->name ),
                     esc_html( $term->term_id )
@@ -84,7 +84,7 @@ function mtm_terms_from_taxonomy_links_all( $tax = '', $post_type = '' ){
         $term_list = '<ul class="mtm-component--term-list"><li><a href="' . site_url( $post_type ) . '">' . __( "View All", "spring" ) . '</a></li>';
         foreach ( $terms as $term ) {
             $i++;
-            $term_list .= '<li><a href="' . get_term_link( $term ) . '" title="' . sprintf( __( 'View all filed under %s', 'spring' ), $term->name ) . '" data-id="' . $term->term_id . '">' . $term->name . '</a></li>';
+            $term_list .= '<li><a aria-label="View all filed under %s" href="' . get_term_link( $term ) . '" title="' . sprintf( __( 'View all filed under %s', 'spring' ), $term->name ) . '" data-id="' . $term->term_id . '">' . $term->name . '</a></li>';
             if ( $count != $i ) {
                 $term_list .= ' ';
             }

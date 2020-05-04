@@ -33,19 +33,19 @@ if ( ! empty( $product_tabs ) ) : ?>
 	<?php $j = 1; ?>
 
 	<div class="mtm-component--content mtm-tabs--wrapper">
-		<ul class="mtm-tabs--title-container" role="tablist">
+		<div class="mtm-tabs--title-container" role="tablist">
 
 			<?php foreach ( $product_tabs as $key => $product_tab ) : ?>
-				<li class="<?php echo esc_attr( $key ); ?>_tab mtm-tabs--title current" id="tab-title-<?php echo esc_attr( $key ); ?>" data-tab="tab-<?php echo $i++; ?>" role="tab" aria-controls="tab-<?php echo esc_attr( $key ); ?>">
+				<button class="<?php echo esc_attr( $key ); ?>_tab mtm-tabs--title current" id="tab-title-<?php echo esc_attr( $key ); ?>" data-tab="tab-<?php echo $i++; ?>" role="tab" aria-controls="tab-<?php echo esc_attr( $key ); ?>">
 					<?php echo wp_kses_post( apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $product_tab['title'] ), $key ) ); ?>
-				</li>
+				</button>
 			<?php endforeach; ?>
-		</ul>
+		</div>
 
 		<?php foreach ( $product_tabs as $key => $product_tab ) : ?>
-			<div class="mtm-tabs--title mtm-tabs--title-accordion current" data-tab="tab-<?php echo $j; ?>" >
-				<h3><?php if ( isset( $product_tab['title'] ) ) { echo $product_tab['title']; } ?></h3>
-			</div>
+			<button class="mtm-tabs--title mtm-tabs--title-accordion current" data-tab="tab-<?php echo $j; ?>" >
+				<?php if ( isset( $product_tab['title'] ) ) { echo $product_tab['title']; } ?>
+			</button>
 			<div class="mtm-tabs--content current" id="tab-<?php echo $j; ?>" role="tabpanel" aria-labelledby="tab-title-<?php echo $j++; ?>">
 				<?php if ( isset( $product_tab['callback'] ) ) { call_user_func( $product_tab['callback'], $key, $product_tab ); } ?>
 			</div>

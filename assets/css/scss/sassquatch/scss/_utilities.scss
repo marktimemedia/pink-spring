@@ -3,3 +3,11 @@
 @function strip-unit($num) {
 	@return $num / ($num * 0 + 1);
 }
+
+@function set-text-color( $background ) {
+  @if ( lightness( $background ) > 50) {
+    @return $Ndarkest; // Lighter backgorund, return dark color
+  } @else {
+    @return $white; // Darker background, return light color
+  }
+}

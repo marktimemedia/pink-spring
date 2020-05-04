@@ -18,7 +18,7 @@
 
             &:active,
             &:focus {
-                outline: 0;
+                
             }
 
             &:hover {
@@ -73,7 +73,7 @@
                 display: block;
                 height: 70%;
                 margin-left: 3px;
-                width: 21px; 
+                width: 21px;
             }
 
             &:hover:before {
@@ -97,7 +97,7 @@
         }
 
 
-@media only screen and (max-width: #{$midBreakpoint}) {
+@media only screen and (max-width: #{$midBreakpoint - 1}) {
     .open-the-menu {
         overflow: hidden;
 
@@ -202,4 +202,3 @@
         display: none;
     }
 }
-

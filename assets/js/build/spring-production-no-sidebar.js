@@ -34,14 +34,14 @@ function openCloseMenu() {
 
 function navHeight() {
     var heights = window.innerHeight;
-    var mq = window.matchMedia( "(max-width: 48.5em)" );
+    var mq = window.matchMedia( "(max-width: 48.9em)" );
 
     document.addEventListener('DOMContentLoaded', function() {
         if (mq.matches) {
           document.querySelectorAll('.nav-main')[0].style.height = heights -50 + "px";
-        } 
-    }, false); 
-    
+        }
+    }, false);
+
     mq.addListener(function(changed) {
         if(changed.matches) {
             document.querySelectorAll('.nav-main')[0].style.height = heights -50 + "px";

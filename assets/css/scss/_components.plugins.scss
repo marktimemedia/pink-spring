@@ -6,6 +6,11 @@
 }
 
 // Events Calendar
+.tribe-common {
+  span {
+    vertical-align: middle;
+  }
+}
 .post-type-archive-tribe_events {
   .content .content--page {
     max-width: none;
