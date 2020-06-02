@@ -50,6 +50,7 @@
 
     .gallery-caption {
         text-align: center;
+        pointer-events: none;
     }
 }
 
@@ -84,8 +85,8 @@
     }
 
     iframe, object, embed {
-        background-color: rgba(0,0,0, .5);
-        color: $white;
+        background-color: #{'rgba('+$Ndarkest_RGB+', 0.5)'};
+        color: $Nwhite;
         height: 100%;
         left: 0;
         top: 0;

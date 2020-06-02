@@ -4,10 +4,18 @@
 	@return $num / ($num * 0 + 1);
 }
 
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  @return $string;
+}
+
 @function set-text-color( $background ) {
-  @if ( lightness( $background ) > 50) {
-    @return $Ndarkest; // Lighter backgorund, return dark color
+  @if ( lightness( $background ) < 50) {
+    @return $Nwhite; // Darker backgorund, return light color
   } @else {
-    @return $white; // Darker background, return light color
+    @return 'inherit'; // Keep the same
   }
 }

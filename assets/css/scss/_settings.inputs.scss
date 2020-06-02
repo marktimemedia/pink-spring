@@ -1,7 +1,7 @@
 // Forms
-$textboxBackground: $white;
-$textboxBorderColor: $Nlight;
-$textboxBorderColorActive: $linkColor;
+$textboxBackground: $Nwhite;
+$textboxBorderColor: #{'rgba('+$Ndarkest_RGB+', 0.3)'};
+$textboxBorderColorActive: $alertColor;
 $textboxBorderWidth: 1px;
 $textboxBorderStyle: solid;
 $textboxColor: $Ndarkest;
@@ -9,7 +9,6 @@ $textboxPlaceholderColor: $Ndark;
 $textboxPlaceholderSize: .875em;
 $textboxPlaceholderStyle: normal; //Change to italic if you want placeholder text to be italic.
 $textboxPadding: .5em;
-$textboxOutline: none;
 $textboxMaxWidth: 100%;
 
 $labelFontSize: 1.125em;
@@ -18,14 +17,13 @@ $labelColor: $Ndarkest;
 // Buttons
 $buttonBackground: $springColor1;
 $buttonBackground2: $springColor1_Dk;
-$buttonBorderColor: darken($buttonBackground,15%);
-$buttonBorderColor2: darken($buttonBackground2, 15%);
+$buttonBorderColor: $springColor1_Dk;
+$buttonBorderColor2: $springColor1;
 $buttonBorderWidth: 2px;
 $buttonBorderStyle: solid;
 
-$buttonColor: $white;
-$buttonColor2: $white;
-$buttonOutlineColor: $springColor1;
+$buttonColor: $Nwhite;
+$buttonColor2: $Nwhite;
 
 $buttonFont: $baseFont;
 $buttonFontSize: 1em;
@@ -34,5 +32,7 @@ $buttonPadding: .5em 1em;
 
 $buttonAltBackground: $springColor2;
 $buttonAltBackground2: $springColor2_Dk;
-$buttonAltBorderColor: darken($buttonAltBackground,15%);
-$buttonAltBorderColor2: darken($buttonAltBackground2, 15%);
+$buttonAltBorderColor: $springColor2_Dk;
+$buttonAltBorderColor2: $springColor2;
+
+$outline: $alertColor dotted 2px;

@@ -1,5 +1,4 @@
 // Root
-$textColor: $Ndarker;
 $columnMargin: .5em;
 $gutter: 1em;
 $textFontSize: 1rem;
@@ -23,42 +22,42 @@ $subheadingLetterSpace: 0px;
 $iconFont: 'Font Awesome 5 Pro', 'FontAwesome';
 $iconFontWeight: 900; // solid
 
-$h1Color: $Ndarkest;
+$h1Color: $headingColor;
 $h1Size: 2.5em;
 $h1FontWeight: 200;
 
-$h2Color: $Ndarkest;
+$h2Color: $headingColor;
 $h2Size: 2em;
 $h2FontWeight: 200;
 
-$h3Color: $Ndarker;
+$h3Color: $subheadingColor;
 $h3Size: 1.6em;
 $h3FontWeight: 500;
 
-$h4Color: $Ndarker;
+$h4Color: $subheadingColor;
 $h4Size: 1.4em;
 $h4FontWeight: 500;
 
-$h5Color: $Ndark;
+$h5Color: $textColor;
 $h5Size: 1.1em;
 $h5FontWeight: 500;
 
-$h6Color: $Ndark;
+$h6Color: $textColor;
 $h6Size: .875em;
 $h6FontWeight: 500;
 
 $headingTextShadow: none;
 $codeFont: monospace;
 
-$metaColor: $Ndark;
+$metaColor: $textColor;
 $metaSize: .875em;
 $metaFontWeight: 300;
 
 // Links
-$linkColor: $springColor1;
-$linkHover: darken($linkColor,20%);
-$linkVisited: darken($linkColor,20%);
-$linkFocus: darken($linkColor,15%);
+$linkColor: $interactColor;
+$linkHover: $interactColor_Dk;
+$linkVisited: $interactColor;
+$linkFocus: $interactColor_Dk;
 
 // Blockquotes
 $blockquoteMarginBottom: .875rem;
@@ -66,8 +65,8 @@ $blockquotePadding: .5em;
 $blockquotePaddingLeft: $blockquotePadding;
 $blockquoteBorderWidth: 4px;
 $blockquoteBorderStyle: solid;
-$blockquoteBorderColor: $Nlighter;
-$blockquoteColor: $Ndark;
+$blockquoteBorderColor: $Nlight;
+$blockquoteColor: $textColor_Lt;
 $blockquoteFontFamily: $headingFont;
 $blockquoteFontSize: 1.25rem;
 $blockquoteFontStyle: italic;
@@ -76,7 +75,7 @@ $blockquoteFontWeight: 200;
 // Code/Pre blocks
 $codeMargin: 1em 0;
 $codePadding: .5em 1em;
-$codeBackground: rgba($Ndarkest, 0.1);
+$codeBackground: #{'rgba('+$Ndark_RGB+', 0.1)'};
 $codeBorder: 0;
 $codeFontFamily: $codeFont;
 $codeFontSize: 1em;
@@ -84,6 +83,6 @@ $codeColor: $textColor;
 
 $fa-font-path: 				"assets/fonts/fontawesome-webfont/webfonts";
 $fa-font-size-base:         1em;
-$fa-border-color:           $Nlighter;
-$fa-inverse:                $white;
+$fa-border-color:           $Nlight;
+$fa-inverse:                $Nwhite;
 $fa-li-width:               2em;

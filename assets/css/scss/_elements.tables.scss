@@ -10,8 +10,6 @@ table {
 
 th,
 td {
-    border-color: $tableBorderColor;
-    border-style: $tableBorderStyle;
     border-width: 0;
     font-size: .875em;
     line-height: $baselineHeight;
@@ -24,12 +22,17 @@ th {
     font-weight: bold;
 }
 
-td {  
+td {
     border-top: $tableBorderWidth $tableBorderStyle $tableBorderColor;
 }
 
 thead th {
     vertical-align: bottom;
+    border-bottom: $tableHeaderBorderWidth $tableBorderStyle $tableHeaderBorderColor;
+}
+
+tfoot th {
+  border-bottom: inherit;
 }
 
 thead:first-child tr:first-child th,

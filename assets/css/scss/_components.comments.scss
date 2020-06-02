@@ -1,5 +1,5 @@
 section.comments {
-    border-top: 1px solid $Nlighter;
+    border-top: 1px solid $tableBorderColor;
     margin-top: 2em;
     padding-top: 1em;
 }
@@ -11,9 +11,9 @@ section.comments {
 
         ul.comment,
         ol.comment {
-            border-left: 1px solid $Nlighter;
-            border-top: 1px solid $Nlightest;
-            border-bottom: 1px solid $Nlightest;
+            border-left: 1px solid $tableBorderColor;
+            border-top: 1px solid $tableBorderColor;
+            border-bottom: 1px solid $tableBorderColor;
             list-style: none;
             margin-left: 0;
             margin-bottom: 0;
@@ -78,7 +78,7 @@ section.comments {
                 }
 
     .comments--respond {
-        border-top: 1px solid rgba($Ndarkest, 0.4);;
+        border-top: 1px solid $tableBorderColor;
         margin-top: 2em;
         padding-top: 1em;
     }

@@ -1,0 +1,424 @@
+/* Gutenberg Block Styles */
+
+// Structure (to match editor)
+.single--block {
+  position: relative;
+}
+
+.post--content, .content--page {
+  & > div {
+    margin-bottom: $smallPadding;
+    margin-top: $smallPadding;
+    &.wp-block-spacer {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+  @media only screen and (min-width: $midBreakpoint) {
+    & > div {
+      margin-bottom: $midPadding;
+      margin-top: $midPadding;
+    }
+  }
+}
+
+@media screen and ( min-width: 768px ) {
+    .wp-block {
+	      max-width: $boxedMax;
+    }
+}
+
+// Gutenberg Color Styles
+// These are now defined inline, see palette.php
+
+// Utilities
+.has-background, .has-custom-background-color{
+  padding: $smallPadding;
+
+  &.alignfull, &.alignwide {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  @media only screen and (min-width: $midBreakpoint) {
+    padding: $midPadding $maxPadding;
+  }
+}
+
+/* Typography */
+
+
+// Headings
+.wp-block-heading {
+    h1 {
+        @include rem-px('font-size', $h1Size);
+    }
+
+    h2 {
+        @include rem-px('font-size', $h2Size);
+    }
+
+    h3 {
+        @include rem-px('font-size', $h3Size);
+    }
+
+    h4 {
+        @include rem-px('font-size', $h4Size);
+    }
+
+    h5 {
+        @include rem-px('font-size', $h5Size);
+    }
+
+    h6 {
+        @include rem-px('font-size', $h6Size);
+    }
+}
+
+// Subhead
+p.wp-block-subhead {
+    color: $Ndark;
+    font-size: 1.3em;
+    font-style: normal;
+}
+
+// Drop Cap
+p.has-drop-cap {
+  min-height: 6em;
+  &:first-letter {
+     font-size:6em;
+  }
+}
+
+/* Core Layout Blocks */
+
+// group block
+.wp-block-group {
+  overflow: auto; // for floats
+
+  .wp-block-group__inner-container {
+    max-width: $boxedMax;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto; //for floats
+
+    .content--inner {
+      padding: 0 !important; // not needed if within a group
+    }
+
+    & > * {
+      margin-top: 0;
+    }
+  }
+
+  &.has-background {
+
+    .wp-block-group__inner-container {
+      & > div:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    @media only screen and (min-width: $midBreakpoint) {
+      &.alignfull {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+// column block
+.wp-block-column {
+  & > .wp-block {
+    margin-top: 0;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+  }
+}
+
+/** Other Core Blocks **/
+
+// Block Quote
+.wp-block-quote {
+    @extend blockquote;
+
+    &.is-large, &.is-style-large {
+        cite {
+            text-align: left;
+        }
+    }
+
+    &.has-text-align-right {
+      border-left-width: 0;
+      padding-left: 0;
+      border-right: $blockquoteBorderWidth $blockquoteBorderStyle $blockquoteBorderColor;
+      padding-right: $blockquotePaddingLeft;
+    }
+
+    &.has-text-align-center {
+      border-right: $blockquoteBorderWidth $blockquoteBorderStyle $blockquoteBorderColor;
+      padding-right: $blockquotePaddingLeft;
+    }
+
+    &.is-large, &.is-style-large {
+        padding-left: 0;
+        padding-right: 0;
+        border: 0;
+    }
+
+}
+
+// Pull Quote
+.wp-block-pullquote {
+    @extend blockquote;
+    text-align: inherit;
+
+    blockquote {
+      border: 0;
+      padding: 0;
+      margin: 0;
+    }
+
+    &.alignleft, &.alignright {
+      max-width: 50%;
+    }
+
+    &.is-large, &.is-style-large {
+        cite {
+            text-align: left;
+        }
+    }
+    &:not(.is-style-solid-color) {
+      background-color: transparent !important;
+    }
+    &:not(.is-large):not(.is-style-large):not(.is-style-solid-color) {
+        border-left: $blockquoteBorderWidth $blockquoteBorderStyle $blockquoteBorderColor;
+        padding-left: $blockquotePaddingLeft;
+    }
+
+    &.is-style-solid-color {
+      border: 0;
+      padding: 1em;
+
+      blockquote {
+        margin: 0 !important;
+        max-width: none !important;
+
+        p {
+          font-size: inherit !important;
+        }
+      }
+    }
+}
+
+// Separator
+hr.wp-block-separator {
+    background-color: $tableBorderColor;
+    clear: both;
+    padding: 0 !important;
+}
+
+// table
+.wp-block-table {
+  td, th {
+    border: 0;
+    padding: $tableCellPadding;
+  }
+  th {
+    font-weight: bold;
+    border-bottom: $tableHeaderBorderWidth $tableBorderStyle $tableHeaderBorderColor;
+  }
+  td {
+    border-top: $tableBorderWidth $tableBorderStyle $tableBorderColor;
+  }
+  &.is-style-stripes {
+    border-width: 0;
+    tbody tr:nth-child(odd) {
+      background-color: $tableStripe;
+    }
+    td {
+      border-width: 0;
+    }
+  }
+}
+
+// Buttons
+.wp-block-button:not(.components-toolbar) {
+    text-align: center;
+    //width: 100%;
+
+    .wp-block-button__link, .wp-block-button__link:not(.has-background), .wp-block-button__link:not(.has-text-color),
+    wp-block .button:not(.insert-media):not(.acf-button) {
+        @extend %button;
+
+        &.no-border-radius { // old
+          border-radius: 0;
+        }
+    }
+
+    // Added Background
+    .wp-block-button__link.has-background {
+      border-width: 0;
+
+      @each $name, $color in $colors {
+      	&.has-#{$name}-background-color:hover, &.has-#{$name}-background-color:focus {
+      		background-color: map_get( $colorsDarken, $name ) !important;
+      	}
+      }
+    }
+
+    .wp-block-button__link.has-text-color {
+      @each $name, $color in $colors {
+        &.has-#{$name}-color:hover, &.has-#{$name}-color:focus {
+          color: map_get( $colorsLighten, $name ) !important;
+        }
+      }
+    }
+
+    // Outline
+    &.is-style-outline {
+        .wp-block-button__link {
+          background-color: transparent !important;
+          border-color: $buttonBorderColor;
+          border-style: $buttonBorderStyle;
+          border-width: $buttonBorderWidth !important;
+          color: $buttonBorderColor;
+
+            &:hover, &:focus {
+              filter: saturate(50%);
+              color: $buttonBorderColor;
+            }
+        }
+        .wp-block-button__link.has-background {
+
+          @each $name, $color in $colors {
+            &.has-#{$name}-background-color {
+          		border-color: map_get( $colors, $name ) !important;
+          	}
+          	&.has-#{$name}-background-color:hover, &.has-#{$name}-background-color:focus {
+              background-color: rgba(0,0,0,.1) !important;
+          		border-color: map_get( $colorsDarken, $name ) !important;
+          	}
+          }
+
+        }
+        .wp-block-button__link.has-text-color {
+          @each $name, $color in $colors {
+            &.has-#{$name}-color:hover, &.has-#{$name}-color:focus {
+              color: map_get( $colorsDarken, $name ) !important;
+            }
+          }
+        }
+    }
+
+    &.is-style-fill, { // old
+      .wp-block-button__link {
+        border-width: 0 !important;
+      }
+    }
+
+}
+
+// mutliple buttons
+.wp-block-buttons {
+  .wp-block-button {
+    margin: 0;
+    width: auto;
+  }
+
+  .wp-block-group & {
+    margin-top: 0;
+  }
+}
+
+
+
+// cover block
+.wp-block-cover {
+  margin-bottom: 0 !important;
+
+  &.alignleft, &.alignright, &.aligncenter {
+    display: flex !important;
+  }
+
+  &.alignleft, &.alignright {
+    max-width: 100%;
+  }
+  @media only screen and (min-width: $midBreakpoint) {
+    &.alignleft, &.alignright {
+      max-width: 50%;
+    }
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+.wp-block-cover__inner-container, .wp-block-group__inner-container {
+  max-width: $boxedMax;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; // helps with z-index issues
+
+  .alignfull & {
+    width: 100%;
+    padding-left: $smallPadding; // for a boxed width background with no sidebar
+    padding-right: $smallPadding; // for a boxed width background with no sidebar
+
+    .content--inner {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @media only screen and (min-width: $midBreakpoint) {
+      padding-left: $maxPadding; // for a boxed width background with no sidebar
+      padding-right: $maxPadding; // for a boxed width background with no sidebar
+    }
+  }
+}
+
+// Latest posts
+.wp-block-latest-posts {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+
+  li {
+    font-size: $h4Size;
+    font-weight: $h4FontWeight;
+  }
+}
+
+
+// Gallery
+.wp-block-gallery, .blocks-gallery-grid {
+  figcaption {
+    pointer-events: none;
+  }
+
+  .blocks-gallery-image, .blocks-gallery-item {
+    figure {
+      align-items: flex-start;
+    }
+  }
+}
+
+
+// Media Text
+.wp-block-media-text {
+  &.has-background {
+    padding: 0 !important;
+
+    .wp-block-media-text__content {
+      padding-top: $smallPadding;
+      padding-bottom: $smallPadding;
+
+      @media only screen and (min-width: $midBreakpoint) {
+        padding-top: $maxPadding;
+        padding-bottom: $maxPadding;
+      }
+    }
+  }
+}

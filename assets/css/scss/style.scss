@@ -1,8 +1,8 @@
 /*--
-    Theme Name:  NAME Theme
+    Theme Name:  DEV Theme
     Description:  A custom WordPress theme
     Author: Marktime Media
-    Version: 1.0
+    Version: 2.0
     License: GPLv2
     License URI: http://www.gnu.org/licenses/gpl-2.0.html
 --*/
@@ -41,11 +41,11 @@
 @import "objects.tables";
 @import "objects.media";
 @import "objects.wp-objects";
-@import "objects.wp-gutenberg";
 
 // Grid Mixin
 
 /* 06. COMPONENTS */
+@import "components.woo"; // want this to be overridden by everything else
 @import "components.navigation";
 @import "components.navigation--subnav";
 @import "components.header";
@@ -55,13 +55,14 @@
 @import "components.sidebar--widgets";
 @import "components.search";
 @import "components.wp-content";
+@import "components.wp-gutenberg";
 @import "components.content";
 @import "components.comments";
 @import "components.plugins";
 @import "components.pagination";
 @import "components.panels";
 
-@import "components.woo";
+
 
 /* 07. VENDOR */
 @import "../../fonts/fontawesome-webfont/scss/fontawesome";

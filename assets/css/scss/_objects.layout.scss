@@ -51,13 +51,14 @@
 		position: relative;
 		z-index: 2; // dealing with gutenberg issues
 }
+
 .content:not(.has_sidebar) {
-  .alignwide,
-  .alignfull {
-      margin: 0 -#{$smallPadding};
-      max-width: none;
-      width: calc( 100% + (2 * #{$smallPadding}) );
+  .alignwide {
+		@extend %alignwide;
   }
+	.alignfull {
+		@extend %alignfull;
+	}
 }
 
 @media only screen and (min-width: #{$smallBreakpoint}) {
@@ -86,29 +87,18 @@
         margin: 1em 0;
         max-width: 100%;
     }
-    .content:not(.has_sidebar) {
-      .alignwide, .alignfull {
-          margin: 0 -2rem;
-          width: calc( 100% + (2 * 2rem) );
-      }
-    }
 }
 
 @media only screen and (min-width: #{$midBreakpoint}) {
-	.content:not(.has_sidebar) {
-		.alignwide, .alignfull {
-				margin: 0 -#{$maxPadding};
-				width: calc( 100% + (2 * #{$maxPadding}) );
-		}
-	}
+
 }
 
 @media only screen and (min-width: #{$boxedMax}) {
-  .content:not(.has_sidebar) {
-    .alignfull {
-        margin-left: calc(-100vw / 2 + ( #{$boxedMax} - (2 * #{$maxPadding}) ) / 2);
-        margin-right: calc(-100vw / 2 + ( #{$boxedMax} - (2 * #{$maxPadding}) ) / 2);
-        width: 100vw;
-    }
-  }
+	.content:not(.has_sidebar){
+		.alignfull {
+			margin-left: calc(-100vw / 2 + ( #{$boxedMax} - (2 * #{$maxPadding}) ) / 2);
+	    margin-right: calc(-100vw / 2 + ( #{$boxedMax} - (2 * #{$maxPadding}) ) / 2);
+	    width: 100vw;
+		}
+	}
 }

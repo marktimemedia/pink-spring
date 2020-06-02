@@ -4,6 +4,7 @@
             <?php the_mtm_footer_logo() ?>
             <?php the_mtm_footer_copyright() ?>
             <?php the_mtm_footer_text() ?>
+            <?php the_mtm_social_icons( 'fab fa-' ); ?>
     	</div>
         <nav aria-label="Footer" class="nav-footer" role="navigation">
             <?php

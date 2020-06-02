@@ -36,13 +36,13 @@ add_filter('embed_oembed_html', 'spring_embed_wrap', 10, 4);
 * https://wordpress.stackexchange.com/questions/329587/add-a-containing-div-to-core-gutenberg-blocks
 */
 
-add_filter( 'render_block', function( $block_content, $block ) {
-    // Uncomment to only target core/* and core-embed/* blocks.
-    if ( preg_match( '~^core|core-embed|mtm~', $block['blockName'] )  && !preg_match( '(button)', $block['blockName'] ) && !preg_match( '(column)', $block['blockName'] ) ) {
-       $block_content = sprintf( '<div class="single--block">%s</div>', $block_content );
-    }
-    return $block_content;
-}, PHP_INT_MAX - 1, 2 );
+// add_filter( 'render_block', function( $block_content, $block ) {
+//     // Only target core/* and core-embed/* blocks.
+//     if ( preg_match( '~^core|core-embed|mtm~', $block['blockName'] )  && !preg_match( '(button)', $block['blockName'] ) && !preg_match( '(column)', $block['blockName'] ) ) {
+//        $block_content = sprintf( '<div class="single--block">%s</div>', $block_content );
+//     }
+//     return $block_content;
+// }, PHP_INT_MAX - 1, 2 );
 
 /**
  * Add thumbnail styling to images with captions

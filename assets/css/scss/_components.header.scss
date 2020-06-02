@@ -4,7 +4,7 @@
     z-index:999;
 }
     .header--inner {
-        background-color: $bodyColor;
+        background-color: $Nwhite;
         border-bottom: 1px solid $Nlightest;
         padding: 0;
         position: relative;
@@ -15,7 +15,7 @@
 
     .header--quicklinks {
         padding: .5em $smallPadding;
-        background: $Ndarker;
+        background: $Ndarkest;
         position: relative;
         @include transition(all .8s);
         z-index:1000;
@@ -34,6 +34,10 @@
             display: block;
             line-height: 1;
 						text-decoration: none;
+
+						&:hover, &:focus {
+							text-decoration: underline;
+						}
         }
 
         img {
@@ -93,7 +97,7 @@
 
 @media only screen and (min-width: #{$midBreakpoint}) {
     .header-main {
-        background-color: $bodyColor;
+        background-color: $Nwhite;
         border-bottom: 1px solid $Nlightest;
     }
 

@@ -20,7 +20,7 @@
 
     &:active,
     &:focus {
-        outline-color: $textboxBorderColorActive;
+        outline: $outline;
     }
 }
 
@@ -43,11 +43,12 @@
     @include transition(all .3s);
     width: auto;
 
-    &:hover {
+    &:hover, &:focus {
         background-color: $buttonBackground2;
         //@include vertical($buttonBackground2, $buttonBackground);
         border-color: $buttonBorderColor2;
         color: $buttonColor2;
+        text-decoration: none;
         @include transition(all .3s);
     }
 
@@ -67,7 +68,7 @@
         color: $buttonBackground;
 
         &:hover, &:focus {
-            background-color: rgba($buttonBackground, 0.3);
+            background-color: #{'rgba('+$buttonBackground+', 0.3)'};
             border-color: $buttonBackground;
             color: $buttonBackground;
         }
@@ -83,7 +84,8 @@
 
     &:active,
     &:focus {
-        outline-color: $buttonOutlineColor;
+        border-width: $buttonBorderWidth;
+        outline: $outline;
     }
 }
 
@@ -145,18 +147,65 @@
 }
 
 %reverse {
-  color: $white !important;
+  color: $Nwhite !important;
 
   h1, h2, h3, h4, h5, h6, p {
-    color: $white !important;
+    color: $Nwhite !important;
   }
   a {
-    color: $white !important;
+    color: $Nwhite !important;
     &:hover, &:focus {
       opacity: 0.9;
     }
   }
   label {
-    color: $white !important;
+    color: $Nwhite !important;
   }
+}
+
+// For use in theme and editor, with not has_sidebar
+%alignfull {
+  margin: 0 -#{$smallPadding};
+  max-width: none;
+  width: calc( 100% + (2 * #{$smallPadding}) );
+
+  .content--inner {
+    padding-left: $smallPadding;
+		padding-right: $smallPadding;
+  }
+
+  @media only screen and (min-width: #{$smallBreakpoint}) {
+    margin: 0 -2rem;
+    width: calc( 100% + (2 * 2rem) );
+
+    .content--inner {
+      padding-left:$midPadding;
+      padding-right: $midPadding;
+    }
+  }
+  @media only screen and (min-width: #{$midBreakpoint}) {
+    margin: 0 -#{$maxPadding};
+    width: calc( 100% + (2 * #{$maxPadding}) );
+
+    .content--inner {
+      padding-left:$maxPadding;
+      padding-right: $maxPadding;
+    }
+  }
+}
+
+%alignwide {
+  margin: 0 -#{$smallPadding};
+  max-width: $boxedMax;
+  width: calc( 100% + (2 * #{$smallPadding}) );
+
+  @media only screen and (min-width: #{$smallBreakpoint}) {
+    margin: 0 -2rem;
+    width: calc( 100% + (2 * 2rem) );
+  }
+  @media only screen and (min-width: #{$midBreakpoint}) {
+    margin: 0 -#{$maxPadding};
+    width: calc( 100% + (2 * #{$maxPadding}) );
+  }
+
 }

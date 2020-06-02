@@ -25,16 +25,11 @@
     }
 
     .content--page.no-title {
-      padding-top: 0;
+      padding-top: 0 !important;
     }
 
     .content--inner {
       @include rem-px('max-width', $boxedMax); // for a boxed width background with no sidebar
-    }
-
-    .alignfull .content--inner {
-      padding-left: 2rem; // for a boxed width background with no sidebar
-      padding-right: 2rem; // for a boxed width background with no sidebar
     }
 
     &.has_sidebar {
@@ -57,12 +52,6 @@
           padding: $midPadding; // for a boxed width background with no sidebar
       }
 
-
-      .alignfull .content--inner {
-        padding-left: 2rem; // for a boxed width background with no sidebar
-        padding-right: 2rem; // for a boxed width background with no sidebar
-      }
-
       &.has_sidebar {
         padding: $paddingTopMobile $midPadding 0 $midPadding; // for a boxed width background with sidebar only
       }
@@ -81,11 +70,6 @@
 
         .content--page.no-title {
           padding-top: 0;
-        }
-
-        .alignfull .content--inner {
-          padding-left: $maxPadding; // for a boxed width background with no sidebar
-          padding-right: $maxPadding; // for a boxed width background with no sidebar
         }
 
         &.has_sidebar {

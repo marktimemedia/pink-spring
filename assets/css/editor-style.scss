@@ -24,9 +24,10 @@
 @import "scss/objects.inputs";
 @import "scss/objects.media";
 @import "scss/objects.wp-objects";
-@import "scss/objects.wp-gutenberg";
 
+/* 06. COMPONENTS */
 @import "scss/components.wp-content";
+@import "scss/components.wp-gutenberg";
 @import "scss/components.panels";
 
 @import "scss/trumps.editor";

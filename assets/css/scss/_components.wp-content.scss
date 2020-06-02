@@ -7,9 +7,7 @@
         @include rem-px('margin-bottom', .75rem);
 
         a {
-            &:hover {
-                text-decoration: none;
-            }
+
         }
     }
 
@@ -33,6 +31,14 @@
     .post--content {
         overflow: visible;
 
+        &:after { // account for floats
+           content: ".";
+           visibility: hidden;
+           display: block;
+           height: 0;
+           clear: both;
+        }
+
         h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
             margin-top: $textFontSize * 1.5;
             margin-bottom: $textFontSize * .8;
@@ -40,7 +46,7 @@
     }
 
     .post--metadata {
-      border-bottom: 1px solid rgba($Ndarkest, 0.4);
+      border-bottom: 1px solid $tableBorderColor;
       @include rem-px('font-size', .875rem);
       font-style: italic;
       @include rem-px('margin-bottom', 1rem);
@@ -88,7 +94,8 @@
 
     .post--metadata {
         @include rem-px('margin-bottom', .3rem);
-        @include rem-px('margin-top', .25rem);
+        @include rem-px('margin-top', .5rem);
+        clear: both;
     }
 
     .post--summary {

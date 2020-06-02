@@ -24,7 +24,6 @@
                     wp_nav_menu(array( 'theme_location' => 'quicklink_navigation', 'menu_class' => 'quicklinks-menu' ) );
                 endif;
                 ?>
-                <?php //the_mtm_social_icons( '' ); ?>
                 <?php spring_search_bar(); ?>
             </nav>
         </div>

@@ -13,18 +13,21 @@ a {
     &:hover {
         color: $linkHover;
         outline: 0;
-        text-decoration: none;
+        text-decoration: underline;
     }
 
     // &:visited {
     //     color: $linkVisited;
     // }
 
-    &:focus,
+    &:focus {
+        border-width: 0;
+        outline: $outline;
+    }
+
     &:active {
-        border: 0;
-        color: $linkFocus;
-        outline: 0;
+      border-width: 0;
+      color: $linkFocus;
     }
 
     img {
@@ -52,11 +55,19 @@ h6, .h6 {
     * {
         line-height: $headingLineHeight;
     }
+
+    a {
+      text-decoration: none;
+
+      &:hover, &:focus {
+        text-decoration: underline;
+      }
+    }
 }
 
 h1,
 .h1 {
-    //color: $h1Color;
+    color: $h1Color;
     font-family: $headingFont;
     @include rem-px('font-size', $h1Size * .9);
     font-weight: $h1FontWeight;
@@ -72,7 +83,7 @@ h1,
 
 h2,
 .h2 {
-    //color: $h2Color;
+    color: $h2Color;
     font-family: $headingFont;
     @include rem-px('font-size', $h2Size * .9);
     font-weight: $h2FontWeight;
@@ -87,7 +98,7 @@ h2,
 
 h3,
 .h3 {
-    //color: $h3Color;
+    color: $h3Color;
     font-family: $subheadingFont;
     @include rem-px('font-size', $h3Size * .9);
     font-weight: $h3FontWeight;
@@ -102,7 +113,7 @@ h3,
 
 h4,
 .h4 {
-    //color: $h4Color;
+    color: $h4Color;
     font-family: $subheadingFont;
     @include rem-px('font-size', $h4Size * .9);
     font-weight: $h4FontWeight;
@@ -117,7 +128,7 @@ h4,
 
 h5,
 .h5 {
-    //color: $h5Color;
+    color: $h5Color;
     font-family: $subheadingFont;
     @include rem-px('font-size', $h5Size * .9);
     font-weight: $h5FontWeight;
@@ -132,7 +143,7 @@ h5,
 
 h6,
 .h6 {
-    //color: $h6Color;
+    color: $h6Color;
     font-family: $subheadingFont;
     @include rem-px('font-size', $h6Size * .9);
     font-weight: $h6FontWeight;
@@ -261,13 +272,13 @@ u {
 
 ins {
     background-color: $Nlightest;
-    color: $warningColor;
+    color: $alertColor;
     text-decoration: none;
 }
 
 mark {
     background-color: $Nlightest;
-    color: $warningColor;
+    color: $alertColor;
     font-style: italic;
     font-weight: bold;
 }
@@ -324,7 +335,7 @@ sub {
 }
 
 hr {
-    //background-color: $Nlighter;
+    //background-color: $Nlight;
     border: 0;
     display: block;
     height: 1px;
@@ -354,13 +365,13 @@ nav {
 
 /* SELECTION */
 ::-moz-selection {
-    background-color: $Nlighter;
+    background-color: $Nlight;
     color: $Nlightest;
     text-shadow: none;
 }
 
 ::selection {
-    background-color: $Nlighter;
+    background-color: $Nlight;
     color: $Nlightest;
     text-shadow: none;
 }

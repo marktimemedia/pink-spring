@@ -13,7 +13,7 @@ if ( have_comments() && !is_page() && post_type_supports( get_post_type(), 'comm
         </ol>
 
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-            <nav>
+            <nav aria-label="Comments Pager" class="nav-comments-pager" role="navigation">
                 <ul class="comments--pager pager">
                     <?php if ( get_previous_comments_link() ) : ?>
                         <li class="pager--previous"><?php previous_comments_link( __( '&larr; Older comments', 'spring') ); ?></li>

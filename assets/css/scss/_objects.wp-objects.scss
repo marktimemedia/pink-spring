@@ -1,11 +1,11 @@
 .archive .sticky {
-	background: darken($bodyColor, 5%);
+	background: $Nlightest;
     padding: 1em;
 }
 
 .alert {
-	background-color: $Ndarker;
-	color: $white;
+	background-color: $Ndark;
+	color: $Nwhite;
     font-size: 1.25em;
     margin-bottom: 1em;
     padding: 1em;

@@ -4,6 +4,7 @@ nav {
   }
 }
 
+// General Menu Items
 .menu-item {
     padding: 0;
     margin-bottom: 0;
@@ -31,25 +32,30 @@ nav {
     }
 }
 
+// Quicklinks Menu
 .nav-quicklinks {
     width: 100%;
     position: relative;
     z-index: 999;
 
+    & > div { // menu container
+      display: inline-block;
+    }
+
     .menu-item {
 
         a, a:visited {
-            color: $Nlighter;
+            color: $Nlightest;
             font-weight: 200;
             padding: 0 .5em;
 
             &:hover {
-                color: $white;
+                color: $Nwhite;
             }
         }
 
         &.current-menu-item > a, &.current-menu-parent > a {
-            color: $white;
+            color: $Nwhite;
         }
     }
 
@@ -59,12 +65,10 @@ nav {
         }
     }
 
-    .sub-menu {
+    .sub-menu, .menu-toggle {
         display: none;
     }
 }
-
-
     .quicklinks-menu {
         margin: 0;
         padding: 0;
@@ -75,10 +79,7 @@ nav {
         }
     }
 
-    .menu-quicklinks-menu-container {
-        display: inline-block;
-    }
-
+// Main Nav
 .nav-main {
 	position: absolute;
     right: 100%;
@@ -101,7 +102,7 @@ nav {
     }
 
 
-
+// Footer Menu
 .footer--menu {
     margin: 1em 0 0 0;
     padding: 0;
@@ -112,15 +113,15 @@ nav {
     }
 
      a, a:visited {
-       color: $springColor1_Lt;
+       color: $interactColor;
       padding: 0;
 
       &:hover, &:focus {
-        color: $white;
+        color: $interactColor_Lt;
       }
     }
 
-    ul.sub-menu {
+    .sub-menu, .menu-toggle {
         display: none;
     }
 }
@@ -143,10 +144,12 @@ nav {
 
 
 @media only screen and (min-width: #{$midBreakpoint}) {
-    .menu-quicklinks-menu-container {
+    // quicklinks menu
+    .nav-quicklinks > div { // menu container
         padding: 0;
     }
 
+    // main menu
     .nav-main {
         float: right;
         height: auto;
@@ -157,34 +160,35 @@ nav {
         text-transform: uppercase;
         top: auto;
         width: auto;
-    }
-         .menu-main-menu-container {
-            height:100%;
+
+        & > div { // menu container
+          height:100%;
         }
+    }
+        .nav-main--menu {
+            height:100%;
+            padding: 0;
+            text-align: right;
 
-            .nav-main--menu {
-                height:100%;
-                padding: 0;
-                text-align: right;
+            .menu-item {
+                display: inline-block;
+                height: 100%;
 
-                .menu-item {
-                    display: inline-block;
+                & > a {
                     height: 100%;
+                    display: inline-block;
+                    padding: .5em;
+                }
 
+                &:hover, &:focus {
                     & > a {
-                        height: 100%;
-                        display: inline-block;
-                        padding: .5em;
-                    }
-
-                    &:hover, &:focus {
-                        & > a {
-                            color: $linkHover;
-                        }
+                        color: $linkHover;
                     }
                 }
             }
+        }
 
+    // footer menu
     .footer--menu {
         margin-top: 0;
 

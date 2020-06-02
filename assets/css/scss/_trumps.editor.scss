@@ -7,19 +7,29 @@
 
 /* Width of "wide" blocks */
 .wp-block[data-align="wide"] {
-    max-width: $boxedMax;
+    // @extend %alignwide;
+    @include rem-px('max-width', $boxedMax); // for a boxed width background with no sidebar
 }
 
 /* Width of "full-wide" blocks */
 .wp-block[data-align="full"] {
-    max-width: none;
+    @extend %alignfull;
 }
 
 /* "alignright" and "alignleft" blocks should not float unless theme says so */
 .wp-block[data-align="right"], .wp-block[data-align="left"] {
-  & > .block-editor-block-list__block-edit {
-    float: none !important;
+  & > .block-editor-block-list__block {
+    //float: none;
   }
+  .wp-block-cover {
+    max-width: 50%;
+  }
+}
+
+.content--inner {
+  @include rem-px('max-width', $boxedMax); // for a boxed width background with no sidebar
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // styles within the visual editor (includes the popup boxes)
@@ -27,13 +37,19 @@
 	font-family: $baseFont !important;
 }
 
-span {
-  &.editor-block-mover__description, &.block-editor-block-mover__description {
-    display: none;
+span { // to hide text but keep accessible
+  &.editor-block-mover__description, &.block-editor-block-mover__description, &.block-editor-block-mover-button__description {
+    // display: none;
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
   }
 }
 
-	.block-editor-post-title__block .block-editor-post-title__input, .wp-block-cover h2 {
+	.block-editor-post-title__block .block-editor-post-title__input, .editor-post-title__block .editor-post-title__input, .wp-block-cover h2 {
 		font-family: $headingFont !important;
     font-weight: $h1FontWeight !important;
 	}
@@ -63,6 +79,7 @@ span {
 	    font-style: normal;
 	}
 
+// Iris Picker
 .iris-picker {
   .iris-strip {
     margin-left: -5px;
@@ -101,15 +118,20 @@ span {
     display: none;
   }
 
-// panel overrides just for editor-styles-wrapper
-.mtm-tabs--content.current {
-  display: none;
+/* panel overrides just for editor-styles */
 
-  &#tab-1 {
-    display: inherit;
+// Tabs Visibility
+.mtm-tabs--wrapper {
+  .mtm-tabs--content.current {
+    display: none;
+
+    &#tab-1 {
+      display: inherit;
+    }
   }
 }
 
+// Slides Visibility
 ul.slides {
   list-style: none;
   margin-left: auto;
@@ -121,6 +143,21 @@ ul.slides {
     }
   }
 }
+
+// ACF Specific
+.acf-block-component .components-placeholder {
+  &.components-placeholder {
+    background-color: transparent;
+    border-color: #ccc;
+    box-shadow: none;
+    outline: 2px dotted #ccc;
+  }
+  .components-placeholder__fieldset {
+    text-align: center;
+  }
+}
+
+
 
 // TinyMCE Overrides to emulate post content (classic)
 #tinymce {

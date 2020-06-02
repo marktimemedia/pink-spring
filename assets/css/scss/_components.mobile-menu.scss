@@ -18,7 +18,7 @@
 
             &:active,
             &:focus {
-                
+
             }
 
             &:hover {
@@ -97,7 +97,7 @@
         }
 
 
-@media only screen and (max-width: #{$midBreakpoint - 1}) {
+@media only screen and (max-width: #{$midBreakpoint - 0.06}) {
     .open-the-menu {
         overflow: hidden;
 

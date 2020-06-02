@@ -12,19 +12,18 @@
       display: inline-block;
       width: 69%;
     }
-}
 
     .textbox.search--textbox {
-        border-color: $Nlighter;
+        border-color: $Nlight;
         margin: 0;
         padding: .5em;
     }
 
-    .search--button {
+    button.search--button {
         background: $buttonAltBackground;
         border: 0;
         bottom: 0;
-        color: $white;
+        color: $Nwhite;
         display: inline-block;
         font-weight: bold;
         padding: .5em;
@@ -33,9 +32,12 @@
         &:hover {
             background: $buttonAltBackground2;
             border: 0;
-            color: $white;
+            color: $Nwhite;
         }
     }
+}
+
+
 
 .sidebar {
     .search-form {
@@ -46,15 +48,15 @@
 }
 
 .search-toggle {
-    background-color: $linkColor;
+    background-color: $buttonBackground;
     border: none;
-    color: $white;
+    color: $Nwhite;
     float: right;
     padding: .5em;
     @include transition(padding .8s);
 
     &:hover {
-        background-color: darken($linkColor, 10%);
+        background-color: $buttonAltBackground;
         border: none;
     }
 
@@ -66,7 +68,7 @@
 .header-main .search-form {
     margin: 0;
     max-height: 0;
-    overflow: hidden;
+    overflow: hidden; // to account for the toggle
     padding-bottom: 0;
     @include transition(all .8s);
 
@@ -98,5 +100,6 @@
         max-height: 3em;
         @include transition(all .8s);
         width: 20em;
+        overflow: visible; // unless you need a toggle on desktop
     }
 }

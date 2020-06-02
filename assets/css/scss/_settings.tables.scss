@@ -1,10 +1,12 @@
 // Tables
 $tableBackground: transparent;
 $tableCellPadding: .25em;
-$tableStripe: rgba($Ndarkest, 0.1);
+$tableStripe: #{'rgba('+$Ndarkest_RGB+', 0.1)'};
 $tableFontSize: .875em;
 $tableLineHeight: 1.4em;
 $tableBorderWidth: 1px;
+$tableHeaderBorderWidth: 2px;
 $tableBorderStyle: solid;
-$tableBorderColor: rgba($Ndarkest, 0.5);
+$tableBorderColor: #{'rgba('+$Ndarkest_RGB+', 0.3)'};
+$tableHeaderBorderColor: #{'rgba('+$Ndarkest_RGB+', 0.5)'};
 $tableHover: transparent;

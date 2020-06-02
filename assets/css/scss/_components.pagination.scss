@@ -1,5 +1,5 @@
 .nav-pager {
-    @include clearfix();
+  clear: both;
 }
     .pager {
         list-style: none;
@@ -9,7 +9,7 @@
 
         .pager--previous, a[rel="prev"] {
             //float: left;
-            
+
             &:before {
                 //content: '← ';
             }
@@ -17,7 +17,7 @@
 
         .pager--next, a[rel="next"] {
            // float: right;
-            
+
             &:after {
                 //content:' →';
             }
@@ -31,3 +31,7 @@
     .post--pager-all {
         padding: 0 1em;
     }
+
+.post-page-numbers {
+  clear: both;
+}

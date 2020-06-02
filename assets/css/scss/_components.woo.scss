@@ -1,8 +1,42 @@
-.woocommerce {
-    .content, .content & {
+// store notice, can load on all pages
+.woocommerce-store-notice, p.demo_store {
+  background-color: $alertColor;
+}
+  .admin-bar p.demo_store {
+    top: 0;
+  }
+.content--page .woocommerce-notices-wrapper {
+  margin: 0;
+}
+
+// woocommerce body classes
+body.woocommerce, .woocommerce-page {
+
+  form {
+    max-width: $boxedMax;
+
+    .form-row .required {
+      color: $alertColor;
+    }
+  }
+
+  .button {
+    @extend %button;
+
+    &.alt {
+        @extend .alt;
+    }
+
+    &:disabled, &:disabled[disabled] {
+        opacity: .5;
+        filter: saturate(0);
+    }
+  }
+
+    .content {
         @include clearfix();
 
-        .button, a.button, button, input.button {
+        a.button, button.button, input.button {
 
             @extend %button;
 
@@ -16,6 +50,10 @@
         }
     }
 
+    table.shop_table {
+      border: 0;
+    }
+
     .woocommerce-input-wrapper {
         width: 100%;
     }
@@ -27,6 +65,8 @@
     }
 
     div.product {
+      margin-top: 0;
+
         div.images {
             img {
                 max-height: 40em;
@@ -36,6 +76,10 @@
             .flex-control-thumbs li {
                 padding: .5em .5em .5em 0;
             }
+        }
+
+        p.price, span.price {
+          color: $springColor3;
         }
     }
 
@@ -77,9 +121,13 @@
         ul li {
             a:focus, a:hover, span.current {
                 background: $linkColor;
-                color: $white;
+                color: $Nwhite;
             }
         }
+    }
+
+    .woocommerce-variation {
+      margin-bottom: 1em;
     }
 
     .widget_price_filter {
@@ -103,6 +151,7 @@
         margin-top: 2em;
     }
 
+  // alerts
     .woocommerce-error, .woocommerce-info, .woocommerce-message {
         background-color: $Nlightest;
         border-top: 3px solid $springColor1;
@@ -114,9 +163,9 @@
     }
 
         .woocommerce-error {
-            border-color: $warningColor;
+            border-color: $alertColor;
             &:before {
-                color: $warningColor;
+                color: $alertColor;
             }
         }
 
@@ -126,10 +175,8 @@
                 color: $Nmid;
             }
         }
-}
 
 // Make products display flex by default, with fallback to their floats.
-.woocommerce, .woocommerce-page {
     ul.products {
         align-items: stretch;
         display: flex;
@@ -149,13 +196,21 @@
                 &.added_to_cart.wc-forward {
                     @extend %button;
                     background-color: $springColor3;
+                    border-color: $springColor3_Dk;
                     flex-grow: 0;
                     margin-top: .5em;
                     text-align: center;
+
+                    &:hover {
+                      background-color: $springColor3_Dk;
+                      border-color: $springColor3;
+                    }
                 }
 
-                h2 {
-                    @include transition(all .2s);
+                h2.woocommerce-loop-product__title {
+                  font-size: 1.1em;
+                  font-weight: 400;
+                  @include transition(all .2s);
 
                     &:hover, &:focus {
                         color: $linkColor;
@@ -179,11 +234,8 @@
             }
         }
     }
-}
-
-// With Sidebar, fewer products per row
-// Don't forget to update custom function in woo.php
-.woocommerce, .woocommerce-page {
+    // With Sidebar, fewer products per row
+    // Don't forget to update custom function in woo.php
     & .has_sidebar {
         ul.products {
             li.product {
@@ -200,7 +252,25 @@
     }
 }
 
+.woocommerce-checkout, .woocommerce-cart {
+  #payment {
+    background-color: $Nlightest;
+  }
+
+  .checkout {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 // WooCommerce Tabbed Account Page
+.woocommerce-account {
+  .addresses .title {
+    h3, .edit {
+      float: none;
+    }
+  }
+}
 
 .woocommerce-MyAccount-navigation {
     ul {
@@ -210,7 +280,8 @@
     }
 
     li {
-        border-bottom: 1px solid $Nlighter;
+        border-bottom: 1px solid $tableBorderColor;
+        padding: .25em 0;
 
         &.is-active a {
             font-weight: bold;

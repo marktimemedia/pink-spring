@@ -71,7 +71,7 @@
 	}
 
 		.mtm-hero-image-title, .mtm-hero-image-subtitle p, .mtm-module--slider-title, .mtm-module--slider-subtitle p {
-			color: $white;
+			color: $Nwhite;
 		}
 
 	.mtm-module--slider-slide {
@@ -119,15 +119,15 @@
 		padding: $smallPadding;
 
 		.mtm-module--content-secondary-wrapper {
-			background-color: rgba($Ndarkest,.5);
-			color: $white;
-			padding: 1em;
+			background-color: #{'rgba('+$Ndarkest_RGB+', 0.5)'};
+			color: $Nwhite;
+			padding: $smallPadding;
 		}
 	}
 
 // CTA
 	.mtm_module_call_to_action {
-		padding: 1em;
+		padding: $smallPadding;
 		background: $Nlightest;
 		overflow: auto;
 
@@ -194,9 +194,9 @@
 		}
 
 		.mtm-module--gallery-caption {
-			background-color: rgba($Ndarkest, .3);
+			background-color: #{'rgba('+$Ndarkest_RGB+', 0.3)'};
 			bottom: 0;
-			color: $white;
+			color: $Nwhite;
 			margin: 0;
 			padding: .25em;
 			position: absolute;
@@ -258,7 +258,7 @@
 /* Tab Rules */
 
 .mtm-tabs--wrapper {
-	border-bottom: 1px solid rgba($Nmid, 0.6);
+	border-bottom: 1px solid $tableHeaderBorderColor;
 	clear: both;
 	margin: 1em 0;
 
@@ -274,6 +274,7 @@
 			color: $linkColor;
 			cursor: pointer; // for old tabs
 			padding: .5em 0;
+			text-decoration: underline;
 
 			&:hover, &:focus {
 				background-color: transparent;
@@ -283,13 +284,14 @@
 			&.current {
 				color: $linkHover;
 				font-weight: bold;
+				text-decoration: none;
 			}
 		}
 
 		button.mtm-tabs--title-accordion, .mtm-tabs--title-accordion {
 			background-color: transparent;
 			border: 0;
-			border-top: 1px solid rgba($Nmid, 0.6);
+			border-top: 1px solid $tableHeaderBorderColor;
 			color: $linkColor;
 			display: block;
 			width: 100%;
@@ -301,9 +303,10 @@
 		}
 
 	.mtm-tabs--content {
-		display: none;
-		padding: .5em 0;
 		clear: both;
+		display: none;
+		overflow: auto;
+		padding: .5em 0;
 
 		&.current {
 			display:inherit;
@@ -415,7 +418,7 @@
 				display: none;
 			}
 			.mtm-tabs--content {
-				border-top: 1px solid rgba($Nmid, 0.6);
+				border-top: 1px solid $tableHeaderBorderColor;
 			}
 	}
 
