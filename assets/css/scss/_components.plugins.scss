@@ -6,6 +6,27 @@
     .gfield_required {
         color: $alertColor;
   	}
+
+    .gform_fileupload_multifile .gform_drop_area {
+      color: $textColor;
+    }
+
+    .validation_message {
+      color: $alertColor;
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    &.gf_browser_chrome {
+      .gfield_checkbox li input, .gfield_checkbox li input[type=checkbox], .gfield_radio li input[type=radio] {
+        margin-top: 0;
+      }
+      select {
+        padding: 0.5em;
+      }
+    }
 }
 
 // Events Calendar
@@ -52,6 +73,18 @@
 
   .tribe-block__rsvp__description, .tribe-block__rsvp__title, .tribe-block__rsvp__availability {
     color: $Ndarkest;
+  }
+
+  .tribe-block__venue {
+    .tribe-block__venue__meta {
+      .tribe-block__venue__address a {
+        color: $linkColor;
+
+        &:hover {
+          color: $linkHover;
+        }
+      }
+    }
   }
 
   .tribe-common .tribe-common-c-btn.tribe-common-c-btn--small {
@@ -207,7 +240,7 @@
           @extend %button.outline;
 
           &:hover {
-            background-color: #{'rgba('+$Ndarkest+', .1)'}
+            background-color: #{'rgba('+$Ndarkest_RGB+', .1)'}
           }
 
           img {
@@ -476,6 +509,10 @@
     background-color: transparent;
     color: $Ndarkest;
     border-width: 1px;
+  }
+
+  button.tribe-events-calendar-month__day-cell--selected {
+    background-color: #{'rgba('+$springColor1_RGB+', .1)'}
   }
 
   // List

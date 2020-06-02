@@ -12,10 +12,11 @@
 .block-editor-block-list__block-edit div[data-block] .textbox {
   background-color: var(--neutral-white);
   border: 1px solid rgba(var(--neutral-darkest-rgb), 0.3);
+  border-radius: 0;
   color: var(--neutral-darkest);
   display: block;
   font-family: sans-serif;
-  font-size: .875em;
+  font-size: 1em;
   font-weight: 500;
   margin-bottom: 8px;
   margin-bottom: 0.5rem;
@@ -75,7 +76,7 @@
     .block-editor-block-list__block-edit div[data-block] .outline.button:hover:not(.wp-color-result):not(.ed_button):not(.acf-button):not(.add_media):not(.wp-picker-clear), .block-editor-block-list__layout .outline.button:hover:not(.wp-color-result):not(.ed_button):not(.acf-button):not(.add_media):not(.wp-picker-clear), .outline.global-button:hover, .wp-block-button:not(.components-toolbar) .outline.wp-block-button__link:hover,
     .wp-block-button:not(.components-toolbar) wp-block .outline.button:hover:not(.insert-media):not(.acf-button), .block-editor-block-list__block-edit div[data-block] .outline.button:focus:not(.wp-color-result):not(.ed_button):not(.acf-button):not(.add_media):not(.wp-picker-clear), .block-editor-block-list__layout .outline.button:focus:not(.wp-color-result):not(.ed_button):not(.acf-button):not(.add_media):not(.wp-picker-clear), .outline.global-button:focus, .wp-block-button:not(.components-toolbar) .outline.wp-block-button__link:focus,
     .wp-block-button:not(.components-toolbar) wp-block .outline.button:focus:not(.insert-media):not(.acf-button) {
-      background-color: rgba(var(--spring-color-1), 0.3);
+      background-color: rgba(var(--neutral-darkest-rgb), 0.2);
       border-color: var(--spring-color-1);
       color: var(--spring-color-1); }
   .block-editor-block-list__block-edit div[data-block] .neutral.button:not(.wp-color-result):not(.ed_button):not(.acf-button):not(.add_media):not(.wp-picker-clear), .block-editor-block-list__layout .neutral.button:not(.wp-color-result):not(.ed_button):not(.acf-button):not(.add_media):not(.wp-picker-clear), .neutral.global-button, .wp-block-button:not(.components-toolbar) .neutral.wp-block-button__link,
@@ -150,11 +151,12 @@ a {
   color: var(--spring-links);
   cursor: pointer;
   font-weight: inherit;
+  text-decoration: underline;
   transition: color .3s; }
   a:hover {
     color: var(--spring-links-darker);
     outline: 0;
-    text-decoration: underline; }
+    text-decoration: none; }
   a:focus {
     border-width: 0;
     outline: var(--spring-alert) dotted 2px; }

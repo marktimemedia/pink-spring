@@ -76,10 +76,11 @@ textarea,
 .textbox {
   background-color: var(--neutral-white);
   border: 1px solid rgba(var(--neutral-darkest-rgb), 0.3);
+  border-radius: 0;
   color: var(--neutral-darkest);
   display: block;
   font-family: sans-serif;
-  font-size: .875em;
+  font-size: 1em;
   font-weight: 500;
   margin-bottom: 8px;
   margin-bottom: 0.5rem;
@@ -340,7 +341,7 @@ li.woocommerce-MyAccount-navigation-link--customer-logout .wp-block-button:not(.
     .wp-block-button:not(.components-toolbar) wp-block .outline.button:focus:not(.insert-media):not(.acf-button),
     .wp-block-button:not(.components-toolbar) wp-block li.woocommerce-MyAccount-navigation-link--customer-logout a.outline:focus:not(.insert-media):not(.acf-button),
     li.woocommerce-MyAccount-navigation-link--customer-logout .wp-block-button:not(.components-toolbar) wp-block a.outline:focus:not(.insert-media):not(.acf-button), .tribe_events .tribe-common .outline.tribe-common-c-btn.tribe-common-c-btn--small:focus, .tribe_events .tribe-block__rsvp__status-button:focus, .tribe_events .tribe-block__rsvp__form .outline.tribe-block__rsvp__submit-button:focus, #tribe-events .tribe-events-single .tribe-block__events-link .tribe-block__btn--link a:focus, #tribe-events .tribe-events-single .tribe-events-button:focus, #tribe-events-pg-template .tribe-events-single .tribe-block__events-link .tribe-block__btn--link a:focus, #tribe-events-pg-template .tribe-events-single .tribe-events-button:focus, .tribe-events .tribe-events-c-nav__list .outline.tribe-common-b2:focus, .tribe-events .tribe-events-l-container a.tribe-common-c-btn-border:focus, .tribe-events .tribe-events-c-ical__link:focus, .tribe-events .tribe-events-calendar-list .tribe-events-c-small-cta__link:focus {
-      background-color: rgba(var(--spring-color-1), 0.3);
+      background-color: rgba(var(--neutral-darkest-rgb), 0.2);
       border-color: var(--spring-color-1);
       color: var(--spring-color-1); }
   button.neutral,
@@ -481,11 +482,12 @@ a {
   color: var(--spring-links);
   cursor: pointer;
   font-weight: inherit;
+  text-decoration: underline;
   transition: color .3s; }
   a:hover {
     color: var(--spring-links-darker);
     outline: 0;
-    text-decoration: underline; }
+    text-decoration: none; }
   a:focus {
     border-width: 0;
     outline: var(--spring-alert) dotted 2px; }
@@ -1725,6 +1727,8 @@ li.woocommerce-MyAccount-navigation-link--customer-logout {
     width: 46%; } }
 nav a {
   text-decoration: none; }
+  nav a:hover {
+    text-decoration: underline; }
 
 .menu-item {
   padding: 0;
@@ -3047,6 +3051,17 @@ section.comments {
   margin-bottom: 1.2em; }
 .gform_wrapper .gfield_required {
   color: var(--spring-alert); }
+.gform_wrapper .gform_fileupload_multifile .gform_drop_area {
+  color: var(--spring-text); }
+.gform_wrapper .validation_message {
+  color: var(--spring-alert); }
+  .gform_wrapper .validation_message ul {
+    margin: 0;
+    padding: 0; }
+.gform_wrapper.gf_browser_chrome .gfield_checkbox li input, .gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox], .gform_wrapper.gf_browser_chrome .gfield_radio li input[type=radio] {
+  margin-top: 0; }
+.gform_wrapper.gf_browser_chrome select {
+  padding: 0.5em; }
 
 .tribe-common span {
   vertical-align: middle; }
@@ -3071,6 +3086,10 @@ section.comments {
   background-color: transparent; }
 .tribe_events .tribe-block__rsvp__description, .tribe_events .tribe-block__rsvp__title, .tribe_events .tribe-block__rsvp__availability {
   color: var(--neutral-darkest); }
+.tribe_events .tribe-block__venue .tribe-block__venue__meta .tribe-block__venue__address a {
+  color: var(--spring-links); }
+  .tribe_events .tribe-block__venue .tribe-block__venue__meta .tribe-block__venue__address a:hover {
+    color: var(--spring-links-darker); }
 .tribe_events .tribe-block__rsvp__status-button {
   border-width: 2px !important;
   width: 100%; }
@@ -3142,7 +3161,7 @@ section.comments {
   background: transparent;
   border: 0; }
 #tribe-events .tribe-events-single .tribe-block__events-link .tribe-block__btn--link a:hover, #tribe-events .tribe-events-single .tribe-events-button:hover, #tribe-events-pg-template .tribe-events-single .tribe-block__events-link .tribe-block__btn--link a:hover, #tribe-events-pg-template .tribe-events-single .tribe-events-button:hover {
-  background-color: rgba(var(--neutral-darkest), .1); }
+  background-color: rgba(var(--neutral-darkest-rgb), .1); }
 #tribe-events .tribe-events-single .tribe-block__events-link .tribe-block__btn--link a img, #tribe-events .tribe-events-single .tribe-events-button img, #tribe-events-pg-template .tribe-events-single .tribe-block__events-link .tribe-block__btn--link a img, #tribe-events-pg-template .tribe-events-single .tribe-events-button img {
   filter: grayscale(100%); }
 #tribe-events .tribe-events-list .type-tribe_events, #tribe-events-pg-template .tribe-events-list .type-tribe_events {
@@ -3282,6 +3301,8 @@ section.comments {
   background-color: transparent;
   color: var(--neutral-darkest);
   border-width: 1px; }
+.tribe-events button.tribe-events-calendar-month__day-cell--selected {
+  background-color: rgba(var(--spring-color-1-rgb), .1); }
 .tribe-events .tribe-events-calendar-list .tribe-events-calendar-list__event-date-tag {
   padding-right: 0 !important;
   margin-right: .5em;

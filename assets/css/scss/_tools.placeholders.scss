@@ -8,10 +8,11 @@
 %textbox {
     background-color: $textboxBackground;
     border: $textboxBorderWidth $textboxBorderStyle $textboxBorderColor;
+    border-radius: 0;
     color: $textboxColor;
     display: block;
     font-family: $baseFont;
-    font-size: .875em;
+    font-size: 1em;
     font-weight: $baseFontWeight;
     @include rem-px('margin-bottom', .5em);
     max-width: $textboxMaxWidth;
@@ -68,7 +69,7 @@
         color: $buttonBackground;
 
         &:hover, &:focus {
-            background-color: #{'rgba('+$buttonBackground+', 0.3)'};
+            background-color: #{'rgba('+$Ndarkest_RGB+', 0.2)'};
             border-color: $buttonBackground;
             color: $buttonBackground;
         }

@@ -8,12 +8,13 @@ a {
     color: $linkColor;
     cursor: pointer;
     font-weight: inherit;
+    text-decoration: underline;
     transition: color .3s;
 
     &:hover {
         color: $linkHover;
         outline: 0;
-        text-decoration: underline;
+        text-decoration: none;
     }
 
     // &:visited {
