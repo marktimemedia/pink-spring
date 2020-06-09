@@ -39,8 +39,22 @@
     //float: right;
 
 		a.button-social { // circle button
-        border-radius: 50%;
-        @include rem-px('padding', .5rem);
+        background-color: transparent;
+        border: 0;
+        color: $linkColor;
+        @include rem-px('padding', .25rem);
+
+        &:hover {
+          color: $linkHover;
+        }
+
+        .footer-main &, .header-main & {
+          color: $Nwhite;
+
+          &:hover {
+            color: $linkHover;
+          }
+        }
     }
 }
 

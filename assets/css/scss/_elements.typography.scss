@@ -366,14 +366,14 @@ nav {
 
 /* SELECTION */
 ::-moz-selection {
-    background-color: $Nlight;
-    color: $Nlightest;
+    background-color: #{'rgba('+$springColor1_RGB+', .2)'};
+    color: $Ndarkest;
     text-shadow: none;
 }
 
 ::selection {
-    background-color: $Nlight;
-    color: $Nlightest;
+    background-color: #{'rgba('+$springColor1_RGB+', .2)'};
+    color: $Ndarkest;
     text-shadow: none;
 }
 

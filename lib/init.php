@@ -111,13 +111,13 @@ function spring_register_required_plugins() {
       //'external_url'       => 'http://www.advancedcustomfields.com/pro/', // If set, overrides default API URL and points to an external URL.
     ),
 
-    array(
-      'name'               => 'ACF Block Components',
-      'slug'               => 'mtm-block-components',
-      'source'             => 'https://github.com/marktimemedia/acf-component-blocks/archive/master.zip',
-      'required'           => false, // If false, the plugin is only 'recommended' instead of required.
-      'external_url'       => 'https://github.com/marktimemedia/acf-component-blocks', // If set, overrides default API URL and points to an external URL.
-    ),
+    // array(
+    //   'name'               => 'ACF Block Components',
+    //   'slug'               => 'mtm-block-components',
+    //   'source'             => 'https://github.com/marktimemedia/acf-component-blocks/archive/master.zip',
+    //   'required'           => false, // If false, the plugin is only 'recommended' instead of required.
+    //   'external_url'       => 'https://github.com/marktimemedia/acf-component-blocks', // If set, overrides default API URL and points to an external URL.
+    // ),
 
   );
 

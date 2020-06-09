@@ -11,7 +11,11 @@
         }
     }
 
-    .post--thumbnail {
+    .post--thumbnail { // this is now becoming a background image container
+        background-size: cover;
+      	background-position: center center;
+      	background-repeat: no-repeat;
+      	padding-bottom: 100%; // square
         width: 100%;
     }
 
@@ -86,7 +90,7 @@
     }
 
     article.post {
-        margin-bottom: 3em;
+        margin-bottom: $midPadding;
     }
 }
 

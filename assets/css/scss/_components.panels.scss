@@ -54,6 +54,12 @@
 			margin-top: 1em;
 		}
 
+		.post--thumbnail {
+			.mtm-module--list &, .mtm-module--grid & {
+				padding-bottom: 0;
+			}
+		}
+
 		.mtm-module--hero-title {
 			margin: .75em auto;
 		}
@@ -271,6 +277,7 @@
 		button.mtm-tabs--title, .mtm-tabs--title {
 			background-color: transparent;
 			border: 0;
+			border-radius: 0 !Important;
 			color: $linkColor;
 			cursor: pointer; // for old tabs
 			padding: .5em 0;

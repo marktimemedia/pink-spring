@@ -32,10 +32,11 @@
   word-wrap: normal !important;
 }
 .screen-reader-text:focus {
-  background-color: $Nlightest;
+  background-color: $alertColor;
+	border: 2px solid $Nwhite;
   clip: auto !important;
   clip-path: none;
-  color: $Nmid;
+  color: $Nwhite;
   display: block;
   font-size: 1em;
   height: auto;

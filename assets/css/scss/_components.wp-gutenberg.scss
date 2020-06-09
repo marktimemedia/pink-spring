@@ -337,7 +337,13 @@ hr.wp-block-separator {
 
 // cover block
 .wp-block-cover {
-  margin-bottom: 0 !important;
+  // margin-bottom: 0 !important;
+
+  .no-title & {
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
 
   &.alignleft, &.alignright, &.aligncenter {
     display: flex !important;

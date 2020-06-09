@@ -19,3 +19,29 @@ function spring_customize_color_controls( $wp_customize ) {
     }
 }
 add_action( 'customize_register', 'spring_customize_color_controls' );
+
+function spring_customize_body_style( $wp_customize ) {
+  // Body Style Options
+  $wp_customize->add_setting( 'mtm_body_style',
+   array(
+      'default' => 'option-square',
+      'transport' => 'refresh',
+     )
+  );
+
+  $wp_customize->add_control( 'mtm_body_style',
+   array(
+      'label' => __( 'Theme Geometry' ),
+      'description' => esc_html__( 'Choose whether the theme should follow a square or rounded style by default' ),
+      'section' => 'title_tagline',
+      'priority' => 10, // Optional. Order priority to load the control. Default: 10
+      'type' => 'select',
+      'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+      'choices' => array( // Optional.
+         'option-square' => __( 'Square' ),
+         'option-round' => __( 'Rounded' )
+        )
+     )
+  );
+}
+add_action( 'customize_register', 'spring_customize_body_style' );

@@ -5,7 +5,7 @@ global $txtSearch;
 if( !isset( $txtSearch ) ) { $txtSearch = 1; }
 ?>
 
-<section class="search-form" role="search">
+<section class="search-form">
     <form role="search" method="get" class="search--form" action="<?php echo home_url( '/' ); ?>">
         <div class="form--group">
             <label for="txtSearch-<?php echo $txtSearch; ?>"><?php _e( 'Search for:', 'spring' ); ?></label>

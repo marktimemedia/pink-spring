@@ -31,9 +31,7 @@ nav {
         }
     }
 
-    &.current-menu-item > a, &.current-menu-parent > a, &.current-menu-ancestor > a {
-        color: $linkHover;
-    }
+
 }
 
 // Quicklinks Menu
@@ -133,10 +131,22 @@ nav {
 
 @media only screen and (max-width: #{$midBreakpoint}) {
     .nav-main {
+        background-color: $linkColor;
         position: absolute;
         right: 100%;
         top: 0;
         width: $sidebarWidthMid;
+
+        .menu-item {
+          a,
+          a:visited {
+              color: $Nwhite;
+
+              &:hover, &:focus {
+                  color: $Nwhite;
+              }
+          }
+        }
     }
 }
 
@@ -151,6 +161,12 @@ nav {
     // quicklinks menu
     .nav-quicklinks > div { // menu container
         padding: 0;
+    }
+
+    .menu-item {
+      &.current-menu-item > a, &.current-menu-parent > a, &.current-menu-ancestor > a {
+        text-decoration: underline;
+      }
     }
 
     // main menu
@@ -184,9 +200,16 @@ nav {
                     padding: .5em;
                 }
 
+                .menu-item {
+                  &.current-menu-item > a, &.current-menu-parent > a, &.current-menu-ancestor > a {
+                    background-color: #{'rgba('+$Ndarkest_RGB+', .2)'};
+                      color: $Nwhite;
+                  }
+                }
+
                 &:hover, &:focus {
                     & > a {
-                        color: $linkHover;
+
                     }
                 }
             }

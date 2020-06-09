@@ -1,9 +1,56 @@
+.menu-item.menu-item-has-children a {
+  padding-right: 1.5em;
+}
+
 .menu-toggle {
-  border: 0;
+    background: transparent;
+    border: 0;
+    display:inline-block;
+    height: 85%;
+    padding: 0;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    vertical-align: middle;
+    width: 1em;
+
+    @include transition(all .3s);
+
+    &:hover, &:focus, &:active {
+      background: transparent;
+        @include transition(all .3s);
+
+        &:after {
+            @include transition(all .3s);
+        }
+    }
+
+    &:after {
+        content: '+';
+        color: $linkColor;
+        font-size: 1em;
+        padding: 0;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        @include transition(all .3s);
+    }
+}
+
+.menu-toggle-active {
+    &:after {
+        content: "–";
+    }
 }
 
 @media only screen and (max-width: #{$midBreakpoint - 1}) {
     .nav-main--menu {
+
+      * {
+        &:focus {
+          outline-color: $Nwhite;
+        }
+      }
 
         .menu-item {
             position: relative;
@@ -16,47 +63,8 @@
             }
         }
 
-        .menu-toggle {
-            background: transparent;
-            display:inline-block;
-            height: 100%;
-            padding: 0;
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 2em;
-            @include transition(all .3s);
-
-            &:hover, &:focus, &:active {
-                background-color: $buttonBackground;
-                @include transition(all .3s);
-
-                &:after {
-                    color: $buttonColor;
-                    @include transition(all .3s);
-                }
-            }
-
-            &:after {
-                content: '+';
-                color: $linkColor;
-                font-size: 1.2em;
-                padding: .3em 0;
-                display: inline-block;
-                width: 100%;
-                text-align: center;
-                @include transition(all .3s);
-            }
-        }
-
-        .menu-toggle-active {
-            &:after {
-                content: "–";
-            }
-        }
-
         ul.sub-menu {
-            background-color: $Nlight;
+            background-color: #{'rgba('+$Ndarkest_RGB+', .2)'};
             margin-left: 0;
 
              &.menu-collapse {
@@ -64,6 +72,38 @@
                 height: 0;
                 overflow: hidden;
             }
+        }
+    }
+
+    .menu-toggle {
+        background: $Nwhite;
+        height: 100%;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 2em;
+
+        &:hover, &:focus, &:active {
+            background-color: $Ndarkest;
+            @include transition(all .3s);
+
+            &:after {
+                color: $Nwhite;
+            }
+        }
+
+        &:after {
+            content: '+';
+            color: $linkColor;
+            font-size: 1.2em;
+            padding: .3em 0;
+        }
+    }
+
+    .menu-toggle-active {
+        &:after {
+            content: "–";
         }
     }
 }
@@ -76,14 +116,14 @@
 
     .nav-main--menu {
         ul.sub-menu { // secondary menu
-            background-color: $Nlightest;
+            background-color: $linkColor;
             border: 0;
             display: block;
             height: auto;
             left: .5em;
             max-height: 0;
             overflow: hidden;
-            padding: 0 .5em;
+            padding: 0;
             position: absolute;
             text-align: left;
             top: 100%;
@@ -91,14 +131,28 @@
             //width: 10em // if you want a fixed width menu with text wrap
             z-index: 99;
 
-            &:hover {
+            * {
+              &:focus {
+                outline-color: $Nwhite;
+              }
+            }
+
+            .menu-toggle {
+              color: $Nwhite;
+
+              &:after {
+                color: $Nwhite;
+              }
+            }
+
+            &:hover, &.can-overflow {
                 overflow: inherit;
             }
 
             ul { // tertiary menu
                 top: 0;
                 left: 100%;
-                background: $Nlight;
+                background: $Ndark;
             }
 
             li {
@@ -106,11 +160,16 @@
                 width: 100%;
 
                 & > a {
-                    color: $linkColor;
+                    color: $Nwhite;
                     @include rem-px('padding', .6rem, 1rem);
                     text-transform: none;
                     width: 100%;
                     // white-space: normal // if you want a fixed width menu with text wrap
+
+                    &:hover, &:focus, &:active {
+                      background-color: #{'rgba('+$Ndarkest_RGB+', 0.2)'};
+                      color: $Nwhite;
+                    }
                 }
             }
         }
@@ -118,13 +177,12 @@
         li { // all menu LI items
             position: relative;
 
-            &:hover, &.sfHover, &:focus {
+            &:hover, &.tab-active {
 
                 &>ul { // submenu on LI hover
                     display: block;
                     max-height: 800px; // change based on your menu height
                     //min-width: 10em; // if you're not using text overflow
-                    padding: .5em;
                     @include transition(all .5s linear .3s);
                 }
             }

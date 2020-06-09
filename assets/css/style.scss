@@ -1,0 +1,71 @@
+/*--
+    Theme Name:  Events Base Theme
+    Description:  Framework theme for virtual events
+    Author: Marktime Media
+    Version: 1.0
+    License: GPLv2
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+--*/
+
+// Methodology from ITCSS http://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731
+
+/* 01. SETTINGS */
+@import "scss/settings.breakpoints";
+@import "scss/settings.colors";
+@import "scss/settings.typography";
+@import "scss/settings.inputs";
+@import "scss/settings.tables";
+
+
+/* 02. TOOLS */
+@import "scss/sassquatch/sassquatch";
+@import "scss/pink-grid/pinkgrid";
+
+
+/* 03. GENERIC */
+@import "scss/generic.normalize";
+@import "scss/tools.placeholders";
+
+/* 04. ELEMENTS */
+@import "scss/elements.global";
+@import "scss/elements.typography";
+@import "scss/elements.inputs";
+@import "scss/elements.tables";
+@import "scss/elements.media";
+
+
+/* 05. OBJECTS */
+@import "scss/objects.structure";
+@import "scss/objects.layout";
+@import "scss/objects.inputs";
+@import "scss/objects.tables";
+@import "scss/objects.media";
+@import "scss/objects.wp-objects";
+
+// Grid Mixin
+
+/* 06. COMPONENTS */
+@import "scss/components.woo"; // want this to be overridden by everything else
+@import "scss/components.navigation";
+@import "scss/components.navigation--subnav";
+@import "scss/components.header";
+@import "scss/components.mobile-menu";
+@import "scss/components.footer";
+@import "scss/components.sidebar";
+@import "scss/components.sidebar--widgets";
+@import "scss/components.search";
+@import "scss/components.wp-content";
+@import "scss/components.wp-gutenberg";
+@import "scss/components.content";
+@import "scss/components.comments";
+@import "scss/components.plugins";
+@import "scss/components.pagination";
+@import "scss/components.panels";
+
+
+/* 07. VENDOR */
+@import "../fonts/fontawesome-webfont/scss/fontawesome";
+
+/* 08. TRUMPS */
+@import "scss/trumps.templates";
+@import "scss/trumps.admin-bar";

@@ -56,7 +56,7 @@
     @include transition(padding .8s);
 
     &:hover {
-        background-color: $buttonAltBackground;
+        background-color: $buttonBackground2;
         border: none;
     }
 

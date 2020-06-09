@@ -3,6 +3,7 @@ $textboxBackground: $Nwhite;
 $textboxBorderColor: #{'rgba('+$Ndarkest_RGB+', 0.3)'};
 $textboxBorderColorActive: $alertColor;
 $textboxBorderWidth: 1px;
+$textboxBorderRadius: 0 !default;
 $textboxBorderStyle: solid;
 $textboxColor: $Ndarkest;
 $textboxPlaceholderColor: $Ndark;
@@ -21,6 +22,7 @@ $buttonBorderColor: $springColor1_Dk;
 $buttonBorderColor2: $springColor1;
 $buttonBorderWidth: 2px;
 $buttonBorderStyle: solid;
+$buttonBorderRadius: 0 !default;
 
 $buttonColor: $Nwhite;
 $buttonColor2: $Nwhite;

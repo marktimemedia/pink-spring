@@ -29,11 +29,16 @@ License: GPLv2
 
 	    if ($(this).parent().next('.sub-menu').hasClass('menu-collapse')) {
 	        $(this).parent().next('.sub-menu').removeClass('menu-collapse');
+					$(this).parent().parent('.menu-item-has-children').addClass('tab-active');
+					$(this).parent().parent().parent('.sub-menu').addClass('can-overflow');
 	        $(this).addClass('menu-toggle-active');
 	        e.stopPropagation();
 	    } else {
 	        $(this).parent().next('.sub-menu').addClass('menu-collapse');
-	        $(this).removeClass('menu-toggle-active');
+					$(this).parent().parent('.menu-item-has-children').removeClass('tab-active');
+					$(this).parent().parent().parent('.sub-menu').removeClass('can-overflow');
+					$(this).parent().parent().find('.sub-menu').removeClass('can-overflow');
+					$(this).removeClass('menu-toggle-active');
 	        e.stopPropagation();
 	    }
 	});

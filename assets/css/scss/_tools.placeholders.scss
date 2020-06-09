@@ -8,7 +8,7 @@
 %textbox {
     background-color: $textboxBackground;
     border: $textboxBorderWidth $textboxBorderStyle $textboxBorderColor;
-    border-radius: 0;
+    border-radius: $textboxBorderRadius;
     color: $textboxColor;
     display: block;
     font-family: $baseFont;
@@ -32,7 +32,7 @@
     background-color: $buttonBackground;
     //@include vertical($buttonBackground, $buttonBackground2);
     border: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor;
-    border-radius: 0;
+    border-radius: $buttonBorderRadius;
     display: inline-block;
     font-family: $buttonFont;
     font-size: $buttonFontSize;
@@ -166,7 +166,8 @@
 
 // For use in theme and editor, with not has_sidebar
 %alignfull {
-  margin: 0 -#{$smallPadding};
+  margin-left: -#{$smallPadding};
+  margin-right: -#{$smallPadding};
   max-width: none;
   width: calc( 100% + (2 * #{$smallPadding}) );
 
@@ -176,7 +177,8 @@
   }
 
   @media only screen and (min-width: #{$smallBreakpoint}) {
-    margin: 0 -2rem;
+    margin-left: -2rem;
+    margin-right: -2rem;
     width: calc( 100% + (2 * 2rem) );
 
     .content--inner {
@@ -185,7 +187,8 @@
     }
   }
   @media only screen and (min-width: #{$midBreakpoint}) {
-    margin: 0 -#{$maxPadding};
+    margin-left: -#{$maxPadding};
+    margin-right: -#{$maxPadding};
     width: calc( 100% + (2 * #{$maxPadding}) );
 
     .content--inner {
@@ -196,16 +199,19 @@
 }
 
 %alignwide {
-  margin: 0 -#{$smallPadding};
+  margin-left: -#{$smallPadding};
+  margin-right: -#{$smallPadding};
   max-width: $boxedMax;
   width: calc( 100% + (2 * #{$smallPadding}) );
 
   @media only screen and (min-width: #{$smallBreakpoint}) {
-    margin: 0 -2rem;
+    margin-left: -2rem;
+    margin-right: -2rem;
     width: calc( 100% + (2 * 2rem) );
   }
   @media only screen and (min-width: #{$midBreakpoint}) {
-    margin: 0 -#{$maxPadding};
+    margin-left: -#{$maxPadding};
+    margin-right: -#{$maxPadding};
     width: calc( 100% + (2 * #{$maxPadding}) );
   }
 

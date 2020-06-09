@@ -1,0 +1,36 @@
+body.option-round {
+  .post--thumbnail {
+    border-radius: 50%;
+  }
+
+  button, .button, a.button, button.button, a.added_to_cart {
+    border-radius: 3em !important;
+  }
+
+  .wp-block-button:not(.components-toolbar) .wp-block-button__link {
+    border-radius: 3em;
+  }
+
+  .wp-block-columns .wp-block-cover {
+    border-radius: 100px;
+    overflow: hidden;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="url"],
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="file"],
+  input[type="password"],
+  input[type="tel"],
+  select,
+  textarea,
+  .textbox {
+    border-radius: 5px;
+  }
+}

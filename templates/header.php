@@ -13,7 +13,7 @@
 
     <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class( get_theme_mod('mtm_body_style') ); ?>>
 <div class="wrapper" role="document">
     <header class="header-main">
       <a class="screen-reader-text skip-link" href="#content">Skip to content</a>
@@ -24,6 +24,7 @@
                     wp_nav_menu(array( 'theme_location' => 'quicklink_navigation', 'menu_class' => 'quicklinks-menu' ) );
                 endif;
                 ?>
+                <?php the_mtm_social_icons( 'fab fa-' ); ?>
                 <?php spring_search_bar(); ?>
             </nav>
         </div>

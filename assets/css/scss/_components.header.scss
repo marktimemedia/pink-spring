@@ -154,9 +154,10 @@
                 top: 0;
                 @include transition(all .2s);
 
-                .menu-item a {
+								.nav-main--menu > .menu-item > a {
                     margin: 0 .3em;
-                    padding: .6em 0 .5em;
+                    padding-top: 0.6em;
+										padding-bottom: 0.5em;
                     @include transition(all .3s);
                 }
             }
