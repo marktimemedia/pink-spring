@@ -15,6 +15,13 @@ function is_element_empty( $element ) {
 }
 
 /**
+* Check Block Registry if a block exists
+*/
+function spring_check_block_registry( $name ) { // return 1 or nothing
+  return WP_Block_Type_Registry::get_instance()->is_registered( $name );
+}
+
+/**
 * Custom Taxonomy Term Links
 * From http://codex.wordpress.org/Function_Reference/get_the_terms
 * echo mtm_custom_taxonomies_terms_links(); in your template file

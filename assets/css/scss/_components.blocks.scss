@@ -1,0 +1,20 @@
+.wp-block-acf-spring-featured-image {
+  max-width: 300px;
+
+  .post--thumbnail {
+    background-color: $Nwhite;
+    box-shadow: 0 0 10px #{'rgba('$Ndarkest_RGB', 0.1)'};
+    margin-bottom: 0;
+  }
+
+  .single-acfes_sponsor &, .single-acfes_exhibitor & {
+
+    .post--thumbnail {
+      background-size: 90%;
+    }
+  }
+
+  @media only screen and (min-width: $navBreakpoint) {
+    width: 25%;
+  }
+}

@@ -145,7 +145,7 @@
               }
             }
 
-            &:hover, &.can-overflow {
+            &:hover {
                 overflow: inherit;
             }
 
@@ -177,7 +177,7 @@
         li { // all menu LI items
             position: relative;
 
-            &:hover, &.tab-active {
+            &:hover, &.tab-active, &:focus {
 
                 &>ul { // submenu on LI hover
                     display: block;

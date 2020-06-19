@@ -49,7 +49,7 @@
       }
 
       .content-full .content--page {
-          padding: $midPadding; // for a boxed width background with no sidebar
+          padding: 0 $midPadding; // for a boxed width background with no sidebar
       }
 
       &.has_sidebar {
@@ -65,7 +65,7 @@
         padding-top: $paddingTop; // for fixed-position header, adjust to match header size
 
         .content-full .content--page{
-            padding: $maxPadding; // for a boxed width background with no sidebar
+            padding: 0 $maxPadding; // for a boxed width background with no sidebar
         }
 
         .content--page.no-title {

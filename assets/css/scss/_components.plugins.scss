@@ -1,3 +1,176 @@
+/* Events Plugin Color + Style Rules */
+.acfes-schedule {
+
+  .acfes-session-type-session {
+    background-color: #{'rgba('+$Nmid_RGB+', .2)'};
+  }
+
+  .acfes-global-session-mainstage, .acfes-session-type-mainstage {
+    background-color: #{'rgba('+$springColor1_RGB+', .2)'} !important;
+  }
+
+  .acfes-global-session-custom, .acfes-session-type-custom {
+    background-color: #{'rgba('+$Nmid_RGB+', .3)'} !important;
+  }
+
+  a {
+    color: $textColor;
+  }
+}
+
+// Table Colors
+.acfes-layout-table {
+  border: $Nmid solid 1px;
+
+  tr {
+    background-color: $Nwhite;
+  }
+
+  td {
+    border: $Nmid solid 0;
+  }
+
+  thead th {
+    background-color: #{'rgba('+$Nmid_RGB+', .3)'};
+    border: $Nmid solid 1px;
+    color: $textColor;
+  }
+
+  [class*="acfes-session-type-"] {
+    border-width: 1px;
+    border-bottom-width: 0;
+  }
+
+  .acfes-session-type-session {
+    background-color: transparent;
+  }
+
+  .acfes-col-time, .acfes-col-track { // header
+    background-color: #{'rgba('+$Nmid_RGB+', .2)'};
+  }
+
+  .acfes-time {
+    background-color: transparent;
+    border-width:1px;
+  }
+
+  .acfes-session-empty {
+    background-color: transparent;
+    border-right-width: 1px;
+  }
+
+  // Table Metadata on Mobile
+  @media screen and (max-width: $med-bp) {
+    .acfes-session-type-session {
+      &:before {
+        color: $Ndark;
+      }
+    }
+  }
+}
+
+// Grid Colors
+.acfes-layout-grid {
+  .acfes-global-session {
+    background-color: #{'rgba('+$Nmid_RGB+', .2)'};
+  }
+}
+
+/* Dark Rules */
+.acfes-schedule.acfes-color-scheme-dark {
+  color: $Nwhite;
+
+  a {
+    color: $Nwhite;
+  }
+
+  tr {
+
+  }
+
+  .acfes-session-title {
+    color: $Nwhite;
+  }
+
+  .acfes-session-type-session {
+    background-color: $textColor;
+  }
+
+  .acfes-global-session-mainstage, .acfes-session-type-mainstage {
+    background-color: $springColor1_Dk !important;
+  }
+
+  .acfes-global-session-custom, .acfes-session-type-custom {
+    background-color: $Ndark !important;
+  }
+
+  ::-moz-selection {
+    color: $Nwhite;
+  }
+
+  ::selection {
+      color: $Nwhite;
+  }
+
+  // Table Dark Colors
+  &.acfes-layout-table {
+    border-color: $Nwhite;
+
+    tr {
+      background-color: $textColor;
+    }
+
+    td {
+      border-color: $Nwhite;
+    }
+
+    thead th {
+      background-color: $Ndark;
+      border-color: $Nwhite;
+      color: $Nwhite;
+    }
+
+    [class*="acfes-session-type-"] {
+
+    }
+
+    .acfes-session-type-session {
+      // background-color: transparent;
+    }
+
+    .acfes-col-time, .acfes-col-track { // header
+      background-color: $textColor;
+    }
+
+    .acfes-time {
+      // background-color: transparent;
+    }
+
+    .acfes-session-empty {
+      // background-color: transparent;
+    }
+
+    @media screen and (max-width: $med-bp) {
+      .acfes-session-type-session:before {
+        color: $Nmid;
+      }
+    }
+  }
+
+  // Grid Dark Colors
+  &.acfes-layout-grid {
+    .acfes-col-track, .acfes-time {
+     color: $textColor;
+   }
+
+    .acfes-session-cell-content {
+      color: $Nwhite;
+    }
+  }
+}
+
+
+
 // Gravity Forms
 .gform_wrapper {
     .field_sublabel_below .ginput_complex.ginput_container label, .field_sublabel_below div[class*=gfield_time_].ginput_container label {
@@ -209,7 +382,7 @@
                 display: inline-block;
                 font-family: $baseFont;
                 font-size: 1.2em;
-                font-weight: bold;
+                font-weight: $baseWeightBold;
             }
         }
 
@@ -276,7 +449,7 @@
         background-color: $Nlightest;
         border: 0;
         display: inline-block;
-        font-weight: bold;
+        font-weight: $baseWeightBold;
         padding: .5em;
 
         span {
@@ -417,7 +590,7 @@
           }
           &.tribe-events-c-view-selector__list-item--active {
             border-bottom: 2px solid $Ndark;
-            font-weight: bold;
+            font-weight: $baseWeightBold;
 
             a {
               color: $Ndark;
@@ -501,7 +674,7 @@
       @extend .h5;
     }
     .tribe-events-calendar-month-mobile-events__mobile-event-datetime {
-      font-weight: bold;
+      font-weight: $baseWeightBold;
     }
   }
 
@@ -537,16 +710,16 @@
       text-align: center;
     }
     .tribe-events-calendar-list__event-date-tag-daynum {
-      font-weight: bold;
+      font-weight: $baseWeightBold;
       font-size: 1.5em;
     }
     .tribe-events-calendar-list__event-datetime-wrapper {
-      font-weight: bold;
+      font-weight: $baseWeightBold;
       margin-bottom: .5em;
       margin-top: -.25em;
     }
     .tribe-events-calendar-list__event-cost {
-      font-weight: bold;
+      font-weight: $baseWeightBold;
     }
     .tribe-events-c-small-cta__link {
       text-decoration: none;
@@ -709,7 +882,7 @@ body.page-tribe-attendee-registration .tribe-tickets__registration {
             }
         }
             .tickets_name {
-                font-weight: 500;
+                font-weight: $baseWeightBold;
             }
     }
 

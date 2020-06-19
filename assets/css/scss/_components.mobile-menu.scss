@@ -53,7 +53,7 @@
                 content: 'MENU';
                 display: block;
                 font-size: 7px;
-                font-weight: 600;
+                font-weight: $baseWeightBold;
                 letter-spacing: .5px;
                 width: 100%;
             }
@@ -86,7 +86,7 @@
                 content: 'INFO';
                 display: block;
                 font-size: 7px;
-                font-weight: 600;
+                font-weight: $baseWeightBold;
                 letter-spacing: .5px;
                 margin-top:.3em;
                 width: 100%;

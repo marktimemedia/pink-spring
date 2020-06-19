@@ -2,7 +2,7 @@
 /**
  * Clean up the_excerpt()
  */
-define( 'POST_EXCERPT_LENGTH', 55 ); // Length in words for excerpt_length filter (http://codex.wordpress.org/Plugin_API/Filter_Reference/excerpt_length)
+define( 'POST_EXCERPT_LENGTH', 30 ); // Length in words for excerpt_length filter (http://codex.wordpress.org/Plugin_API/Filter_Reference/excerpt_length)
 function spring_excerpt_length( $length ) {
   return POST_EXCERPT_LENGTH;
 }

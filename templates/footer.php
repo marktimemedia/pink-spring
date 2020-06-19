@@ -1,11 +1,16 @@
 <footer class="footer-main" role="contentinfo">
     <div class="footer--inner">
+      <?php the_mtm_footer_logo() ?>
+      <div class="footer--contact">
+        <?php echo mtm_get_social_media(); ?>
+        <?php echo mtm_get_phone_number(); ?>
+      </div>      
     	<div class="footer--copyright">
-            <?php the_mtm_footer_logo() ?>
             <?php the_mtm_footer_copyright() ?>
-            <?php the_mtm_footer_text() ?>
-            <?php the_mtm_social_icons( 'fab fa-' ); ?>
     	</div>
+      <div class="footer--extra-text">
+        <?php the_mtm_footer_text() ?>
+      </div>
         <nav aria-label="Footer" class="nav-footer" role="navigation">
             <?php
             if ( has_nav_menu( 'footer_navigation' ) ) :

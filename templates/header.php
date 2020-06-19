@@ -18,15 +18,18 @@
     <header class="header-main">
       <a class="screen-reader-text skip-link" href="#content">Skip to content</a>
         <div class="header--quicklinks">
+          <div class="header--quicklinks-inner">
             <nav aria-label="Quicklinks" class="nav-quicklinks" role="navigation">
                 <?php
                 if ( has_nav_menu( 'quicklink_navigation' ) ) :
                     wp_nav_menu(array( 'theme_location' => 'quicklink_navigation', 'menu_class' => 'quicklinks-menu' ) );
                 endif;
                 ?>
-                <?php the_mtm_social_icons( 'fab fa-' ); ?>
-                <?php spring_search_bar(); ?>
             </nav>
+            <?php echo mtm_get_social_media(); ?>
+            <?php echo mtm_get_phone_number(); ?>
+            <?php spring_search_bar(); ?>
+          </div>
         </div>
         <div class="header--inner">
             <section class="open-button-wrapper">

@@ -1,23 +1,20 @@
 <section class="content--page">
-	<?php if( false !== mtm_acf_check() && get_field( 'mtm_custom_404_page', 'option' ) ) :
-		$errorPage = get_field( 'mtm_custom_404_page', 'option' ) ? : false ;
-		// override $post
-		$post = $errorPage;
-		setup_postdata( $post ); ?>
+	<?php
+	$errorPage = get_theme_mod( 'custom_error_page' ) ? : false ;
 
-		<header class="page--header">
-				<h1 class="page--title">
-						<?php echo the_title(); ?><?php edit_post_link( '(Edit)', ' • ' ); ?>
-				</h1>
-		</header>
-		<?php if( !false == get_field( 'mtm_custom_404_page_enable_search', 'option') ) :
+	if( $errorPage ) :
+		$post = get_post( $errorPage ); // override $post
+		setup_postdata( $post ); ?>
+		<?php get_template_part( 'templates/page', 'header' ); ?>
+		<?php if( get_theme_mod( 'error_page_search_bar' ) ) :
 				get_template_part( 'templates/searchform' );
 			endif; ?>
 		<?php the_content(); ?>
 		<?php wp_reset_postdata(); ?>
+
 	<?php else : ?>
 		<?php get_template_part( 'templates/page', 'header' ); ?>
-		<?php if( false !== mtm_acf_check() && !false == get_field( 'mtm_custom_404_page_enable_search', 'option') ) : // checking for "not false" instead of "true" in case it wasn't set
+		<?php if( get_theme_mod( 'error_page_search_bar' ) ) :
 				get_template_part( 'templates/searchform' );
 			endif; ?>
 		<div class="alert alert-warning">

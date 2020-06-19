@@ -4,47 +4,52 @@ $gutter: 1em;
 $textFontSize: 1rem;
 
 // Typography
-$baseFont: sans-serif;
+$baseFont: var(--body-font-family), sans-serif;
 $baseFontSize: 100%;
 $baselineHeight: 1.625em;
 $baseLetterSpace: 0px;
-$baseFontWeight: 500;
+$baseWeight: var(--body-font-weight);
+$baseWeightBold: var(--body-font-weight-bold);
 
-$headingFont: sans-serif;
+$headingFont: var(--heading-font-family), sans-serif;
 $headingLineHeight: 1.1;
 $headingLetterSpace: 0px;
 $headingMargin: $textFontSize;
+$headingWeight: var(--heading-font-weight);
+$headingWeightBold: var(--heading-font-weight-bold);
 
-$subheadingFont: $baseFont;
+$subheadingFont: var(--subheading-font-family), $baseFont;
 $subheadingLineHeight: 1.1;
 $subheadingLetterSpace: 0px;
+$subheadingWeight: var(--subheading-font-weight);
+$subheadingWeightBold: var(--subheading-font-weight-bold);
 
 $iconFont: 'Font Awesome 5 Pro', 'FontAwesome';
 $iconFontWeight: 900; // solid
 
 $h1Color: $headingColor;
 $h1Size: 2.5em;
-$h1FontWeight: 200;
+$h1FontWeight: $headingWeight;
 
 $h2Color: $headingColor;
 $h2Size: 2em;
-$h2FontWeight: 200;
+$h2FontWeight: $headingWeight;
 
 $h3Color: $subheadingColor;
 $h3Size: 1.6em;
-$h3FontWeight: 500;
+$h3FontWeight: $subheadingWeight;
 
 $h4Color: $subheadingColor;
 $h4Size: 1.4em;
-$h4FontWeight: 500;
+$h4FontWeight: $subheadingWeight;
 
 $h5Color: $textColor;
 $h5Size: 1.1em;
-$h5FontWeight: 500;
+$h5FontWeight: $baseWeightBold;
 
 $h6Color: $textColor;
 $h6Size: .875em;
-$h6FontWeight: 500;
+$h6FontWeight: $baseWeightBold;
 
 $headingTextShadow: none;
 $codeFont: monospace;
@@ -70,7 +75,7 @@ $blockquoteColor: $textColor_Lt;
 $blockquoteFontFamily: $headingFont;
 $blockquoteFontSize: 1.25rem;
 $blockquoteFontStyle: italic;
-$blockquoteFontWeight: 200;
+$blockquoteFontWeight: $headingWeight;
 
 // Code/Pre blocks
 $codeMargin: 1em 0;
@@ -80,9 +85,3 @@ $codeBorder: 0;
 $codeFontFamily: $codeFont;
 $codeFontSize: 1em;
 $codeColor: $textColor;
-
-$fa-font-path: 				"assets/fonts/fontawesome-webfont/webfonts";
-$fa-font-size-base:         1em;
-$fa-border-color:           $Nlight;
-$fa-inverse:                $Nwhite;
-$fa-li-width:               2em;

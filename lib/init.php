@@ -27,13 +27,13 @@ function spring_setup() {
     );
     /* Header Options */
     $header_defaults = array(
-        'default-image'          => '',
-        'width'                  => 300,
-        'height'                 => 60,
+        'default-image'          => get_stylesheet_directory_uri() . '/assets/img/ee-default-cover.png',
+        'width'                  => 1440,
+        'height'                 => 450,
         'flex-height'            => true,
         'flex-width'             => true,
         'default-text-color'     => '',
-        'header-text'            => true,
+        'header-text'            => false,
         'uploads'                => true,
     );
     /* Background Options */
@@ -54,7 +54,7 @@ function spring_setup() {
   add_theme_support( 'customize-selective-refresh-widgets' ); // https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
   add_theme_support( 'custom-logo', $logo_defaults );    // https://developer.wordpress.org/reference/functions/add_theme_support/#custom-logo
   // add_theme_support( 'custom-background', $bg_defaults ); // https://developer.wordpress.org/reference/functions/add_theme_support/#custom-background
-  // add_theme_support( 'custom-header', $header_defaults ); // https://developer.wordpress.org/reference/functions/add_theme_support/#custom-header
+  add_theme_support( 'custom-header', $header_defaults ); // https://developer.wordpress.org/reference/functions/add_theme_support/#custom-header
   add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) ); // https://developer.wordpress.org/reference/functions/add_theme_support/#html5
   add_theme_support( 'post-thumbnails' );
   add_theme_support( 'responsive-embeds' );
@@ -86,12 +86,12 @@ function spring_register_required_plugins() {
   $plugins = array(
 
     array(
-      'name'               => 'ACF Options Page',
-      'slug'               => 'mtm-options-page',
-      'source'             => 'https://github.com/marktimemedia/acf-theme-settings/archive/master.zip',
+      'name'               => 'Site Customizer',
+      'slug'               => 'mtm-customizer',
+      'source'             => 'https://github.com/marktimemedia/site-customizer/archive/master.zip',
       'required'           => true, // If false, the plugin is only 'recommended' instead of required.
       'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-      'external_url'       => 'https://github.com/marktimemedia/acf-theme-settings', // If set, overrides default API URL and points to an external URL.
+      'external_url'       => 'https://github.com/marktimemedia/site-customizer', // If set, overrides default API URL and points to an external URL.
     ),
 
     array(

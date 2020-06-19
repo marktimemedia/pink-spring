@@ -7,7 +7,7 @@ Build off of [Spring Theme](https://github.com/3themes/spring-theme), which is b
 
 Updates for modular styles, typographic consideration, general fixes and WordPress standards. And of course, a better color scheme.
 
-Support for my [ACF Options Page](https://github.com/marktimemedia/acf-theme-settings) and [ACF Block Components](https://github.com/marktimemedia/acf-component-blocks) plugins built in!
+Support for my [Site Customizer](https://github.com/marktimemedia/mtm-site-customizer) and [ACF Block Components](https://github.com/marktimemedia/acf-component-blocks) plugins built in!
 
 ### Screenshots
 

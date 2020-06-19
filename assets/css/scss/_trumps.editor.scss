@@ -26,6 +26,13 @@
   }
 }
 
+/* Center align block */
+.wp-block[data-align="center"] {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .content--inner {
   @include rem-px('max-width', $boxedMax); // for a boxed width background with no sidebar
   margin-left: auto;
@@ -49,6 +56,33 @@ span { // to hide text but keep accessible
   }
 }
 
+// Editor Layout
+// Edit post title to distinguish from other gutenberg content
+.edit-post-visual-editor__post-title-wrapper {
+  box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+  border-bottom: 1px solid $Nlightest;
+  position: relative;
+  z-index:2;
+
+  .editor-post-title {
+    margin-bottom: 0;
+  }
+}
+
+.edit-post-visual-editor {
+  padding-top: 0;
+}
+
+// if cover block is first, remove the top margin
+.is-root-container {
+  & > .wp-block:first-of-type {
+    .wp-block-cover {
+      margin-top: 0;
+    }
+  }
+}
+
+// Typography
 	.block-editor-post-title__block .block-editor-post-title__input, .editor-post-title__block .editor-post-title__input, .wp-block-cover h2 {
 		font-family: $headingFont !important;
     font-weight: $h1FontWeight !important;

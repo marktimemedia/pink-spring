@@ -36,7 +36,8 @@ nav {
 
 // Quicklinks Menu
 .nav-quicklinks {
-    width: 100%;
+  display: inline-block;
+    width: auto;
     position: relative;
     z-index: 999;
 
@@ -48,7 +49,7 @@ nav {
 
         a, a:visited {
             color: $Nlightest;
-            font-weight: 200;
+            font-weight: $baseWeight;
             padding: 0 .5em;
 
             &:hover {
@@ -116,7 +117,7 @@ nav {
 
      a, a:visited {
        color: $interactColor;
-      padding: 0;
+       padding: 0;
 
       &:hover, &:focus {
         color: $interactColor_Lt;

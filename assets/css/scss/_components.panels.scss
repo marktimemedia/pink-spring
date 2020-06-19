@@ -69,7 +69,7 @@
 		}
 
 // Hero Rules
-	.mtm-hero-image, .wp-block-cover {
+	.mtm-hero-image {
 		padding: 2em;
 		background-size:cover;
 		background-position: center center;
@@ -290,7 +290,7 @@
 
 			&.current {
 				color: $linkHover;
-				font-weight: bold;
+				font-weight: $baseWeightBold;
 				text-decoration: none;
 			}
 		}

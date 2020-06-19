@@ -43,9 +43,23 @@
            clear: both;
         }
 
-        h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-            margin-top: $textFontSize * 1.5;
-            margin-bottom: $textFontSize * .8;
+        h1, h2, .h1, .h2 {
+            margin-top: $midPadding;
+            margin-bottom: $smallPadding;
+        }
+
+        h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
+            margin-top: $smallPadding + .5rem;
+            margin-bottom: $smallPadding;
+        }
+
+        @media only screen and (min-width: $midBreakpoint) {
+          h1, h2, .h1, .h2 {
+              margin-top: $maxPadding;
+          }
+          h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
+              margin-top: $midPadding;
+          }
         }
     }
 
@@ -75,7 +89,7 @@
     }
 
     .post--metadata--title {
-        font-weight: bold;
+        font-weight: $baseWeightBold;
         margin-right: .25em;
     }
 
@@ -113,10 +127,10 @@
 }
 
 .page--header {
-    @include rem-px('margin-bottom', $headingMargin * 2);
+    margin-bottom: $headingMargin * 2;
 }
 
 .page--title {
-    @extend .h1;
-    @include rem-px('margin-bottom', $headingMargin * 1.5);
+    margin-bottom: $headingMargin * 1.5;
+    margin-top: 0;
 }

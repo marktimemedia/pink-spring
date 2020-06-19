@@ -4,9 +4,11 @@
  */
 function spring_title() {
   if ( is_home() ) {
+    // Settings > Reading > Front Page Displays > Static Page > Posts Page
     if ( get_option( 'page_for_posts', true) ) {
       return get_the_title( get_option( 'page_for_posts', true ) );
     } else {
+      // Settings > Reading > Front Page Displays > Your Latest Posts
       return __( 'Latest Posts', 'spring' );
     }
   } elseif ( is_archive() ) {
@@ -31,8 +33,11 @@ function spring_title() {
     return sprintf( __('Search Results for %s', 'spring' ), get_search_query() );
   } elseif ( is_404() ) {
     return __( 'Page Not Found', 'spring' );
-  } else {
+  } elseif ( get_the_title() ) {
     return esc_html( get_the_title() );
+  } else {
+    $obj = get_post_type_object( get_post_type( get_the_ID() ) );
+    return sprintf(__( '%s Title', 'spring' ), $obj->labels->singular_name );
   }
 }
 

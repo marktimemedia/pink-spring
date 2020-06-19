@@ -10,26 +10,6 @@
     margin-top: .5em;
 }
 
-.youtube, .embed-youtube {
-    height: 0;
-    @include rem-px('margin-bottom', 3rem);
-    padding-top: 56.25%;
-    position: relative;
-    width: 100%;
-    z-index: 1;
-
-    &.standard {
-        padding-top: 75%;
-    }
-
-    iframe {
-        height: 100% !important;
-        position: absolute;
-        top: 0; bottom: 0;
-        width: 100% !important;
-    }
-}
-
 .gallery {
 
     dl, dt, dd { // Definition lists elements
@@ -81,7 +61,19 @@
         height: auto;
         max-width: 100%;
         overflow: hidden;
+        &:before {
+          padding-top: 56.25%;
+        }
+    }
+
+    &.iframe-general {
+      height: auto;
+      max-width: 100%;
+      overflow: hidden;
+
+      &:before {
         padding-top: 56.25%;
+      }
     }
 
     iframe, object, embed {
@@ -106,6 +98,26 @@
             max-width: 100% !important;
             min-width: 100% !important;
         }
+    }
+}
+
+.youtube, .embed-youtube {
+    height: 0;
+    @include rem-px('margin-bottom', 3rem);
+    padding-top: 56.25%;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+
+    &.standard {
+        padding-top: 75%;
+    }
+
+    iframe {
+        height: 100% !important;
+        position: absolute;
+        top: 0; bottom: 0;
+        width: 100% !important;
     }
 }
 

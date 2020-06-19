@@ -2,7 +2,7 @@
     color: $labelColor;
     font-family: $subheadingFont;
     font-size: $labelFontSize;
-    font-weight: $baseFontWeight;
+    font-weight: $baseWeight;
 }
 
 %textbox {
@@ -13,7 +13,7 @@
     display: block;
     font-family: $baseFont;
     font-size: 1em;
-    font-weight: $baseFontWeight;
+    font-weight: $baseWeight;
     @include rem-px('margin-bottom', .5em);
     max-width: $textboxMaxWidth;
     padding: $textboxPadding;
@@ -98,7 +98,7 @@
 
 %iconlight {
   font-family: 'Font Awesome 5 Light';
-  font-weight: 300;
+  font-weight: $baseWeight;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -109,13 +109,13 @@
 
   &:before {
     font-family: 'Font Awesome 5 Light';
-    font-weight: 300;
+    font-weight: $baseWeight;
   }
 }
 
 %iconbrand {
   font-family: 'Font Awesome 5 Brands';
-  font-weight: 400;
+  font-weight: $baseWeight;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -126,13 +126,13 @@
 
   &:before {
     font-family: 'Font Awesome 5 Brands';
-    font-weight: 400;
+    font-weight: $baseWeight;
   }
 }
 
 %icon {
   font-family: 'Font Awesome 5 Pro';
-  font-weight: 400;
+  font-weight: $baseWeight;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -143,7 +143,7 @@
 
   &:before {
     font-family: 'Font Awesome 5 Pro';
-    font-weight: 400;
+    font-weight: $baseWeight;
   }
 }
 
@@ -214,5 +214,4 @@
     margin-right: -#{$maxPadding};
     width: calc( 100% + (2 * #{$maxPadding}) );
   }
-
 }

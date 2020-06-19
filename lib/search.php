@@ -8,8 +8,10 @@ function spring_search_scripts() {
 add_action( 'wp_enqueue_scripts', 'spring_search_scripts', 100 );
 
 function spring_search_bar() {
-  echo '<button aria-label="Toggle Search Bar" class="fa fa-search search-toggle run-toggle"></button>';
-  get_template_part( 'templates/searchform' );
+  if( get_theme_mod( 'header_search_bar') ) {
+    echo '<button aria-label="Toggle Search Bar" class="fa fa-search search-toggle run-toggle"></button>';
+    get_template_part( 'templates/searchform' );
+  }
 }
 
 

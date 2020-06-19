@@ -130,7 +130,7 @@ h4,
 h5,
 .h5 {
     color: $h5Color;
-    font-family: $subheadingFont;
+    font-family: $baseFont;
     @include rem-px('font-size', $h5Size * .9);
     font-weight: $h5FontWeight;
     letter-spacing: $subheadingLetterSpace;
@@ -145,7 +145,7 @@ h5,
 h6,
 .h6 {
     color: $h6Color;
-    font-family: $subheadingFont;
+    font-family: $baseFont;
     @include rem-px('font-size', $h6Size * .9);
     font-weight: $h6FontWeight;
     letter-spacing: $subheadingLetterSpace;
@@ -191,7 +191,7 @@ ol {
 }
 
     li {
-        font-weight: $baseFontWeight;
+        font-weight: $baseWeight;
         line-height: 1.3em;
         margin: .3em 0;
 
@@ -243,16 +243,16 @@ dd {
 }
 
 dt {
-    font-weight: bold;
+    font-weight: $baseWeightBold;
     margin-bottom:$baselineHeight/4;
 }
 
 b,
 strong {
-    font-weight:  bold;
+    font-weight: $baseWeightBold;
 
     a {
-        font-weight: bold;
+        font-weight: $baseWeightBold;
     }
 }
 
@@ -281,7 +281,7 @@ mark {
     background-color: $Nlightest;
     color: $alertColor;
     font-style: italic;
-    font-weight: bold;
+    font-weight: $baseWeightBold;
 }
 
 del, strike {

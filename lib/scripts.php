@@ -33,6 +33,7 @@ add_action( 'wp_enqueue_scripts', 'spring_scripts', 100 );
 function spring_inline_styles() {
   wp_add_inline_style('spring-main', spring_palette_css());
   wp_add_inline_style('spring-main', spring_rgb_css());
+  wp_add_inline_style('spring-main', spring_inline_media_styles());
 }
 add_action('wp_enqueue_scripts', 'spring_inline_styles', PHP_INT_MAX); // prioritize as last
 
@@ -41,6 +42,7 @@ function spring_add_block_editor_assets() {
   wp_enqueue_style( 'editor-styles', get_template_directory_uri() . '/assets/css/editor-style.css', false );
   wp_add_inline_style('editor-styles', spring_palette_css());
   wp_add_inline_style('editor-styles', spring_rgb_css());
+  wp_add_inline_style('editor-styles', spring_inline_media_styles());
 }
 add_action( 'enqueue_block_editor_assets', 'spring_add_block_editor_assets' );
 

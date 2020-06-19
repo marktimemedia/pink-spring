@@ -33,4 +33,10 @@ body.option-round {
   .textbox {
     border-radius: 5px;
   }
+
+  .acfes-layout-grid {
+    [class*="acfes-session-type-"] {
+      border-radius: 8px;
+    }
+  }
 }

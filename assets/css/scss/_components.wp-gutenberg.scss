@@ -8,7 +8,7 @@
 .post--content, .content--page {
   & > div {
     margin-bottom: $smallPadding;
-    margin-top: $smallPadding;
+    // margin-top: $smallPadding;
     &.wp-block-spacer {
       margin-bottom: 0;
       margin-top: 0;
@@ -17,7 +17,12 @@
   @media only screen and (min-width: $midBreakpoint) {
     & > div {
       margin-bottom: $midPadding;
-      margin-top: $midPadding;
+    }
+  }
+
+  @media only screen and (min-width: $widescreenBreakpoint) {
+    & > div {
+      margin-bottom: $maxPadding;
     }
   }
 }
@@ -46,7 +51,6 @@
 }
 
 /* Typography */
-
 
 // Headings
 .wp-block-heading {
@@ -92,7 +96,7 @@ p.has-drop-cap {
 
 /* Core Layout Blocks */
 
-// group block
+// Group block
 .wp-block-group {
   overflow: auto; // for floats
 
@@ -128,7 +132,7 @@ p.has-drop-cap {
   }
 }
 
-// column block
+// Column block
 .wp-block-column {
   & > .wp-block {
     margin-top: 0;
@@ -220,14 +224,14 @@ hr.wp-block-separator {
     padding: 0 !important;
 }
 
-// table
+// Table
 .wp-block-table {
   td, th {
     border: 0;
     padding: $tableCellPadding;
   }
   th {
-    font-weight: bold;
+    font-weight: $baseWeightBold;
     border-bottom: $tableHeaderBorderWidth $tableBorderStyle $tableHeaderBorderColor;
   }
   td {
@@ -244,7 +248,8 @@ hr.wp-block-separator {
   }
 }
 
-// Buttons
+/* Buttons */
+// Single Button
 .wp-block-button:not(.components-toolbar) {
     text-align: center;
     //width: 100%;
@@ -335,9 +340,12 @@ hr.wp-block-separator {
 
 
 
-// cover block
+/* Cover Block */
+
 .wp-block-cover {
-  // margin-bottom: 0 !important;
+  background-size:cover;
+  background-position: center center;
+  margin-bottom: $smallPadding !important;
 
   .no-title & {
     &:first-of-type {
@@ -353,6 +361,7 @@ hr.wp-block-separator {
     max-width: 100%;
   }
   @media only screen and (min-width: $midBreakpoint) {
+    margin-bottom: $midPadding !important;
     &.alignleft, &.alignright {
       max-width: 50%;
     }
@@ -386,7 +395,7 @@ hr.wp-block-separator {
   }
 }
 
-// Latest posts
+/* Latest Posts Block */
 .wp-block-latest-posts {
   margin-left: 0 !important;
   padding-left: 0 !important;
@@ -398,7 +407,7 @@ hr.wp-block-separator {
 }
 
 
-// Gallery
+/* Gallery Block */
 .wp-block-gallery, .blocks-gallery-grid {
   figcaption {
     pointer-events: none;
@@ -412,7 +421,7 @@ hr.wp-block-separator {
 }
 
 
-// Media Text
+/* Media Text Block */
 .wp-block-media-text {
   &.has-background {
     padding: 0 !important;

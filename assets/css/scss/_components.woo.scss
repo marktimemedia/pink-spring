@@ -96,7 +96,7 @@ body.woocommerce, .woocommerce-page {
         ins { // new sale price
             background-color: transparent;
             color: $springColor3;
-            font-weight: bold;
+            font-weight: $baseWeightBold;
         }
     }
 
@@ -209,7 +209,7 @@ body.woocommerce, .woocommerce-page {
 
                 h2.woocommerce-loop-product__title {
                   font-size: 1.1em;
-                  font-weight: 400;
+                  font-weight: $baseWeight;
                   @include transition(all .2s);
 
                     &:hover, &:focus {
@@ -284,7 +284,7 @@ body.woocommerce, .woocommerce-page {
         padding: .25em 0;
 
         &.is-active a {
-            font-weight: bold;
+            font-weight: $baseWeightBold;
             &:after {
                 content: ' »';
             }

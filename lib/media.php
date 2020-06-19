@@ -108,3 +108,15 @@ add_filter( 'media_view_settings', 'spring_gallery_default_type_set_link' );
 * Remove the overly opinionated gallery styles
 */
 add_filter( 'use_default_gallery_style', '__return_false' );
+
+
+/**
+* Inline Media Default assert_options
+*/
+function spring_inline_media_styles() {
+  $styles = '';
+  if( get_custom_header() ) {
+    $styles .= '.wp-block-cover { background-image:url('.get_header_image().')}';
+  }
+  return $styles;
+}

@@ -16,7 +16,7 @@
     .textbox.search--textbox {
         border-color: $Nlight;
         margin: 0;
-        padding: .5em;
+        padding: .4em;
     }
 
     button.search--button {
@@ -25,7 +25,7 @@
         bottom: 0;
         color: $Nwhite;
         display: inline-block;
-        font-weight: bold;
+        font-weight: $baseWeightBold;
         padding: .5em;
         width: 29%;
 

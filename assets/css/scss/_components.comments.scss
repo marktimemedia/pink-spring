@@ -55,11 +55,11 @@ section.comments {
 
                 .comment--name {
                     @include rem-px('font-size', 1rem);
-                    font-weight: bold;
+                    font-weight: $baseWeightBold;
                     margin-bottom: .5em;
 
                     a {
-                        font-weight: bold;
+                        font-weight: $baseWeightBold;
                     }
                 }
 

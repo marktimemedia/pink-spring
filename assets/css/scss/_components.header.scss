@@ -3,23 +3,27 @@
     width: 100%;
     z-index:999;
 }
-    .header--inner {
-        background-color: $Nwhite;
-        border-bottom: 1px solid $Nlightest;
-        padding: 0;
-        position: relative;
-        top: 0;
-        @include transition(all .8s);
-        z-index:999;
-    }
+.header--inner {
+		background-color: $Nwhite;
+		border-bottom: 1px solid $Nlightest;
+		padding: 0;
+		position: relative;
+		top: 0;
+		@include transition(all .8s);
+		z-index:999;
+}
 
     .header--quicklinks {
-        padding: .5em $smallPadding;
+        padding: .5em 0;
         background: $Ndarkest;
         position: relative;
         @include transition(all .8s);
         z-index:1000;
     }
+
+		.header--quicklinks-inner {
+			position: relative;
+		}
 
     .header--blog-name {
         box-sizing: border-box;
@@ -101,7 +105,7 @@
         border-bottom: 1px solid $Nlightest;
     }
 
-        .header--inner, .nav-quicklinks {
+        .header--inner, .header--quicklinks-inner {
             @include clearfix();
             @include rem-px('max-width', $boxedMax);
             padding-left: $maxPadding;
@@ -156,7 +160,7 @@
 
 								.nav-main--menu > .menu-item > a {
                     margin: 0 .3em;
-                    padding-top: 0.6em;
+										padding-top: 0.6em;
 										padding-bottom: 0.5em;
                     @include transition(all .3s);
                 }
@@ -167,7 +171,7 @@
 
 
 @media only screen and (min-width: #{$widescreenBreakpoint}) {
-    .header--inner, .nav-quicklinks {
+    .header--inner, .header--quicklinks-inner {
         @include center-block;
     }
 
