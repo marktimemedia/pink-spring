@@ -163,6 +163,15 @@ span { // to hide text but keep accessible
       display: inherit;
     }
   }
+  button.mtm-tabs--title.current {
+    background-color: transparent;
+    color: $linkColor;
+
+    &#tab-title-1 {
+      background-color: $tableHeaderBorderColor;
+      color: $Nwhite;
+    }
+  }
 }
 
 // Slides Visibility

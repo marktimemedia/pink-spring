@@ -111,8 +111,8 @@
 .single {
 
     .post--metadata {
-        @include rem-px('margin-bottom', .3rem);
-        @include rem-px('margin-top', .5rem);
+        margin-top: .5em;
+        margin-bottom: 2em;
         clear: both;
     }
 

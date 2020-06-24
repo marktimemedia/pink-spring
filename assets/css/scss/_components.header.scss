@@ -14,7 +14,7 @@
 }
 
     .header--quicklinks {
-        padding: .5em 0;
+        padding: .5em;
         background: $Ndarkest;
         position: relative;
         @include transition(all .8s);
@@ -33,28 +33,31 @@
         @include rem-px('padding', 1rem, 2.5rem);
         text-align: center;
         @include transition(all .8s);
+				width: 80%;
 
         a {
             display: block;
             line-height: 1;
 						text-decoration: none;
+						height: 100%;
 
 						&:hover, &:focus {
 							text-decoration: underline;
 						}
         }
 
-        img {
-            max-width:9em;
+        img { // all logos
+					max-height: 3em;
+					max-width: 9em;
+					width: auto;
          }
 
-        .header-logo {
-            display: none;
-        }
+				 .hide-mobile {
+ 						display: none;
+ 				}
 
         .header-logo-mobile {
-            display: inline-block;
-            max-height: 4em;
+            display: block;
         }
     }
 
@@ -83,7 +86,7 @@
             @include transition(font-size .2s);
 
             img {
-                //@include transition(all 1s);
+                @include transition(all .2s);
             }
         }
     }
@@ -93,7 +96,6 @@
 @media only screen and (min-width: #{$smallBreakpoint}) {
     .header--blog-name {
         @include rem-px('padding', 1rem, 0);
-        width: inherit;
     }
 }
 
@@ -118,16 +120,22 @@
         }
             .header--blog-name {
                 float: left;
+								font-size: 2.5rem;
                 margin-top: 0;
                 text-align: left;
+								width: inherit;
 
                 .header-logo {
                     display: inline-block;
                 }
 
-                .header-logo-mobile {
-                    display: none;
-                }
+								.hide-mobile {
+									display: inline-block;
+								}
+
+								.header-logo-mobile {
+									display: none;
+								}
             }
 
             .header--extra-text {
@@ -140,13 +148,18 @@
             .header--inner {
                 height: 2.2em;
                 overflow: visible;
-                 top: 0;
+                top: 0;
             }
 
             .header--blog-name {
                 //display: none;
-                font-size: 1.3em;
-                padding-top: .4em;
+                font-size: 2rem;
+                padding-bottom: .1em;
+								padding-top: .1em;
+
+								img {
+									max-height: 100%;
+								}
             }
 
             .header--extra-text {
@@ -179,6 +192,7 @@
 
         .header--blog-name {
             display: inline-block;
+
         }
 
         .nav-main {

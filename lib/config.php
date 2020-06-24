@@ -37,7 +37,7 @@ function spring_sidebar_button() {
 }
 
 /**
- * Define which pages shouldn't have the sidebar
+ * Define which pages should have the sidebar
  *
  * @see lib/sidebar.php for more details
  */
@@ -54,7 +54,9 @@ function spring_display_sidebar() {
      * The second element must be an array even if there's only 1 argument.
      */
     array(
-  //'is_archive'
+      array( 'is_singular', array('post', 'page') ),
+      // 'is_archive',
+      // array( 'is_post_type_archive', array('post') ),
     ),
     /**
      * Page template checks (via is_page_template())
@@ -65,7 +67,6 @@ function spring_display_sidebar() {
       //'template-custom.php'
     )
   );
-
   return apply_filters( 'spring_display_sidebar', $sidebar_config->display );
 }
 
@@ -83,19 +84,20 @@ if ( !isset( $content_width ) ) { $content_width = 1140; }
 /**
 * Email Notification Defaults
 */
-// add_filter( 'wp_mail_from', 'mtm_mail_from' );
-// add_filter( 'wp_mail_from_name', 'mtm_mail_name' );
+add_filter( 'wp_mail_from', 'mtm_mail_from' );
+add_filter( 'wp_mail_from_name', 'mtm_mail_name' );
 
-// function mtm_mail_from ($email ){
-//   return 'sample@wordpress.com'; // new email address from sender.
-// }
+function mtm_mail_from ($email ){
+  $email = str_replace( 'http://', '', get_site_url( '', '', 'http' ));
+  return 'noreply@'; // new email address from sender.
+}
 
-// function mtm_mail_name( $email ){
-//   return 'Sample'; // new email name from sender.
-// }
+function mtm_mail_name( $email ){
+  return get_bloginfo('name'); // new email name from sender.
+}
 
 
 /**
-* Comment out the following line to enable the admin bar
+* Use the following line to disable the admin bar
 */
 // add_filter('show_admin_bar', '__return_false');

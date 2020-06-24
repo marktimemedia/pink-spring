@@ -118,6 +118,7 @@ body.woocommerce, .woocommerce-page {
     }
 
     nav.woocommerce-pagination  {
+      margin-bottom: 2em;
         ul li {
             a:focus, a:hover, span.current {
                 background: $linkColor;

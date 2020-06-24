@@ -29,13 +29,15 @@ class Spring_Sidebar {
     if( is_page_template() && !in_array( true, $templates ) ) {
       $this->display = false;
     }
+
   }
 
   private function check_conditional_tag( $conditional_tag ) {
     if ( is_array( $conditional_tag ) ) {
-      return $conditional_tag[0]( $conditional_tag[1] );
+      $conditions = $conditional_tag[1];
+      return call_user_func($conditional_tag[0],$conditions);
     } else {
-      return $conditional_tag();
+      return call_user_func( $conditional_tag, "" );
     }
   }
 

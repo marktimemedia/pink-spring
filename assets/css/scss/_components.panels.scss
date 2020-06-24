@@ -1,6 +1,6 @@
 /* General Panel Rules */
 
-.mtm-component {
+.mtm-section {
 	margin-top: -2rem;
 	padding-top: 2rem;
 	position: relative;
@@ -16,30 +16,13 @@
 	}
 
 }
-	.mtm-component--main-full {
-		overflow: auto;
-		position: relative;
-	}
 
-	.mtm-component--home {
+// Single Scroll
+	.mtm-section--home {
 		background-size: cover;
 		margin-top: 0;
 		padding-top: 0;
 		text-align: center;
-	}
-
-	.mtm-component--term-list {
-		padding: 1em 0;
-		margin: 0;
-
-		li {
-			list-style: none;
-			display: inline-block;
-		}
-
-		a {
-			padding-right: .5em;
-		}
 	}
 
 
@@ -55,54 +38,76 @@
 		}
 
 		.post--thumbnail {
-			.mtm-module--list &, .mtm-module--grid & {
-				padding-bottom: 0;
-			}
+			background-color: #{'rgba('$Nlightest_RGB',.5)'};
 		}
 
-		.mtm-module--hero-title {
-			margin: .75em auto;
-		}
 
-		.mtm-module--hero-subtitle {
-			margin-bottom: .75em;
-		}
+// Slider Rules
+.mtm_module_slider {
+	position: relative;
+}
+.mtm-module--slider {
+	&.no-nav {
+		margin-bottom: 0;
 
-// Hero Rules
-	.mtm-hero-image {
-		padding: 2em;
-		background-size:cover;
-		background-position: center center;
-		text-align: center;
-	}
-
-		.mtm-hero-image-title, .mtm-hero-image-subtitle p, .mtm-module--slider-title, .mtm-module--slider-subtitle p {
-			color: $Nwhite;
-		}
-
-	.mtm-module--slider-slide {
-		background-size:cover;
-		background-position: center center;
-		text-align: center;
-
-		& > p, a > p { // gutenberg issues
+		.flex-control-nav {
 			display: none;
 		}
 	}
-		.mtm-module--slider-link {
-			display: block;
-			padding: 2em;
-		}
 
-		.mtm-module--slider-content {
-			padding: 0 2em;
+	&.no-arrows {
+		.flex-direction-nav {
+			display: none;
 		}
+	}
+}
+.mtm-module--slider-slide {
+	background-size:cover;
+	background-position: center center;
+	height: 800px;
+
+	& > p, a > p { // gutenberg issues
+		display: none;
+	}
+
+	@media only screen and (max-width: $midBreakpoint) {
+		height: 100px;
+	}
+
+	@media only screen and (min-width: $midBreakpoint) {
+		height: 800px;
+	}
+}
 
 		.flex-control-nav {
 			z-index: 2;
 		}
 
-	// Logo Rules
+		.mtm-module--main-text {
+		  display: flex;
+		  flex-direction: column;
+		  height: 100%;
+		  justify-content: center;
+		  padding: $smallPadding;
+		  position: relative;
+		  z-index: 2;
+
+		  @media only screen and (min-width: $midBreakpoint) {
+		    position: absolute;
+		    top: 0;
+				padding: $midPadding;
+		  }
+
+			@media only screen and (min-width: $midBreakpoint) {
+				padding: $maxPadding;
+		  }
+
+		  & > div {
+		    z-index: 3;
+		  }
+		}
+
+// Logo Rules
 	.mtm_module_logo_showcase {
 
 	}
@@ -111,25 +116,6 @@
 		text-align: center;
 	}
 
-// Single Content
-	.mtm_module_single_content_area {
-		.mtm-module--content-heading, .mtm-module--content-primary {
-			margin-left: auto;
-			margin-right: auto;
-			max-width: $contentMax;
-		}
-	}
-
-// Content Callout
-	.mtm-module--content-secondary-image {
-		padding: $smallPadding;
-
-		.mtm-module--content-secondary-wrapper {
-			background-color: #{'rgba('+$Ndarkest_RGB+', 0.5)'};
-			color: $Nwhite;
-			padding: $smallPadding;
-		}
-	}
 
 // CTA
 	.mtm_module_call_to_action {
@@ -140,111 +126,9 @@
 		.alignright, .alignleft, .aligncenter {
 			margin-bottom: 0;
 		}
-	}
-
-
-
-// Gallery
-	.mtm-module--gallery {
-		display: flex;
-		flex-flow: row wrap;
-		list-style: none;
-		margin: 1em 0;
-		padding: 0;
-
-		& > p, a > p { // gutenberg issues
-			display: none;
-		}
-
-		// grid for supported browsers
-		@supports(display: grid) {
-			display: grid;
-			grid-auto-rows: minmax(20vh, $gallery-height);
-			grid-gap: 0.2em;
-			grid-template-columns: repeat(auto-fill, minmax($gallery-width, 1fr));
-		}
-
-		a {
-			// flex fallback
-			flex: 1 0 auto;
-			min-height: $gallery-height;
-			min-width: $gallery-width;
-			margin: ($gallery-gutter/2);
-
-			@supports(display: grid) {
-				margin: 0;
-			}
-		}
 
 	}
-		.mtm-module--gallery-image {
-			height: 100%;
-			line-height: 1;
-			margin: 0;
-			overflow: hidden;
-			position: relative;
-			width: 100%;
 
-			figure {
-				background-size: cover;
-				background-position: center center;
-				height: 100%;
-				-webkit-transition:all .5s;
-				transition:all .5s;
-				width: 100%;
-
-				&:hover, &:focus {
-					transform: scale(1.2);
-				}
-			}
-		}
-
-		.mtm-module--gallery-caption {
-			background-color: #{'rgba('+$Ndarkest_RGB+', 0.3)'};
-			bottom: 0;
-			color: $Nwhite;
-			margin: 0;
-			padding: .25em;
-			position: absolute;
-			width: 100%;
-		}
-
-
-/* Home Rules */
-
-.mtm-home-news--content, .mtm-home-featured--story {
-	text-align:left;
-}
-
-.mtm-home-featured--single, .mtm-home-topic--single {
-	margin-bottom: 2%;
-}
-
-.mtm-home-sidebar--widget {
-	display: none;
-}
-
-/* Button Rules */
-.mtm-home-buttons {
-	margin-bottom: 1em;
-
-	&.alignleft {
-		margin-left: -.5em;
-	}
-
-	&.alignright {
-		margin-right: -.5em;
-	}
-}
-
-.button.mtm-button {
-	display:inline-block;
-	margin: .5em;
-}
-
-.post-edit-link {
-	font-size: .7em;
-}
 
 /* List Rules */
 
@@ -289,9 +173,17 @@
 			}
 
 			&.current {
-				color: $linkHover;
+				background-color: $tableHeaderBorderColor;
+				color: $Nwhite;
 				font-weight: $baseWeightBold;
 				text-decoration: none;
+				padding-left: .5em;
+				padding-right: .5em;
+
+				&:hover, &:focus {
+					background-color: $linkColor;
+					color: $Nwhite;
+				}
 			}
 		}
 
@@ -304,8 +196,8 @@
 			width: 100%;
 
 			&:hover, &:focus {
-				background-color: transparent;
-				color: $linkHover;
+				background-color: $linkColor;
+				color: $Nwhite;
 			}
 		}
 
@@ -321,7 +213,15 @@
 	}
 }
 
+ul.mtm-component--term-list {
+	margin-left: 0;
+	padding-left: 0;
 
+	li {
+		list-style: none;
+		display: inline-block;
+	}
+}
 /* MEDIA QUERIES */
 
 
@@ -349,27 +249,6 @@
 		@include pinkrow( $rowitems: 2, $before: 0, $after: 0 )
 	}
 
-	.mtm-home-news--content {
-		@include pinkgrid( $colspan: 6 );
-		@include pinkrow( $rowitems: 2 );
-
-		&.full {
-			@include pinkgrid( $colspan: 12 );
-			@include pinkrow( $rowitems: 1 );
-
-			.mtm-home-sidebar--widget {
-				@include pinkgrid( $colspan: 4 );
-				@include pinkrow( $rowitems: 3 );
-				margin: 1.5em 0;
-			}
-		}
-	}
-
-	.mtm-home-featured--story {
-		@include pinkgrid( $colspan: 6 );
-		@include pinkrow( $rowitems: 2 );
-	}
-
 }
 
 // Small
@@ -380,45 +259,18 @@
 
 // Medium
 @media only screen and ( min-width: $midBreakpoint ) {
-	.mtm-component .content--page {
+	.mtm-section .content--page {
 		padding: $maxPadding;
-	}
-
-	.mtm-home-sidebar--widget {
-		display: block;
-
-		&:first-of-type {
-			margin-top: 1.5em;
-		}
-	}
-
-	.mtm_module_dual_content_area {
-		.mtm-module--content-primary, .mtm-module--content-secondary {
-			@include pinkgrid( $align: top, $totalcols: $defaultcols, $colspan: 6, $padtop: 0, $padside: 5% );
-			@include pinkrow( $rowitems: 2, $before: 0, $after: 0 )
-		}
-	}
-
-	.mtm_module_content_callout {
-		.mtm-module--content-primary {
-			@include pinkgrid( $align: top, $totalcols: $defaultcols, $colspan: 8, $padtop: 0, $padside: 5% );
-			@include pinkrow( $rowitems: 2, $before: 0, $after: 0 )
-		}
-
-		.mtm-module--content-secondary {
-			@include pinkgrid( $align: top, $totalcols: $defaultcols, $colspan: 4, $padtop: 0, $padside: 5% );
-			@include pinkrow( $rowitems: 2, $before: 0, $after: 0 )
-		}
 	}
 
 	.mtm-tabs--wrapper {
 		border-bottom-width: 0;
 		.mtm-tabs--title-container {
 			display: block;
+			margin-bottom: -1px;
 		}
 			button.mtm-tabs--title, .mtm-tabs--title {
-				padding: .3em 0;
-				margin-right:1em;
+				padding: .5em;
 				display:inline-block;
 			}
 			button.mtm-tabs--title-accordion, .mtm-tabs--title-accordion {
@@ -430,8 +282,7 @@
 	}
 
 	.mtm_module_call_to_action {
-		padding-top: 2em;
-		padding-bottom: 2em;
+		padding: $midPadding;
 	}
 
 	.mtm-module--cta-subheading{
@@ -458,24 +309,4 @@
 		@include pinkrow( $rowitems: 2, $before: 0, $after: 0 )
 	}
 
-	.mtm-home-news--content {
-		@include pinkgrid( $colspan: 4 );
-		@include pinkrow( $rowitems: 2 );
-
-		&.full {
-			@include pinkgrid( $colspan: 12 );
-			@include pinkrow( $rowitems: 1 );
-
-			.mtm-home-sidebar--widget {
-				@include pinkgrid( $colspan: 4 );
-				@include pinkrow( $rowitems: 3 );
-				margin: 1.5em 0;
-			}
-		}
-	}
-
-	.mtm-home-featured--story {
-		@include pinkgrid( $colspan: 8 );
-		@include pinkrow( $rowitems: 2 );
-	}
 }

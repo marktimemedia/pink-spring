@@ -24,12 +24,15 @@ License: GPLv2
 
 	var $lastScrollTop = $(window).scrollTop(); // reset variable any time it reloads
 	var $siteHeader = $('.header-main'); // your header element
-	var $content = $('.content'); // content container
+	var $content = $('#content'); // content container
+	var $contentWithHeader = $('body:not(.page-template-template-blocks-page):not(.single) #content'); // content container
 	var changeDirection = -1; // base comparitive variable
-	var shrinkClass = 'header-main-small' // your small header class
+	var shrinkClass = 'header-main-small'; // your small header class
 	var paddingTop = $siteHeader.innerHeight();
+	var paddingTopPlus = ( $siteHeader.innerHeight() + 50 );
 
 	$content.css('padding-top', paddingTop);
+	$contentWithHeader.css('padding-top', paddingTopPlus);
 
 	$(window).on('scroll', (function(event) {
 		var $scrollPosition = $(this).scrollTop();

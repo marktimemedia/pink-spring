@@ -97,42 +97,8 @@
 }
 
 %iconlight {
-  font-family: 'Font Awesome 5 Light';
-  font-weight: $baseWeight;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-
-  &:before {
-    font-family: 'Font Awesome 5 Light';
-    font-weight: $baseWeight;
-  }
-}
-
-%iconbrand {
-  font-family: 'Font Awesome 5 Brands';
-  font-weight: $baseWeight;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-
-  &:before {
-    font-family: 'Font Awesome 5 Brands';
-    font-weight: $baseWeight;
-  }
-}
-
-%icon {
   font-family: 'Font Awesome 5 Pro';
-  font-weight: $baseWeight;
+  font-weight: 300;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -143,7 +109,41 @@
 
   &:before {
     font-family: 'Font Awesome 5 Pro';
-    font-weight: $baseWeight;
+    font-weight: 300;
+  }
+}
+
+%iconbrand {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+
+  &:before {
+    font-family: 'Font Awesome 5 Brands';
+    font-weight: 400;
+  }
+}
+
+%icon {
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: $iconFontWeight;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+
+  &:before {
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: $iconFontWeight;
   }
 }
 

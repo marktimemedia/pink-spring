@@ -45,10 +45,9 @@
                 <button aria-label="Close Menu" id="closeSidebar"> × </button>
             </nav>
 
-            <h1 class="header--blog-name">
+            <div class="header--blog-name h1">
                 <?php the_mtm_header_logo(); ?>
-                <?php the_mtm_mobile_logo(); ?>
-            </h1>
+            </div>
             <div class="header--extra-text">
                 <?php the_mtm_header_text(); ?>
             </div>
