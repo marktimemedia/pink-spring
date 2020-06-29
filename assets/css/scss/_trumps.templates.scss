@@ -34,9 +34,17 @@ body.option-round {
     border-radius: 5px;
   }
 
-  .acfes-layout-grid {
-    [class*="acfes-session-type-"] {
-      border-radius: 8px;
+  .mtm-tabs--title {
+    border-radius: 0 0 6px 6px !important;
+
+    @media only screen and (min-width: $midBreakpoint) {
+      border-radius: 6px 6px 0 0 !important;
+    }
+  }
+
+  .mtm_module_call_to_action {
+    &:not(.alignfull) {
+      border-radius: 10px;
     }
   }
 }

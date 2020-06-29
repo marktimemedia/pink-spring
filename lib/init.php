@@ -27,7 +27,7 @@ function spring_setup() {
     );
     /* Header Options */
     $header_defaults = array(
-        'default-image'          => get_stylesheet_directory_uri() . '/assets/img/ee-default-cover.png',
+        'default-image'          => get_stylesheet_directory_uri() . '/assets/img/default-cover.png',
         'width'                  => 1440,
         'height'                 => 450,
         'flex-height'            => true,

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*--
-    Theme Name:  Events Base Theme
-    Description:  Framework theme for virtual events
+    Theme Name:  Pink Spring Theme
+    Description:  Framework theme for development
     Author: Marktime Media
     Version: 1.0
     License: GPLv2
@@ -3894,8 +3894,13 @@ body.option-round select,
 body.option-round textarea,
 body.option-round .textbox {
   border-radius: 5px; }
-body.option-round .acfes-layout-grid [class*="acfes-session-type-"] {
-  border-radius: 8px; }
+body.option-round .mtm-tabs--title {
+  border-radius: 0 0 6px 6px !important; }
+  @media only screen and (min-width: 49em) {
+    body.option-round .mtm-tabs--title {
+      border-radius: 6px 6px 0 0 !important; } }
+body.option-round .mtm_module_call_to_action:not(.alignfull) {
+  border-radius: 10px; }
 
 /*
  * Temporary fix for https://core.trac.wordpress.org/ticket/26609

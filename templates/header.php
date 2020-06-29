@@ -49,7 +49,7 @@
                 <?php the_mtm_header_logo(); ?>
             </div>
             <div class="header--extra-text">
-                <?php the_mtm_header_text(); ?>
+                <?php echo get_mtm_header_text(); ?>
             </div>
         </div>
     </header>

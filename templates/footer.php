@@ -4,12 +4,12 @@
       <div class="footer--contact">
         <?php echo mtm_get_social_media(); ?>
         <?php echo mtm_get_phone_number(); ?>
-      </div>      
+      </div>
     	<div class="footer--copyright">
             <?php the_mtm_footer_copyright() ?>
     	</div>
       <div class="footer--extra-text">
-        <?php the_mtm_footer_text() ?>
+        <?php echo get_mtm_footer_text() ?>
       </div>
         <nav aria-label="Footer" class="nav-footer" role="navigation">
             <?php
