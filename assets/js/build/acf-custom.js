@@ -2,7 +2,7 @@
 
 acf.add_filter('color_picker_args', function( args, field ){
 
-  args.palettes = [custom_colors.springcolor1, custom_colors.springcolor2, custom_colors.springcolor3, custom_colors.springcolor4, custom_colors.springcolor5, custom_colors.white, custom_colors.neutrallightest, custom_colors.neutrallight, custom_colors.neutralmid, custom_colors.neutraldark, custom_colors.neutraldarkest]
+  args.palettes = [custom_colors.springcolor1, custom_colors.springcolor2, custom_colors.springcolor3, custom_colors.springcolor4, custom_colors.springcolor5, custom_colors.neutralwhite, custom_colors.neutrallightest, custom_colors.neutrallight, custom_colors.neutralmid, custom_colors.neutraldark, custom_colors.neutraldarkest]
   // return colors
 
     // return

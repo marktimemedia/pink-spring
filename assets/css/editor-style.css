@@ -1391,6 +1391,8 @@ p.has-drop-cap {
   margin-top: 0; }
 .wp-block-column h1, .wp-block-column h2, .wp-block-column h3, .wp-block-column h4, .wp-block-column h5, .wp-block-column h6 {
   margin-top: 0; }
+.wp-block-column p:first-child {
+  margin-top: 0; }
 
 /** Other Core Blocks **/
 .wp-block-quote.is-large cite, .wp-block-quote.is-style-large cite {
