@@ -71,14 +71,14 @@
   .block-editor-block-list__block-edit div[data-block] .outline.button:not(.wp-color-result):not(.ed_button):not(.acf-button):not(.add_media):not(.wp-picker-clear), .block-editor-block-list__layout .outline.button:not(.wp-color-result):not(.ed_button):not(.acf-button):not(.add_media):not(.wp-picker-clear), .outline.global-button, .wp-block-button:not(.components-toolbar) .outline.wp-block-button__link,
   .wp-block-button:not(.components-toolbar) wp-block .outline.button:not(.insert-media):not(.acf-button) {
     background-color: transparent;
-    border-color: var(--spring-color-1);
-    color: var(--spring-color-1); }
+    border-color: var(--spring-color-1-darker);
+    color: var(--spring-color-1-darker); }
     .block-editor-block-list__block-edit div[data-block] .outline.button:hover:not(.wp-color-result):not(.ed_button):not(.acf-button):not(.add_media):not(.wp-picker-clear), .block-editor-block-list__layout .outline.button:hover:not(.wp-color-result):not(.ed_button):not(.acf-button):not(.add_media):not(.wp-picker-clear), .outline.global-button:hover, .wp-block-button:not(.components-toolbar) .outline.wp-block-button__link:hover,
     .wp-block-button:not(.components-toolbar) wp-block .outline.button:hover:not(.insert-media):not(.acf-button), .block-editor-block-list__block-edit div[data-block] .outline.button:focus:not(.wp-color-result):not(.ed_button):not(.acf-button):not(.add_media):not(.wp-picker-clear), .block-editor-block-list__layout .outline.button:focus:not(.wp-color-result):not(.ed_button):not(.acf-button):not(.add_media):not(.wp-picker-clear), .outline.global-button:focus, .wp-block-button:not(.components-toolbar) .outline.wp-block-button__link:focus,
     .wp-block-button:not(.components-toolbar) wp-block .outline.button:focus:not(.insert-media):not(.acf-button) {
-      background-color: rgba(var(--neutral-darkest-rgb), 0.2);
-      border-color: var(--spring-color-1);
-      color: var(--spring-color-1); }
+      background-color: rgba(var(--neutral-darkest-rgb), 0.1);
+      border-color: var(--spring-color-1-darker);
+      color: var(--spring-color-1-darker); }
   .block-editor-block-list__block-edit div[data-block] .neutral.button:not(.wp-color-result):not(.ed_button):not(.acf-button):not(.add_media):not(.wp-picker-clear), .block-editor-block-list__layout .neutral.button:not(.wp-color-result):not(.ed_button):not(.acf-button):not(.add_media):not(.wp-picker-clear), .neutral.global-button, .wp-block-button:not(.components-toolbar) .neutral.wp-block-button__link,
   .wp-block-button:not(.components-toolbar) wp-block .neutral.button:not(.insert-media):not(.acf-button) {
     background-color: var(--neutral-mid); }
@@ -923,6 +923,15 @@ figcaption {
   position: relative;
   z-index: 2; }
 
+.alignfull {
+  margin-bottom: 0 !important; }
+
+.alignfull + * {
+  margin-top: 1rem; }
+
+.alignfull + .alignfull {
+  margin-top: 0 !important; }
+
 @media only screen and (min-width: 30em) {
   .alignright {
     float: right !important;
@@ -942,7 +951,13 @@ figcaption {
   .alignnone {
     float: none !important;
     margin: 1em 0;
-    max-width: 100%; } }
+    max-width: 100%; }
+
+  .alignfull + * {
+    margin-top: 2rem; } }
+@media only screen and (min-width: 49em) {
+  .alignfull + * {
+    margin-top: 3rem; } }
 @media only screen and (min-width: 81rem) {
   .content:not(.has_sidebar) .alignfull {
     margin-left: calc(-100vw / 2 + ( 81rem - (2 * 3rem) ) / 2);
@@ -1277,18 +1292,23 @@ figcaption {
       padding: 0 0.1rem 0 0; }
   .post--metadata a {
     font-style: italic; }
+  .mtm-grid--single .post--metadata {
+    border: 0; }
 
 .post--metadata--title {
   font-weight: var(--body-font-weight-bold);
   margin-right: .25em; }
+
+.post--metadata-group {
+  line-height: 1.4; }
 
 .post--hr {
   width: 50%;
   margin: 3em auto; }
 
 .archive .post--title, .blog .post--title {
-  font-size: 34px;
-  font-size: 2.125rem; }
+  font-size: 30px;
+  font-size: 1.875rem; }
 .archive article.post, .blog article.post {
   margin-bottom: 2rem; }
 
@@ -1304,25 +1324,31 @@ figcaption {
     line-height: 1.3; }
 
 .page--header {
-  margin-bottom: 2rem; }
+  margin-bottom: 1rem; }
+  @media only screen and (min-width: 49em) {
+    .page--header {
+      margin-bottom: 2rem; } }
 
 .page--title {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   margin-top: 0; }
+  @media only screen and (min-width: 62em) {
+    .wp-block-cover .page--title {
+      font-size: 3em; } }
+  @media only screen and (min-width: 75em) {
+    .wp-block-cover .page--title {
+      font-size: 3.3em; } }
 
 /* Gutenberg Block Styles */
 .single--block {
   position: relative; }
 
 .post--content > div, .content--page > div {
-  margin-bottom: 1rem; }
+  margin-bottom: 2rem; }
   .post--content > div.wp-block-spacer, .content--page > div.wp-block-spacer {
     margin-bottom: 0;
     margin-top: 0; }
 @media only screen and (min-width: 49em) {
-  .post--content > div, .content--page > div {
-    margin-bottom: 2rem; } }
-@media only screen and (min-width: 75em) {
   .post--content > div, .content--page > div {
     margin-bottom: 3rem; } }
 
@@ -1331,9 +1357,6 @@ figcaption {
     max-width: 81rem; } }
 .has-background, .has-custom-background-color {
   padding: 1rem; }
-  .has-background.alignfull, .has-background.alignwide, .has-custom-background-color.alignfull, .has-custom-background-color.alignwide {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important; }
   @media only screen and (min-width: 49em) {
     .has-background, .has-custom-background-color {
       padding: 2rem 3rem; } }
@@ -1604,8 +1627,7 @@ hr.wp-block-separator {
 /* Cover Block */
 .wp-block-cover {
   background-size: cover;
-  background-position: center center;
-  margin-bottom: 1rem !important; }
+  background-position: center center; }
   .no-title .wp-block-cover:first-of-type {
     margin-top: 0; }
   .wp-block-cover.alignleft, .wp-block-cover.alignright, .wp-block-cover.aligncenter {
@@ -1613,10 +1635,8 @@ hr.wp-block-separator {
   .wp-block-cover.alignleft, .wp-block-cover.alignright {
     max-width: 100%; }
   @media only screen and (min-width: 49em) {
-    .wp-block-cover {
-      margin-bottom: 2rem !important; }
-      .wp-block-cover.alignleft, .wp-block-cover.alignright {
-        max-width: 50%; } }
+    .wp-block-cover.alignleft, .wp-block-cover.alignright {
+      max-width: 50%; } }
   .wp-block-cover a {
     color: inherit; }
 

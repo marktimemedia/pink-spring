@@ -10,6 +10,12 @@
         color: $Nlightest;
     }
 }
+    .footer-logo {
+      max-height: 4em;
+      max-width: 9em;
+      width: auto;
+      margin-bottom: 1em;
+     }
     .footer--inner {
         @include clearfix();
         padding: 0 $smallPadding;
@@ -20,6 +26,12 @@
     }
 
 @media only screen and (min-width: #{$midBreakpoint}) {
+
+  .footer-logo {
+    float: right;
+    clear: right;
+    margin-left: 1em;
+   }
 
 
     .footer--inner {

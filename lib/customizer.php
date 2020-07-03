@@ -23,9 +23,9 @@ function spring_customize_options( $wp_customize ) {
     )
   );
 
-  $wp_customize->add_section( 'type_section',
+  $wp_customize->add_section( 'layout_section',
     array(
-      'title' => __( 'Typography & Layout', 'mtm' ),
+      'title' => __( 'Layout', 'mtm' ),
       'description' => esc_html__( '', 'mtm' ),
       'panel' => 'site_branding_panel'
     )
@@ -60,7 +60,7 @@ function spring_customize_options( $wp_customize ) {
    array(
       'label' => __( 'Theme Geometry' ),
       'description' => esc_html__( 'Choose whether the theme should follow a square or rounded style by default' ),
-      'section' => 'type_section',
+      'section' => 'layout_section',
       'priority' => 10, // Optional. Order priority to load the control. Default: 10
       'type' => 'select',
       'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
@@ -71,7 +71,54 @@ function spring_customize_options( $wp_customize ) {
      )
   );
 
+  // Archive Layout
+  $wp_customize->add_setting( 'mtm_archive_type',
+   array(
+      'default' => 'list',
+      'transport' => 'refresh',
+			'type' => 'option'
+     )
+  );
 
+  $wp_customize->add_control( 'mtm_archive_type',
+   array(
+      'label' => __( 'Archive Layout' ),
+      'description' => esc_html__( 'Choose whether post archives should display as a grid or a list by default' ),
+      'section' => 'layout_section',
+      'priority' => 10, // Optional. Order priority to load the control. Default: 10
+      'type' => 'select',
+      'capability' => 'manage_options', // Optional. Default: 'edit_theme_options'
+      'choices' => array( // Optional.
+         'grid' => __( 'Grid' ),
+         'list' => __( 'List' )
+        )
+     )
+  );
+
+	// Grid Per Row
+	$wp_customize->add_setting( 'mtm_grid_per_row',
+	 array(
+		 'default' => 3,
+			'transport' => 'refresh',
+			'type' => 'option',
+		 )
+	);
+
+	$wp_customize->add_control( 'mtm_grid_per_row',
+   array(
+      'label' => __( 'Grid Items Per Row' ),
+      'description' => __('If you display items in a grid, how many items should display per row?'),
+      'section' => 'layout_section',
+      'priority' => 10, // Optional. Order priority to load the control. Default: 10
+      'type' => 'number',
+      'capability' => 'manage_options', // Optional. Default: 'edit_theme_options'
+			'input_attrs' => array(
+        'min'   => 2,
+        'max'   => 6,
+        'step'  => 1,
+			)
+     )
+  );
 
 }
 add_action( 'customize_register', 'spring_customize_options' );

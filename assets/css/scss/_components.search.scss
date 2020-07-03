@@ -53,6 +53,8 @@
     color: $Nwhite;
     float: right;
     padding: .5em;
+    min-width: 32px;
+    min-height: 32px;
     @include transition(padding .8s);
 
     &:hover {
@@ -70,17 +72,17 @@
     max-height: 0;
     overflow: hidden; // to account for the toggle
     padding-bottom: 0;
-    @include transition(all .8s);
+    @include transition(max-height .8s);
 
     .textbox.search--textbox {
-        
+
     }
 }
 
     .header-main .search-form.search-expanded {
         max-height: 3em;
         padding: .4em 0;
-        @include transition(all .8s);
+        @include transition(max-height .8s);
     }
 
     .fa-search.search-open:before {
@@ -98,7 +100,7 @@
         clear: both;
         float: right;
         max-height: 3em;
-        @include transition(all .8s);
+        @include transition(max-height .8s);
         width: 20em;
         overflow: visible; // unless you need a toggle on desktop
     }

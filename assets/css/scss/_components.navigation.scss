@@ -50,7 +50,7 @@ nav {
         a, a:visited {
             color: $Nlightest;
             font-weight: $baseWeight;
-            padding: 0 .5em;
+            padding: .5em;
 
             &:hover {
                 color: $Nwhite;
@@ -72,7 +72,7 @@ nav {
         display: none;
     }
 }
-    .quicklinks-menu {
+    .nav-quicklinks--menu {
         margin: 0;
         padding: 0;
 
@@ -87,7 +87,7 @@ nav {
 	position: absolute;
     right: 100%;
     top: 0;
-    @include transition(all .8s);
+    // @include transition(all .8s);
     width: 80%;
 
     ul {
@@ -99,7 +99,7 @@ nav {
     }
 }
 
-    .nav-main--menu {
+    .nav-main--menu, .nav-mobile--menu {
         margin: 0;
         padding: 1em;
     }
@@ -148,6 +148,17 @@ nav {
               }
           }
         }
+
+    }
+
+    .nav-main--menu {
+        height: 0 !important;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .nav-quicklinks {
+      display: none;
     }
 }
 
@@ -164,6 +175,10 @@ nav {
         padding: 0;
     }
 
+    .nav-mobile--menu {
+        display: none;
+    }
+
     .menu-item {
       &.current-menu-item > a, &.current-menu-parent > a, &.current-menu-ancestor > a {
         text-decoration: underline;
@@ -173,6 +188,7 @@ nav {
     // main menu
     .nav-main {
         float: right;
+        clear: right;
         height: auto;
         left: auto;
         padding: 0;
@@ -185,6 +201,10 @@ nav {
         & > div { // menu container
           height:100%;
         }
+
+        div + div {
+          display: none;
+        }
     }
         .nav-main--menu {
             height:100%;
@@ -194,6 +214,7 @@ nav {
             .menu-item {
                 display: inline-block;
                 height: 100%;
+                line-height: 0;
 
                 & > a {
                     height: 100%;
@@ -208,9 +229,15 @@ nav {
                   }
                 }
 
-                &:hover, &:focus {
+                &:hover, &:focus, .tab-active {
                     & > a {
+                      background-color: $linkColor;
+                      color: $Nwhite;
+                      text-decoration: none;
 
+                      & > .menu-toggle:after {
+                        color: $Nwhite;
+                      }
                     }
                 }
             }

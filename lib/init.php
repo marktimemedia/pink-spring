@@ -15,12 +15,13 @@ function spring_setup() {
     'primary_navigation' => __( 'Primary Navigation', 'spring-theme' ),
     'quicklink_navigation' => __( 'Quicklink Navigation', 'spring-theme' ),
     'footer_navigation' => __( 'Footer Navigation', 'spring-theme' ),
+    'mobile_navigation' => __( 'Mobile Navigation', 'spring-theme' ),
   ));
 
   /* Logo Options */
     $logo_defaults = array(
       'height'      => 300,
-      'width'       => 300,
+      'width'       => 600,
       'flex-height' => true,
       'flex-width'  => true,
       'header-text' => array( 'site-title', 'site-description' ),

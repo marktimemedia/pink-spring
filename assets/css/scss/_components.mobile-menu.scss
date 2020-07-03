@@ -1,6 +1,11 @@
 .open-button-wrapper {
-        position: relative;
+        position: absolute;
+        top: 0;
         width: 100%;
+
+        .open-the-menu & {
+          top: 48px; // height of quicklinks
+        }
     }
 
         .open-button {

@@ -61,6 +61,18 @@
 	}
 }
 
+.alignfull {
+	  margin-bottom: 0 !important;
+}
+
+.alignfull + * {
+	margin-top: $smallPadding;
+}
+
+.alignfull + .alignfull {
+	margin-top: 0 !important;
+}
+
 @media only screen and (min-width: #{$smallBreakpoint}) {
     .alignright {
         float: right !important;
@@ -87,10 +99,16 @@
         margin: 1em 0;
         max-width: 100%;
     }
+
+		.alignfull + * {
+			margin-top: $midPadding;
+		}
 }
 
 @media only screen and (min-width: #{$midBreakpoint}) {
-
+	.alignfull + * {
+		margin-top: $maxPadding;
+	}
 }
 
 @media only screen and (min-width: #{$boxedMax}) {

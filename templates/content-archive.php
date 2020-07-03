@@ -1,16 +1,19 @@
-<article <?php post_class( 'archive' ); ?>>
+<?php
+global $archive_type;
+$archive_type = get_option('mtm_archive_type') ? :'list';
+$grid_row_class = get_option('mtm_grid_per_row') ? 'mtm-per-row-'.get_option('mtm_grid_per_row') : 'mtm-per-row-3' ;
+$post_class = ('grid' == $archive_type ) ? 'archive mtm-' . $archive_type .'--single ' . $grid_row_class : 'archive mtm-' . $archive_type .'--single';
+?>
+
+<article <?php post_class( $post_class ); ?>>
 
   <?php $content_size = ( has_post_thumbnail() ) ? '' : '-full'; ?>
 
-  <?php if( has_post_thumbnail() ) : ?>
-    <section class="mtm-list--image">
-      <a aria-hidden="true" tabindex="-1" href="<?php the_permalink(); ?>"><figure class="post--thumbnail mtm-post-thumbnail" style="background-image:url(<?php the_post_thumbnail_url( 'medium_large' ); ?>)"></figure></a>
-    </section>
-  <?php endif; ?>
+  <?php get_template_part('templates/featured-image', 'cropped'); ?>
 
-  	<section class="post--summary acfes-list--post-content<?php echo $content_size; ?>">
+  	<section class="post--summary mtm-<?php echo $archive_type; ?>--post-content<?php echo $content_size; ?>">
       <header>
-    		<h2 class="post--title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+    		<h2 class="post--title h3"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
       </header>
   		<?php the_excerpt('<p>Continue Reading...</p>' ); ?>
   	</section>

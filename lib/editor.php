@@ -12,6 +12,8 @@ function spring_setup_editor() {
   add_theme_support( 'align-wide' ); // gutenberg wide block support
   //add_theme_support( 'wp-block-styles' ); // allow default block styles
   add_theme_support( 'disable-custom-colors' ); // no custom picker
+  // add_theme_support( 'disable-custom-gradients' ); // no custom gradients
+
 }
 add_action('after_setup_theme', 'spring_setup_editor');
 
@@ -30,8 +32,36 @@ function spring_editor_color_palette()
         );
     }
     add_theme_support('editor-color-palette', $editor_color_palette);
+
 }
 add_action('after_setup_theme', 'spring_editor_color_palette');
+
+/**
+* Gradient Palettes
+* Remove disable gradients above when this is done
+*/
+function spring_editor_gradient_palette() {
+
+  $palette = spring_brand_colors(); // palette.php
+  $j = 1;
+  foreach ( $palette as $key => $item ) {
+    if ($item['color']) {
+      $color = get_theme_mod( $key, $item['color'] );
+      $gradients[] = array(
+              'name'     => __( 'Theme Color ' . $j .' Darker', 'spring' ),
+              'gradient' => 'linear-gradient(135deg,'.$color.' 0%,'.color_luminance($color, -.4).' 100%)',
+              'slug'     => $key . '-gradient-darker'
+          );
+      $gradients[] = array(
+              'name'     => __( 'Theme Color ' . $j++ .' Lighter', 'spring' ),
+              'gradient' => 'linear-gradient(135deg,'.$color.' 0%,'.color_luminance($color, .4).' 100%)',
+              'slug'     => $key . '-gradient-lighter'
+          );
+    }
+  }
+  add_theme_support( 'editor-gradient-presets', $gradients );
+}
+add_action('after_setup_theme', 'spring_editor_gradient_palette');
 
 /**
  * List of templates/IDs

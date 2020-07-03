@@ -44,7 +44,7 @@
 }
 
 @media only screen and (max-width: #{$midBreakpoint - 1}) {
-    .nav-main--menu {
+    .nav-main--menu, .nav-mobile--menu {
 
       * {
         &:focus {
@@ -120,7 +120,7 @@
             border: 0;
             display: block;
             height: auto;
-            left: .5em;
+            left: 0;
             max-height: 0;
             overflow: hidden;
             padding: 0;

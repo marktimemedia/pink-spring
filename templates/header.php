@@ -22,7 +22,7 @@
             <nav aria-label="Quicklinks" class="nav-quicklinks" role="navigation">
                 <?php
                 if ( has_nav_menu( 'quicklink_navigation' ) ) :
-                    wp_nav_menu(array( 'theme_location' => 'quicklink_navigation', 'menu_class' => 'quicklinks-menu' ) );
+                    wp_nav_menu(array( 'theme_location' => 'quicklink_navigation', 'menu_class' => 'nav-quicklinks--menu' ) );
                 endif;
                 ?>
             </nav>
@@ -32,24 +32,26 @@
           </div>
         </div>
         <div class="header--inner">
+          <div class="header--blog-name h1">
+              <?php the_mtm_header_logo(); ?>
+          </div>
             <section class="open-button-wrapper">
                 <button aria-label="Open Menu" id="openMainMenu" class="open-main-menu open-button"><span>Open Main Menu</span></button>
                 <?php echo spring_sidebar_button(); ?>
             </section>
+            <div class="header--extra-text">
+                <?php echo get_mtm_header_text(); ?>
+            </div>
             <nav aria-label="Primary" class="nav-main" role="navigation">
                 <?php
+                if ( has_nav_menu( 'mobile_navigation' ) ) :
+                    wp_nav_menu( array( 'theme_location' => 'mobile_navigation', 'menu_class' => 'nav-mobile--menu' ) );
+                endif;
                 if ( has_nav_menu( 'primary_navigation' ) ) :
                     wp_nav_menu( array( 'theme_location' => 'primary_navigation', 'menu_class' => 'nav-main--menu' ) );
                 endif;
                 ?>
                 <button aria-label="Close Menu" id="closeSidebar"> × </button>
             </nav>
-
-            <div class="header--blog-name h1">
-                <?php the_mtm_header_logo(); ?>
-            </div>
-            <div class="header--extra-text">
-                <?php echo get_mtm_header_text(); ?>
-            </div>
         </div>
     </header>

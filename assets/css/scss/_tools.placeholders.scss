@@ -65,13 +65,13 @@
 
     &.outline {
         background-color: transparent;
-        border-color: $buttonBackground;
-        color: $buttonBackground;
+        border-color: $buttonBorderColor;
+        color: $buttonBorderColor;
 
         &:hover, &:focus {
-            background-color: #{'rgba('+$Ndarkest_RGB+', 0.2)'};
-            border-color: $buttonBackground;
-            color: $buttonBackground;
+            background-color: #{'rgba('+$Ndarkest_RGB+', 0.1)'};
+            border-color: $buttonBorderColor;
+            color: $buttonBorderColor;
         }
     }
 

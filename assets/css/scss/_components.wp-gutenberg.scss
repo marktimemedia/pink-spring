@@ -7,7 +7,7 @@
 
 .post--content, .content--page {
   & > div {
-    margin-bottom: $smallPadding;
+    margin-bottom: $midPadding;
     // margin-top: $smallPadding;
     &.wp-block-spacer {
       margin-bottom: 0;
@@ -16,13 +16,13 @@
   }
   @media only screen and (min-width: $midBreakpoint) {
     & > div {
-      margin-bottom: $midPadding;
+      margin-bottom: $maxPadding;
     }
   }
 
   @media only screen and (min-width: $widescreenBreakpoint) {
     & > div {
-      margin-bottom: $maxPadding;
+
     }
   }
 }
@@ -39,11 +39,6 @@
 // Utilities
 .has-background, .has-custom-background-color{
   padding: $smallPadding;
-
-  &.alignfull, &.alignwide {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-  }
 
   @media only screen and (min-width: $midBreakpoint) {
     padding: $midPadding $maxPadding;
@@ -349,7 +344,6 @@ hr.wp-block-separator {
 .wp-block-cover {
   background-size:cover;
   background-position: center center;
-  margin-bottom: $smallPadding !important;
 
   .no-title & {
     &:first-of-type {
@@ -365,7 +359,7 @@ hr.wp-block-separator {
     max-width: 100%;
   }
   @media only screen and (min-width: $midBreakpoint) {
-    margin-bottom: $midPadding !important;
+
     &.alignleft, &.alignright {
       max-width: 50%;
     }

@@ -171,6 +171,8 @@ function spring_palette_css()
         $css_vars[] = '--' . $key . '-lighter:' . color_luminance($color, .25) . ';';
         $css_style[] = '.has-' . $key . '-background-color{background-color:' . $color . ' !important;}';
         $css_style[] = '.has-' . $key . '-color{color:' . $color . ' !important;}';
+        $css_style[] = '.has-' . $key . '-gradient-darker-background{linear-gradient(135deg,'.$color.' 0%,'.color_luminance($color, -.4).' 100%) !important;}';
+        $css_style[] = '.has-' . $key . '-gradient-lighter-background{linear-gradient(135deg,'.$color.' 0%,'.color_luminance($color, .4).' 100%) !important;}';
       }
     }
     $options = spring_brand_options();

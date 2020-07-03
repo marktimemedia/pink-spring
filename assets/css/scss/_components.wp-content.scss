@@ -86,11 +86,19 @@
         a {
             font-style: italic;
         }
+
+        .mtm-grid--single & {
+          border: 0;
+        }
     }
 
     .post--metadata--title {
         font-weight: $baseWeightBold;
         margin-right: .25em;
+    }
+
+    .post--metadata-group {
+      line-height: 1.4;
     }
 
     .post--hr {
@@ -100,7 +108,7 @@
 
 .archive, .blog {
     .post--title {
-        @include rem-px('font-size', $h1Size * .85);
+        @include rem-px('font-size', $h1Size * .75);
     }
 
     article.post {
@@ -127,10 +135,24 @@
 }
 
 .page--header {
-    margin-bottom: $headingMargin * 2;
+    margin-bottom: $headingMargin;
+
+    @media only screen and (min-width: $midBreakpoint) {
+      margin-bottom: $headingMargin * 2;
+    }
 }
 
 .page--title {
-    margin-bottom: $headingMargin * 1.5;
+    margin-bottom: $headingMargin;
     margin-top: 0;
+
+    .wp-block-cover & {
+      @media only screen and (min-width: $largeBreakpoint) {
+        font-size: 3em;
+      }
+
+      @media only screen and (min-width: $widescreenBreakpoint) {
+        font-size: 3.3em;
+      }
+    }
 }
