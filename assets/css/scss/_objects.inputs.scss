@@ -43,6 +43,11 @@
         color: $linkColor;
         padding: .25rem .5rem;
 
+        &:before {
+          font-family: $iconFont;
+          font-weight: $iconFontWeight;
+        }
+
         &:hover {
           color: $linkHover;
         }

@@ -54,9 +54,10 @@ function spring_display_sidebar() {
      * The second element must be an array even if there's only 1 argument.
      */
     array(
-      array( 'is_singular', array('post', 'page') ),
+      array( 'is_singular', array('post') ),
       // 'is_archive',
-      // array( 'is_post_type_archive', array('post') ),
+      array( 'is_post_type_archive', array('post') ),
+      'is_blog'
     ),
     /**
      * Page template checks (via is_page_template())

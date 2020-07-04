@@ -997,6 +997,9 @@ figcaption {
     border: 0;
     color: var(--spring-links);
     padding: .25rem .5rem; }
+    .social-icons a.button-social:before {
+      font-family: "Font Awesome 5 Pro", "FontAwesome";
+      font-weight: 900; }
     .social-icons a.button-social:hover {
       color: var(--spring-links-darker); }
     .footer-main .social-icons a.button-social, .header-main .social-icons a.button-social {
