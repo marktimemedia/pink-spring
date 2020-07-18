@@ -22,10 +22,8 @@ require_once locate_template( '/lib/editor.php' );          // Editor styles and
 require_once locate_template( '/lib/scripts.php' );         // Scripts and stylesheets
 require_once locate_template( '/lib/media.php' );           // Specific to media
 require_once locate_template( '/lib/content.php' );         // Specific to content
-require_once locate_template( '/lib/block-templates.php' );          // Editor styles and setup
+require_once locate_template( '/lib/block-templates.php' ); // Editor styles and setup
 require_once locate_template( '/lib/panels.php' );          // Specific to panels plugin
-require_once locate_template( '/lib/woo.php' );          	  // WooCommerce functions
+require_once locate_template( '/lib/woo.php' );             // WooCommerce functions
 require_once locate_template( '/lib/custom.php' );          // Custom functions
 require_once locate_template( '/client-files/client-functions.php' ); // Client functions
-
-?>

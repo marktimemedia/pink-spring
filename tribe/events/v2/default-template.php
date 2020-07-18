@@ -16,7 +16,7 @@ use Tribe\Events\Views\V2\Template_Bootstrap; ?>
 
 <section class="content--page">
 	<?php get_template_part( 'templates/page', 'header' ); ?>
-  <div class="post--content">
-    <?php echo tribe( Template_Bootstrap::class )->get_view_html(); ?>
-  </div>
+	<div class="post--content">
+		<?php echo tribe( Template_Bootstrap::class )->get_view_html(); ?>
+	</div>
 </section>

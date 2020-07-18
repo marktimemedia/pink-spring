@@ -4,37 +4,37 @@
 */
 function spring_setup_editor() {
 
-  /** Editor Style */
-  add_theme_support('editor-styles');
-  // add_theme_support( 'dark-editor-style' ); // dark mode (optional)
+	/** Editor Style */
+	add_theme_support( 'editor-styles' );
+	// add_theme_support( 'dark-editor-style' ); // dark mode (optional)
 
-  /** Gutenberg Features */
-  add_theme_support( 'align-wide' ); // gutenberg wide block support
-  //add_theme_support( 'wp-block-styles' ); // allow default block styles
-  add_theme_support( 'disable-custom-colors' ); // no custom picker
-  // add_theme_support( 'disable-custom-gradients' ); // no custom gradients
+	/** Gutenberg Features */
+	add_theme_support( 'align-wide' ); // gutenberg wide block support
+	//add_theme_support( 'wp-block-styles' ); // allow default block styles
+	add_theme_support( 'disable-custom-colors' ); // no custom picker
+	// add_theme_support( 'disable-custom-gradients' ); // no custom gradients
+	remove_theme_support( 'core-block-patterns' );
 
 }
-add_action('after_setup_theme', 'spring_setup_editor');
+add_action( 'after_setup_theme', 'spring_setup_editor' );
 
 /**
 * Register Editor Color Controls
 */
-function spring_editor_color_palette()
-{
-    $palette = spring_editor_palette(); // palette.php
-    foreach ( $palette as $key => $item ) {
-        $color = get_theme_mod( $key, $item['color'] );
-        $editor_color_palette[] = array(
-            'name' => $item['name'],
-            'slug' => $key,
-            'color' => $color,
-        );
-    }
-    add_theme_support('editor-color-palette', $editor_color_palette);
+function spring_editor_color_palette() {
+	$palette = spring_editor_palette(); // palette.php
+	foreach ( $palette as $key => $item ) {
+		$color                  = get_theme_mod( $key, $item['color'] );
+		$editor_color_palette[] = array(
+			'name'  => $item['name'],
+			'slug'  => $key,
+			'color' => $color,
+		);
+	}
+	add_theme_support( 'editor-color-palette', $editor_color_palette );
 
 }
-add_action('after_setup_theme', 'spring_editor_color_palette');
+add_action( 'after_setup_theme', 'spring_editor_color_palette' );
 
 /**
 * Gradient Palettes
@@ -42,26 +42,26 @@ add_action('after_setup_theme', 'spring_editor_color_palette');
 */
 function spring_editor_gradient_palette() {
 
-  $palette = spring_brand_colors(); // palette.php
-  $j = 1;
-  foreach ( $palette as $key => $item ) {
-    if ($item['color']) {
-      $color = get_theme_mod( $key, $item['color'] );
-      $gradients[] = array(
-              'name'     => __( 'Theme Color ' . $j .' Darker', 'spring' ),
-              'gradient' => 'linear-gradient(135deg,'.$color.' 0%,'.color_luminance($color, -.4).' 100%)',
-              'slug'     => $key . '-gradient-darker'
-          );
-      $gradients[] = array(
-              'name'     => __( 'Theme Color ' . $j++ .' Lighter', 'spring' ),
-              'gradient' => 'linear-gradient(135deg,'.$color.' 0%,'.color_luminance($color, .4).' 100%)',
-              'slug'     => $key . '-gradient-lighter'
-          );
-    }
-  }
-  add_theme_support( 'editor-gradient-presets', $gradients );
+	$palette = spring_brand_colors(); // palette.php
+	$j       = 1;
+	foreach ( $palette as $key => $item ) {
+		if ( $item['color'] ) {
+			$color       = get_theme_mod( $key, $item['color'] );
+			$gradients[] = array(
+				'name'     => 'Theme Color ' . $j . ' Darker',
+				'gradient' => 'linear-gradient(135deg,' . $color . ' 0%,' . color_luminance( $color, -.4 ) . ' 100%)',
+				'slug'     => $key . '-gradient-darker',
+			);
+			$gradients[] = array(
+				'name'     => 'Theme Color ' . $j++ . ' Lighter',
+				'gradient' => 'linear-gradient(135deg,' . $color . ' 0%,' . color_luminance( $color, .4 ) . ' 100%)',
+				'slug'     => $key . '-gradient-lighter',
+			);
+		}
+	}
+	add_theme_support( 'editor-gradient-presets', $gradients );
 }
-add_action('after_setup_theme', 'spring_editor_gradient_palette');
+add_action( 'after_setup_theme', 'spring_editor_gradient_palette' );
 
 /**
  * List of templates/IDs
@@ -78,13 +78,14 @@ function spring_disable_editor( $id = false ) {
 		// get_option( 'page_on_front' )
 	);
 
-	if( empty( $id ) )
+	if ( empty( $id ) ) {
 		return false;
+	}
 
-	$id = intval( $id );
+	$id       = intval( $id );
 	$template = get_page_template_slug( $id );
 
-	return in_array( $id, $excluded_ids ) || in_array( $template, $excluded_templates );
+	return in_array( $id, $excluded_ids, true ) || in_array( $template, $excluded_templates, true );
 }
 
 /**
@@ -93,10 +94,10 @@ function spring_disable_editor( $id = false ) {
  */
 function spring_disable_gutenberg( $can_edit, $post_type ) {
 
-	if( ! ( is_admin() && !empty( $_GET['post'] ) ) )
+	if ( ! ( is_admin() && ! empty( $_GET['post'] ) ) )
 		return $can_edit;
 
-	if( spring_disable_editor( $_GET['post'] ) )
+	if ( spring_disable_editor( $_GET['post'] ) )
 		$can_edit = false;
 
 	return $can_edit;
@@ -112,10 +113,10 @@ add_filter( 'use_block_editor_for_post_type', 'spring_disable_gutenberg', 10, 2 
 function spring_disable_classic_editor() {
 
 	$screen = get_current_screen();
-	if( 'page' !== $screen->id || ! isset( $_GET['post']) )
+	if ( 'page' !== $screen->id || ! isset( $_GET['post']) )
 		return;
 
-	if( spring_disable_editor( $_GET['post'] ) ) {
+	if ( spring_disable_editor( $_GET['post'] ) ) {
 		remove_post_type_support( 'page', 'editor' );
 	}
 
@@ -132,17 +133,17 @@ add_action( 'admin_head', 'spring_disable_classic_editor' );
 */
 function spring_acf_admin_scripts() {
 
-    wp_register_script( 'acf_custom', get_template_directory_uri() . '/assets/js/build/acf-custom.js' );
+	wp_register_script( 'acf_custom', get_template_directory_uri() . '/assets/js/build/acf-custom.js', '', 1, false );
 
-		$palette = spring_editor_palette(); // palette.php
-		foreach ( $palette as $key => $item ) {
-			$color = get_theme_mod( $key, $item['color'] );
-			$newkey = str_replace("-", "", $key);
-			$spring_acf_colors[$newkey] = $color;
-		}
+	$palette = spring_editor_palette(); // palette.php
+	foreach ( $palette as $key => $item ) {
+		$color                        = get_theme_mod( $key, $item['color'] );
+		$newkey                       = str_replace( '-', '', $key );
+		$spring_acf_colors[ $newkey ] = $color;
+	}
 
-    wp_localize_script( 'acf_custom', 'custom_colors', $spring_acf_colors );
-    wp_enqueue_script( 'acf_custom');
+		wp_localize_script( 'acf_custom', 'custom_colors', $spring_acf_colors );
+		wp_enqueue_script( 'acf_custom' );
 }
 
 add_action( 'acf/input/admin_enqueue_scripts', 'spring_acf_admin_scripts' );
@@ -152,15 +153,14 @@ add_action( 'acf/input/admin_enqueue_scripts', 'spring_acf_admin_scripts' );
 * https://whiteleydesigns.com/synchronizing-your-acf-color-picker-with-gutenberg-color-classes/
 */
 function spring_filter_acf_class_colors( $colors ) {
-  // global $springcolor1, $springcolor2, $springcolor3, $springcolor4, $springwhite, $springNlightest, $springNlighter, $springNlight, $springNmid, $springNdark, $springNdarker, $springNdarkest;
 
 	$palette = spring_editor_palette();  // palette.php
 	foreach ( $palette as $key => $item ) {
-		$color = get_theme_mod( $key, $item['color'] );
-		$colors[$key] = $color;
+		$color          = get_theme_mod( $key, $item['color'] );
+		$colors[ $key ] = $color;
 	}
 
-  return $colors;
+	return $colors;
 }
 add_filter( 'mtm_block_colors_filter', 'spring_filter_acf_class_colors' );
 
@@ -181,7 +181,7 @@ add_filter( 'mtm_block_colors_filter', 'spring_filter_acf_class_colors' );
 //       'core/pullquote',
 //       'core/button',
 //       'core/shortcode',
-//       'core/spacer'
+//       'core/spacer',
 //   	);
 // 	}
 //

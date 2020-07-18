@@ -4,18 +4,18 @@
 * 'FILE_PATH_AND_NAME' => 'TEMPLATE_TITLE'
 */
 
-  // function spring_theme_templates( $templates ) {
+// function spring_theme_templates( $templates ) {
 
-  //   $templates = array(
-  //       //    '../templates/template-components.php' => 'Components Page',
-  //       //    '../templates/template-home.php' => 'Landing Page',
-  //       //    '../templates/template-news.php' => 'News Page',
-  //       // '../templates/template-modules.php' => 'Modular Content',
-  //       );
+//   $templates = array(
+//       //    '../templates/template-components.php' => 'Components Page',
+//       //    '../templates/template-home.php' => 'Landing Page',
+//       //    '../templates/template-news.php' => 'News Page',
+//       // '../templates/template-modules.php' => 'Modular Content',
+//       );
 
-  //   return $templates;
-  // }
-  // add_filter( 'mtm_filter_templates', 'spring_theme_templates' );
+//   return $templates;
+// }
+// add_filter( 'mtm_filter_templates', 'spring_theme_templates' );
 
 
 

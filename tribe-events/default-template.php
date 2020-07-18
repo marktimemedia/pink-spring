@@ -20,10 +20,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 <section class="content--page">
 	<?php //get_template_part( 'templates/page', 'header' ); ?>
 	<div class="post--content">
-    <main id="tribe-events-pg-template" class="tribe-events-pg-template">
-    	<?php tribe_events_before_html(); ?>
-    	<?php tribe_get_view(); ?>
-    	<?php tribe_events_after_html(); ?>
-    </main> <!-- #tribe-events-pg-template -->
-  </div>
+		<main id="tribe-events-pg-template" class="tribe-events-pg-template">
+			<?php tribe_events_before_html(); ?>
+			<?php tribe_get_view(); ?>
+			<?php tribe_events_after_html(); ?>
+		</main> <!-- #tribe-events-pg-template -->
+	</div>
 </section>
