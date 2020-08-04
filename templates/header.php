@@ -16,7 +16,7 @@
 <body <?php body_class( get_theme_mod( 'mtm_body_style' ) ); ?>>
 <div class="wrapper" role="document">
 		<header class="header-main">
-			<a class="screen-reader-text skip-link" href="#content">Skip to content</a>
+			<a class="screen-reader-text skip-link" href="#content"><?php esc_html_e( 'Skip to content', 'spring' ); ?></a>
 				<div class="header--quicklinks">
 					<div class="header--quicklinks-inner">
 						<nav aria-label="Quicklinks" class="nav-quicklinks" role="navigation">
@@ -41,7 +41,7 @@
 							<?php the_mtm_header_logo(); ?>
 					</div>
 						<section class="open-button-wrapper">
-								<button aria-label="Open Menu" id="openMainMenu" class="open-main-menu open-button"><span>Open Main Menu</span></button>
+								<button aria-label="Open Menu" id="openMainMenu" class="open-main-menu open-button"><span><?php esc_html_e( 'Open Main Menu', 'spring' ); ?></span></button>
 								<?php echo wp_kses_post( spring_sidebar_button() ); ?>
 						</section>
 						<div class="header--extra-text">
@@ -53,7 +53,7 @@
 										wp_nav_menu(
 											array(
 												'theme_location' => 'mobile_navigation',
-												'menu_class' => 'nav-mobile--menu',
+												'menu_class'     => 'nav-mobile--menu',
 											)
 										);
 								endif;
@@ -61,12 +61,12 @@
 										wp_nav_menu(
 											array(
 												'theme_location' => 'primary_navigation',
-												'menu_class' => 'nav-main--menu',
+												'menu_class'     => 'nav-main--menu',
 											)
 										);
 								endif;
 								?>
-								<button aria-label="Close Menu" id="closeSidebar"> × </button>
+								<button aria-label="Close Menu" id="closeSidebar"><?php esc_html_e( ' × ', 'spring' ); ?></button>
 						</nav>
 				</div>
 		</header>

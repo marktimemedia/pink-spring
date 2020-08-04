@@ -18,6 +18,14 @@
 		}
 }
 
+.read-more {
+	&:after {
+		content: '→';
+		display: inline-block;
+		margin-left: .3em;
+	}
+}
+
 /* Text meant only for screen readers. */
 .screen-reader-text {
   border: 0;

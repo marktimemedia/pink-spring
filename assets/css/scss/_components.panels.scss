@@ -44,23 +44,30 @@
 
 // Slider Rules
 .mtm_module_slider {
+	background-color: rgba(0,0,0,0.2);
 	position: relative;
+	min-height: 200px;
 }
 .mtm-module--slider {
+	margin-bottom: 40px;
 	&.no-nav {
 		margin-bottom: 0;
-
-		.flex-control-nav {
-			display: none;
-		}
 	}
 
 	&.no-arrows {
-		.flex-direction-nav {
-			display: none;
-		}
 	}
 }
+
+.slides {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.slide {
+	list-style: none;
+	margin: 0;
+}
+
 .mtm-module--slider-slide {
 	background-size:cover;
 	background-position: center center;
@@ -71,35 +78,31 @@
 	}
 
 	@media only screen and (max-width: $midBreakpoint) {
-		height: 100px;
+		height: 200px;
 	}
 
 	@media only screen and (min-width: $midBreakpoint) {
 		height: 800px;
 	}
 }
-
-		.flex-control-nav {
-			z-index: 2;
+		.mtm-module--main-text {
+			padding: 0 2em;
 		}
 
 		.mtm-module--main-text {
+			background-color: rgba(0,0,0,0.2);
 		  display: flex;
 		  flex-direction: column;
 		  height: 100%;
 		  justify-content: center;
-		  padding: $smallPadding;
+		  padding: 1em;
 		  position: relative;
 		  z-index: 2;
 
 		  @media only screen and (min-width: $midBreakpoint) {
 		    position: absolute;
 		    top: 0;
-				padding: $midPadding;
-		  }
-
-			@media only screen and (min-width: $midBreakpoint) {
-				padding: $maxPadding;
+				padding: 2em;
 		  }
 
 		  & > div {

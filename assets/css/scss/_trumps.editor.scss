@@ -1,5 +1,6 @@
 // Gutenberg Editor Styling
 
+
 /* set to match max width of site minus padding */
 .wp-block {
     max-width: calc( #{$boxedMax} - ( 2 * #{$maxPadding}) );
@@ -13,7 +14,7 @@
 
 /* Width of "full-wide" blocks */
 .wp-block[data-align="full"] {
-    @extend %alignfull;
+    // max-width: 100%;
 }
 
 /* "alignright" and "alignleft" blocks should not float unless theme says so */
@@ -61,11 +62,17 @@ span { // to hide text but keep accessible
 .edit-post-visual-editor__post-title-wrapper {
   box-shadow: 0 4px 5px rgba(0,0,0,0.1);
   border-bottom: 1px solid $Nlightest;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding-left: 20px;
+  padding-right: 20px;
   position: relative;
+  width: calc( 100% + 20px);
   z-index:2;
 
   .editor-post-title {
     margin-bottom: 0;
+    margin-top: 0;
   }
 }
 

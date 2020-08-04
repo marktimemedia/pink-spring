@@ -52,81 +52,10 @@
         }
     }
 
-.embed-container, .entry-content-asset {
-    max-width: 100%;
-    overflow: hidden;
-    position: relative;
-
-    &.video-asset {
-        height: auto;
-        max-width: 100%;
-        overflow: hidden;
-        &:before {
-          padding-top: 56.25%;
-        }
-    }
-
-    &.iframe-general {
-      height: auto;
-      max-width: 100%;
-      overflow: hidden;
-
-      &:before {
-        padding-top: 56.25%;
-      }
-    }
-
-    iframe, object, embed {
-        background-color: #{'rgba('+$Ndarkest_RGB+', 0.5)'};
-        color: $Nwhite;
-        height: 100%;
-        left: 0;
-        top: 0;
-        margin: 0 !important;
-        position: absolute !important;
-        width: 100% !important;
-    }
-
-    twitterwidget {
-        // height: 100%;
-        // left: 0;
-        // top: 0;
-        // position: absolute !important;
-        // width: 100% !important;
-
-        .EmbeddedTweet {
-            max-width: 100% !important;
-            min-width: 100% !important;
-        }
-    }
-}
-
-.youtube, .embed-youtube {
-    height: 0;
-    @include rem-px('margin-bottom', 3rem);
-    padding-top: 56.25%;
-    position: relative;
-    width: 100%;
-    z-index: 1;
-
-    &.standard {
-        padding-top: 75%;
-    }
-
-    iframe {
-        height: 100% !important;
-        position: absolute;
-        top: 0; bottom: 0;
-        width: 100% !important;
-    }
-}
-
-.wp-has-aspect-ratio {
-    .embed-container, .entry-content-asset {
-      position: initial;
-      &.video-asset {
-        padding-top: 0;
-    }
+.wp-block-embed__wrapper {
+  width: 100%;
+  iframe, object, embed {
+      width: 100% !important;
   }
 }
 
@@ -134,4 +63,10 @@
   & > p {
     display: none;
   }
+}
+
+.has-background-image, .cropped {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }

@@ -17,12 +17,17 @@
 
 		<section class="comment--text">
 			<?php comment_text(); ?>
-			<?php comment_reply_link(
-				array_merge( $args, array(
-					'depth'     => $depth,
-					'max_depth' => $args['max_depth'],
-				))
+			<?php
+			comment_reply_link(
+				array_merge(
+					$args,
+					array(
+						'depth'     => $depth,
+						'max_depth' => $args['max_depth'],
+					)
+				)
 			);
-			edit_comment_link( __( '&#8226; (Edit)', 'spring' ), '', '' ); ?>
+			edit_comment_link( __( '&#8226; (Edit)', 'spring' ), '', '' );
+			?>
 		</section>
 </div>

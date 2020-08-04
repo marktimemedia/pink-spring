@@ -1,5 +1,6 @@
 .nav-pager {
   clear: both;
+  overflow: auto;
 }
     .pager {
         list-style: none;
@@ -8,18 +9,31 @@
     }
 
         .pager--previous, a[rel="prev"] {
-            //float: left;
+            float: left;
 
-            &:before {
-                //content: '← ';
+            .read-more {
+            	&:before {
+            		content: '←';
+            		display: inline-block;
+            		margin-right: .3em;
+            	}
+              &:after {
+                content: '';
+                margin: 0;
+              }
             }
         }
 
         .pager--next, a[rel="next"] {
-           // float: right;
+           float: right;
+           text-align: right;
 
-            &:after {
-                //content:' →';
+            .read-more {
+            	&:after {
+            		content: '→';
+            		display: inline-block;
+            		margin-left: .3em;
+            	}
             }
         }
 

@@ -1,4 +1,4 @@
-<section class="content--page">
+<section class="content--page" id="content-page">
 	<?php
 	$error_page = get_theme_mod( 'custom_error_page' ) ? get_theme_mod( 'custom_error_page' ) : false;
 

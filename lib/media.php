@@ -7,7 +7,7 @@
  * @link http://www.readability.com/publishers/guidelines#publisher
  * @link https://wordpress.stackexchange.com/questions/254583/add-wrapper-to-only-youtube-videos-via-embed-oembed-html-filter-function
  */
-function spring_embed_wrap($cache, $url, $attr = '', $post_ID = '') {
+function spring_embed_wrap( $cache, $url, $attr = '', $post_ID = '' ) {
 	$classes = array();
 
 		// Add these classes to all embeds.
@@ -29,7 +29,7 @@ function spring_embed_wrap($cache, $url, $attr = '', $post_ID = '') {
 
 		return '<div class="' . esc_attr( implode( $classes, ' ' ) ) . '">' . $cache . '</div>';
 }
-add_filter( 'embed_oembed_html', 'spring_embed_wrap', 10, 4 );
+// add_filter( 'embed_oembed_html', 'spring_embed_wrap', 10, 4 );
 
 /**
 * Wrap Gutenberg blocks in a container so we can target them with scroll ScrollReveal

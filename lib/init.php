@@ -50,7 +50,6 @@ function spring_setup() {
 	/**
 	 * Enable theme features
 	 */
-	// add_theme_support( 'jquery-cdn' );                    // Enable to load jQuery from the Google CDN
 	add_theme_support( 'root-relative-urls' );            // Enable relative URLs
 	add_theme_support( 'nice-search' );                   // Enable /?s= to /search/ redirect
 	add_theme_support( 'customize-selective-refresh-widgets' ); // https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets

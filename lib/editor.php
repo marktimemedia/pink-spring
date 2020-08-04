@@ -13,7 +13,10 @@ function spring_setup_editor() {
 	//add_theme_support( 'wp-block-styles' ); // allow default block styles
 	add_theme_support( 'disable-custom-colors' ); // no custom picker
 	// add_theme_support( 'disable-custom-gradients' ); // no custom gradients
-	remove_theme_support( 'core-block-patterns' );
+	add_theme_support( 'custom-line-height' );
+	add_theme_support( 'custom-units', 'px, em, vh' ); // supports px, em, rem, vh, vw
+
+	remove_theme_support( 'core-block-patterns' ); // no core block patterns
 
 }
 add_action( 'after_setup_theme', 'spring_setup_editor' );
@@ -44,24 +47,44 @@ function spring_editor_gradient_palette() {
 
 	$palette = spring_brand_colors(); // palette.php
 	$j       = 1;
-	foreach ( $palette as $key => $item ) {
+
+	foreach ( $palette as $key => $item ) { // single color
 		if ( $item['color'] ) {
 			$color       = get_theme_mod( $key, $item['color'] );
 			$gradients[] = array(
-				'name'     => 'Theme Color ' . $j . ' Darker',
-				'gradient' => 'linear-gradient(135deg,' . $color . ' 0%,' . color_luminance( $color, -.4 ) . ' 100%)',
+				'name'     => $item['name'] . ' Darker',
+				'gradient' => 'linear-gradient(135deg,' . $color . ' 0%,' . color_luminance( $color, -.5 ) . ' 100%)',
 				'slug'     => $key . '-gradient-darker',
 			);
 			$gradients[] = array(
-				'name'     => 'Theme Color ' . $j++ . ' Lighter',
-				'gradient' => 'linear-gradient(135deg,' . $color . ' 0%,' . color_luminance( $color, .4 ) . ' 100%)',
+				'name'     => $item['name'] . ' Lighter',
+				'gradient' => 'linear-gradient(135deg,' . $color . ' 0%,' . color_luminance( $color, .6 ) . ' 100%)',
 				'slug'     => $key . '-gradient-lighter',
 			);
+		}
+	}
+
+	foreach ( $palette as $key => $item ) { // multi color
+		if ( $item['color'] ) {
+			$color = get_theme_mod( $key, $item['color'] );
+
+			foreach ( array_slice( $palette, $j++ ) as $key2 => $item2 ) {
+				$color2 = get_theme_mod( $key2, $item2['color'] );
+
+				if ( $color2 ) {
+					$gradients[] = array(
+						'name'     => $item['name'] . ' And ' . $item2['name'],
+						'gradient' => 'linear-gradient(135deg,' . $color . ' 0%,' . $color2 . ' 100%)',
+						'slug'     => $key . '-' . $key2 . '-gradient',
+					);
+				}
+			}
 		}
 	}
 	add_theme_support( 'editor-gradient-presets', $gradients );
 }
 add_action( 'after_setup_theme', 'spring_editor_gradient_palette' );
+
 
 /**
  * List of templates/IDs
@@ -94,11 +117,13 @@ function spring_disable_editor( $id = false ) {
  */
 function spring_disable_gutenberg( $can_edit, $post_type ) {
 
-	if ( ! ( is_admin() && ! empty( $_GET['post'] ) ) )
+	if ( ! ( is_admin() && ! empty( $_GET['post'] ) ) ) {
 		return $can_edit;
+	}
 
-	if ( spring_disable_editor( $_GET['post'] ) )
+	if ( spring_disable_editor( $_GET['post'] ) ) {
 		$can_edit = false;
+	}
 
 	return $can_edit;
 
@@ -113,8 +138,9 @@ add_filter( 'use_block_editor_for_post_type', 'spring_disable_gutenberg', 10, 2 
 function spring_disable_classic_editor() {
 
 	$screen = get_current_screen();
-	if ( 'page' !== $screen->id || ! isset( $_GET['post']) )
+	if ( 'page' !== $screen->id || ! isset( $_GET['post'] ) ) {
 		return;
+	}
 
 	if ( spring_disable_editor( $_GET['post'] ) ) {
 		remove_post_type_support( 'page', 'editor' );

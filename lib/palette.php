@@ -80,11 +80,9 @@ function spring_brand_options() {
 		),
 		'spring-heading'    => array(
 			'name' => 'Heading Color (Optional)',
-			// 'color' => '#303030',
 		),
 		'spring-subheading' => array(
 			'name' => 'Subheading Color (Optional)',
-			// 'color' => '#303030',
 		),
 		'spring-alert'      => array(
 			'name'  => 'Alert Color',
@@ -170,8 +168,6 @@ function spring_palette_css() {
 			$css_vars[]  = '--' . $key . '-lighter:' . color_luminance( $color, .25 ) . ';';
 			$css_style[] = '.has-' . $key . '-background-color{background-color:' . $color . ' !important;}';
 			$css_style[] = '.has-' . $key . '-color{color:' . $color . ' !important;}';
-			$css_style[] = '.has-' . $key . '-gradient-darker-background{linear-gradient(135deg,' . $color . ' 0%,' . color_luminance( $color, -.4 ) . ' 100%) !important;}';
-			$css_style[] = '.has-' . $key . '-gradient-lighter-background{linear-gradient(135deg,' . $color . ' 0%,' . color_luminance( $color, .4 ) . ' 100%) !important;}';
 		}
 	}
 	$options = spring_brand_options();
@@ -197,6 +193,31 @@ function spring_palette_css() {
 	$root  = ! empty( $css_vars ) ? ':root{' . implode( ' ', $css_vars ) . ' }' : '';
 	$style = ! empty( $css_style ) ? implode( ' ', $css_style ) : '';
 	return $root . "\n" . $style;
+}
+
+/**
+* CSS Gradients Inline Style
+*/
+function spring_gradient_css() {
+	$palette = spring_brand_colors();
+	$j       = 1;
+
+	foreach ( $palette as $key => $item ) {
+		if ( $item['color'] ) {
+			$color       = get_theme_mod( $key, $item['color'] );
+			$css_style[] = '.has-' . $key . '-gradient-darker-gradient-background{background:linear-gradient(135deg,' . $color . ' 0%,' . color_luminance( $color, -.5 ) . ' 100%) !important;}';
+			$css_style[] = '.has-' . $key . '-gradient-lighter-gradient-background{background:linear-gradient(135deg,' . $color . ' 0%,' . color_luminance( $color, .6 ) . ' 100%) !important;}';
+
+			foreach ( array_slice( $palette, $j++ ) as $key2 => $item2 ) {
+				$color2 = get_theme_mod( $key2, $item2['color'] );
+				if ( $color2 ) {
+					$css_style[] = '.has-' . $key . '-' . $key2 . '-gradient-gradient-background{background:linear-gradient(135deg,' . $color . ' 0%,' . $color2 . ' 100%) !important;}';
+				}
+			}
+		}
+	}
+	$style = ! empty( $css_style ) ? implode( ' ', $css_style ) : '';
+	return $style;
 }
 
 function spring_rgb_css() {
