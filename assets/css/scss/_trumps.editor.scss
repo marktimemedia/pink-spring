@@ -1,5 +1,15 @@
 // Gutenberg Editor Styling
-
+:root {
+	--body-font-family: sans-serif;
+	--body-font-weight: 'regular';
+	--body-font-weight-bold: 'bold';
+	--heading-font-family: sans-serif;
+	--heading-font-weight: 200;
+	--heading-font-weight-bold: 500;
+	--subheading-font-family: sans-serif;
+	--subheading-font-weight: 500;
+	--subheading-font-weight-bold: 700;
+}
 
 /* set to match max width of site minus padding */
 .wp-block {

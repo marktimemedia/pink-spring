@@ -17,6 +17,7 @@
 <div class="wrapper" role="document">
 		<header class="header-main">
 			<a class="screen-reader-text skip-link" href="#content"><?php esc_html_e( 'Skip to content', 'spring' ); ?></a>
+			<?php if ( has_nav_menu( 'quicklink_navigation' ) || get_theme_mod( 'header_search_bar' ) ) : ?>
 				<div class="header--quicklinks">
 					<div class="header--quicklinks-inner">
 						<nav aria-label="Quicklinks" class="nav-quicklinks" role="navigation">
@@ -31,11 +32,10 @@
 							endif;
 							?>
 						</nav>
-						<?php echo wp_kses_post( mtm_get_social_media() ); ?>
-						<?php echo wp_kses_post( mtm_get_phone_number() ); ?>
 						<?php spring_search_bar(); ?>
 					</div>
 				</div>
+			<?php endif; ?>
 				<div class="header--inner">
 					<div class="header--blog-name h1">
 							<?php the_mtm_header_logo(); ?>

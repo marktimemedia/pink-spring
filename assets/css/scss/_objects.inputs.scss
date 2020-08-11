@@ -52,7 +52,7 @@
           color: $linkHover;
         }
 
-        .footer-main &, .header-main & {
+        .header-main & {
           color: $Nwhite;
 
           &:hover {
@@ -72,7 +72,7 @@
     margin-right: 5px;
   }
 
-  .footer-main &, .header-main & {
+  .header-main & {
     color: $Nwhite;
 
     &:hover {

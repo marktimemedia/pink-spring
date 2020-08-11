@@ -1,95 +1,63 @@
 <?php
 /**
- * Lightens/darkens a given colour (hex format), returning the altered colour in hex format.7
- * @link https://gist.github.com/stephenharris/5532899
- * @param str $hex Colour as hexadecimal (with or without hash);
- * @param float $percent Decimal ( 0.2 = lighten by 20%(), -0.4 = darken by 40%() )
- * @return str Lightened/Darkend colour as hexadecimal (with hash);
- */
-function color_luminance( $hex, $percent ) {
-	if ( $hex ) {
-		$hex     = preg_replace( '/[^0-9a-f]/i', '', $hex );
-		$new_hex = '#';
-		if ( strlen( $hex ) < 6 ) {
-			$hex = $hex[0] + $hex[0] + $hex[1] + $hex[1] + $hex[2] + $hex[2];
-		}
-		for ( $i = 0; $i < 3; $i++ ) {
-			$dec      = hexdec( substr( $hex, $i * 2, 2 ) );
-			$dec      = min( max( 0, $dec + $dec * $percent ), 255 );
-			$new_hex .= str_pad( dechex( $dec ), 2, 0, STR_PAD_LEFT );
-		}
-		return $new_hex;
-	}
-}
-
-function hex2rgb( $colour ) {
-	if ( $colour ) {
-		if ( '#' === $colour[0] ) {
-						$colour = substr( $colour, 1 );
-		}
-		if ( 6 === strlen( $colour ) ) {
-			list( $r, $g, $b ) = array( $colour[0] . $colour[1], $colour[2] . $colour[3], $colour[4] . $colour[5] );
-		} elseif ( 3 === strlen( $colour ) ) {
-			list( $r, $g, $b ) = array( $colour[0] . $colour[0], $colour[1] . $colour[1], $colour[2] . $colour[2] );
-		} else {
-						return false;
-		}
-		$r = hexdec( $r );
-		$g = hexdec( $g );
-		$b = hexdec( $b );
-		return array( $r, $g, $b );
-	}
-}
-/**
 * Brand Palettes
 * General Brand Colors, Neutrals, Options
 */
 function spring_brand_colors() {
 	return array(
-		'spring-color-1' => array(
-			'name'  => 'Theme Color 1 (Primary)',
+		'brand-color-1' => array(
+			'name'  => 'Brand Color 1 (Primary)',
 			'color' => '#de1e7e',
 		),
-		'spring-color-2' => array(
-			'name'  => 'Theme Color 2 (Secondary)',
+		'brand-color-2' => array(
+			'name'  => 'Brand Color 2 (Secondary)',
 			'color' => '#1D7FA7',
 		),
-		'spring-color-3' => array(
-			'name'  => 'Theme Color 3',
+		'brand-color-3' => array(
+			'name'  => 'Brand Color 3 (Accent)',
 			'color' => '#0C8670',
 		),
-		'spring-color-4' => array(
-			'name'  => 'Theme Color 4',
+		'brand-color-4' => array(
+			'name'  => 'Brand Color 4 (Accent)',
 			'color' => '#7F4FD2',
 		),
-		'spring-color-5' => array(
-			'name'  => 'Theme Color 5',
+		'brand-color-5' => array(
+			'name'  => 'Brand Color 5 (Accent)',
 			'color' => '#D63F10',
 		),
 	);
 }
 function spring_brand_options() {
 	return array(
-		'spring-links'      => array(
+		'brand-links' => array(
 			'name'  => 'Link Color',
-			'color' => '#de1e7e',
+			'color' => '#BC1A6B',
 		),
-		'spring-text'       => array(
-			'name'  => 'Primary Text Color',
-			'color' => '#303030',
-		),
-		'spring-heading'    => array(
-			'name' => 'Heading Color (Optional)',
-		),
-		'spring-subheading' => array(
-			'name' => 'Subheading Color (Optional)',
-		),
-		'spring-alert'      => array(
+		'brand-alert' => array(
 			'name'  => 'Alert Color',
 			'color' => '#E6135A',
 		),
 	);
 }
+
+function spring_brand_text() {
+	return array(
+		'brand-text'       => array(
+			'name'  => 'Primary Text Color',
+			'color' => '#303030',
+		),
+		'brand-heading'    => array(
+			'name' => 'Heading Color',
+			'color' => '#303030',
+		),
+		'brand-subheading' => array(
+			'name' => 'Subheading Color',
+			'color' => '#303030',
+		),
+	);
+}
+
+
 function spring_brand_neutrals() {
 	return array(
 		'neutral-lightest' => array(
@@ -142,7 +110,8 @@ function spring_brand_palette() {
 function spring_customizer_palette() {
 	$brand   = spring_brand_palette();
 	$options = spring_brand_options();
-	return array_merge( $brand, $options );
+	$text    = spring_brand_text();
+	return array_merge( $brand, $options, $text );
 }
 
 /**
@@ -151,9 +120,53 @@ function spring_customizer_palette() {
 */
 function spring_editor_palette() {
 	$brandcolors   = spring_brand_colors();
+	$brandoptions  = spring_brand_options();
 	$brandneutrals = spring_brand_neutralwhite();
-	return array_merge( $brandcolors, $brandneutrals );
+	return array_merge( $brandcolors, $brandoptions, $brandneutrals );
 }
+
+/**
+ * Lightens/darkens a given colour (hex format), returning the altered colour in hex format.7
+ * @link https://gist.github.com/stephenharris/5532899
+ * @param str $hex Colour as hexadecimal (with or without hash);
+ * @param float $percent Decimal ( 0.2 = lighten by 20%(), -0.4 = darken by 40%() )
+ * @return str Lightened/Darkend colour as hexadecimal (with hash);
+ */
+function color_luminance( $hex, $percent ) {
+	if ( $hex ) {
+		$hex     = preg_replace( '/[^0-9a-f]/i', '', $hex );
+		$new_hex = '#';
+		if ( strlen( $hex ) < 6 ) {
+			$hex = $hex[0] + $hex[0] + $hex[1] + $hex[1] + $hex[2] + $hex[2];
+		}
+		for ( $i = 0; $i < 3; $i++ ) {
+			$dec      = hexdec( substr( $hex, $i * 2, 2 ) );
+			$dec      = min( max( 0, $dec + $dec * $percent ), 255 );
+			$new_hex .= str_pad( dechex( $dec ), 2, 0, STR_PAD_LEFT );
+		}
+		return $new_hex;
+	}
+}
+
+function hex2rgb( $colour ) {
+	if ( $colour ) {
+		if ( '#' === $colour[0] ) {
+						$colour = substr( $colour, 1 );
+		}
+		if ( 6 === strlen( $colour ) ) {
+			list( $r, $g, $b ) = array( $colour[0] . $colour[1], $colour[2] . $colour[3], $colour[4] . $colour[5] );
+		} elseif ( 3 === strlen( $colour ) ) {
+			list( $r, $g, $b ) = array( $colour[0] . $colour[0], $colour[1] . $colour[1], $colour[2] . $colour[2] );
+		} else {
+						return false;
+		}
+		$r = hexdec( $r );
+		$g = hexdec( $g );
+		$b = hexdec( $b );
+		return array( $r, $g, $b );
+	}
+}
+
 
 /**
 * CSS Color Variables Inline Style
@@ -178,6 +191,14 @@ function spring_palette_css() {
 			$css_vars[]  = '--' . $key . '-darker:' . color_luminance( $color, -.25 ) . ';';
 			$css_vars[]  = '--' . $key . '-lighter:' . color_luminance( $color, .25 ) . ';';
 			$css_style[] = '.has-' . $key . '-background-color{background-color:' . $color . ' !important;}';
+			$css_style[] = '.has-' . $key . '-color{color:' . $color . ' !important;}';
+		}
+	}
+	$text = spring_brand_text();
+	foreach ( $text as $key => $item ) {
+		if ( $item['color'] ) {
+			$color       = get_theme_mod( $key, $item['color'] );
+			$css_vars[]  = '--' . $key . ':' . $color . ';';
 			$css_style[] = '.has-' . $key . '-color{color:' . $color . ' !important;}';
 		}
 	}

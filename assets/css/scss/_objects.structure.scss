@@ -87,7 +87,7 @@
 
     .content-main {
         padding-right: 1em;
-        @include pinkgrid($colspan:9, $padside:3%);
+        @include pinkgrid($colspan:9, $padside:4%);
         @include pinkrow($rowitems:2)
     }
 }

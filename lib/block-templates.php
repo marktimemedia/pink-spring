@@ -13,7 +13,7 @@ function spring_page_block_template() {
 		array(
 			'core/cover',
 			array(
-				'overlayColor' => 'spring-color-1',
+				'overlayColor' => 'brand-color-1',
 				'align'        => 'full',
 			),
 			array(
@@ -98,8 +98,8 @@ if ( function_exists( 'register_block_pattern' ) ) {
 		array(
 			'title'      => __( 'Cover Image', 'spring' ),
 			'categories' => array( 'cover' ),
-			'content'    => '<!-- wp:cover {"overlayColor":"spring-color-1","minHeight":400,"align":"full", "className":"cover-feature"} -->
-			<div class="wp-block-cover alignfull has-spring-color-1-background-color has-background-dim cover-feature" style="min-height:400px">
+			'content'    => '<!-- wp:cover {"overlayColor":"brand-color-1","minHeight":400,"align":"full", "className":"cover-feature"} -->
+			<div class="wp-block-cover alignfull has-brand-color-1-background-color has-background-dim cover-feature" style="min-height:400px">
 			<div class="wp-block-cover__inner-container">
 			<!-- wp:acf/spring-headline {"id":"block_5ee136f9c2ab4","name":"acf/spring-headline","align":"center","mode":"preview"} /-->
 			<!-- wp:paragraph {"align":"center","placeholder":"Lead subheading text...","fontSize":"large"} -->
@@ -351,8 +351,8 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			<!-- /wp:column -->
 			<!-- wp:column {"width":25} -->
 			<div class="wp-block-column" style="flex-basis:25%">
-			<!-- wp:cover {"overlayColor":"spring-color-2","minHeight":50,"contentPosition":"center center"} -->
-			<div class="wp-block-cover has-spring-color-2-background-color has-background-dim is-position-center-center" style="min-height:50px">
+			<!-- wp:cover {"overlayColor":"brand-color-2","minHeight":50,"contentPosition":"center center"} -->
+			<div class="wp-block-cover has-brand-color-2-background-color has-background-dim is-position-center-center" style="min-height:50px">
 			<div class="wp-block-cover__inner-container">
 			<!-- wp:paragraph {"placeholder":"Add callout text...","align":"center","fontSize":"medium"} -->
 			<p class="has-text-align-center has-medium-font-size"></p>
@@ -375,8 +375,8 @@ if ( function_exists( 'register_block_pattern' ) ) {
 		array(
 			'title'      => __( 'Content And Callout', 'spring' ),
 			'categories' => array( 'featured' ),
-			'content'    => '<!-- wp:group {"className":"call-to-action","backgroundColor":"spring-color-1","textColor":"neutral-white"} -->
-			<div class="wp-block-group alignfull call-to-action has-neutral-white-color has-spring-color-1-background-color has-text-color has-background" id="call-to-action">
+			'content'    => '<!-- wp:group {"className":"call-to-action","backgroundColor":"brand-color-1","textColor":"neutral-white"} -->
+			<div class="wp-block-group alignfull call-to-action has-neutral-white-color has-brand-color-1-background-color has-text-color has-background" id="call-to-action">
 			<div class="wp-block-group__inner-container">
 			<!-- wp:columns {"verticalAlignment":null} -->
 			<div class="wp-block-columns">

@@ -1,23 +1,23 @@
 // Site Colors
-$springColor1: var(--spring-color-1); //#de1e7e // pink
-$springColor1_Lt: var(--spring-color-1-lighter); //lighten( $springColor1, 10% );
-$springColor1_Dk: var(--spring-color-1-darker);//darken( $springColor1, 10% );
+$brandColor1: var(--brand-color-1); //#de1e7e // pink
+$brandColor1_Lt: var(--brand-color-1-lighter); //lighten( $brandColor1, 10% );
+$brandColor1_Dk: var(--brand-color-1-darker);//darken( $brandColor1, 10% );
 
-$springColor2: var(--spring-color-2); //#009fd4 // blue
-$springColor2_Lt: var(--spring-color-2-lighter); //lighten( $springColor2, 10% )
-$springColor2_Dk: var(--spring-color-2-darker); //darken( $springColor2, 10% )
+$brandColor2: var(--brand-color-2); //#009fd4 // blue
+$brandColor2_Lt: var(--brand-color-2-lighter); //lighten( $brandColor2, 10% )
+$brandColor2_Dk: var(--brand-color-2-darker); //darken( $brandColor2, 10% )
 
-$springColor3: var(--spring-color-3); //#03a678 // green
-$springColor3_Lt: var(--spring-color-3-lighter); //lighten( $springColor3, 10% )
-$springColor3_Dk: var(--spring-color-3-darker); //darken( $springColor3, 10% )
+$brandColor3: var(--brand-color-3); //#03a678 // green
+$brandColor3_Lt: var(--brand-color-3-lighter); //lighten( $brandColor3, 10% )
+$brandColor3_Dk: var(--brand-color-3-darker); //darken( $brandColor3, 10% )
 
-$springColor4: var(--spring-color-4); //#9053ed
-$springColor4_Lt: var(--spring-color-4-lighter); //lighten( $springColor4, 10% )
-$springColor4_Dk: var(--spring-color-4-darker); //darken( $springColor4, 10% )
+$brandColor4: var(--brand-color-4); //#9053ed
+$brandColor4_Lt: var(--brand-color-4-lighter); //lighten( $brandColor4, 10% )
+$brandColor4_Dk: var(--brand-color-4-darker); //darken( $brandColor4, 10% )
 
-$springColor5: var(--spring-color-5); //#9053ed
-$springColor5_Lt: var(--spring-color-5-lighter); //lighten( $springColor4, 10% )
-$springColor5_Dk: var(--spring-color-5-darker); //darken( $springColor4, 10% )
+$brandColor5: var(--brand-color-5); //#9053ed
+$brandColor5_Lt: var(--brand-color-5-lighter); //lighten( $brandColor4, 10% )
+$brandColor5_Dk: var(--brand-color-5-darker); //darken( $brandColor4, 10% )
 
 
 // Neutrals
@@ -31,29 +31,29 @@ $Nwhite: var(--neutral-white); //#fff
 $bodyColor: $Nwhite;
 
 // Options
-$textColor: var(--spring-text);
-$textColor_Lt: var(--spring-text-lighter);
-$textColor_Dk: var(--spring-text-darker);
-$headingColor: var(--spring-heading);
-$headingColor_Lt: var(--spring-heading-lighter);
-$headingColor_Dk: var(--spring-heading-darker);
-$subheadingColor: var(--spring-subheading);
-$subheadingColor_Lt: var(--spring-subheading-lighter);
-$subheadingColor_Dk: var(--spring-subheading-darker);
-$interactColor: var(--spring-links);
-$interactColor_Lt: var(--spring-links-lighter);
-$interactColor_Dk: var(--spring-links-darker);
-$alertColor: var(--spring-alert); //red
-$alertColor_Lt: var(--spring-alert-lighter);
-$alertColor_Dk: var(--spring-alert-darker);
+$textColor: var(--brand-text);
+$textColor_Lt: var(--brand-text-lighter);
+$textColor_Dk: var(--brand-text-darker);
+$headingColor: var(--brand-heading);
+$headingColor_Lt: var(--brand-heading-lighter);
+$headingColor_Dk: var(--brand-heading-darker);
+$subheadingColor: var(--brand-subheading);
+$subheadingColor_Lt: var(--brand-subheading-lighter);
+$subheadingColor_Dk: var(--brand-subheading-darker);
+$interactColor: var(--brand-links);
+$interactColor_Lt: var(--brand-links-lighter);
+$interactColor_Dk: var(--brand-links-darker);
+$alertColor: var(--brand-alert); //red
+$alertColor_Lt: var(--brand-alert-lighter);
+$alertColor_Dk: var(--brand-alert-darker);
 
 
 // RGB
-$springColor1_RGB: var(--spring-color-1-rgb);
-$springColor2_RGB: var(--spring-color-2-rgb);
-$springColor3_RGB: var(--spring-color-3-rgb);
-$springColor4_RGB: var(--spring-color-3-rgb);
-$springColor5_RGB: var(--spring-color-3-rgb);
+$brandColor1_RGB: var(--brand-color-1-rgb);
+$brandColor2_RGB: var(--brand-color-2-rgb);
+$brandColor3_RGB: var(--brand-color-3-rgb);
+$brandColor4_RGB: var(--brand-color-3-rgb);
+$brandColor5_RGB: var(--brand-color-3-rgb);
 $Ndarkest_RGB:var(--neutral-darkest-rgb);
 $Ndark_RGB: var(--neutral-dark-rgb);
 $Nmid_RGB: var(--neutral-mid-rgb);
@@ -63,11 +63,11 @@ $Nwhite_RGB: var(--neutral-white-rgb);
 
 // Color Arrays
 $colors: (
-  spring-color-1: $springColor1,
-  spring-color-2: $springColor2,
-  spring-color-3: $springColor3,
-  spring-color-4: $springColor4,
-  spring-color-5: $springColor5,
+  brand-color-1: $brandColor1,
+  brand-color-2: $brandColor2,
+  brand-color-3: $brandColor3,
+  brand-color-4: $brandColor4,
+  brand-color-5: $brandColor5,
   neutral-darkest: $Ndarkest,
   neutral-dark: $Ndark,
   neutral-mid: $Nmid,
@@ -77,11 +77,11 @@ $colors: (
 );
 
 $colorsDarken: (
-  spring-color-1: $springColor1_Dk,
-  spring-color-2: $springColor2_Dk,
-  spring-color-3: $springColor3_Dk,
-  spring-color-4: $springColor4_Dk,
-  spring-color-5: $springColor5_Dk,
+  brand-color-1: $brandColor1_Dk,
+  brand-color-2: $brandColor2_Dk,
+  brand-color-3: $brandColor3_Dk,
+  brand-color-4: $brandColor4_Dk,
+  brand-color-5: $brandColor5_Dk,
   neutral-darkest: #000000,
   neutral-dark: $Ndarkest,
   neutral-mid: $Ndark,
@@ -91,11 +91,11 @@ $colorsDarken: (
 );
 
 $colorsLighten: (
-  spring-color-1: $springColor1_Lt,
-  spring-color-2: $springColor2_Lt,
-  spring-color-3: $springColor3_Lt,
-  spring-color-4: $springColor4_Lt,
-  spring-color-5: $springColor5_Lt,
+  brand-color-1: $brandColor1_Lt,
+  brand-color-2: $brandColor2_Lt,
+  brand-color-3: $brandColor3_Lt,
+  brand-color-4: $brandColor4_Lt,
+  brand-color-5: $brandColor5_Lt,
   neutral-darkest: $Ndark,
   neutral-dark: $Nmid,
   neutral-mid: $Nlight,

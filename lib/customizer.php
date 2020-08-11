@@ -38,6 +38,7 @@ function spring_customize_options( $wp_customize ) {
 			$key,
 			array(
 				'default'           => $item['color'],
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
 			)
 		);

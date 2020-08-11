@@ -5,6 +5,13 @@
   position: relative;
 }
 
+.post--content {
+  .page--header {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+}
+
 .post--content, .content--page {
   & > div {
     margin-bottom: $midPadding;

@@ -136,6 +136,7 @@
 
 .page--header {
     margin-bottom: $headingMargin;
+		margin-top: 2em;
 
     @media only screen and (min-width: $midBreakpoint) {
       margin-bottom: $headingMargin * 2;

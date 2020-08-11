@@ -6,7 +6,7 @@
   }
 
   .acfes-global-session-mainstage, .acfes-session-type-mainstage {
-    background-color: #{'rgba('+$springColor1_RGB+', .2)'} !important;
+    background-color: #{'rgba('+$brandColor1_RGB+', .2)'} !important;
   }
 
   .acfes-global-session-custom, .acfes-session-type-custom {
@@ -97,7 +97,7 @@
   }
 
   .acfes-global-session-mainstage, .acfes-session-type-mainstage {
-    background-color: $springColor1_Dk !important;
+    background-color: $brandColor1_Dk !important;
   }
 
   .acfes-global-session-custom, .acfes-session-type-custom {
@@ -279,7 +279,7 @@
     }
 
     .tribe-right label[for^=tribe-tickets-attendees-list-optout] input[type=checkbox]:checked:before {
-      color:$springColor1;
+      color:$brandColor1;
     }
 
     .tribe-block__rsvp__number-input-button {
@@ -302,7 +302,7 @@
 // Tooltip
 .tooltipster-sidetip .tooltipster-box {
   background-color: $Nwhite;
-  border-color: $springColor1;
+  border-color: $brandColor1;
   color: $Ndarkest;
   padding: .5em;
 
@@ -685,7 +685,7 @@
   }
 
   button.tribe-events-calendar-month__day-cell--selected {
-    background-color: #{'rgba('+$springColor1_RGB+', .1)'}
+    background-color: #{'rgba('+$brandColor1_RGB+', .1)'}
   }
 
   // List
@@ -819,7 +819,7 @@ body.page-tribe-attendee-registration .tribe-tickets__registration {
 
 @media only screen and (max-width: 768px) {
     #tribe-events-content .tribe-events-calendar td.tribe-events-present.mobile-active:hover, .tribe-events-calendar td.tribe-events-present.mobile-active, .tribe-events-calendar td.tribe-events-present.mobile-active div[id*=tribe-events-daynum-], .tribe-events-calendar td.tribe-events-present.mobile-active div[id*=tribe-events-daynum-] a {
-        background-color: $springColor1;
+        background-color: $brandColor1;
     }
 }
 

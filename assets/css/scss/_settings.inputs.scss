@@ -16,10 +16,10 @@ $labelFontSize: 1.125em;
 $labelColor: $Ndarkest;
 
 // Buttons
-$buttonBackground: $springColor1;
-$buttonBackground2: $springColor1_Dk;
-$buttonBorderColor: $springColor1_Dk;
-$buttonBorderColor2: $springColor1;
+$buttonBackground: $brandColor1;
+$buttonBackground2: $brandColor1_Dk;
+$buttonBorderColor: $brandColor1_Dk;
+$buttonBorderColor2: $brandColor1;
 $buttonBorderWidth: 2px;
 $buttonBorderStyle: solid;
 $buttonBorderRadius: 0 !default;
@@ -32,9 +32,9 @@ $buttonFontSize: 1em;
 $buttonFontWeight: 600;
 $buttonPadding: .5em 1em;
 
-$buttonAltBackground: $springColor2;
-$buttonAltBackground2: $springColor2_Dk;
-$buttonAltBorderColor: $springColor2_Dk;
-$buttonAltBorderColor2: $springColor2;
+$buttonAltBackground: $brandColor2;
+$buttonAltBackground2: $brandColor2_Dk;
+$buttonAltBorderColor: $brandColor2_Dk;
+$buttonAltBorderColor2: $brandColor2;
 
 $outline: $alertColor dotted 2px;

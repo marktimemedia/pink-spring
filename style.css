@@ -16,6 +16,17 @@
 /*
   ---- ---- ---- ---- RESET STYLESHEET ---- ---- ---- ----
 */
+:root {
+  --body-font-family: sans-serif;
+  --body-font-weight: 'regular';
+  --body-font-weight-bold: 'bold';
+  --heading-font-family: sans-serif;
+  --heading-font-weight: 200;
+  --heading-font-weight-bold: 500;
+  --subheading-font-family: sans-serif;
+  --subheading-font-weight: 500;
+  --subheading-font-weight-bold: 700; }
+
 html, body {
   margin: 0;
   padding: 0; }
@@ -116,7 +127,7 @@ textarea,
   select:focus,
   textarea:focus,
   .textbox:focus {
-    outline: var(--spring-alert) dotted 2px; }
+    outline: var(--brand-alert) dotted 2px; }
 
 button,
 .button,
@@ -129,8 +140,8 @@ input[type="reset"], .global-button, #tribe-events .tribe-events-button, #tribe-
 li.woocommerce-MyAccount-navigation-link--customer-logout .wp-block-button:not(.components-toolbar) wp-block a:not(.insert-media):not(.acf-button), .tribe_events .tribe-common .tribe-common-c-btn.tribe-common-c-btn--small, .tribe_events .tribe-block__rsvp__status-button, .tribe_events .tribe-block__rsvp__form .tribe-block__rsvp__submit-button, #tribe-events .tribe-events-single .tribe-block__events-link .tribe-block__btn--link a, #tribe-events .tribe-events-single .tribe-events-button, #tribe-events-pg-template .tribe-events-single .tribe-block__events-link .tribe-block__btn--link a, #tribe-events-pg-template .tribe-events-single .tribe-events-button, .tribe-events .tribe-events-c-nav__list .tribe-common-b2, .tribe-events .tribe-events-l-container a.tribe-common-c-btn-border, .tribe-events .tribe-events-c-ical__link, .tribe-events .tribe-events-calendar-list .tribe-events-c-small-cta__link {
   color: var(--neutral-white);
   cursor: pointer;
-  background-color: var(--spring-color-1);
-  border: 2px solid var(--spring-color-1-darker);
+  background-color: var(--brand-color-1);
+  border: 2px solid var(--brand-color-1-darker);
   border-radius: 0;
   display: inline-block;
   font-family: var(--body-font-family), sans-serif;
@@ -163,8 +174,8 @@ li.woocommerce-MyAccount-navigation-link--customer-logout .wp-block-button:not(.
   .wp-block-button:not(.components-toolbar) wp-block .button:focus:not(.insert-media):not(.acf-button),
   .wp-block-button:not(.components-toolbar) wp-block li.woocommerce-MyAccount-navigation-link--customer-logout a:focus:not(.insert-media):not(.acf-button),
   li.woocommerce-MyAccount-navigation-link--customer-logout .wp-block-button:not(.components-toolbar) wp-block a:focus:not(.insert-media):not(.acf-button), .tribe_events .tribe-common .tribe-common-c-btn.tribe-common-c-btn--small:focus, .tribe_events .tribe-block__rsvp__status-button:focus, .tribe_events .tribe-block__rsvp__form .tribe-block__rsvp__submit-button:focus, #tribe-events .tribe-events-single .tribe-block__events-link .tribe-block__btn--link a:focus, #tribe-events-pg-template .tribe-events-single .tribe-block__events-link .tribe-block__btn--link a:focus, .tribe-events .tribe-events-c-nav__list .tribe-common-b2:focus, .tribe-events .tribe-events-l-container a.tribe-common-c-btn-border:focus, .tribe-events .tribe-events-c-ical__link:focus, .tribe-events .tribe-events-calendar-list .tribe-events-c-small-cta__link:focus {
-    background-color: var(--spring-color-1-darker);
-    border-color: var(--spring-color-1);
+    background-color: var(--brand-color-1-darker);
+    border-color: var(--brand-color-1);
     color: var(--neutral-white);
     text-decoration: none;
     -webkit-transition: all 0.3s;
@@ -233,8 +244,8 @@ li.woocommerce-MyAccount-navigation-link--customer-logout .wp-block-button:not(.
   .wp-block-button:not(.components-toolbar) wp-block .alt.button:not(.insert-media):not(.acf-button),
   .wp-block-button:not(.components-toolbar) wp-block li.woocommerce-MyAccount-navigation-link--customer-logout a.alt:not(.insert-media):not(.acf-button),
   li.woocommerce-MyAccount-navigation-link--customer-logout .wp-block-button:not(.components-toolbar) wp-block a.alt:not(.insert-media):not(.acf-button), .tribe_events .tribe-common .alt.tribe-common-c-btn.tribe-common-c-btn--small, .tribe_events .alt.tribe-block__rsvp__status-button, .tribe_events body.woocommerce .tribe-block__rsvp__status-button.button.alt, body.woocommerce .tribe_events .tribe-block__rsvp__status-button.button.alt, .tribe_events body.woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a.tribe-block__rsvp__status-button.alt, body.woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout .tribe_events a.tribe-block__rsvp__status-button.alt, .tribe_events li.woocommerce-MyAccount-navigation-link--customer-logout body.woocommerce a.tribe-block__rsvp__status-button.alt, li.woocommerce-MyAccount-navigation-link--customer-logout body.woocommerce .tribe_events a.tribe-block__rsvp__status-button.alt, .tribe_events .woocommerce-page .content a.tribe-block__rsvp__status-button.button.alt, .woocommerce-page .content .tribe_events a.tribe-block__rsvp__status-button.button.alt, .tribe_events .woocommerce-page .content li.woocommerce-MyAccount-navigation-link--customer-logout a.tribe-block__rsvp__status-button.alt, .woocommerce-page .content li.woocommerce-MyAccount-navigation-link--customer-logout .tribe_events a.tribe-block__rsvp__status-button.alt, .tribe_events li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce-page .content a.tribe-block__rsvp__status-button.alt, li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce-page .content .tribe_events a.tribe-block__rsvp__status-button.alt, .tribe_events .woocommerce-page .content button.tribe-block__rsvp__status-button.button.alt, .woocommerce-page .content .tribe_events button.tribe-block__rsvp__status-button.button.alt, .tribe_events .woocommerce-page .content input.tribe-block__rsvp__status-button.button.alt, .woocommerce-page .content .tribe_events input.tribe-block__rsvp__status-button.button.alt, .tribe_events .tribe-block__rsvp__form .alt.tribe-block__rsvp__submit-button, .tribe_events .tribe-block__rsvp__form body.woocommerce .content a.tribe-block__rsvp__submit-button.button.alt, body.woocommerce .content .tribe_events .tribe-block__rsvp__form a.tribe-block__rsvp__submit-button.button.alt, .tribe_events .tribe-block__rsvp__form body.woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a.tribe-block__rsvp__submit-button.alt, body.woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout .tribe_events .tribe-block__rsvp__form a.tribe-block__rsvp__submit-button.alt, .tribe_events .tribe-block__rsvp__form li.woocommerce-MyAccount-navigation-link--customer-logout body.woocommerce .content a.tribe-block__rsvp__submit-button.alt, li.woocommerce-MyAccount-navigation-link--customer-logout body.woocommerce .content .tribe_events .tribe-block__rsvp__form a.tribe-block__rsvp__submit-button.alt, .tribe_events .tribe-block__rsvp__form body.woocommerce .content button.tribe-block__rsvp__submit-button.button.alt, body.woocommerce .content .tribe_events .tribe-block__rsvp__form button.tribe-block__rsvp__submit-button.button.alt, .tribe_events .tribe-block__rsvp__form body.woocommerce .content input.tribe-block__rsvp__submit-button.button.alt, body.woocommerce .content .tribe_events .tribe-block__rsvp__form input.tribe-block__rsvp__submit-button.button.alt, .tribe_events .tribe-block__rsvp__form .woocommerce-page .content a.tribe-block__rsvp__submit-button.button.alt, .woocommerce-page .content .tribe_events .tribe-block__rsvp__form a.tribe-block__rsvp__submit-button.button.alt, .tribe_events .tribe-block__rsvp__form .woocommerce-page .content li.woocommerce-MyAccount-navigation-link--customer-logout a.tribe-block__rsvp__submit-button.alt, .woocommerce-page .content li.woocommerce-MyAccount-navigation-link--customer-logout .tribe_events .tribe-block__rsvp__form a.tribe-block__rsvp__submit-button.alt, .tribe_events .tribe-block__rsvp__form li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce-page .content a.tribe-block__rsvp__submit-button.alt, li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce-page .content .tribe_events .tribe-block__rsvp__form a.tribe-block__rsvp__submit-button.alt, .tribe_events .tribe-block__rsvp__form .woocommerce-page .content button.tribe-block__rsvp__submit-button.button.alt, .woocommerce-page .content .tribe_events .tribe-block__rsvp__form button.tribe-block__rsvp__submit-button.button.alt, .tribe_events .tribe-block__rsvp__form .woocommerce-page .content input.tribe-block__rsvp__submit-button.button.alt, .woocommerce-page .content .tribe_events .tribe-block__rsvp__form input.tribe-block__rsvp__submit-button.button.alt, #tribe-events .tribe-events-single .tribe-block__events-link .tribe-block__btn--link a.alt, #tribe-events .tribe-events-single .alt.tribe-events-button, #tribe-events-pg-template .tribe-events-single .tribe-block__events-link .tribe-block__btn--link a.alt, #tribe-events-pg-template .tribe-events-single .alt.tribe-events-button, .tribe-events .tribe-events-c-nav__list .alt.tribe-common-b2, .tribe-events .tribe-events-c-nav__list body.woocommerce .content a.tribe-common-b2.button.alt, body.woocommerce .content .tribe-events .tribe-events-c-nav__list a.tribe-common-b2.button.alt, .tribe-events .tribe-events-c-nav__list body.woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a.tribe-common-b2.alt, body.woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout .tribe-events .tribe-events-c-nav__list a.tribe-common-b2.alt, .tribe-events .tribe-events-c-nav__list li.woocommerce-MyAccount-navigation-link--customer-logout body.woocommerce .content a.tribe-common-b2.alt, li.woocommerce-MyAccount-navigation-link--customer-logout body.woocommerce .content .tribe-events .tribe-events-c-nav__list a.tribe-common-b2.alt, .tribe-events .tribe-events-c-nav__list body.woocommerce .content button.tribe-common-b2.button.alt, body.woocommerce .content .tribe-events .tribe-events-c-nav__list button.tribe-common-b2.button.alt, .tribe-events .tribe-events-c-nav__list body.woocommerce .content input.tribe-common-b2.button.alt, body.woocommerce .content .tribe-events .tribe-events-c-nav__list input.tribe-common-b2.button.alt, .tribe-events .tribe-events-c-nav__list .woocommerce-page .content a.tribe-common-b2.button.alt, .woocommerce-page .content .tribe-events .tribe-events-c-nav__list a.tribe-common-b2.button.alt, .tribe-events .tribe-events-c-nav__list .woocommerce-page .content li.woocommerce-MyAccount-navigation-link--customer-logout a.tribe-common-b2.alt, .woocommerce-page .content li.woocommerce-MyAccount-navigation-link--customer-logout .tribe-events .tribe-events-c-nav__list a.tribe-common-b2.alt, .tribe-events .tribe-events-c-nav__list li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce-page .content a.tribe-common-b2.alt, li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce-page .content .tribe-events .tribe-events-c-nav__list a.tribe-common-b2.alt, .tribe-events .tribe-events-c-nav__list .woocommerce-page .content button.tribe-common-b2.button.alt, .woocommerce-page .content .tribe-events .tribe-events-c-nav__list button.tribe-common-b2.button.alt, .tribe-events .tribe-events-c-nav__list .woocommerce-page .content input.tribe-common-b2.button.alt, .woocommerce-page .content .tribe-events .tribe-events-c-nav__list input.tribe-common-b2.button.alt, .tribe-events .tribe-events-l-container a.alt.tribe-common-c-btn-border, .tribe-events .tribe-events-l-container body.woocommerce .content a.tribe-common-c-btn-border.button.alt, body.woocommerce .content .tribe-events .tribe-events-l-container a.tribe-common-c-btn-border.button.alt, .tribe-events .tribe-events-l-container body.woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a.tribe-common-c-btn-border.alt, body.woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout .tribe-events .tribe-events-l-container a.tribe-common-c-btn-border.alt, .tribe-events .tribe-events-l-container li.woocommerce-MyAccount-navigation-link--customer-logout body.woocommerce .content a.tribe-common-c-btn-border.alt, li.woocommerce-MyAccount-navigation-link--customer-logout body.woocommerce .content .tribe-events .tribe-events-l-container a.tribe-common-c-btn-border.alt, .tribe-events .alt.tribe-events-c-ical__link, .tribe-events body.woocommerce .tribe-events-c-ical__link.button.alt, body.woocommerce .tribe-events .tribe-events-c-ical__link.button.alt, .tribe-events body.woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a.tribe-events-c-ical__link.alt, body.woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout .tribe-events a.tribe-events-c-ical__link.alt, .tribe-events li.woocommerce-MyAccount-navigation-link--customer-logout body.woocommerce a.tribe-events-c-ical__link.alt, li.woocommerce-MyAccount-navigation-link--customer-logout body.woocommerce .tribe-events a.tribe-events-c-ical__link.alt, .tribe-events .woocommerce-page .content a.tribe-events-c-ical__link.button.alt, .woocommerce-page .content .tribe-events a.tribe-events-c-ical__link.button.alt, .tribe-events .woocommerce-page .content li.woocommerce-MyAccount-navigation-link--customer-logout a.tribe-events-c-ical__link.alt, .woocommerce-page .content li.woocommerce-MyAccount-navigation-link--customer-logout .tribe-events a.tribe-events-c-ical__link.alt, .tribe-events li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce-page .content a.tribe-events-c-ical__link.alt, li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce-page .content .tribe-events a.tribe-events-c-ical__link.alt, .tribe-events .woocommerce-page .content button.tribe-events-c-ical__link.button.alt, .woocommerce-page .content .tribe-events button.tribe-events-c-ical__link.button.alt, .tribe-events .woocommerce-page .content input.tribe-events-c-ical__link.button.alt, .woocommerce-page .content .tribe-events input.tribe-events-c-ical__link.button.alt, .tribe-events .tribe-events-calendar-list .alt.tribe-events-c-small-cta__link, .tribe-events .tribe-events-calendar-list body.woocommerce .content a.tribe-events-c-small-cta__link.button.alt, body.woocommerce .content .tribe-events .tribe-events-calendar-list a.tribe-events-c-small-cta__link.button.alt, .tribe-events .tribe-events-calendar-list body.woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a.tribe-events-c-small-cta__link.alt, body.woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout .tribe-events .tribe-events-calendar-list a.tribe-events-c-small-cta__link.alt, .tribe-events .tribe-events-calendar-list li.woocommerce-MyAccount-navigation-link--customer-logout body.woocommerce .content a.tribe-events-c-small-cta__link.alt, li.woocommerce-MyAccount-navigation-link--customer-logout body.woocommerce .content .tribe-events .tribe-events-calendar-list a.tribe-events-c-small-cta__link.alt, .tribe-events .tribe-events-calendar-list body.woocommerce .content button.tribe-events-c-small-cta__link.button.alt, body.woocommerce .content .tribe-events .tribe-events-calendar-list button.tribe-events-c-small-cta__link.button.alt, .tribe-events .tribe-events-calendar-list body.woocommerce .content input.tribe-events-c-small-cta__link.button.alt, body.woocommerce .content .tribe-events .tribe-events-calendar-list input.tribe-events-c-small-cta__link.button.alt, .tribe-events .tribe-events-calendar-list .woocommerce-page .content a.tribe-events-c-small-cta__link.button.alt, .woocommerce-page .content .tribe-events .tribe-events-calendar-list a.tribe-events-c-small-cta__link.button.alt, .tribe-events .tribe-events-calendar-list .woocommerce-page .content li.woocommerce-MyAccount-navigation-link--customer-logout a.tribe-events-c-small-cta__link.alt, .woocommerce-page .content li.woocommerce-MyAccount-navigation-link--customer-logout .tribe-events .tribe-events-calendar-list a.tribe-events-c-small-cta__link.alt, .tribe-events .tribe-events-calendar-list li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce-page .content a.tribe-events-c-small-cta__link.alt, li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce-page .content .tribe-events .tribe-events-calendar-list a.tribe-events-c-small-cta__link.alt, .tribe-events .tribe-events-calendar-list .woocommerce-page .content button.tribe-events-c-small-cta__link.button.alt, .woocommerce-page .content .tribe-events .tribe-events-calendar-list button.tribe-events-c-small-cta__link.button.alt, .tribe-events .tribe-events-calendar-list .woocommerce-page .content input.tribe-events-c-small-cta__link.button.alt, .woocommerce-page .content .tribe-events .tribe-events-calendar-list input.tribe-events-c-small-cta__link.button.alt {
-    background-color: var(--spring-color-2);
-    border-color: var(--spring-color-2-darker); }
+    background-color: var(--brand-color-2);
+    border-color: var(--brand-color-2-darker); }
     button.alt:hover, body.woocommerce button.button.alt:hover, .woocommerce-page button.button.alt:hover,
     .alt.button:hover,
     body.woocommerce .button.alt:hover,
@@ -310,8 +321,8 @@ li.woocommerce-MyAccount-navigation-link--customer-logout .wp-block-button:not(.
     .wp-block-button:not(.components-toolbar) wp-block .alt.button:focus:not(.insert-media):not(.acf-button),
     .wp-block-button:not(.components-toolbar) wp-block li.woocommerce-MyAccount-navigation-link--customer-logout a.alt:focus:not(.insert-media):not(.acf-button),
     li.woocommerce-MyAccount-navigation-link--customer-logout .wp-block-button:not(.components-toolbar) wp-block a.alt:focus:not(.insert-media):not(.acf-button), .tribe_events .tribe-common .alt.tribe-common-c-btn.tribe-common-c-btn--small:focus, .tribe_events .alt.tribe-block__rsvp__status-button:focus, .tribe_events body.woocommerce .content a.tribe-block__rsvp__status-button.button.alt:focus, body.woocommerce .content .tribe_events a.tribe-block__rsvp__status-button.button.alt:focus, .tribe_events body.woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a.tribe-block__rsvp__status-button.alt:focus, body.woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout .tribe_events a.tribe-block__rsvp__status-button.alt:focus, .tribe_events li.woocommerce-MyAccount-navigation-link--customer-logout body.woocommerce .content a.tribe-block__rsvp__status-button.alt:focus, li.woocommerce-MyAccount-navigation-link--customer-logout body.woocommerce .content .tribe_events a.tribe-block__rsvp__status-button.alt:focus, .tribe_events body.woocommerce .content button.tribe-block__rsvp__status-button.button.alt:focus, body.woocommerce .content .tribe_events button.tribe-block__rsvp__status-button.button.alt:focus, .tribe_events body.woocommerce .content input.tribe-block__rsvp__status-button.button.alt:focus, body.woocommerce .content .tribe_events input.tribe-block__rsvp__status-button.button.alt:focus, .tribe_events .woocommerce-page .content a.tribe-block__rsvp__status-button.button.alt:focus, .woocommerce-page .content .tribe_events a.tribe-block__rsvp__status-button.button.alt:focus, .tribe_events .woocommerce-page .content li.woocommerce-MyAccount-navigation-link--customer-logout a.tribe-block__rsvp__status-button.alt:focus, .woocommerce-page .content li.woocommerce-MyAccount-navigation-link--customer-logout .tribe_events a.tribe-block__rsvp__status-button.alt:focus, .tribe_events li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce-page .content a.tribe-block__rsvp__status-button.alt:focus, li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce-page .content .tribe_events a.tribe-block__rsvp__status-button.alt:focus, .tribe_events .woocommerce-page .content button.tribe-block__rsvp__status-button.button.alt:focus, .woocommerce-page .content .tribe_events button.tribe-block__rsvp__status-button.button.alt:focus, .tribe_events .woocommerce-page .content input.tribe-block__rsvp__status-button.button.alt:focus, .woocommerce-page .content .tribe_events input.tribe-block__rsvp__status-button.button.alt:focus, .tribe_events .tribe-block__rsvp__form .alt.tribe-block__rsvp__submit-button:focus, #tribe-events .tribe-events-single .tribe-block__events-link .tribe-block__btn--link a.alt:focus, #tribe-events .tribe-events-single .alt.tribe-events-button:focus, #tribe-events-pg-template .tribe-events-single .tribe-block__events-link .tribe-block__btn--link a.alt:focus, #tribe-events-pg-template .tribe-events-single .alt.tribe-events-button:focus, .tribe-events .tribe-events-c-nav__list .alt.tribe-common-b2:focus, .tribe-events .tribe-events-l-container a.alt.tribe-common-c-btn-border:focus, .tribe-events .alt.tribe-events-c-ical__link:focus, .tribe-events body.woocommerce .content a.tribe-events-c-ical__link.button.alt:focus, body.woocommerce .content .tribe-events a.tribe-events-c-ical__link.button.alt:focus, .tribe-events body.woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout a.tribe-events-c-ical__link.alt:focus, body.woocommerce .content li.woocommerce-MyAccount-navigation-link--customer-logout .tribe-events a.tribe-events-c-ical__link.alt:focus, .tribe-events li.woocommerce-MyAccount-navigation-link--customer-logout body.woocommerce .content a.tribe-events-c-ical__link.alt:focus, li.woocommerce-MyAccount-navigation-link--customer-logout body.woocommerce .content .tribe-events a.tribe-events-c-ical__link.alt:focus, .tribe-events body.woocommerce .content button.tribe-events-c-ical__link.button.alt:focus, body.woocommerce .content .tribe-events button.tribe-events-c-ical__link.button.alt:focus, .tribe-events body.woocommerce .content input.tribe-events-c-ical__link.button.alt:focus, body.woocommerce .content .tribe-events input.tribe-events-c-ical__link.button.alt:focus, .tribe-events .woocommerce-page .content a.tribe-events-c-ical__link.button.alt:focus, .woocommerce-page .content .tribe-events a.tribe-events-c-ical__link.button.alt:focus, .tribe-events .woocommerce-page .content li.woocommerce-MyAccount-navigation-link--customer-logout a.tribe-events-c-ical__link.alt:focus, .woocommerce-page .content li.woocommerce-MyAccount-navigation-link--customer-logout .tribe-events a.tribe-events-c-ical__link.alt:focus, .tribe-events li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce-page .content a.tribe-events-c-ical__link.alt:focus, li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce-page .content .tribe-events a.tribe-events-c-ical__link.alt:focus, .tribe-events .woocommerce-page .content button.tribe-events-c-ical__link.button.alt:focus, .woocommerce-page .content .tribe-events button.tribe-events-c-ical__link.button.alt:focus, .tribe-events .woocommerce-page .content input.tribe-events-c-ical__link.button.alt:focus, .woocommerce-page .content .tribe-events input.tribe-events-c-ical__link.button.alt:focus, .tribe-events .tribe-events-calendar-list .alt.tribe-events-c-small-cta__link:focus {
-      background-color: var(--spring-color-2-darker);
-      border-color: var(--spring-color-2); }
+      background-color: var(--brand-color-2-darker);
+      border-color: var(--brand-color-2); }
   button.outline,
   .outline.button,
   li.woocommerce-MyAccount-navigation-link--customer-logout a.outline,
@@ -322,8 +333,8 @@ li.woocommerce-MyAccount-navigation-link--customer-logout .wp-block-button:not(.
   .wp-block-button:not(.components-toolbar) wp-block li.woocommerce-MyAccount-navigation-link--customer-logout a.outline:not(.insert-media):not(.acf-button),
   li.woocommerce-MyAccount-navigation-link--customer-logout .wp-block-button:not(.components-toolbar) wp-block a.outline:not(.insert-media):not(.acf-button), .tribe_events .tribe-common .outline.tribe-common-c-btn.tribe-common-c-btn--small, .tribe_events .tribe-block__rsvp__status-button, .tribe_events .tribe-block__rsvp__form .outline.tribe-block__rsvp__submit-button, #tribe-events .tribe-events-single .tribe-block__events-link .tribe-block__btn--link a, #tribe-events .tribe-events-single .tribe-events-button, #tribe-events-pg-template .tribe-events-single .tribe-block__events-link .tribe-block__btn--link a, #tribe-events-pg-template .tribe-events-single .tribe-events-button, .tribe-events .tribe-events-c-nav__list .outline.tribe-common-b2, .tribe-events .tribe-events-l-container a.tribe-common-c-btn-border, .tribe-events .tribe-events-c-ical__link, .tribe-events .tribe-events-calendar-list .tribe-events-c-small-cta__link {
     background-color: transparent;
-    border-color: var(--spring-color-1-darker);
-    color: var(--spring-color-1-darker); }
+    border-color: var(--brand-color-1-darker);
+    color: var(--brand-color-1-darker); }
     button.outline:hover,
     .outline.button:hover,
     li.woocommerce-MyAccount-navigation-link--customer-logout a.outline:hover,
@@ -342,8 +353,8 @@ li.woocommerce-MyAccount-navigation-link--customer-logout .wp-block-button:not(.
     .wp-block-button:not(.components-toolbar) wp-block li.woocommerce-MyAccount-navigation-link--customer-logout a.outline:focus:not(.insert-media):not(.acf-button),
     li.woocommerce-MyAccount-navigation-link--customer-logout .wp-block-button:not(.components-toolbar) wp-block a.outline:focus:not(.insert-media):not(.acf-button), .tribe_events .tribe-common .outline.tribe-common-c-btn.tribe-common-c-btn--small:focus, .tribe_events .tribe-block__rsvp__status-button:focus, .tribe_events .tribe-block__rsvp__form .outline.tribe-block__rsvp__submit-button:focus, #tribe-events .tribe-events-single .tribe-block__events-link .tribe-block__btn--link a:focus, #tribe-events .tribe-events-single .tribe-events-button:focus, #tribe-events-pg-template .tribe-events-single .tribe-block__events-link .tribe-block__btn--link a:focus, #tribe-events-pg-template .tribe-events-single .tribe-events-button:focus, .tribe-events .tribe-events-c-nav__list .outline.tribe-common-b2:focus, .tribe-events .tribe-events-l-container a.tribe-common-c-btn-border:focus, .tribe-events .tribe-events-c-ical__link:focus, .tribe-events .tribe-events-calendar-list .tribe-events-c-small-cta__link:focus {
       background-color: rgba(var(--neutral-darkest-rgb), 0.1);
-      border-color: var(--spring-color-1-darker);
-      color: var(--spring-color-1-darker); }
+      border-color: var(--brand-color-1-darker);
+      color: var(--brand-color-1-darker); }
   button.neutral,
   .neutral.button,
   li.woocommerce-MyAccount-navigation-link--customer-logout a.neutral,
@@ -390,7 +401,7 @@ li.woocommerce-MyAccount-navigation-link--customer-logout .wp-block-button:not(.
   .wp-block-button:not(.components-toolbar) wp-block li.woocommerce-MyAccount-navigation-link--customer-logout a:focus:not(.insert-media):not(.acf-button),
   li.woocommerce-MyAccount-navigation-link--customer-logout .wp-block-button:not(.components-toolbar) wp-block a:focus:not(.insert-media):not(.acf-button), .tribe_events .tribe-common .tribe-common-c-btn.tribe-common-c-btn--small:focus, .tribe_events .tribe-block__rsvp__status-button:focus, .tribe_events .tribe-block__rsvp__form .tribe-block__rsvp__submit-button:focus, #tribe-events .tribe-events-single .tribe-block__events-link .tribe-block__btn--link a:focus, #tribe-events-pg-template .tribe-events-single .tribe-block__events-link .tribe-block__btn--link a:focus, .tribe-events .tribe-events-c-nav__list .tribe-common-b2:focus, .tribe-events .tribe-events-l-container a.tribe-common-c-btn-border:focus, .tribe-events .tribe-events-c-ical__link:focus, .tribe-events .tribe-events-calendar-list .tribe-events-c-small-cta__link:focus {
     border-width: 2px;
-    outline: var(--spring-alert) dotted 2px; }
+    outline: var(--brand-alert) dotted 2px; }
 
 .back-to-top {
   font-family: 'Font Awesome 5 Pro';
@@ -470,7 +481,7 @@ html {
 
 body {
   background: transparent;
-  color: var(--spring-text);
+  color: var(--brand-text);
   font-weight: var(--body-font-weight);
   font-family: var(--body-font-family), sans-serif;
   font-size: 100%;
@@ -485,21 +496,21 @@ p {
 
 /* Links */
 a {
-  color: var(--spring-links);
+  color: var(--brand-links);
   cursor: pointer;
   font-weight: inherit;
   text-decoration: underline;
   transition: color .3s; }
   a:hover {
-    color: var(--spring-links-darker);
+    color: var(--brand-links-darker);
     outline: 0;
     text-decoration: none; }
   a:focus {
     border-width: 0;
-    outline: var(--spring-alert) dotted 2px; }
+    outline: var(--brand-alert) dotted 2px; }
   a:active {
     border-width: 0;
-    color: var(--spring-links-darker); }
+    color: var(--brand-links-darker); }
   a img {
     border: 0;
     outline: 0; }
@@ -545,7 +556,7 @@ h6, .h6 {
 
 h1,
 .h1 {
-  color: var(--spring-heading);
+  color: var(--brand-heading);
   font-family: var(--heading-font-family), sans-serif;
   font-size: 36px;
   font-size: 2.25rem;
@@ -556,7 +567,7 @@ h1,
 
 h2,
 .h2 {
-  color: var(--spring-heading);
+  color: var(--brand-heading);
   font-family: var(--heading-font-family), sans-serif;
   font-size: 28.8px;
   font-size: 1.8rem;
@@ -569,7 +580,7 @@ h3,
 .h3,
 .tribe-events .tribe-events-calendar-list .tribe-events-calendar-list__month-separator,
 .tribe-events .tribe-events-calendar-day .tribe-events-calendar-day__time-separator {
-  color: var(--spring-subheading);
+  color: var(--brand-subheading);
   font-family: var(--subheading-font-family), var(--body-font-family), sans-serif;
   font-size: 23.04px;
   font-size: 1.44rem;
@@ -580,7 +591,7 @@ h3,
 
 h4,
 .h4 {
-  color: var(--spring-subheading);
+  color: var(--brand-subheading);
   font-family: var(--subheading-font-family), var(--body-font-family), sans-serif;
   font-size: 20.16px;
   font-size: 1.26rem;
@@ -594,7 +605,7 @@ h5,
 #tribe-events-day .tribe-events-day-time-slot h5,
 .tribe-events .tribe-events-calendar-month-mobile-events .tribe-events-calendar-month-mobile-events__day-marker,
 .tribe-events .tribe-events-calendar-list .tribe-events-calendar-list__event-date-tag-datetime {
-  color: var(--spring-text);
+  color: var(--brand-text);
   font-family: var(--body-font-family), sans-serif;
   font-size: 15.84px;
   font-size: 0.99rem;
@@ -605,7 +616,7 @@ h5,
 
 h6,
 .h6 {
-  color: var(--spring-text);
+  color: var(--brand-text);
   font-family: var(--body-font-family), sans-serif;
   font-size: 12.6px;
   font-size: 0.7875rem;
@@ -705,12 +716,12 @@ u {
 
 ins {
   background-color: var(--neutral-lightest);
-  color: var(--spring-alert);
+  color: var(--brand-alert);
   text-decoration: none; }
 
 mark {
   background-color: var(--neutral-lightest);
-  color: var(--spring-alert);
+  color: var(--brand-alert);
   font-style: italic;
   font-weight: var(--body-font-weight-bold); }
 
@@ -725,7 +736,7 @@ var,
 tt {
   background-color: rgba(var(--neutral-dark-rgb), 0.1);
   border: 0;
-  color: var(--spring-text);
+  color: var(--brand-text);
   font-family: monospace;
   font-size: 16px;
   font-size: 1rem;
@@ -781,12 +792,12 @@ nav ul {
 
 /* SELECTION */
 ::-moz-selection {
-  background-color: rgba(var(--spring-color-1-rgb), .2);
+  background-color: rgba(var(--brand-color-1-rgb), .2);
   color: var(--neutral-darkest);
   text-shadow: none; }
 
 ::selection {
-  background-color: rgba(var(--spring-color-1-rgb), .2);
+  background-color: rgba(var(--brand-color-1-rgb), .2);
   color: var(--neutral-darkest);
   text-shadow: none; }
 
@@ -993,7 +1004,7 @@ figcaption {
     margin-right: -.275em;
     vertical-align: top;
     width: 75%;
-    padding: 0 3%; }
+    padding: 0 4%; }
     .content-main:nth-of-type(2n+1) {
       padding-left: 0; }
     .content-main:nth-of-type(2n+2) {
@@ -1374,17 +1385,17 @@ figcaption {
   .social-icons a.button-social {
     background-color: transparent;
     border: 0;
-    color: var(--spring-links);
+    color: var(--brand-links);
     padding: .25rem .5rem; }
     .social-icons a.button-social:before {
       font-family: "Font Awesome 5 Pro", "FontAwesome";
       font-weight: 900; }
     .social-icons a.button-social:hover {
-      color: var(--spring-links-darker); }
-    .footer-main .social-icons a.button-social, .header-main .social-icons a.button-social {
+      color: var(--brand-links-darker); }
+    .header-main .social-icons a.button-social {
       color: var(--neutral-white); }
-      .footer-main .social-icons a.button-social:hover, .header-main .social-icons a.button-social:hover {
-        color: var(--spring-links-darker); }
+      .header-main .social-icons a.button-social:hover {
+        color: var(--brand-links-darker); }
 
 .button-social:before {
   content: '\2665 '; }
@@ -1393,10 +1404,10 @@ figcaption {
   text-decoration: none; }
   .button-phone a i {
     margin-right: 5px; }
-  .footer-main .button-phone a, .header-main .button-phone a {
+  .header-main .button-phone a {
     color: var(--neutral-white); }
-    .footer-main .button-phone a:hover, .header-main .button-phone a:hover {
-      color: var(--spring-links-darker); }
+    .header-main .button-phone a:hover {
+      color: var(--brand-links-darker); }
 
 .checkbox span {
   display: inline; }
@@ -1415,11 +1426,11 @@ figcaption {
   width: 30px; }
   .back-to-top:before {
     content: "\f0aa";
-    color: var(--spring-links);
+    color: var(--brand-links);
     font-size: 29px;
     line-height: 1.1; }
     .back-to-top:before:hover, .back-to-top:before:focus {
-      color: var(--spring-links-darker); }
+      color: var(--brand-links-darker); }
   .back-to-top:hover, .back-to-top:focus {
     background-color: transparent;
     border: 0; }
@@ -1567,7 +1578,7 @@ figcaption {
 
 /* 06. COMPONENTS */
 .woocommerce-store-notice, p.demo_store {
-  background-color: var(--spring-alert); }
+  background-color: var(--brand-alert); }
 
 .admin-bar p.demo_store {
   top: 0; }
@@ -1578,7 +1589,7 @@ figcaption {
 body.woocommerce form, .woocommerce-page form {
   max-width: 81rem; }
   body.woocommerce form .form-row .required, .woocommerce-page form .form-row .required {
-    color: var(--spring-alert); }
+    color: var(--brand-alert); }
 body.woocommerce .button:disabled, body.woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a:disabled, li.woocommerce-MyAccount-navigation-link--customer-logout body.woocommerce a:disabled, body.woocommerce .button:disabled[disabled], body.woocommerce li.woocommerce-MyAccount-navigation-link--customer-logout a:disabled[disabled], li.woocommerce-MyAccount-navigation-link--customer-logout body.woocommerce a:disabled[disabled], .woocommerce-page .button:disabled, .woocommerce-page li.woocommerce-MyAccount-navigation-link--customer-logout a:disabled, li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce-page a:disabled, .woocommerce-page .button:disabled[disabled], .woocommerce-page li.woocommerce-MyAccount-navigation-link--customer-logout a:disabled[disabled], li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce-page a:disabled[disabled] {
   opacity: .5;
   filter: saturate(0); }
@@ -1605,50 +1616,50 @@ body.woocommerce div.product, .woocommerce-page div.product {
   body.woocommerce div.product div.images .flex-control-thumbs li, .woocommerce-page div.product div.images .flex-control-thumbs li {
     padding: .5em .5em .5em 0; }
   body.woocommerce div.product p.price, body.woocommerce div.product span.price, .woocommerce-page div.product p.price, .woocommerce-page div.product span.price {
-    color: var(--spring-color-3); }
+    color: var(--brand-color-3); }
 body.woocommerce .price, .woocommerce-page .price {
-  color: var(--spring-color-3); }
+  color: var(--brand-color-3); }
   body.woocommerce .price del > span, .woocommerce-page .price del > span {
     text-decoration: line-through;
     color: var(--neutral-mid); }
   body.woocommerce .price ins, .woocommerce-page .price ins {
     background-color: transparent;
-    color: var(--spring-color-3);
+    color: var(--brand-color-3);
     font-weight: var(--body-font-weight-bold); }
 body.woocommerce span.onsale, .woocommerce-page span.onsale {
-  background-color: var(--spring-color-3);
+  background-color: var(--brand-color-3);
   padding: 0; }
 body.woocommerce .woocommerce-breadcrumb, .woocommerce-page .woocommerce-breadcrumb {
   margin: 0; }
   body.woocommerce .woocommerce-breadcrumb a, .woocommerce-page .woocommerce-breadcrumb a {
-    color: var(--spring-links); }
+    color: var(--brand-links); }
     body.woocommerce .woocommerce-breadcrumb a:hover, body.woocommerce .woocommerce-breadcrumb a:focus, .woocommerce-page .woocommerce-breadcrumb a:hover, .woocommerce-page .woocommerce-breadcrumb a:focus {
-      color: var(--spring-links-darker); }
+      color: var(--brand-links-darker); }
 body.woocommerce nav.woocommerce-pagination, .woocommerce-page nav.woocommerce-pagination {
   margin-bottom: 2em; }
   body.woocommerce nav.woocommerce-pagination ul li a:focus, body.woocommerce nav.woocommerce-pagination ul li a:hover, body.woocommerce nav.woocommerce-pagination ul li span.current, .woocommerce-page nav.woocommerce-pagination ul li a:focus, .woocommerce-page nav.woocommerce-pagination ul li a:hover, .woocommerce-page nav.woocommerce-pagination ul li span.current {
-    background: var(--spring-links);
+    background: var(--brand-links);
     color: var(--neutral-white); }
 body.woocommerce .woocommerce-variation, .woocommerce-page .woocommerce-variation {
   margin-bottom: 1em; }
 body.woocommerce .widget_price_filter .ui-slider.ui-widget-content, .woocommerce-page .widget_price_filter .ui-slider.ui-widget-content {
-  background-color: var(--spring-color-1-darker); }
+  background-color: var(--brand-color-1-darker); }
 body.woocommerce .widget_price_filter .ui-slider .ui-slider-handle, body.woocommerce .widget_price_filter .ui-slider .ui-slider-range, .woocommerce-page .widget_price_filter .ui-slider .ui-slider-handle, .woocommerce-page .widget_price_filter .ui-slider .ui-slider-range {
-  background-color: var(--spring-color-1); }
+  background-color: var(--brand-color-1); }
 body.woocommerce .widget_shopping_cart_content .button:not(.checkout), body.woocommerce .widget_shopping_cart_content li.woocommerce-MyAccount-navigation-link--customer-logout a:not(.checkout), li.woocommerce-MyAccount-navigation-link--customer-logout body.woocommerce .widget_shopping_cart_content a:not(.checkout), .woocommerce-page .widget_shopping_cart_content .button:not(.checkout), .woocommerce-page .widget_shopping_cart_content li.woocommerce-MyAccount-navigation-link--customer-logout a:not(.checkout), li.woocommerce-MyAccount-navigation-link--customer-logout .woocommerce-page .widget_shopping_cart_content a:not(.checkout) {
-  background-color: var(--spring-color-3); }
+  background-color: var(--brand-color-3); }
 body.woocommerce .related.products, .woocommerce-page .related.products {
   margin-top: 2em; }
 body.woocommerce .woocommerce-error, body.woocommerce .woocommerce-info, body.woocommerce .woocommerce-message, .woocommerce-page .woocommerce-error, .woocommerce-page .woocommerce-info, .woocommerce-page .woocommerce-message {
   background-color: var(--neutral-lightest);
-  border-top: 3px solid var(--spring-color-1);
+  border-top: 3px solid var(--brand-color-1);
   color: var(--neutral-darkest); }
   body.woocommerce .woocommerce-error:before, body.woocommerce .woocommerce-info:before, body.woocommerce .woocommerce-message:before, .woocommerce-page .woocommerce-error:before, .woocommerce-page .woocommerce-info:before, .woocommerce-page .woocommerce-message:before {
-    color: var(--spring-color-1); }
+    color: var(--brand-color-1); }
 body.woocommerce .woocommerce-error, .woocommerce-page .woocommerce-error {
-  border-color: var(--spring-alert); }
+  border-color: var(--brand-alert); }
   body.woocommerce .woocommerce-error:before, .woocommerce-page .woocommerce-error:before {
-    color: var(--spring-alert); }
+    color: var(--brand-alert); }
 body.woocommerce .woocommerce-message, .woocommerce-page .woocommerce-message {
   border-color: var(--neutral-mid); }
   body.woocommerce .woocommerce-message:before, .woocommerce-page .woocommerce-message:before {
@@ -1666,14 +1677,14 @@ body.woocommerce ul.products, .woocommerce-page ul.products {
       flex-direction: column;
       flex-grow: 1; }
       body.woocommerce ul.products li.product a.added_to_cart.wc-forward, .woocommerce-page ul.products li.product a.added_to_cart.wc-forward {
-        background-color: var(--spring-color-3);
-        border-color: var(--spring-color-3-darker);
+        background-color: var(--brand-color-3);
+        border-color: var(--brand-color-3-darker);
         flex-grow: 0;
         margin-top: .5em;
         text-align: center; }
         body.woocommerce ul.products li.product a.added_to_cart.wc-forward:hover, .woocommerce-page ul.products li.product a.added_to_cart.wc-forward:hover {
-          background-color: var(--spring-color-3-darker);
-          border-color: var(--spring-color-3); }
+          background-color: var(--brand-color-3-darker);
+          border-color: var(--brand-color-3); }
       body.woocommerce ul.products li.product a h2.woocommerce-loop-product__title, .woocommerce-page ul.products li.product a h2.woocommerce-loop-product__title {
         font-size: 1.1em;
         font-weight: var(--body-font-weight);
@@ -1683,7 +1694,7 @@ body.woocommerce ul.products, .woocommerce-page ul.products {
         -o-transition: all 0.2s;
         transition: all 0.2s; }
         body.woocommerce ul.products li.product a h2.woocommerce-loop-product__title:hover, body.woocommerce ul.products li.product a h2.woocommerce-loop-product__title:focus, .woocommerce-page ul.products li.product a h2.woocommerce-loop-product__title:hover, .woocommerce-page ul.products li.product a h2.woocommerce-loop-product__title:focus {
-          color: var(--spring-links);
+          color: var(--brand-links);
           -webkit-transition: all 0.2s;
           -moz-transition: all 0.2s;
           -ms-transition: all 0.2s;
@@ -1693,7 +1704,7 @@ body.woocommerce ul.products, .woocommerce-page ul.products {
       flex-grow: 0;
       text-align: center; }
     body.woocommerce ul.products li.product .price, .woocommerce-page ul.products li.product .price {
-      color: var(--spring-text); }
+      color: var(--brand-text); }
       body.woocommerce ul.products li.product .price del, .woocommerce-page ul.products li.product .price del {
         display: inline-block;
         margin-right: .5em; }
@@ -1753,7 +1764,7 @@ nav a {
     border-bottom: 0; }
   .menu-item a,
   .menu-item a:visited {
-    color: var(--spring-links);
+    color: var(--brand-links);
     display: block;
     padding: .5em 0;
     -webkit-transition: all 0.3s;
@@ -1764,7 +1775,7 @@ nav a {
     .menu-item a:hover, .menu-item a:focus,
     .menu-item a:visited:hover,
     .menu-item a:visited:focus {
-      color: var(--spring-links-darker);
+      color: var(--brand-links-darker);
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       -ms-transition: all 0.3s;
@@ -1817,19 +1828,25 @@ nav a {
   margin: 1em 0 0 0;
   padding: 0; }
   .footer--menu li {
-    display: inline-block;
-    margin-right: 1em; }
+    margin-bottom: .75em; }
   .footer--menu a, .footer--menu a:visited {
-    color: var(--spring-links);
+    color: var(--brand-links);
     padding: 0; }
     .footer--menu a:hover, .footer--menu a:focus, .footer--menu a:visited:hover, .footer--menu a:visited:focus {
-      color: var(--spring-links-lighter); }
+      color: var(--brand-links-lighter); }
+  .footer--menu .sub-menu {
+    padding-left: 0;
+    margin-left: 0; }
   .footer--menu .sub-menu, .footer--menu .menu-toggle {
     display: none; }
 
+.standard-footer .footer--menu li {
+  display: inline-block;
+  margin-right: 1em; }
+
 @media only screen and (max-width: 49em) {
   .nav-main {
-    background-color: var(--spring-links);
+    background-color: var(--brand-links);
     position: absolute;
     right: 100%;
     top: 0;
@@ -1894,7 +1911,7 @@ nav a {
         background-color: rgba(var(--neutral-darkest-rgb), .2);
         color: var(--neutral-white); }
       .nav-main--menu .menu-item:hover > a, .nav-main--menu .menu-item:focus > a, .nav-main--menu .menu-item .tab-active > a {
-        background-color: var(--spring-links);
+        background-color: var(--brand-links);
         color: var(--neutral-white);
         text-decoration: none; }
         .nav-main--menu .menu-item:hover > a > .menu-toggle:after, .nav-main--menu .menu-item:focus > a > .menu-toggle:after, .nav-main--menu .menu-item .tab-active > a > .menu-toggle:after {
@@ -1938,7 +1955,7 @@ nav a {
       transition: all 0.3s; }
   .menu-toggle:after {
     content: '+';
-    color: var(--spring-links);
+    color: var(--brand-links);
     font-size: 1em;
     padding: 0;
     display: inline-block;
@@ -1987,7 +2004,7 @@ nav a {
         color: var(--neutral-white); }
     .menu-toggle:after {
       content: '+';
-      color: var(--spring-links);
+      color: var(--brand-links);
       font-size: 1.2em;
       padding: .3em 0; }
 
@@ -1999,7 +2016,7 @@ nav a {
     padding: 0; }
 
   .nav-main--menu ul.sub-menu {
-    background-color: var(--spring-links);
+    background-color: var(--brand-links);
     border: 0;
     display: block;
     height: auto;
@@ -2269,15 +2286,15 @@ nav a {
 .open-main-menu {
   left: 0; }
   .open-main-menu:before {
-    color: var(--spring-links);
+    color: var(--brand-links);
     content: '\2630';
     display: block;
     font-size: 1.5em;
     width: 100%; }
   .open-main-menu:hover:before {
-    color: var(--spring-links-darker); }
+    color: var(--brand-links-darker); }
   .open-main-menu:after {
-    color: var(--spring-links);
+    color: var(--brand-links);
     content: 'MENU';
     display: block;
     font-size: 7px;
@@ -2285,22 +2302,22 @@ nav a {
     letter-spacing: .5px;
     width: 100%; }
   .open-main-menu:hover:after {
-    color: var(--spring-links-darker); }
+    color: var(--brand-links-darker); }
 
 .open-sidebar {
   right: 0; }
   .open-sidebar:before {
-    border-left: 12px solid var(--spring-links);
-    border-right: 6px solid var(--spring-links);
+    border-left: 12px solid var(--brand-links);
+    border-right: 6px solid var(--brand-links);
     content: ' ';
     display: block;
     height: 70%;
     margin-left: 3px;
     width: 21px; }
   .open-sidebar:hover:before {
-    border-color: var(--spring-links-darker); }
+    border-color: var(--brand-links-darker); }
   .open-sidebar:after {
-    color: var(--spring-links);
+    color: var(--brand-links);
     content: 'INFO';
     display: block;
     font-size: 7px;
@@ -2309,7 +2326,7 @@ nav a {
     margin-top: .3em;
     width: 100%; }
   .open-sidebar:hover:after {
-    color: var(--spring-links-darker); }
+    color: var(--brand-links-darker); }
 
 @media only screen and (max-width: 48.94em) {
   .open-the-menu {
@@ -2328,7 +2345,7 @@ nav a {
     .open-the-menu .nav-main {
       overflow-y: auto; }
       .open-the-menu .nav-main #closeSidebar {
-        background-color: var(--spring-color-1);
+        background-color: var(--brand-color-1);
         border-color: var(--neutral-white);
         border-radius: 50%;
         color: var(--neutral-white);
@@ -2338,7 +2355,7 @@ nav a {
         margin: .5em;
         padding: .1em .3em; }
         .open-the-menu .nav-main #closeSidebar:hover, .open-the-menu .nav-main #closeSidebar:focus, .open-the-menu .nav-main #closeSidebar:active {
-          background-color: var(--spring-color-1-darker); }
+          background-color: var(--brand-color-1-darker); }
     .open-the-menu .admin-bar .nav-main {
       padding-bottom: 4em; }
 
@@ -2376,21 +2393,22 @@ nav a {
 
   #closeSidebar {
     display: none; } }
-.footer-main {
-  background-color: var(--neutral-darkest);
+.footer {
+  background-color: var(--neutral-lightest);
   bottom: 0;
-  color: var(--neutral-lightest);
-  padding: 1rem 0;
   position: relative;
   width: 100%; }
-  .footer-main p, .footer-main h1, .footer-main h2, .footer-main h3 {
-    color: var(--neutral-lightest); }
+  .footer p, .footer h1, .footer h2, .footer h3 {
+    margin: 0 0 .5em 0; }
 
-.footer-logo {
-  max-height: 4em;
-  max-width: 9em;
-  width: auto;
-  margin-bottom: 1em; }
+.footer-main, .footer-credits {
+  padding: 1rem 0; }
+
+.footer-credits {
+  background-color: var(--neutral-darkest);
+  color: var(--neutral-lightest); }
+  .footer-credits p, .footer-credits h1, .footer-credits h2, .footer-credits h3 {
+    color: var(--neutral-lightest); }
 
 .footer--inner {
   *zoom: 1;
@@ -2401,14 +2419,34 @@ nav a {
   .footer--inner:after {
     clear: both; }
 
-.footer--copyright {
-  padding-top: .5em; }
+.footer-logo {
+  max-height: 4em;
+  max-width: 9em;
+  width: auto;
+  margin-bottom: 1em; }
+
+.footer--contact {
+  margin-bottom: .75em; }
+
+.standard-footer.wp-block-columns {
+  margin: 0; }
+
+.widgetized-footer.footer--widgets {
+  margin-top: 1em; }
 
 @media only screen and (min-width: 49em) {
-  .footer-logo {
+  .standard-footer .footer-logo {
     float: right;
     clear: right;
     margin-left: 1em; }
+
+  .footer--extra-text {
+    float: right;
+    clear: right;
+    margin-left: 1em; }
+
+  .footer--copyright {
+    float: left; }
 
   .footer--inner {
     max-width: 1296px;
@@ -2424,6 +2462,8 @@ nav a {
   padding: 2rem;
   position: absolute;
   width: 80%; }
+  .content--sidebar .wp-block-column {
+    margin-left: 0; }
 
 @media only screen and (max-width: 49em) {
   .content--sidebar {
@@ -2538,7 +2578,7 @@ nav a {
     margin: 0;
     padding: .4em; }
   .search-form button.search--button {
-    background: var(--spring-color-2);
+    background: var(--brand-color-2);
     border: 0;
     bottom: 0;
     color: var(--neutral-white);
@@ -2547,7 +2587,7 @@ nav a {
     padding: .5em;
     width: 29%; }
     .search-form button.search--button:hover {
-      background: var(--spring-color-2-darker);
+      background: var(--brand-color-2-darker);
       border: 0;
       color: var(--neutral-white); }
 
@@ -2557,7 +2597,7 @@ nav a {
   width: 100%; }
 
 .search-toggle {
-  background-color: var(--spring-color-1);
+  background-color: var(--brand-color-1);
   border: none;
   color: var(--neutral-white);
   float: right;
@@ -2570,7 +2610,7 @@ nav a {
   -o-transition: padding 0.8s;
   transition: padding 0.8s; }
   .search-toggle:hover {
-    background-color: var(--spring-color-1-darker);
+    background-color: var(--brand-color-1-darker);
     border: none; }
   .search-toggle:before {
     content: "⚲"; }
@@ -2719,7 +2759,8 @@ nav a {
     line-height: 1.3; }
 
 .page--header {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  margin-top: 2em; }
   @media only screen and (min-width: 49em) {
     .page--header {
       margin-bottom: 2rem; } }
@@ -2737,6 +2778,10 @@ nav a {
 /* Gutenberg Block Styles */
 .single--block {
   position: relative; }
+
+.post--content .page--header {
+  margin-top: 0;
+  margin-bottom: 1em; }
 
 .post--content > div, .content--page > div {
   margin-bottom: 2rem; }
@@ -2882,16 +2927,16 @@ hr.wp-block-separator {
     border-radius: 0; }
   .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background {
     border-width: 0; }
-    .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-spring-color-1-background-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-spring-color-1-background-color:focus {
-      background-color: var(--spring-color-1-darker) !important; }
-    .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-spring-color-2-background-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-spring-color-2-background-color:focus {
-      background-color: var(--spring-color-2-darker) !important; }
-    .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-spring-color-3-background-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-spring-color-3-background-color:focus {
-      background-color: var(--spring-color-3-darker) !important; }
-    .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-spring-color-4-background-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-spring-color-4-background-color:focus {
-      background-color: var(--spring-color-4-darker) !important; }
-    .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-spring-color-5-background-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-spring-color-5-background-color:focus {
-      background-color: var(--spring-color-5-darker) !important; }
+    .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-brand-color-1-background-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-brand-color-1-background-color:focus {
+      background-color: var(--brand-color-1-darker) !important; }
+    .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-brand-color-2-background-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-brand-color-2-background-color:focus {
+      background-color: var(--brand-color-2-darker) !important; }
+    .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-brand-color-3-background-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-brand-color-3-background-color:focus {
+      background-color: var(--brand-color-3-darker) !important; }
+    .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-brand-color-4-background-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-brand-color-4-background-color:focus {
+      background-color: var(--brand-color-4-darker) !important; }
+    .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-brand-color-5-background-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-brand-color-5-background-color:focus {
+      background-color: var(--brand-color-5-darker) !important; }
     .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-neutral-darkest-background-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-neutral-darkest-background-color:focus {
       background-color: #000000 !important; }
     .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-neutral-dark-background-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-neutral-dark-background-color:focus {
@@ -2904,16 +2949,16 @@ hr.wp-block-separator {
       background-color: var(--neutral-light) !important; }
     .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-neutral-white-background-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-background.has-neutral-white-background-color:focus {
       background-color: !important; }
-  .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-spring-color-1-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-spring-color-1-color:focus {
-    color: var(--spring-color-1-lighter) !important; }
-  .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-spring-color-2-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-spring-color-2-color:focus {
-    color: var(--spring-color-2-lighter) !important; }
-  .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-spring-color-3-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-spring-color-3-color:focus {
-    color: var(--spring-color-3-lighter) !important; }
-  .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-spring-color-4-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-spring-color-4-color:focus {
-    color: var(--spring-color-4-lighter) !important; }
-  .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-spring-color-5-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-spring-color-5-color:focus {
-    color: var(--spring-color-5-lighter) !important; }
+  .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-brand-color-1-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-brand-color-1-color:focus {
+    color: var(--brand-color-1-lighter) !important; }
+  .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-brand-color-2-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-brand-color-2-color:focus {
+    color: var(--brand-color-2-lighter) !important; }
+  .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-brand-color-3-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-brand-color-3-color:focus {
+    color: var(--brand-color-3-lighter) !important; }
+  .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-brand-color-4-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-brand-color-4-color:focus {
+    color: var(--brand-color-4-lighter) !important; }
+  .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-brand-color-5-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-brand-color-5-color:focus {
+    color: var(--brand-color-5-lighter) !important; }
   .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-neutral-darkest-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-neutral-darkest-color:focus {
     color: var(--neutral-dark) !important; }
   .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-neutral-dark-color:hover, .wp-block-button:not(.components-toolbar) .wp-block-button__link.has-text-color.has-neutral-dark-color:focus {
@@ -2928,38 +2973,38 @@ hr.wp-block-separator {
     color: var(--neutral-white) !important; }
   .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link {
     background-color: transparent !important;
-    border-color: var(--spring-color-1-darker);
+    border-color: var(--brand-color-1-darker);
     border-style: solid;
     border-width: 2px !important;
-    color: var(--spring-color-1-darker); }
+    color: var(--brand-color-1-darker); }
     .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link:focus {
       filter: saturate(50%);
-      color: var(--spring-color-1-darker); }
-  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-spring-color-1-background-color {
-    border-color: var(--spring-color-1) !important; }
-  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-spring-color-1-background-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-spring-color-1-background-color:focus {
+      color: var(--brand-color-1-darker); }
+  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-brand-color-1-background-color {
+    border-color: var(--brand-color-1) !important; }
+  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-brand-color-1-background-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-brand-color-1-background-color:focus {
     background-color: rgba(0, 0, 0, 0.1) !important;
-    border-color: var(--spring-color-1-darker) !important; }
-  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-spring-color-2-background-color {
-    border-color: var(--spring-color-2) !important; }
-  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-spring-color-2-background-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-spring-color-2-background-color:focus {
+    border-color: var(--brand-color-1-darker) !important; }
+  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-brand-color-2-background-color {
+    border-color: var(--brand-color-2) !important; }
+  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-brand-color-2-background-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-brand-color-2-background-color:focus {
     background-color: rgba(0, 0, 0, 0.1) !important;
-    border-color: var(--spring-color-2-darker) !important; }
-  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-spring-color-3-background-color {
-    border-color: var(--spring-color-3) !important; }
-  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-spring-color-3-background-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-spring-color-3-background-color:focus {
+    border-color: var(--brand-color-2-darker) !important; }
+  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-brand-color-3-background-color {
+    border-color: var(--brand-color-3) !important; }
+  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-brand-color-3-background-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-brand-color-3-background-color:focus {
     background-color: rgba(0, 0, 0, 0.1) !important;
-    border-color: var(--spring-color-3-darker) !important; }
-  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-spring-color-4-background-color {
-    border-color: var(--spring-color-4) !important; }
-  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-spring-color-4-background-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-spring-color-4-background-color:focus {
+    border-color: var(--brand-color-3-darker) !important; }
+  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-brand-color-4-background-color {
+    border-color: var(--brand-color-4) !important; }
+  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-brand-color-4-background-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-brand-color-4-background-color:focus {
     background-color: rgba(0, 0, 0, 0.1) !important;
-    border-color: var(--spring-color-4-darker) !important; }
-  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-spring-color-5-background-color {
-    border-color: var(--spring-color-5) !important; }
-  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-spring-color-5-background-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-spring-color-5-background-color:focus {
+    border-color: var(--brand-color-4-darker) !important; }
+  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-brand-color-5-background-color {
+    border-color: var(--brand-color-5) !important; }
+  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-brand-color-5-background-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-brand-color-5-background-color:focus {
     background-color: rgba(0, 0, 0, 0.1) !important;
-    border-color: var(--spring-color-5-darker) !important; }
+    border-color: var(--brand-color-5-darker) !important; }
   .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-neutral-darkest-background-color {
     border-color: var(--neutral-darkest) !important; }
   .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-neutral-darkest-background-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-neutral-darkest-background-color:focus {
@@ -2990,16 +3035,16 @@ hr.wp-block-separator {
   .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-neutral-white-background-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-background.has-neutral-white-background-color:focus {
     background-color: rgba(0, 0, 0, 0.1) !important;
     border-color: !important; }
-  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-spring-color-1-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-spring-color-1-color:focus {
-    color: var(--spring-color-1-darker) !important; }
-  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-spring-color-2-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-spring-color-2-color:focus {
-    color: var(--spring-color-2-darker) !important; }
-  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-spring-color-3-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-spring-color-3-color:focus {
-    color: var(--spring-color-3-darker) !important; }
-  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-spring-color-4-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-spring-color-4-color:focus {
-    color: var(--spring-color-4-darker) !important; }
-  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-spring-color-5-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-spring-color-5-color:focus {
-    color: var(--spring-color-5-darker) !important; }
+  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-brand-color-1-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-brand-color-1-color:focus {
+    color: var(--brand-color-1-darker) !important; }
+  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-brand-color-2-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-brand-color-2-color:focus {
+    color: var(--brand-color-2-darker) !important; }
+  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-brand-color-3-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-brand-color-3-color:focus {
+    color: var(--brand-color-3-darker) !important; }
+  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-brand-color-4-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-brand-color-4-color:focus {
+    color: var(--brand-color-4-darker) !important; }
+  .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-brand-color-5-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-brand-color-5-color:focus {
+    color: var(--brand-color-5-darker) !important; }
   .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-neutral-darkest-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-neutral-darkest-color:focus {
     color: #000000 !important; }
   .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-neutral-dark-color:hover, .wp-block-button:not(.components-toolbar).is-style-outline .wp-block-button__link.has-text-color.has-neutral-dark-color:focus {
@@ -3087,6 +3132,12 @@ hr.wp-block-separator {
 article.archive {
   margin-bottom: 1em; }
 
+.post--content > p, .wp-block-group p, .post--content > h1, .wp-block-group h1, .post--content > h2, .wp-block-group h2, .post--content > h3, .wp-block-group h3, .post--content > h4, .wp-block-group h4, .post--content > h5, .wp-block-group h5, .post--content > h6, .wp-block-group h6, .post--content > blockquote, .post--content > .wp-block-quote, .post--content > .wp-block-pullquote, .wp-block-group blockquote, .wp-block-group .wp-block-quote, .wp-block-group .wp-block-pullquote, .post--content > ol, .wp-block-group ol, .post--content > ul, .wp-block-group ul, .post--content > dl, .wp-block-group dl, .post--content > address, .wp-block-group address {
+  max-width: 860px; }
+
+.has_no_sidebar .page--header {
+  margin-top: 2em; }
+
 .comments {
   border-top: 1px solid rgba(var(--neutral-darkest-rgb), 0.3);
   margin-top: 2em;
@@ -3155,7 +3206,7 @@ article.archive {
     font-style: italic; }
 
 .bypostauthor img.avatar {
-  border: 2px solid var(--spring-color-1); }
+  border: 2px solid var(--brand-color-1); }
 
 .comments--respond {
   border-top: 1px solid rgba(var(--neutral-darkest-rgb), 0.3);
@@ -3192,11 +3243,11 @@ article.archive {
 .acfes-schedule .acfes-session-type-session {
   background-color: rgba(var(--neutral-mid-rgb), .2); }
 .acfes-schedule .acfes-global-session-mainstage, .acfes-schedule .acfes-session-type-mainstage {
-  background-color: rgba(var(--spring-color-1-rgb), .2) !important; }
+  background-color: rgba(var(--brand-color-1-rgb), .2) !important; }
 .acfes-schedule .acfes-global-session-custom, .acfes-schedule .acfes-session-type-custom {
   background-color: rgba(var(--neutral-mid-rgb), .3) !important; }
 .acfes-schedule a {
-  color: var(--spring-text); }
+  color: var(--brand-text); }
 
 .acfes-layout-table {
   border: var(--neutral-mid) solid 1px; }
@@ -3207,7 +3258,7 @@ article.archive {
   .acfes-layout-table thead th {
     background-color: rgba(var(--neutral-mid-rgb), .3);
     border: var(--neutral-mid) solid 1px;
-    color: var(--spring-text); }
+    color: var(--brand-text); }
   .acfes-layout-table [class*="acfes-session-type-"] {
     border-width: 1px;
     border-bottom-width: 0; }
@@ -3236,9 +3287,9 @@ article.archive {
   .acfes-schedule.acfes-color-scheme-dark .acfes-session-title {
     color: var(--neutral-white); }
   .acfes-schedule.acfes-color-scheme-dark .acfes-session-type-session {
-    background-color: var(--spring-text); }
+    background-color: var(--brand-text); }
   .acfes-schedule.acfes-color-scheme-dark .acfes-global-session-mainstage, .acfes-schedule.acfes-color-scheme-dark .acfes-session-type-mainstage {
-    background-color: var(--spring-color-1-darker) !important; }
+    background-color: var(--brand-color-1-darker) !important; }
   .acfes-schedule.acfes-color-scheme-dark .acfes-global-session-custom, .acfes-schedule.acfes-color-scheme-dark .acfes-session-type-custom {
     background-color: var(--neutral-dark) !important; }
   .acfes-schedule.acfes-color-scheme-dark ::-moz-selection {
@@ -3248,7 +3299,7 @@ article.archive {
   .acfes-schedule.acfes-color-scheme-dark.acfes-layout-table {
     border-color: var(--neutral-white); }
     .acfes-schedule.acfes-color-scheme-dark.acfes-layout-table tr {
-      background-color: var(--spring-text); }
+      background-color: var(--brand-text); }
     .acfes-schedule.acfes-color-scheme-dark.acfes-layout-table td {
       border-color: var(--neutral-white); }
     .acfes-schedule.acfes-color-scheme-dark.acfes-layout-table thead th {
@@ -3256,23 +3307,23 @@ article.archive {
       border-color: var(--neutral-white);
       color: var(--neutral-white); }
     .acfes-schedule.acfes-color-scheme-dark.acfes-layout-table .acfes-col-time, .acfes-schedule.acfes-color-scheme-dark.acfes-layout-table .acfes-col-track {
-      background-color: var(--spring-text); }
+      background-color: var(--brand-text); }
     @media screen and (max-width: 49em) {
       .acfes-schedule.acfes-color-scheme-dark.acfes-layout-table .acfes-session-type-session:before {
         color: var(--neutral-mid); } }
   .acfes-schedule.acfes-color-scheme-dark.acfes-layout-grid .acfes-col-track, .acfes-schedule.acfes-color-scheme-dark.acfes-layout-grid .acfes-time {
-    color: var(--spring-text); }
+    color: var(--brand-text); }
   .acfes-schedule.acfes-color-scheme-dark.acfes-layout-grid .acfes-session-cell-content {
     color: var(--neutral-white); }
 
 .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label, .gform_wrapper .field_sublabel_below div[class*=gfield_time_].ginput_container label {
   margin-bottom: 1.2em; }
 .gform_wrapper .gfield_required {
-  color: var(--spring-alert); }
+  color: var(--brand-alert); }
 .gform_wrapper .gform_fileupload_multifile .gform_drop_area {
-  color: var(--spring-text); }
+  color: var(--brand-text); }
 .gform_wrapper .validation_message {
-  color: var(--spring-alert); }
+  color: var(--brand-alert); }
   .gform_wrapper .validation_message ul {
     margin: 0;
     padding: 0; }
@@ -3305,16 +3356,16 @@ article.archive {
 .tribe_events .tribe-block__rsvp__description, .tribe_events .tribe-block__rsvp__title, .tribe_events .tribe-block__rsvp__availability {
   color: var(--neutral-darkest); }
 .tribe_events .tribe-block__venue .tribe-block__venue__meta .tribe-block__venue__address a {
-  color: var(--spring-links); }
+  color: var(--brand-links); }
   .tribe_events .tribe-block__venue .tribe-block__venue__meta .tribe-block__venue__address a:hover {
-    color: var(--spring-links-darker); }
+    color: var(--brand-links-darker); }
 .tribe_events .tribe-block__rsvp__status-button {
   border-width: 2px !important;
   width: 100%; }
 .tribe_events .tribe-block__rsvp__form .tribe-block__rsvp__form__attendee-meta {
   height: auto; }
 .tribe_events .tribe-block__rsvp__form .tribe-right label[for^=tribe-tickets-attendees-list-optout] input[type=checkbox]:checked:before {
-  color: var(--spring-color-1); }
+  color: var(--brand-color-1); }
 .tribe_events .tribe-block__rsvp__form .tribe-block__rsvp__number-input-button {
   border: 0 !important; }
 .tribe_events .tribe-events-c-small-cta__stock:before {
@@ -3326,7 +3377,7 @@ article.archive {
 
 .tooltipster-sidetip .tooltipster-box {
   background-color: var(--neutral-white);
-  border-color: var(--spring-color-1);
+  border-color: var(--brand-color-1);
   color: var(--neutral-darkest);
   padding: .5em; }
   .tooltipster-sidetip .tooltipster-box .tooltipster-content {
@@ -3453,7 +3504,7 @@ article.archive {
       background: var(--neutral-light); }
 
 #tribe-events-content .tribe-events-tooltip h4, #tribe_events_filters_wrapper .tribe_events_slider_val, .single-tribe_events a.tribe-events-gcal, .single-tribe_events a.tribe-events-ical {
-  color: var(--spring-links); }
+  color: var(--brand-links); }
 
 .tribe-events-notices {
   background: var(--neutral-light);
@@ -3485,11 +3536,11 @@ article.archive {
   .tribe-events .tribe-events-header--has-event-search .tribe-events-c-events-bar .tribe-events-c-search__button {
     margin-top: 0; }
 .tribe-events .tribe-events-c-nav__list .tribe-common-b2 {
-  color: var(--spring-links);
+  color: var(--brand-links);
   border: 0 !important;
   background-color: transparent !important; }
   .tribe-events .tribe-events-c-nav__list .tribe-common-b2:hover, .tribe-events .tribe-events-c-nav__list .tribe-common-b2:focus {
-    color: var(--spring-links-darker); }
+    color: var(--brand-links-darker); }
 .tribe-events .tribe-events-l-container a.tribe-common-c-btn-border {
   text-decoration: none; }
 .tribe-events .tribe-events-l-container button.tribe-events-c-top-bar__datepicker-button, .tribe-events .tribe-events-l-container button.tribe-events-c-top-bar__nav-link, .tribe-events .tribe-events-l-container button.tribe-events-c-nav__next, .tribe-events .tribe-events-l-container button.tribe-events-c-nav__prev {
@@ -3504,7 +3555,7 @@ article.archive {
 .tribe-events .tribe-events-calendar-month .tribe-events-calendar-month__day-date-daynum {
   font-size: 20px; }
 .tribe-events .tribe-events-calendar-month .tribe-events-calendar-month__multiday-event-bar {
-  background-color: var(--spring-links);
+  background-color: var(--brand-links);
   color: var(--neutral-white);
   padding: 2px 8px; }
 .tribe-events .tribe-events-calendar-month .tribe-events-calendar-month__calendar-event-title, .tribe-events .tribe-events-calendar-month .tribe-events-calendar-month__multiday-event-bar-title {
@@ -3520,7 +3571,7 @@ article.archive {
   color: var(--neutral-darkest);
   border-width: 1px; }
 .tribe-events button.tribe-events-calendar-month__day-cell--selected {
-  background-color: rgba(var(--spring-color-1-rgb), .1); }
+  background-color: rgba(var(--brand-color-1-rgb), .1); }
 .tribe-events .tribe-events-calendar-list .tribe-events-calendar-list__event-date-tag {
   padding-right: 0 !important;
   margin-right: .5em;
@@ -3589,7 +3640,7 @@ body.page-tribe-attendee-registration .tribe-tickets__registration {
 
 @media only screen and (max-width: 768px) {
   #tribe-events-content .tribe-events-calendar td.tribe-events-present.mobile-active:hover, .tribe-events-calendar td.tribe-events-present.mobile-active, .tribe-events-calendar td.tribe-events-present.mobile-active div[id*=tribe-events-daynum-], .tribe-events-calendar td.tribe-events-present.mobile-active div[id*=tribe-events-daynum-] a {
-    background-color: var(--spring-color-1); } }
+    background-color: var(--brand-color-1); } }
 @media only screen and (min-width: 30em) {
   #tribe-events .tribe-events-event-meta, #tribe-events-pg-template .tribe-events-event-meta {
     display: inline-block; }
@@ -3625,7 +3676,10 @@ body.page-tribe-attendee-registration .tribe-tickets__registration {
     width: 67%; } }
 .nav-pager {
   clear: both;
-  overflow: auto; }
+  overflow: auto;
+  margin: 0 auto 1em auto;
+  max-width: 81rem;
+  text-align: center; }
 
 .pager {
   list-style: none;
@@ -3633,7 +3687,8 @@ body.page-tribe-attendee-registration .tribe-tickets__registration {
   padding: 0; }
 
 .pager--previous, a[rel="prev"] {
-  float: left; }
+  display: inline-block;
+  padding-right: .5em; }
   .pager--previous .read-more:before, a[rel="prev"] .read-more:before {
     content: '←';
     display: inline-block;
@@ -3643,13 +3698,23 @@ body.page-tribe-attendee-registration .tribe-tickets__registration {
     margin: 0; }
 
 .pager--next, a[rel="next"] {
-  float: right;
-  text-align: right; }
+  display: inline-block;
+  padding-left: .5em; }
   .pager--next .read-more:after, a[rel="next"] .read-more:after {
     content: '→';
     display: inline-block;
     margin-left: .3em; }
 
+@media only screen and (min-width: 30em) {
+  .postname-pager .pager--previous {
+    float: left;
+    text-align: left;
+    width: 50%; }
+
+  .postname-pager .pager--next {
+    float: right;
+    text-align: right;
+    width: 50%; } }
 .post--pager {
   margin: 2em auto;
   text-align: center; }
@@ -3776,13 +3841,13 @@ body.page-tribe-attendee-registration .tribe-tickets__registration {
     background-color: transparent;
     border: 0;
     border-radius: 0 !Important;
-    color: var(--spring-links);
+    color: var(--brand-links);
     cursor: pointer;
     padding: .5em 0;
     text-decoration: underline; }
     .mtm-tabs--wrapper button.mtm-tabs--title:hover, .mtm-tabs--wrapper button.mtm-tabs--title:focus, .mtm-tabs--wrapper .mtm-tabs--title:hover, .mtm-tabs--wrapper .mtm-tabs--title:focus {
       background-color: transparent;
-      color: var(--spring-links-darker); }
+      color: var(--brand-links-darker); }
     .mtm-tabs--wrapper button.mtm-tabs--title.current, .mtm-tabs--wrapper .mtm-tabs--title.current {
       background-color: rgba(var(--neutral-darkest-rgb), 0.5);
       color: var(--neutral-white);
@@ -3791,17 +3856,17 @@ body.page-tribe-attendee-registration .tribe-tickets__registration {
       padding-left: .5em;
       padding-right: .5em; }
       .mtm-tabs--wrapper button.mtm-tabs--title.current:hover, .mtm-tabs--wrapper button.mtm-tabs--title.current:focus, .mtm-tabs--wrapper .mtm-tabs--title.current:hover, .mtm-tabs--wrapper .mtm-tabs--title.current:focus {
-        background-color: var(--spring-links);
+        background-color: var(--brand-links);
         color: var(--neutral-white); }
   .mtm-tabs--wrapper button.mtm-tabs--title-accordion, .mtm-tabs--wrapper .mtm-tabs--title-accordion {
     background-color: transparent;
     border: 0;
     border-top: 1px solid rgba(var(--neutral-darkest-rgb), 0.5);
-    color: var(--spring-links);
+    color: var(--brand-links);
     display: block;
     width: 100%; }
     .mtm-tabs--wrapper button.mtm-tabs--title-accordion:hover, .mtm-tabs--wrapper button.mtm-tabs--title-accordion:focus, .mtm-tabs--wrapper .mtm-tabs--title-accordion:hover, .mtm-tabs--wrapper .mtm-tabs--title-accordion:focus {
-      background-color: var(--spring-links);
+      background-color: var(--brand-links);
       color: var(--neutral-white); }
   .mtm-tabs--wrapper .mtm-tabs--content {
     clear: both;

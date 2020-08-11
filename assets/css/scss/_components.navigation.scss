@@ -1,258 +1,267 @@
 nav {
-  a {
-    text-decoration: none;
+	a {
+		text-decoration: none;
 
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
 
 // General Menu Items
 .menu-item {
-    padding: 0;
-    margin-bottom: 0;
-    @include transition(all .3s);
+		padding: 0;
+		margin-bottom: 0;
+		@include transition(all .3s);
 
-    &:last-child {
-        border-bottom: 0;
-    }
+		&:last-child {
+				border-bottom: 0;
+		}
 
-    a,
-    a:visited {
-        color: $linkColor;
-        display: block;
-        padding: .5em 0;
-        @include transition(all .3s);
+		a,
+		a:visited {
+				color: $linkColor;
+				display: block;
+				padding: .5em 0;
+				@include transition(all .3s);
 
-        &:hover, &:focus {
-            color: $linkHover;
-            @include transition(all .3s);
-        }
-    }
+				&:hover, &:focus {
+						color: $linkHover;
+						@include transition(all .3s);
+				}
+		}
 
 
 }
 
 // Quicklinks Menu
 .nav-quicklinks {
-  display: inline-block;
-    width: auto;
-    position: relative;
-    z-index: 999;
+	display: inline-block;
+		width: auto;
+		position: relative;
+		z-index: 999;
 
-    & > div { // menu container
-      display: inline-block;
-    }
+		& > div { // menu container
+			display: inline-block;
+		}
 
-    .menu-item {
+		.menu-item {
 
-        a, a:visited {
-            color: $Nlightest;
-            font-weight: $baseWeight;
-            padding: .5em;
+				a, a:visited {
+						color: $Nlightest;
+						font-weight: $baseWeight;
+						padding: .5em;
 
-            &:hover {
-                color: $Nwhite;
-            }
-        }
+						&:hover {
+								color: $Nwhite;
+						}
+				}
 
-        &.current-menu-item > a, &.current-menu-parent > a {
-            color: $Nwhite;
-        }
-    }
+				&.current-menu-item > a, &.current-menu-parent > a {
+						color: $Nwhite;
+				}
+		}
 
-    li:first-child {
-        a {
-            padding-left: 0;
-        }
-    }
+		li:first-child {
+				a {
+						padding-left: 0;
+				}
+		}
 
-    .sub-menu, .menu-toggle {
-        display: none;
-    }
+		.sub-menu, .menu-toggle {
+				display: none;
+		}
 }
-    .nav-quicklinks--menu {
-        margin: 0;
-        padding: 0;
+		.nav-quicklinks--menu {
+				margin: 0;
+				padding: 0;
 
-        li {
-            display: inline-block;
-            margin: 0;
-        }
-    }
+				li {
+						display: inline-block;
+						margin: 0;
+				}
+		}
 
 // Main Nav
 .nav-main {
 	position: absolute;
-    right: 100%;
-    top: 0;
-    // @include transition(all .8s);
-    width: 80%;
+		right: 100%;
+		top: 0;
+		// @include transition(all .8s);
+		width: 80%;
 
-    ul {
-        list-style: none;
-    }
+		ul {
+				list-style: none;
+		}
 
-    a {
-        @include rem-px('font-size', 1rem);
-    }
+		a {
+				@include rem-px('font-size', 1rem);
+		}
 }
 
-    .nav-main--menu, .nav-mobile--menu {
-        margin: 0;
-        padding: 1em;
-    }
+		.nav-main--menu, .nav-mobile--menu {
+				margin: 0;
+				padding: 1em;
+		}
 
 
 // Footer Menu
 .footer--menu {
-    margin: 1em 0 0 0;
-    padding: 0;
+	margin: 1em 0 0 0;
+	padding: 0;
 
-    li {
-        display: inline-block;
-        margin-right: 1em;
-    }
+		li {
+			margin-bottom: .75em;
+		}
 
-     a, a:visited {
-       color: $interactColor;
-       padding: 0;
+		a, a:visited {
+			color: $interactColor;
+			padding: 0;
 
-      &:hover, &:focus {
-        color: $interactColor_Lt;
-      }
-    }
+			&:hover, &:focus {
+				color: $interactColor_Lt;
+			}
+		}
+		.sub-menu {
+			padding-left: 0;
+			margin-left: 0;
+		}
+		.sub-menu, .menu-toggle {
+				display: none;
+		}
+}
 
-    .sub-menu, .menu-toggle {
-        display: none;
-    }
+.standard-footer .footer--menu {
+	li {
+			display: inline-block;
+			margin-right: 1em;
+	}
 }
 
 
 @media only screen and (max-width: #{$midBreakpoint}) {
-    .nav-main {
-        background-color: $linkColor;
-        position: absolute;
-        right: 100%;
-        top: 0;
-        width: $sidebarWidthMid;
+		.nav-main {
+				background-color: $linkColor;
+				position: absolute;
+				right: 100%;
+				top: 0;
+				width: $sidebarWidthMid;
 
-        .menu-item {
-          a,
-          a:visited {
-              color: $Nwhite;
+				.menu-item {
+					a,
+					a:visited {
+							color: $Nwhite;
 
-              &:hover, &:focus {
-                  color: $Nwhite;
-              }
-          }
-        }
+							&:hover, &:focus {
+									color: $Nwhite;
+							}
+					}
+				}
 
-    }
+		}
 
-    .nav-main--menu {
-        height: 0 !important;
-        padding: 0;
-        overflow: hidden;
-    }
+		.nav-main--menu {
+				height: 0 !important;
+				padding: 0;
+				overflow: hidden;
+		}
 
-    .nav-quicklinks {
-      display: none;
-    }
+		.nav-quicklinks {
+			display: none;
+		}
 }
 
 @media only screen and (max-width: #{$smallBreakpoint}) {
-    .nav-main {
-        width: $sidebarWidthSmall;
-    }
+		.nav-main {
+				width: $sidebarWidthSmall;
+		}
 }
 
 
 @media only screen and (min-width: #{$midBreakpoint}) {
-    // quicklinks menu
-    .nav-quicklinks > div { // menu container
-        padding: 0;
-    }
+		// quicklinks menu
+		.nav-quicklinks > div { // menu container
+				padding: 0;
+		}
 
-    .nav-mobile--menu {
-        display: none;
-    }
+		.nav-mobile--menu {
+				display: none;
+		}
 
-    .menu-item {
-      &.current-menu-item > a, &.current-menu-parent > a, &.current-menu-ancestor > a {
-        text-decoration: underline;
-      }
-    }
+		.menu-item {
+			&.current-menu-item > a, &.current-menu-parent > a, &.current-menu-ancestor > a {
+				text-decoration: underline;
+			}
+		}
 
-    // main menu
-    .nav-main {
-        float: right;
-        clear: right;
-        height: auto;
-        left: auto;
-        padding: 0;
-        position: relative;
-        right: auto;
-        text-transform: uppercase;
-        top: auto;
-        width: auto;
+		// main menu
+		.nav-main {
+				float: right;
+				clear: right;
+				height: auto;
+				left: auto;
+				padding: 0;
+				position: relative;
+				right: auto;
+				text-transform: uppercase;
+				top: auto;
+				width: auto;
 
-        & > div { // menu container
-          height:100%;
-        }
+				& > div { // menu container
+					height:100%;
+				}
 
-        div + div {
-          display: none;
-        }
-    }
-        .nav-main--menu {
-            height:100%;
-            padding: 0;
-            text-align: right;
+				div + div {
+					display: none;
+				}
+		}
+				.nav-main--menu {
+						height:100%;
+						padding: 0;
+						text-align: right;
 
-            .menu-item {
-                display: inline-block;
-                height: 100%;
-                line-height: 0;
+						.menu-item {
+								display: inline-block;
+								height: 100%;
+								line-height: 0;
 
-                & > a {
-                    height: 100%;
-                    display: inline-block;
-                    padding: .5em;
-                }
+								& > a {
+										height: 100%;
+										display: inline-block;
+										padding: .5em;
+								}
 
-                .menu-item {
-                  &.current-menu-item > a, &.current-menu-parent > a, &.current-menu-ancestor > a {
-                    background-color: #{'rgba('+$Ndarkest_RGB+', .2)'};
-                      color: $Nwhite;
-                  }
-                }
+								.menu-item {
+									&.current-menu-item > a, &.current-menu-parent > a, &.current-menu-ancestor > a {
+										background-color: #{'rgba('+$Ndarkest_RGB+', .2)'};
+											color: $Nwhite;
+									}
+								}
 
-                &:hover, &:focus, .tab-active {
-                    & > a {
-                      background-color: $linkColor;
-                      color: $Nwhite;
-                      text-decoration: none;
+								&:hover, &:focus, .tab-active {
+										& > a {
+											background-color: $linkColor;
+											color: $Nwhite;
+											text-decoration: none;
 
-                      & > .menu-toggle:after {
-                        color: $Nwhite;
-                      }
-                    }
-                }
-            }
-        }
+											& > .menu-toggle:after {
+												color: $Nwhite;
+											}
+										}
+								}
+						}
+				}
 
-    // footer menu
-    .footer--menu {
-        margin-top: 0;
+		// footer menu
+		.footer--menu {
+				margin-top: 0;
 
-        .menu-item:first-child {
-            a {
-                padding-left: 0;
-            }
-        }
-    }
+				.menu-item:first-child {
+						a {
+								padding-left: 0;
+						}
+				}
+		}
 }
 
 @media only screen and (min-width: #{$widescreenBreakpoint}) {

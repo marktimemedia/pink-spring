@@ -10,7 +10,7 @@
 		<?php get_template_part( 'templates/content-search' ); ?>
 	<?php endwhile; ?>
 
-	<?php if ( $wp_query->max_num_pages > 1 ) : ?>
-		<?php get_template_part( 'templates/pagination' ); ?>
-	<?php endif; ?>
 </section>
+<?php if ( $wp_query->max_num_pages > 1 ) : ?>
+	<?php get_template_part( 'templates/pagination' ); ?>
+<?php endif; ?>

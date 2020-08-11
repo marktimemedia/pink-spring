@@ -1,6 +1,9 @@
 .nav-pager {
   clear: both;
   overflow: auto;
+  margin: 0 auto 1em auto;
+  max-width: $boxedMax;
+  text-align: center;
 }
     .pager {
         list-style: none;
@@ -9,7 +12,8 @@
     }
 
         .pager--previous, a[rel="prev"] {
-            float: left;
+          display: inline-block;
+          padding-right: .5em;
 
             .read-more {
             	&:before {
@@ -25,8 +29,8 @@
         }
 
         .pager--next, a[rel="next"] {
-           float: right;
-           text-align: right;
+          display: inline-block;
+          padding-left: .5em;
 
             .read-more {
             	&:after {
@@ -36,6 +40,19 @@
             	}
             }
         }
+
+        @media only screen and (min-width: $smallBreakpoint) {
+        .postname-pager .pager--previous {
+          float: left;
+          text-align: left;
+          width: 50%;
+        }
+        .postname-pager .pager--next {
+           float: right;
+           text-align: right;
+           width: 50%;
+         }
+      }
 
  .post--pager {
      margin: 2em auto;

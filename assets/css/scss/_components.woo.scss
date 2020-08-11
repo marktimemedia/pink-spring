@@ -79,12 +79,12 @@ body.woocommerce, .woocommerce-page {
         }
 
         p.price, span.price {
-          color: $springColor3;
+          color: $brandColor3;
         }
     }
 
     .price {
-        color: $springColor3;
+        color: $brandColor3;
 
         del { // old pre-sale price
             & > span {
@@ -95,13 +95,13 @@ body.woocommerce, .woocommerce-page {
 
         ins { // new sale price
             background-color: transparent;
-            color: $springColor3;
+            color: $brandColor3;
             font-weight: $baseWeightBold;
         }
     }
 
     span.onsale {
-        background-color: $springColor3;
+        background-color: $brandColor3;
         padding: 0;
     }
 
@@ -134,17 +134,17 @@ body.woocommerce, .woocommerce-page {
     .widget_price_filter {
         .ui-slider {
             &.ui-widget-content {
-                background-color: $springColor1_Dk;
+                background-color: $brandColor1_Dk;
             }
             .ui-slider-handle, .ui-slider-range {
-                background-color: $springColor1;
+                background-color: $brandColor1;
             }
         }
     }
 
     .widget_shopping_cart_content {
         .button:not(.checkout) {
-            background-color: $springColor3;
+            background-color: $brandColor3;
         }
     }
 
@@ -155,11 +155,11 @@ body.woocommerce, .woocommerce-page {
   // alerts
     .woocommerce-error, .woocommerce-info, .woocommerce-message {
         background-color: $Nlightest;
-        border-top: 3px solid $springColor1;
+        border-top: 3px solid $brandColor1;
         color: $Ndarkest;
 
         &:before {
-            color: $springColor1;
+            color: $brandColor1;
         }
     }
 
@@ -196,15 +196,15 @@ body.woocommerce, .woocommerce-page {
 
                 &.added_to_cart.wc-forward {
                     @extend %button;
-                    background-color: $springColor3;
-                    border-color: $springColor3_Dk;
+                    background-color: $brandColor3;
+                    border-color: $brandColor3_Dk;
                     flex-grow: 0;
                     margin-top: .5em;
                     text-align: center;
 
                     &:hover {
-                      background-color: $springColor3_Dk;
-                      border-color: $springColor3;
+                      background-color: $brandColor3_Dk;
+                      border-color: $brandColor3;
                     }
                 }
 

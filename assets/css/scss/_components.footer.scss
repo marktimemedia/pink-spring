@@ -1,53 +1,80 @@
-.footer-main {
-    background-color: $Ndarkest;
-    bottom: 0;
-    color: $Nlightest;
-    padding: $smallPadding 0;
-    position: relative;
-    width: 100%;
+.footer {
+		background-color: $Nlightest;
+		bottom: 0;
+		position: relative;
+		width: 100%;
 
-    p, h1, h2, h3 {
-        color: $Nlightest;
-    }
+		p, h1, h2, h3 {
+			margin: 0 0 .5em 0;
+		}
 }
-    .footer-logo {
-      max-height: 4em;
-      max-width: 9em;
-      width: auto;
-      margin-bottom: 1em;
-     }
-    .footer--inner {
-        @include clearfix();
-        padding: 0 $smallPadding;
-    }
+		.footer-main, .footer-credits {
+			padding: $smallPadding 0;
+		}
+		.footer-credits {
+			background-color: $Ndarkest;
+			color: $Nlightest;
 
-    .footer--copyright {
-        padding-top: .5em;
-    }
+			p, h1, h2, h3 {
+				color: $Nlightest;
+			}
+		}
+
+		.footer--inner {
+				@include clearfix();
+				padding: 0 $smallPadding;
+		}
+
+		.footer-logo {
+			max-height: 4em;
+			max-width: 9em;
+			width: auto;
+			margin-bottom: 1em;
+		 }
+
+		.footer--contact {
+			margin-bottom: .75em;
+		}
+
+		.standard-footer.wp-block-columns {
+			margin: 0;
+		}
+
+		.widgetized-footer.footer--widgets {
+			margin-top: 1em;
+		}
 
 @media only screen and (min-width: #{$midBreakpoint}) {
 
-  .footer-logo {
-    float: right;
-    clear: right;
-    margin-left: 1em;
-   }
+	.standard-footer .footer-logo {
+		float: right;
+		clear: right;
+		margin-left: 1em;
+	}
 
+	.footer--extra-text {
+		float: right;
+		clear: right;
+		margin-left: 1em;
+	}
+	.footer--copyright {
+		float: left;
+	}
 
-    .footer--inner {
-        @include rem-px('max-width', $boxedMax);
-        padding: 0 $maxPadding;
-    }
+		.footer--inner {
+				@include rem-px('max-width', $boxedMax);
+				padding: 0 $maxPadding;
+		}
 }
 
 @media only screen and (min-width: #{$largeBreakpoint}) {
-    .footer-main {
-        //position: absolute;
-    }
+		.footer {
+				//position: absolute;
+		}
 }
 
 @media only screen and (min-width: #{$widescreenBreakpoint}) {
-    .footer--inner {
-        @include center-block;
-    }
+		.footer--inner {
+				@include center-block;
+		}
 }
