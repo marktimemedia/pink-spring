@@ -47,11 +47,11 @@ function spring_brand_text() {
 			'color' => '#303030',
 		),
 		'brand-heading'    => array(
-			'name' => 'Heading Color',
+			'name'  => 'Heading Color',
 			'color' => '#303030',
 		),
 		'brand-subheading' => array(
-			'name' => 'Subheading Color',
+			'name'  => 'Subheading Color',
 			'color' => '#303030',
 		),
 	);
@@ -241,6 +241,9 @@ function spring_gradient_css() {
 	return $style;
 }
 
+/**
+* CSS RGB
+*/
 function spring_rgb_css() {
 	$palette = spring_brand_colors();
 	foreach ( $palette as $key => $item ) {

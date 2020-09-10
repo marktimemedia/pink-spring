@@ -55,6 +55,31 @@ function spring_customize_options( $wp_customize ) {
 		);
 	}
 
+	// Theme Color Scheme Options
+	$wp_customize->add_setting(
+		'mtm_color_mode',
+		array(
+			'default'   => 'option-light',
+			'transport' => 'refresh',
+		)
+	);
+
+	$wp_customize->add_control(
+		'mtm_color_mode',
+		array(
+			'label'       => __( 'Theme Color Scheme' ),
+			'description' => esc_html__( 'Choose whether the theme header/footer should have a light or dark appearance by default' ),
+			'section'     => 'layout_section',
+			'priority'    => 10, // Optional. Order priority to load the control. Default: 10
+			'type'        => 'select',
+			'capability'  => 'edit_theme_options', // Optional. Default: edit_theme_options
+			'choices'     => array( // Optional.
+				'option-light' => __( 'Light' ),
+				'option-dark'  => __( 'Dark' ),
+			),
+		)
+	);
+
 	// Body Style Options
 	$wp_customize->add_setting(
 		'mtm_body_style',

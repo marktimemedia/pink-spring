@@ -1,48 +1,16 @@
 <?php
-/**
- * Wrap embedded media as suggested by Readability
- * Able to change based on URL source
- *
- * @link https://gist.github.com/965956
- * @link http://www.readability.com/publishers/guidelines#publisher
- * @link https://wordpress.stackexchange.com/questions/254583/add-wrapper-to-only-youtube-videos-via-embed-oembed-html-filter-function
- */
-function spring_embed_wrap( $cache, $url, $attr = '', $post_ID = '' ) {
-	$classes = array();
-
-		// Add these classes to all embeds.
-		$classes_all = array(
-			'entry-content-asset',
-		);
-
-		// Check for different providers and add appropriate classes.
-
-		if ( false !== strpos( $url, 'vimeo.com' ) ) {
-				$classes[] = 'vimeo video-asset';
-		}
-
-		if ( false !== strpos( $url, 'youtube.com' ) ) {
-				$classes[] = 'youtube video-asset';
-		}
-
-		$classes = array_merge( $classes, $classes_all );
-
-		return '<div class="' . esc_attr( implode( $classes, ' ' ) ) . '">' . $cache . '</div>';
-}
-// add_filter( 'embed_oembed_html', 'spring_embed_wrap', 10, 4 );
 
 /**
-* Wrap Gutenberg blocks in a container so we can target them with scroll ScrollReveal
-* https://wordpress.stackexchange.com/questions/329587/add-a-containing-div-to-core-gutenberg-blocks
+* Core Lazy Loading filter (WP 5.5+)
+* @link https://make.wordpress.org/core/2020/07/14/lazy-loading-images-in-5-5/
 */
-
-// add_filter( 'render_block', function( $block_content, $block ) {
-//     // Only target core/* and core-embed/* blocks.
-//     if ( preg_match( '~^core|core-embed|mtm~', $block['blockName'] )  && !preg_match( '(button)', $block['blockName'] ) && !preg_match( '(column)', $block['blockName'] ) ) {
-//        $block_content = sprintf( '<div class="single--block">%s</div>', $block_content );
-//     }
-//     return $block_content;
-// }, PHP_INT_MAX - 1, 2 );
+function spring_lazy_loading_filter( $default, $tag_name, $context ) {
+	if ( 'img' === $tag_name && 'the_content' === $context ) {
+		return false;
+	}
+	return $default;
+}
+// add_filter( 'wp_lazy_loading_enabled', 'spring_lazy_loading_filter', 10, 3 );
 
 /**
  * Add thumbnail styling to images with captions
@@ -111,7 +79,7 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 
 
 /**
-* Inline Media Default assert_options
+* Inline Media Default Background
 */
 function spring_inline_media_styles() {
 	$styles = '';
@@ -120,3 +88,48 @@ function spring_inline_media_styles() {
 	}
 	return $styles;
 }
+
+/**
+ * Wrap embedded media as suggested by Readability
+ * Able to change based on URL source
+ *
+ * @link https://gist.github.com/965956
+ * @link http://www.readability.com/publishers/guidelines#publisher
+ * @link https://wordpress.stackexchange.com/questions/254583/add-wrapper-to-only-youtube-videos-via-embed-oembed-html-filter-function
+ */
+function spring_embed_wrap( $cache, $url, $attr = '', $post_ID = '' ) {
+	$classes = array();
+
+		// Add these classes to all embeds.
+		$classes_all = array(
+			'entry-content-asset',
+		);
+
+		// Check for different providers and add appropriate classes.
+
+		if ( false !== strpos( $url, 'vimeo.com' ) ) {
+				$classes[] = 'vimeo video-asset';
+		}
+
+		if ( false !== strpos( $url, 'youtube.com' ) ) {
+				$classes[] = 'youtube video-asset';
+		}
+
+		$classes = array_merge( $classes, $classes_all );
+
+		return '<div class="' . esc_attr( implode( $classes, ' ' ) ) . '">' . $cache . '</div>';
+}
+// add_filter( 'embed_oembed_html', 'spring_embed_wrap', 10, 4 );
+
+/**
+* Wrap Gutenberg blocks in a container so we can target them with scroll ScrollReveal
+* @link https://wordpress.stackexchange.com/questions/329587/add-a-containing-div-to-core-gutenberg-blocks
+*/
+
+// add_filter( 'render_block', function( $block_content, $block ) {
+//     // Only target core/* and core-embed/* blocks.
+//     if ( preg_match( '~^core|core-embed|mtm~', $block['blockName'] )  && !preg_match( '(button)', $block['blockName'] ) && !preg_match( '(column)', $block['blockName'] ) ) {
+//        $block_content = sprintf( '<div class="single--block">%s</div>', $block_content );
+//     }
+//     return $block_content;
+// }, PHP_INT_MAX - 1, 2 );

@@ -40,8 +40,12 @@
     }
 }
 
-// Gutenberg Color Styles
+/* Gutenberg Color Styles */
 // These are now defined inline, see palette.php
+
+.has-neutral-white-color * {
+  color: $Nwhite !important;
+}
 
 // Utilities
 .has-background, .has-custom-background-color{
@@ -81,6 +85,34 @@
     }
 }
 
+.has-small-font-size {
+    font-size: 12px;
+    line-height: 1.4;
+}
+.has-regular-font-size {
+    font-size: 16px;
+    line-height: 1.4;
+}
+.has-medium-font-size {
+    font-size: 20px;
+    line-height: 1.4;
+}
+.has-large-font-size {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+.has-xlarge-font-size {
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1.3;
+}
+.has-huge-font-size {
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
 // Subhead
 p.wp-block-subhead {
     color: $Ndark;
@@ -97,6 +129,10 @@ p.has-drop-cap {
 }
 
 /* Core Layout Blocks */
+
+.wp-block-spacer {
+  margin: 0 !important;
+}
 
 // Group block
 .wp-block-group {
@@ -409,7 +445,7 @@ hr.wp-block-separator {
   margin-left: 0 !important;
   padding-left: 0 !important;
 
-  li {
+  li a {
     font-size: $h4Size;
     font-weight: $h4FontWeight;
   }

@@ -13,7 +13,7 @@
 
 	<link rel="alternate" type="application/rss+xml" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?> Feed" href="<?php echo esc_url( home_url() ); ?>/feed/">
 </head>
-<body <?php body_class( get_theme_mod( 'mtm_body_style' ) ); ?>>
+<body <?php body_class( ( get_theme_mod( 'mtm_body_style' ) . ' ' . get_theme_mod( 'mtm_color_mode' ) ) ); ?>>
 <div class="wrapper" role="document">
 		<header class="header-main">
 			<a class="screen-reader-text skip-link" href="#content"><?php esc_html_e( 'Skip to content', 'spring' ); ?></a>
@@ -49,19 +49,19 @@
 						</div>
 						<nav aria-label="Primary" class="nav-main" role="navigation">
 								<?php
-								if ( has_nav_menu( 'mobile_navigation' ) ) :
-										wp_nav_menu(
-											array(
-												'theme_location' => 'mobile_navigation',
-												'menu_class'     => 'nav-mobile--menu',
-											)
-										);
-								endif;
 								if ( has_nav_menu( 'primary_navigation' ) ) :
 										wp_nav_menu(
 											array(
 												'theme_location' => 'primary_navigation',
 												'menu_class'     => 'nav-main--menu',
+											)
+										);
+								endif;
+								if ( has_nav_menu( 'mobile_navigation' ) ) :
+										wp_nav_menu(
+											array(
+												'theme_location' => 'mobile_navigation',
+												'menu_class'     => 'nav-mobile--menu',
 											)
 										);
 								endif;

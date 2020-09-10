@@ -1,106 +1,106 @@
 .open-button-wrapper {
-        position: absolute;
-        top: 0;
-        width: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
 
-        .open-the-menu & {
-          top: 48px; // height of quicklinks
-        }
+    .open-the-menu & {
+      top: 48px; // height of quicklinks
     }
+}
 
-        .open-button {
-            @include drop-shadow($x-axis: 0, $y-axis: 0px, $blur: 0, $alpha: 0);
-            background: none;
-            border: 0;
-            font-size: 1em;
-            height: 2.8em;
-            overflow: hidden;
-            padding: .4em;
-            position: absolute;
-            top: 0;
-            width: 2.5em;
-            z-index: 1000;
+  .open-button {
+      @include drop-shadow($x-axis: 0, $y-axis: 0px, $blur: 0, $alpha: 0);
+      background: none;
+      border: 0;
+      font-size: 1em;
+      height: 2.8em;
+      overflow: hidden;
+      padding: .4em;
+      position: absolute;
+      top: 0;
+      width: 2.5em;
+      z-index: 1000;
 
-            &:active,
-            &:focus {
+      &:active,
+      &:focus {
 
-            }
+      }
 
-            &:hover, &:focus {
-                border: 0;
-                background-color: transparent;
-            }
+      &:hover, &:focus {
+          border: 0;
+          background-color: transparent;
+      }
 
-            span {
-                display: inline-block;
-                left: 100%;
-                position: absolute;
-            }
-        }
+      span {
+          display: inline-block;
+          left: 100%;
+          position: absolute;
+      }
+  }
 
-        .open-main-menu {
-            left: 0;
+  .open-main-menu {
+      left: 0;
 
-            &:before {
-                color: $linkColor;
-                content: '\2630';
-                display: block;
-                font-size: 1.5em;
-                width: 100%;
-            }
+      &:before {
+          color: $linkColor;
+          content: '\2630';
+          display: block;
+          font-size: 1.5em;
+          width: 100%;
+      }
 
-            &:hover:before {
-                color: $linkHover;
-            }
+      &:hover:before {
+          color: $linkHover;
+      }
 
-            &:after {
-                color: $linkColor;
-                content: 'MENU';
-                display: block;
-                font-size: 7px;
-                font-weight: $baseWeightBold;
-                letter-spacing: .5px;
-                width: 100%;
-            }
+      &:after {
+          color: $linkColor;
+          content: 'MENU';
+          display: block;
+          font-size: 7px;
+          font-weight: $baseWeightBold;
+          letter-spacing: .5px;
+          width: 100%;
+      }
 
-            &:hover:after {
-                color: $linkHover;
-            }
-        }
+      &:hover:after {
+          color: $linkHover;
+      }
+  }
 
-        .open-sidebar {
-            right: 0;
+  .open-sidebar {
+      right: 0;
 
 
-            &:before {
-                border-left: 12px solid $linkColor;
-                border-right: 6px solid $linkColor;
-                content: ' ';
-                display: block;
-                height: 70%;
-                margin-left: 3px;
-                width: 21px;
-            }
+      &:before {
+          border-left: 12px solid $linkColor;
+          border-right: 6px solid $linkColor;
+          content: ' ';
+          display: block;
+          height: 70%;
+          margin-left: 3px;
+          width: 21px;
+      }
 
-            &:hover:before {
-                border-color: $linkHover;
-            }
+      &:hover:before {
+          border-color: $linkHover;
+      }
 
-            &:after {
-                color: $linkColor;
-                content: 'INFO';
-                display: block;
-                font-size: 7px;
-                font-weight: $baseWeightBold;
-                letter-spacing: .5px;
-                margin-top:.3em;
-                width: 100%;
-            }
+      &:after {
+          color: $linkColor;
+          content: 'INFO';
+          display: block;
+          font-size: 7px;
+          font-weight: $baseWeightBold;
+          letter-spacing: .5px;
+          margin-top:.3em;
+          width: 100%;
+      }
 
-            &:hover:after {
-                color: $linkHover;
-            }
-        }
+      &:hover:after {
+          color: $linkHover;
+      }
+  }
 
 
 @media only screen and (max-width: #{$midBreakpoint - 0.06}) {

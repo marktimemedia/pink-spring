@@ -9,17 +9,26 @@ function spring_setup_editor() {
 	// add_theme_support( 'dark-editor-style' ); // dark mode (optional)
 
 	/** Gutenberg Features */
-	add_theme_support( 'align-wide' ); // gutenberg wide block support
+	add_theme_support( 'align-wide' ); // gutenberg wide/full block support
 	//add_theme_support( 'wp-block-styles' ); // allow default block styles
 	add_theme_support( 'disable-custom-colors' ); // no custom picker
-	// add_theme_support( 'disable-custom-gradients' ); // no custom gradients
+	add_theme_support( 'disable-custom-gradients' ); // no custom gradients
 	add_theme_support( 'custom-line-height' );
 	add_theme_support( 'custom-units', 'px, em, vh' ); // supports px, em, rem, vh, vw
 
 	remove_theme_support( 'core-block-patterns' ); // no core block patterns
 
+	/* Experimental Features */
+	add_theme_support( 'experimental-custom-spacing' ); // https://developer.wordpress.org/block-editor/developers/themes/theme-support/#experimental-%e2%80%94-cover-block-padding
+	add_theme_support( 'experimental-link-color' );
 }
 add_action( 'after_setup_theme', 'spring_setup_editor' );
+
+/**
+* -------------------------
+* COLORS
+* -------------------------
+*/
 
 /**
 * Register Editor Color Controls
@@ -85,9 +94,99 @@ function spring_editor_gradient_palette() {
 }
 add_action( 'after_setup_theme', 'spring_editor_gradient_palette' );
 
+/**
+ * ACF Color Palette
+ *
+ * Add default color palatte to ACF color picker for branding
+ * Match these colors to colors in Gutenberg function & SCSS values
+ *
+*/
+function spring_acf_admin_scripts() {
+
+	wp_register_script( 'acf_custom', get_template_directory_uri() . '/assets/js/build/acf-custom.js', '', 1, false );
+
+	$palette = spring_editor_palette(); // palette.php
+	foreach ( $palette as $key => $item ) {
+		$color                        = get_theme_mod( $key, $item['color'] );
+		$newkey                       = str_replace( '-', '', $key );
+		$spring_acf_colors[ $newkey ] = $color;
+	}
+
+		wp_localize_script( 'acf_custom', 'custom_colors', $spring_acf_colors );
+		wp_enqueue_script( 'acf_custom' );
+}
+
+add_action( 'acf/input/admin_enqueue_scripts', 'spring_acf_admin_scripts' );
+
+/*
+* Add custom colors to ACF color picker
+* https://whiteleydesigns.com/synchronizing-your-acf-color-picker-with-gutenberg-color-classes/
+*/
+function spring_filter_acf_class_colors( $colors ) {
+
+	$palette = spring_editor_palette();  // palette.php
+	foreach ( $palette as $key => $item ) {
+		$color          = get_theme_mod( $key, $item['color'] );
+		$colors[ $key ] = $color;
+	}
+
+	return $colors;
+}
+add_filter( 'mtm_block_colors_filter', 'spring_filter_acf_class_colors' );
+
 
 /**
- * List of templates/IDs
+* -------------------------
+* TYPOGRAPHY
+* -------------------------
+*/
+function spring_custom_typography_setup() {
+	add_theme_support(
+		'editor-font-sizes',
+		array(
+			array(
+				'name' => __( 'Small', 'spring' ),
+				'size' => 12,
+				'slug' => 'small',
+			),
+			array(
+				'name' => __( 'Regular (Body)', 'spring' ),
+				'size' => 16,
+				'slug' => 'regular',
+			),
+			array(
+				'name' => __( 'Medium', 'spring' ),
+				'size' => 20,
+				'slug' => 'medium',
+			),
+			array(
+				'name' => __( 'Large (Lead)', 'spring' ),
+				'size' => 28,
+				'slug' => 'large',
+			),
+			array(
+				'name' => __( 'XLarge', 'spring' ),
+				'size' => 36,
+				'slug' => 'xlarge',
+			),
+			array(
+				'name' => __( 'Huge (Cover)', 'spring' ),
+				'size' => 48,
+				'slug' => 'huge',
+			),
+		)
+	);
+}
+add_action( 'after_setup_theme', 'spring_custom_typography_setup' );
+
+/**
+* -------------------------
+* DISABLE EDITOR
+* -------------------------
+*/
+
+/**
+ * Generate list of templates/IDs to disable editor
  *
  */
 function spring_disable_editor( $id = false ) {
@@ -150,45 +249,6 @@ function spring_disable_classic_editor() {
 add_action( 'admin_head', 'spring_disable_classic_editor' );
 
 
-/**
- * ACF Color Palette
- *
- * Add default color palatte to ACF color picker for branding
- * Match these colors to colors in Gutenberg function & SCSS values
- *
-*/
-function spring_acf_admin_scripts() {
-
-	wp_register_script( 'acf_custom', get_template_directory_uri() . '/assets/js/build/acf-custom.js', '', 1, false );
-
-	$palette = spring_editor_palette(); // palette.php
-	foreach ( $palette as $key => $item ) {
-		$color                        = get_theme_mod( $key, $item['color'] );
-		$newkey                       = str_replace( '-', '', $key );
-		$spring_acf_colors[ $newkey ] = $color;
-	}
-
-		wp_localize_script( 'acf_custom', 'custom_colors', $spring_acf_colors );
-		wp_enqueue_script( 'acf_custom' );
-}
-
-add_action( 'acf/input/admin_enqueue_scripts', 'spring_acf_admin_scripts' );
-
-/*
-* Add custom colors to ACF color picker
-* https://whiteleydesigns.com/synchronizing-your-acf-color-picker-with-gutenberg-color-classes/
-*/
-function spring_filter_acf_class_colors( $colors ) {
-
-	$palette = spring_editor_palette();  // palette.php
-	foreach ( $palette as $key => $item ) {
-		$color          = get_theme_mod( $key, $item['color'] );
-		$colors[ $key ] = $color;
-	}
-
-	return $colors;
-}
-add_filter( 'mtm_block_colors_filter', 'spring_filter_acf_class_colors' );
 
 /**
 * Remove certain blocks on page template

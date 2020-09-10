@@ -1,3 +1,4 @@
+// Customizer: Round
 body.option-round {
   .post--thumbnail {
     border-radius: 50%;
@@ -9,11 +10,6 @@ body.option-round {
 
   .wp-block-button:not(.components-toolbar) .wp-block-button__link {
     border-radius: 3em;
-  }
-
-  .wp-block-columns .wp-block-cover {
-    border-radius: 100px;
-    overflow: hidden;
   }
 
   input[type="text"],
@@ -45,6 +41,54 @@ body.option-round {
   .mtm_module_call_to_action {
     &:not(.alignfull) {
       border-radius: 10px;
+    }
+  }
+}
+
+// Customizer: Dark
+body.option-dark {
+  .header-main {
+    border-bottom: 0;
+  }
+  .header--inner, .footer-main {
+    background-color: $textColor;
+    color: $Nwhite !important;
+
+    p, h1, h2, h3, h4, h5, h6, label {
+      color: $Nwhite !important;
+    }
+
+    a, .open-button {
+      color: $Nwhite;
+
+      &:hover {
+        color: $Nlight;
+      }
+
+      &:before, &:after {
+        color: $Nwhite;
+
+        &:hover {
+          color: $Nlight;
+        }
+      }
+    }
+  }
+
+  .open-sidebar:before {
+    border-color: $Nwhite;
+  }
+
+  .menu-item a, .menu-item a:visited {
+    color: $Nwhite;
+  }
+
+  @media only screen and (min-width: $navBreakpoint) {
+    .header-main {
+      background-color: $textColor;
+    }
+    .menu-toggle:after {
+      color: $Nwhite;
     }
   }
 }

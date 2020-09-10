@@ -21,8 +21,8 @@ $footerclass = is_active_sidebar( 'sidebar-footer' ) ? 'widgetized-footer footer
 								?>
 						</nav>
 						<div class="footer--contact">
-							<?php echo wp_kses_post( mtm_get_social_media() ); ?>
 							<?php echo wp_kses_post( mtm_get_phone_number() ); ?>
+							<?php echo wp_kses_post( mtm_get_social_media() ); ?>
 						</div>
 					</div>
 				<?php endif; ?>

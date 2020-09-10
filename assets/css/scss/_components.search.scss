@@ -26,8 +26,9 @@
         color: $Nwhite;
         display: inline-block;
         font-weight: $baseWeightBold;
-        padding: .5em;
-        width: 29%;
+        margin-left: -6px;
+        padding: .51em;
+        width: 90px;
 
         &:hover {
             background: $buttonAltBackground2;
@@ -63,7 +64,8 @@
     }
 
     &:before {
-        content:"⚲";
+      font: normal 20px/1 dashicons!important;
+      content:"\f179"; // fallback
     }
 }
 
@@ -72,7 +74,7 @@
     max-height: 0;
     overflow: hidden; // to account for the toggle
     padding-bottom: 0;
-    @include transition(max-height .8s);
+    @include transition(all .8s);
 
     .textbox.search--textbox {
 
@@ -82,7 +84,7 @@
     .header-main .search-form.search-expanded {
         max-height: 3em;
         padding: .4em 0;
-        @include transition(max-height .8s);
+        @include transition(all .8s);
     }
 
     .fa-search.search-open:before {
@@ -93,15 +95,24 @@
 @media only screen and (min-width: #{$midBreakpoint}) {
 
     .search-toggle {
-        display: none !important;
+        // display: none !important; // if you want the search bar visible with no toggle
     }
 
     .header-main .search-form {
-        clear: both;
         float: right;
+        max-width: 0;
         max-height: 3em;
-        @include transition(max-height .8s);
-        width: 20em;
-        overflow: visible; // unless you need a toggle on desktop
+        width: 21em;
+        // overflow: visible; // if you want the search bar visible with no toggle
+
+        form {
+          width: 20em;
+        }
+
+        &.search-expanded {
+          max-height: 3em;
+          max-width: 21em;
+          padding: 0 .4em;
+        }
     }
 }

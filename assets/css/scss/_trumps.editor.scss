@@ -25,6 +25,7 @@
 /* Width of "full-wide" blocks */
 .wp-block[data-align="full"] {
     // max-width: 100%;
+		@extend %alignfull;
 }
 
 /* "alignright" and "alignleft" blocks should not float unless theme says so */
