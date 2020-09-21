@@ -42,7 +42,7 @@ if ( have_comments() && ! is_page() && post_type_supports( get_post_type(), 'com
 			<h3>
 				<?php
 				//translators: %s is to whom you are leaving a reply
-				comment_form_title( __( 'Leave a Reply', 'spring' ), __( 'Leave a Reply to %s', 'spring' ) );
+				comment_form_title( __( 'Leave a Reply', 'spring' ), __( 'Reply to %s', 'spring' ) );
 				?>
 			</h3>
 

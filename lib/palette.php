@@ -174,7 +174,7 @@ function hex2rgb( $colour ) {
 function spring_palette_css() {
 	$palette = spring_brand_colors();
 	foreach ( $palette as $key => $item ) {
-		if ( $item['color'] ) {
+		if ( array_key_exists( 'color', $item ) ) {
 			$color       = get_theme_mod( $key, $item['color'] );
 			$css_vars[]  = '--' . $key . ':' . $color . ';';
 			$css_vars[]  = '--' . $key . '-darker:' . color_luminance( $color, -.25 ) . ';';
@@ -185,7 +185,7 @@ function spring_palette_css() {
 	}
 	$options = spring_brand_options();
 	foreach ( $options as $key => $item ) {
-		if ( $item['color'] ) {
+		if ( array_key_exists( 'color', $item ) ) {
 			$color       = get_theme_mod( $key, $item['color'] );
 			$css_vars[]  = '--' . $key . ':' . $color . ';';
 			$css_vars[]  = '--' . $key . '-darker:' . color_luminance( $color, -.25 ) . ';';
@@ -196,7 +196,7 @@ function spring_palette_css() {
 	}
 	$text = spring_brand_text();
 	foreach ( $text as $key => $item ) {
-		if ( $item['color'] ) {
+		if ( array_key_exists( 'color', $item ) ) {
 			$color       = get_theme_mod( $key, $item['color'] );
 			$css_vars[]  = '--' . $key . ':' . $color . ';';
 			$css_style[] = '.has-' . $key . '-color{color:' . $color . ' !important;}';
@@ -204,7 +204,7 @@ function spring_palette_css() {
 	}
 	$neutrals = spring_brand_neutralwhite();
 	foreach ( $neutrals as $key => $item ) {
-		if ( $item['color'] ) {
+		if ( array_key_exists( 'color', $item ) ) {
 			$color       = get_theme_mod( $key, $item['color'] );
 			$css_vars[]  = '--' . $key . ':' . $color . ';';
 			$css_style[] = '.has-' . $key . '-background-color{background-color:' . $color . ' !important;}';
@@ -224,7 +224,7 @@ function spring_gradient_css() {
 	$j       = 1;
 
 	foreach ( $palette as $key => $item ) {
-		if ( $item['color'] ) {
+		if ( array_key_exists( 'color', $item ) ) {
 			$color       = get_theme_mod( $key, $item['color'] );
 			$css_style[] = '.has-' . $key . '-gradient-darker-gradient-background{background:linear-gradient(135deg,' . $color . ' 0%,' . color_luminance( $color, -.5 ) . ' 100%) !important;}';
 			$css_style[] = '.has-' . $key . '-gradient-lighter-gradient-background{background:linear-gradient(135deg,' . $color . ' 0%,' . color_luminance( $color, .6 ) . ' 100%) !important;}';
@@ -247,7 +247,7 @@ function spring_gradient_css() {
 function spring_rgb_css() {
 	$palette = spring_brand_colors();
 	foreach ( $palette as $key => $item ) {
-		if ( $item['color'] ) {
+		if ( array_key_exists( 'color', $item ) ) {
 			$convert    = hex2rgb( get_theme_mod( $key, $item['color'] ) );
 			$color      = implode( ', ', $convert );
 			$css_vars[] = '--' . $key . '-rgb:' . $color . ';';
@@ -255,7 +255,7 @@ function spring_rgb_css() {
 	}
 	$neutrals = spring_brand_neutralwhite();
 	foreach ( $neutrals as $key => $item ) {
-		if ( $item['color'] ) {
+		if ( array_key_exists( 'color', $item ) ) {
 			$convert    = hex2rgb( get_theme_mod( $key, $item['color'] ) );
 			$color      = implode( ', ', $convert );
 			$css_vars[] = '--' . $key . '-rgb:' . $color . ';';

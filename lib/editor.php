@@ -58,7 +58,7 @@ function spring_editor_gradient_palette() {
 	$j       = 1;
 
 	foreach ( $palette as $key => $item ) { // single color
-		if ( $item['color'] ) {
+		if ( array_key_exists( 'color', $item ) ) {
 			$color       = get_theme_mod( $key, $item['color'] );
 			$gradients[] = array(
 				'name'     => $item['name'] . ' Darker',
@@ -74,7 +74,7 @@ function spring_editor_gradient_palette() {
 	}
 
 	foreach ( $palette as $key => $item ) { // multi color
-		if ( $item['color'] ) {
+		if ( array_key_exists( 'color', $item ) ) {
 			$color = get_theme_mod( $key, $item['color'] );
 
 			foreach ( array_slice( $palette, $j++ ) as $key2 => $item2 ) {

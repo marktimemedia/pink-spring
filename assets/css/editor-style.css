@@ -198,7 +198,9 @@ li.woocommerce-MyAccount-navigation-link--customer-logout .wp-block-button:not(.
   width: calc( 100% + (2 * 1rem) ); }
   .content:not(.has_sidebar) .alignfull .content--inner, .wp-block[data-align="full"] .content--inner {
     padding-left: 1rem;
-    padding-right: 1rem; }
+    padding-right: 1rem;
+    margin: 0 auto;
+    max-width: 81rem; }
   @media only screen and (min-width: 30em) {
     .content:not(.has_sidebar) .alignfull, .wp-block[data-align="full"] {
       margin-left: -2rem;
@@ -215,6 +217,11 @@ li.woocommerce-MyAccount-navigation-link--customer-logout .wp-block-button:not(.
       .content:not(.has_sidebar) .alignfull .content--inner, .wp-block[data-align="full"] .content--inner {
         padding-left: 3rem;
         padding-right: 3rem; } }
+  @media only screen and (min-width: 81rem) {
+    .content:not(.has_sidebar) .alignfull, .wp-block[data-align="full"] {
+      margin-left: calc(-100vw / 2 + ( 81rem - (2 * 3rem) ) / 2);
+      margin-right: calc(-100vw / 2 + ( 81rem - (2 * 3rem) ) / 2);
+      width: 100vw; } }
 
 .content:not(.has_sidebar) .alignwide {
   margin-left: -1rem;
@@ -1050,11 +1057,6 @@ figcaption {
 @media only screen and (min-width: 49em) {
   .alignfull + * {
     margin-top: 3rem; } }
-@media only screen and (min-width: 81rem) {
-  .content:not(.has_sidebar) .alignfull {
-    margin-left: calc(-100vw / 2 + ( 81rem - (2 * 3rem) ) / 2);
-    margin-right: calc(-100vw / 2 + ( 81rem - (2 * 3rem) ) / 2);
-    width: 100vw; } }
 /* BUTTON SIZES */
 .button.button-xs, li.woocommerce-MyAccount-navigation-link--customer-logout a.button-xs {
   font-size: .75em !important;

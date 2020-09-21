@@ -424,7 +424,9 @@ li.woocommerce-MyAccount-navigation-link--customer-logout .wp-block-button:not(.
   width: calc( 100% + (2 * 1rem) ); }
   .content:not(.has_sidebar) .alignfull .content--inner {
     padding-left: 1rem;
-    padding-right: 1rem; }
+    padding-right: 1rem;
+    margin: 0 auto;
+    max-width: 81rem; }
   @media only screen and (min-width: 30em) {
     .content:not(.has_sidebar) .alignfull {
       margin-left: -2rem;
@@ -441,6 +443,11 @@ li.woocommerce-MyAccount-navigation-link--customer-logout .wp-block-button:not(.
       .content:not(.has_sidebar) .alignfull .content--inner {
         padding-left: 3rem;
         padding-right: 3rem; } }
+  @media only screen and (min-width: 81rem) {
+    .content:not(.has_sidebar) .alignfull {
+      margin-left: calc(-100vw / 2 + ( 81rem - (2 * 3rem) ) / 2);
+      margin-right: calc(-100vw / 2 + ( 81rem - (2 * 3rem) ) / 2);
+      width: 100vw; } }
 
 .content:not(.has_sidebar) .alignwide {
   margin-left: -1rem;
@@ -1345,11 +1352,6 @@ figcaption {
 @media only screen and (min-width: 49em) {
   .alignfull + * {
     margin-top: 3rem; } }
-@media only screen and (min-width: 81rem) {
-  .content:not(.has_sidebar) .alignfull {
-    margin-left: calc(-100vw / 2 + ( 81rem - (2 * 3rem) ) / 2);
-    margin-right: calc(-100vw / 2 + ( 81rem - (2 * 3rem) ) / 2);
-    width: 100vw; } }
 /* BUTTON SIZES */
 .button.button-xs, li.woocommerce-MyAccount-navigation-link--customer-logout a.button-xs {
   font-size: .75em !important;
@@ -2284,7 +2286,8 @@ nav a {
   left: 0; }
   .open-main-menu:before {
     color: var(--brand-links);
-    content: '\2630';
+    font: normal 20px/1 dashicons;
+    content: '\f228';
     display: block;
     font-size: 1.5em;
     width: 100%; }
@@ -2304,15 +2307,17 @@ nav a {
 .open-sidebar {
   right: 0; }
   .open-sidebar:before {
-    border-left: 12px solid var(--brand-links);
-    border-right: 6px solid var(--brand-links);
-    content: ' ';
+    color: var(--brand-links);
+    font: normal 22px/0.9 dashicons;
+    content: '\f317';
     display: block;
-    height: 70%;
-    margin-left: 3px;
-    width: 21px; }
+    font-weight: var(--body-font-weight-bold);
+    letter-spacing: .5px;
+    width: 1em;
+    transform: rotate(-90deg);
+    transition: transform .5s; }
   .open-sidebar:hover:before {
-    border-color: var(--brand-links-darker); }
+    color: var(--brand-links-darker); }
   .open-sidebar:after {
     color: var(--brand-links);
     content: 'INFO';
@@ -2361,6 +2366,8 @@ nav a {
     .open-the-sidebar body {
       overflow: hidden;
       height: auto; }
+    .open-the-sidebar .open-sidebar:before {
+      transform: rotate(90deg); }
     .open-the-sidebar .wrapper {
       width: 100%;
       height: 100%;
@@ -2619,7 +2626,7 @@ nav a {
     background-color: var(--brand-color-1-darker);
     border: none; }
   .search-toggle:before {
-    font: normal 20px/1 dashicons !important;
+    font: normal 20px/1 "Font Awesome 5 Pro", "Font Awesome", dashicons;
     content: "\f179"; }
 
 .header-main .search-form {
@@ -3188,9 +3195,6 @@ article.archive {
   padding: 0; }
   .comments--list ul.comment,
   .comments--list ol.comment {
-    border-left: 1px solid rgba(var(--neutral-darkest-rgb), 0.3);
-    border-top: 1px solid rgba(var(--neutral-darkest-rgb), 0.3);
-    border-bottom: 1px solid rgba(var(--neutral-darkest-rgb), 0.3);
     list-style: none;
     margin-left: 0;
     margin-bottom: 0;
@@ -3201,18 +3205,20 @@ article.archive {
 .comments--form-row textarea, .comments--form-row input {
   margin-top: .5em; }
 
-.comment {
+li.comment {
   *zoom: 1;
+  border-top: 1px solid rgba(var(--neutral-darkest-rgb), 0.3);
   clear: both;
-  margin-top: .5em; }
-  .comment:before, .comment:after {
+  margin-top: .5em;
+  padding-top: .5em; }
+  li.comment:before, li.comment:after {
     display: table;
     content: ""; }
-  .comment:after {
+  li.comment:after {
     clear: both; }
-  .comment:first-of-type {
+  li.comment:first-of-type {
     margin-top: 0; }
-  .comment .avatar {
+  li.comment .avatar {
     float: left;
     height: 32px;
     height: 2rem;
@@ -3247,10 +3253,8 @@ article.archive {
   border: 2px solid var(--brand-color-1); }
 
 .comments--respond {
-  border-top: 1px solid rgba(var(--neutral-darkest-rgb), 0.3);
-  margin-top: 2em;
-  margin-bottom: 2em;
-  padding-top: 1em; }
+  margin-top: 1em;
+  margin-bottom: 2em; }
 
 .comment-subscription-form {
   margin-bottom: 0; }
@@ -3265,7 +3269,7 @@ article.archive {
     padding-left: 80px;
     padding-left: 5rem; }
 
-  .comment .avatar {
+  li.comment .avatar {
     height: 64px;
     height: 4rem;
     margin-right: 16px;

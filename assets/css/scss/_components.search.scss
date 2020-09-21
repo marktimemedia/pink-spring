@@ -64,7 +64,7 @@
     }
 
     &:before {
-      font: normal 20px/1 dashicons!important;
+      font: normal 20px/1 "Font Awesome 5 Pro", "Font Awesome", dashicons;
       content:"\f179"; // fallback
     }
 }

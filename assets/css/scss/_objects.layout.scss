@@ -112,11 +112,5 @@
 }
 
 @media only screen and (min-width: #{$boxedMax}) {
-	.content:not(.has_sidebar){
-		.alignfull {
-			margin-left: calc(-100vw / 2 + ( #{$boxedMax} - (2 * #{$maxPadding}) ) / 2);
-	    margin-right: calc(-100vw / 2 + ( #{$boxedMax} - (2 * #{$maxPadding}) ) / 2);
-	    width: 100vw;
-		}
-	}
+
 }

@@ -91,36 +91,29 @@ function spring_register_required_plugins() {
 		array(
 			'name'             => 'Site Customizer',
 			'slug'             => 'mtm-customizer',
-			'source'           => 'https://github.com/marktimemedia/site-customizer/archive/master.zip',
+			'source'           => 'https://github.com/marktimemedia/mtm-customizer/archive/master.zip',
 			'required'         => true, // If false, the plugin is only 'recommended' instead of required.
 			'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			'external_url'     => 'https://github.com/marktimemedia/site-customizer', // If set, overrides default API URL and points to an external URL.
-		),
-
-		array(
-			'name'             => 'ACF Function Check',
-			'slug'             => 'mtm-safe-acf',
-			'source'           => WP_PLUGIN_DIR . '/mtm-safe-acf',
-			'required'         => true, // If false, the plugin is only 'recommended' instead of required.
-			'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'external_url'     => 'https://github.com/marktimemedia/mtm-customizer', // If set, overrides default API URL and points to an external URL.
 		),
 
 		array(
 			'name'             => 'Advanced Custom Fields Pro', // The plugin name.
 			'slug'             => 'advanced-custom-fields-pro', // The plugin slug (typically the folder name).
 			'source'           => WP_PLUGIN_DIR . '/advanced-custom-fields-pro', // The plugin source.
-			'required'         => true, // If false, the plugin is only 'recommended' instead of required.
-			'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'required'         => false, // If false, the plugin is only 'recommended' instead of required.
+			'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 			//'external_url'       => 'http://www.advancedcustomfields.com/pro/', // If set, overrides default API URL and points to an external URL.
 		),
 
-		// array(
-		//   'name'               => 'ACF Block Components',
-		//   'slug'               => 'mtm-block-components',
-		//   'source'             => 'https://github.com/marktimemedia/acf-component-blocks/archive/master.zip',
-		//   'required'           => false, // If false, the plugin is only 'recommended' instead of required.
-		//   'external_url'       => 'https://github.com/marktimemedia/acf-component-blocks', // If set, overrides default API URL and points to an external URL.
-		// ),
+		array(
+			'name'             => 'ACF Custom Blocks',
+			'slug'             => 'mtm-blocks',
+			'source'           => 'https://github.com/marktimemedia/mtm-blocksarchive/master.zip',
+			'required'         => false, // If false, the plugin is only 'recommended' instead of required.
+			'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'external_url'     => 'https://github.com/marktimemedia/mtm-blocks', // If set, overrides default API URL and points to an external URL.
+		),
 
 	);
 

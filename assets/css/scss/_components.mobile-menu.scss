@@ -42,8 +42,9 @@
       left: 0;
 
       &:before {
-          color: $linkColor;
-          content: '\2630';
+        color: $linkColor;
+          font: normal 20px/1 dashicons;
+          content: '\f228';
           display: block;
           font-size: 1.5em;
           width: 100%;
@@ -73,17 +74,19 @@
 
 
       &:before {
-          border-left: 12px solid $linkColor;
-          border-right: 6px solid $linkColor;
-          content: ' ';
-          display: block;
-          height: 70%;
-          margin-left: 3px;
-          width: 21px;
+        color: $linkColor;
+        font: normal 22px/0.9 dashicons;
+        content: '\f317';
+        display: block;
+        font-weight: $baseWeightBold;
+        letter-spacing: .5px;
+        width: 1em;
+        transform: rotate(-90deg);
+        transition: transform .5s;
       }
 
       &:hover:before {
-          border-color: $linkHover;
+          color: $linkHover;
       }
 
       &:after {
@@ -156,6 +159,10 @@
         body {
             overflow: hidden;
             height: auto;
+        }
+
+        .open-sidebar:before {
+          transform: rotate(90deg);
         }
 
         .wrapper {
