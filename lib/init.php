@@ -109,7 +109,7 @@ function spring_register_required_plugins() {
 		array(
 			'name'             => 'ACF Custom Blocks',
 			'slug'             => 'mtm-blocks',
-			'source'           => 'https://github.com/marktimemedia/mtm-blocksarchive/master.zip',
+			'source'           => 'https://github.com/marktimemedia/mtm-blocks/archive/master.zip',
 			'required'         => false, // If false, the plugin is only 'recommended' instead of required.
 			'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 			'external_url'     => 'https://github.com/marktimemedia/mtm-blocks', // If set, overrides default API URL and points to an external URL.
