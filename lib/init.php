@@ -91,10 +91,10 @@ function spring_register_required_plugins() {
 		array(
 			'name'             => 'Site Customizer',
 			'slug'             => 'mtm-customizer',
-			'source'           => 'https://github.com/marktimemedia/site-customizer/archive/master.zip',
+			'source'           => 'https://github.com/marktimemedia/mtm-customizer/archive/master.zip',
 			'required'         => true, // If false, the plugin is only 'recommended' instead of required.
 			'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			'external_url'     => 'https://github.com/marktimemedia/site-customizer', // If set, overrides default API URL and points to an external URL.
+			'external_url'     => 'https://github.com/marktimemedia/mtm-customizer', // If set, overrides default API URL and points to an external URL.
 		),
 
 		array(
