@@ -3106,7 +3106,7 @@ hr.wp-block-separator {
     border-width: 0 !important; }
 
 .wp-block-buttons .wp-block-button {
-  margin: 0;
+  margin-top: auto;
   width: auto; }
 .wp-block-group .wp-block-buttons {
   margin-top: 0; }

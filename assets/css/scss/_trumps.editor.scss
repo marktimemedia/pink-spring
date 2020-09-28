@@ -18,14 +18,12 @@
 
 /* Width of "wide" blocks */
 .wp-block[data-align="wide"] {
-    // @extend %alignwide;
     @include rem-px('max-width', $boxedMax); // for a boxed width background with no sidebar
 }
 
 /* Width of "full-wide" blocks */
 .wp-block[data-align="full"] {
-    // max-width: 100%;
-		@extend %alignfull;
+		max-width: none;
 }
 
 /* "alignright" and "alignleft" blocks should not float unless theme says so */
@@ -49,6 +47,10 @@
   @include rem-px('max-width', $boxedMax); // for a boxed width background with no sidebar
   margin-left: auto;
   margin-right: auto;
+}
+
+.wp-block-button__link {
+	margin-right: .5em;
 }
 
 // styles within the visual editor (includes the popup boxes)

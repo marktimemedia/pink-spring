@@ -133,32 +133,10 @@ function spring_register_required_plugins() {
 		'parent_slug'  => 'plugins.php',            // Parent menu slug.
 		'capability'   => 'edit_theme_options',    // Capability needed to view plugin install page, should be a capability associated with the parent menu used.
 		'has_notices'  => true,                    // Show admin notices or not.
-		'dismissable'  => false,                    // If false, a user cannot dismiss the nag message.
+		'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
 		'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
 		'is_automatic' => false,                   // Automatically activate plugins after installation or not.
 		'message'      => '',                      // Message to output right before the plugins table.
-
-		'strings'      => array(
-			'page_title'                     => __( 'Install Required Plugins', 'spring' ),
-			'menu_title'                     => __( 'Install Plugins', 'spring' ),
-			/* translators: %s: plugin name. */
-			'installing'                     => __( 'Installing Plugin: %s', 'spring' ),
-			/* translators: %s: plugin name. */
-			'updating'                       => __( 'Updating Plugin: %s', 'spring' ),
-			'oops'                           => __( 'Something went wrong with the plugin API.', 'spring' ),
-			'notice_can_install_required'    => _n_noop(
-				/* translators: 1: plugin name(s). */
-				'This theme requires the following plugin: %1$s.',
-				'This theme requires the following plugins: %1$s.',
-				'spring'
-			),
-			'notice_can_install_recommended' => _n_noop(
-				/* translators: 1: plugin name(s). */
-				'This theme recommends the following plugin: %1$s.',
-				'This theme recommends the following plugins: %1$s.',
-				'spring'
-			),
-		),
 	);
 
 	tgmpa( $plugins, $config );

@@ -7,7 +7,7 @@
 
 /* Page */
 function spring_page_block_template() {
-	$headline_block             = spring_check_block_registry( 'acf/spring-headline' ) ? array( 'acf/spring-headline', array( 'align' => 'center' ) ) : array( 'core/heading', array( 'level' => 1 ) );
+	$headline_block             = spring_check_block_registry( 'acf/spring-headline' ) ? array( 'acf/spring-headline', array( 'align' => 'center' ) ) : array( 'core/heading', array( 'level' => 1, 'align' => 'center', ) );
 	$post_type_object           = get_post_type_object( 'page' );
 	$post_type_object->template = array(
 		array(

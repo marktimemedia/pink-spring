@@ -191,34 +191,34 @@ li.woocommerce-MyAccount-navigation-link--customer-logout .wp-block-button:not(.
     font-family: 'Font Awesome 5 Pro';
     font-weight: 300; }
 
-.content:not(.has_sidebar) .alignfull, .wp-block[data-align="full"] {
+.content:not(.has_sidebar) .alignfull {
   margin-left: -1rem;
   margin-right: -1rem;
   max-width: none;
   width: calc( 100% + (2 * 1rem) ); }
-  .content:not(.has_sidebar) .alignfull .content--inner, .wp-block[data-align="full"] .content--inner {
+  .content:not(.has_sidebar) .alignfull .content--inner {
     padding-left: 1rem;
     padding-right: 1rem;
     margin: 0 auto;
     max-width: 81rem; }
   @media only screen and (min-width: 30em) {
-    .content:not(.has_sidebar) .alignfull, .wp-block[data-align="full"] {
+    .content:not(.has_sidebar) .alignfull {
       margin-left: -2rem;
       margin-right: -2rem;
       width: calc( 100% + (2 * 2rem) ); }
-      .content:not(.has_sidebar) .alignfull .content--inner, .wp-block[data-align="full"] .content--inner {
+      .content:not(.has_sidebar) .alignfull .content--inner {
         padding-left: 2rem;
         padding-right: 2rem; } }
   @media only screen and (min-width: 49em) {
-    .content:not(.has_sidebar) .alignfull, .wp-block[data-align="full"] {
+    .content:not(.has_sidebar) .alignfull {
       margin-left: -3rem;
       margin-right: -3rem;
       width: calc( 100% + (2 * 3rem) ); }
-      .content:not(.has_sidebar) .alignfull .content--inner, .wp-block[data-align="full"] .content--inner {
+      .content:not(.has_sidebar) .alignfull .content--inner {
         padding-left: 3rem;
         padding-right: 3rem; } }
   @media only screen and (min-width: 81rem) {
-    .content:not(.has_sidebar) .alignfull, .wp-block[data-align="full"] {
+    .content:not(.has_sidebar) .alignfull {
       margin-left: calc(-100vw / 2 + ( 81rem - (2 * 3rem) ) / 2);
       margin-right: calc(-100vw / 2 + ( 81rem - (2 * 3rem) ) / 2);
       width: 100vw; } }
@@ -1719,7 +1719,7 @@ hr.wp-block-separator {
     border-width: 0 !important; }
 
 .wp-block-buttons .wp-block-button {
-  margin: 0;
+  margin-top: auto;
   width: auto; }
 .wp-block-group .wp-block-buttons {
   margin-top: 0; }
@@ -2662,6 +2662,9 @@ li.woocommerce-MyAccount-navigation-link--customer-logout {
   max-width: 81rem; }
 
 /* Width of "full-wide" blocks */
+.wp-block[data-align="full"] {
+  max-width: none; }
+
 /* "alignright" and "alignleft" blocks should not float unless theme says so */
 .wp-block[data-align="right"] .wp-block-cover, .wp-block[data-align="left"] .wp-block-cover {
   max-width: 50%; }
@@ -2677,6 +2680,9 @@ li.woocommerce-MyAccount-navigation-link--customer-logout {
   max-width: 81rem;
   margin-left: auto;
   margin-right: auto; }
+
+.wp-block-button__link {
+  margin-right: .5em; }
 
 .block-editor-block-list__layout {
   font-family: var(--body-font-family), sans-serif !important; }
