@@ -36,6 +36,9 @@
 
 %product {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 %product-title {
@@ -43,6 +46,10 @@
   font-size: 1.2em;
   font-weight: $baseWeightBold;
   color: $textColor;
+  &:hover, &:focus {
+    color: $linkColor;
+    text-decoration: underline;
+  }
 }
 
 %added {
@@ -250,9 +257,6 @@ body.woocommerce, .woocommerce-page {
 
         li.product {
           @extend %product;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
 
             a {
                 display: flex;
@@ -291,6 +295,11 @@ body.woocommerce, .woocommerce-page {
                     display: inline-block;
                     margin-right: .5em;
                 }
+            }
+
+            .star-rating {
+              margin: 0 auto .8em auto;
+              color: $textColor;
             }
         }
     }
@@ -364,6 +373,10 @@ body.woocommerce, .woocommerce-page {
 // block rules
 [class*="wp-block-woocommerce-"] {
 
+  .wc-block-grid__product {
+    @extend %product;
+  }
+
   .wc-block-components-product-title {
     @extend %product-title;
 
@@ -404,6 +417,9 @@ body.woocommerce, .woocommerce-page {
       --track-background:
         linear-gradient(90deg,transparent var(--low),$brandColor1 0,$brandColor1 var(--high),transparent 0) no-repeat 0 100%/100% 100%
     }
+  }
+  .wc-block-components-price-slider__range-input {
+
   }
 }
 
