@@ -43,6 +43,15 @@ body.option-round {
       border-radius: 10px;
     }
   }
+
+  span.onsale, .wc-block-components-product-sale-badge {
+    border-radius: 3.5em !important;
+    line-height: 3.5em !important;
+    height: 3.5em;
+    width: 3.5em;
+    padding: 0;
+    margin: -.5em -.5em 0 0 !important;
+  }
 }
 
 // Customizer: Dark
