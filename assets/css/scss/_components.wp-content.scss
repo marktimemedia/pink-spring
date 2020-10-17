@@ -43,21 +43,22 @@
            clear: both;
         }
 
-        h1, h2, .h1, .h2 {
+        // only direct descendents, not inside other blocks;
+        & > h1, & > h2, & > .h1, & > .h2 {
             margin-top: $midPadding;
             margin-bottom: $smallPadding;
         }
 
-        h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
+        & > h3, & > h4, & > h5, & > h6, & > .h3, & > .h4, & > .h5, & > .h6 {
             margin-top: $smallPadding + .5rem;
             margin-bottom: $smallPadding;
         }
 
         @media only screen and (min-width: $midBreakpoint) {
-          h1, h2, .h1, .h2 {
+          & > h1, & > h2, & > .h1, & > .h2 {
               margin-top: $maxPadding;
           }
-          h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
+          & > h3, & > h4, & > h5, & > h6, & > .h3, & > .h4, & > .h5, & > .h6 {
               margin-top: $midPadding;
           }
         }

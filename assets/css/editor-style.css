@@ -1317,16 +1317,16 @@ figcaption {
     display: block;
     height: 0;
     clear: both; }
-  .post--content h1, .post--content h2, .post--content .h1, .post--content .h2 {
+  .post--content > h1, .post--content > h2, .post--content > .h1, .post--content > .h2 {
     margin-top: 2rem;
     margin-bottom: 1rem; }
-  .post--content h3, .post--content h4, .post--content h5, .post--content h6, .post--content .h3, .post--content .tribe-events .tribe-events-calendar-list .tribe-events-calendar-list__month-separator, .tribe-events .tribe-events-calendar-list .post--content .tribe-events-calendar-list__month-separator, .post--content .tribe-events .tribe-events-calendar-day .tribe-events-calendar-day__time-separator, .tribe-events .tribe-events-calendar-day .post--content .tribe-events-calendar-day__time-separator, .post--content .h4, .post--content .h5, .post--content #tribe-events-day .tribe-events-day-time-slot h5, #tribe-events-day .tribe-events-day-time-slot .post--content h5, .post--content .tribe-events .tribe-events-calendar-month-mobile-events .tribe-events-calendar-month-mobile-events__day-marker, .tribe-events .tribe-events-calendar-month-mobile-events .post--content .tribe-events-calendar-month-mobile-events__day-marker, .post--content .tribe-events .tribe-events-calendar-list .tribe-events-calendar-list__event-date-tag-datetime, .tribe-events .tribe-events-calendar-list .post--content .tribe-events-calendar-list__event-date-tag-datetime, .post--content .h6 {
+  .post--content > h3, .post--content > h4, .post--content > h5, .post--content > h6, .post--content > .h3, .tribe-events .tribe-events-calendar-list .post--content > .tribe-events-calendar-list__month-separator, .tribe-events .tribe-events-calendar-day .post--content > .tribe-events-calendar-day__time-separator, .post--content > .h4, .post--content > .h5, #tribe-events-day .tribe-events-day-time-slot .post--content > h5, .tribe-events .tribe-events-calendar-month-mobile-events .post--content > .tribe-events-calendar-month-mobile-events__day-marker, .tribe-events .tribe-events-calendar-list .post--content > .tribe-events-calendar-list__event-date-tag-datetime, .post--content > .h6 {
     margin-top: 1.5rem;
     margin-bottom: 1rem; }
   @media only screen and (min-width: 49em) {
-    .post--content h1, .post--content h2, .post--content .h1, .post--content .h2 {
+    .post--content > h1, .post--content > h2, .post--content > .h1, .post--content > .h2 {
       margin-top: 3rem; }
-    .post--content h3, .post--content h4, .post--content h5, .post--content h6, .post--content .h3, .post--content .tribe-events .tribe-events-calendar-list .tribe-events-calendar-list__month-separator, .tribe-events .tribe-events-calendar-list .post--content .tribe-events-calendar-list__month-separator, .post--content .tribe-events .tribe-events-calendar-day .tribe-events-calendar-day__time-separator, .tribe-events .tribe-events-calendar-day .post--content .tribe-events-calendar-day__time-separator, .post--content .h4, .post--content .h5, .post--content #tribe-events-day .tribe-events-day-time-slot h5, #tribe-events-day .tribe-events-day-time-slot .post--content h5, .post--content .tribe-events .tribe-events-calendar-month-mobile-events .tribe-events-calendar-month-mobile-events__day-marker, .tribe-events .tribe-events-calendar-month-mobile-events .post--content .tribe-events-calendar-month-mobile-events__day-marker, .post--content .tribe-events .tribe-events-calendar-list .tribe-events-calendar-list__event-date-tag-datetime, .tribe-events .tribe-events-calendar-list .post--content .tribe-events-calendar-list__event-date-tag-datetime, .post--content .h6 {
+    .post--content > h3, .post--content > h4, .post--content > h5, .post--content > h6, .post--content > .h3, .tribe-events .tribe-events-calendar-list .post--content > .tribe-events-calendar-list__month-separator, .tribe-events .tribe-events-calendar-day .post--content > .tribe-events-calendar-day__time-separator, .post--content > .h4, .post--content > .h5, #tribe-events-day .tribe-events-day-time-slot .post--content > h5, .tribe-events .tribe-events-calendar-month-mobile-events .post--content > .tribe-events-calendar-month-mobile-events__day-marker, .tribe-events .tribe-events-calendar-list .post--content > .tribe-events-calendar-list__event-date-tag-datetime, .post--content > .h6 {
       margin-top: 2rem; } }
 
 .post--metadata {
@@ -1826,7 +1826,15 @@ hr.wp-block-separator {
 .slides {
   list-style: none;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  overflow: hidden;
+  height: 800px; }
+  @media only screen and (max-width: 49em) {
+    .slides {
+      height: 200px; } }
+  @media only screen and (min-width: 49em) {
+    .slides {
+      height: 800px; } }
 
 .slide {
   list-style: none;

@@ -3,7 +3,7 @@ A base theme and plugins based off Spring Theme and ACF with major support for G
 Also supports WooCommerce, Gravity Forms, and The Events Calendar
 
 ### Pink Spring Theme
-Build off of [Spring Theme](https://github.com/3themes/spring-theme), which is based on an older version of the modular [Roots/Sage](https://roots.io/sage/) templating system.
+Build off of [Spring Theme](https://github.com/3themes/spring-theme), which is based on a manual version of the modular [Roots/Sage](https://roots.io/sage/) templating system.
 
 Updates for modular styles, typographic consideration, general fixes and WordPress standards. And of course, a better color scheme.
 

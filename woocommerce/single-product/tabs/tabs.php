@@ -29,29 +29,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 $product_tabs = apply_filters( 'woocommerce_product_tabs', array() );
 
 if ( ! empty( $product_tabs ) ) : ?>
-	<?php $i = 1; ?>
-	<?php $j = 1; ?>
 
-	<div class="mtm-component--content mtm-tabs--wrapper">
+	<div class="mtm-module--tabs mtm-tabs--wrapper">
 		<div class="mtm-tabs--title-container" role="tablist">
-
+			<?php $i = 1; ?>
 			<?php foreach ( $product_tabs as $key => $product_tab ) : ?>
 				<button class="<?php echo esc_attr( $key ); ?>_tab mtm-tabs--title current" aria-selected="true" id="tab-title-<?php echo esc_attr( $key ); ?>" data-tab="tab-<?php echo $i++; ?>" role="tab" aria-controls="tab-<?php echo esc_attr( $key ); ?>">
 					<?php echo wp_kses_post( apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $product_tab['title'] ), $key ) ); ?>
 				</button>
 			<?php endforeach; ?>
 		</div>
+		<div class="mtm-tabs--content-container">
+			<?php $j = 1; ?>
+			<?php foreach ( $product_tabs as $key => $product_tab ) : ?>
+				<button class="mtm-tabs--title mtm-tabs--title-accordion current" aria-selected="true" data-tab="tab-<?php echo $j; ?>" >
+					<?php if ( isset( $product_tab['title'] ) ) { echo $product_tab['title']; } ?>
+				</button>
+				<div class="mtm-tabs--content current" id="tab-<?php echo $j; ?>" role="tabpanel" aria-labelledby="tab-title-<?php echo $j++; ?>">
+					<?php if ( isset( $product_tab['callback'] ) ) { call_user_func( $product_tab['callback'], $key, $product_tab ); } ?>
+				</div>
+			<?php endforeach; ?>
 
-		<?php foreach ( $product_tabs as $key => $product_tab ) : ?>
-			<button class="mtm-tabs--title mtm-tabs--title-accordion current" aria-selected="true" data-tab="tab-<?php echo $j; ?>" >
-				<?php if ( isset( $product_tab['title'] ) ) { echo $product_tab['title']; } ?>
-			</button>
-			<div class="mtm-tabs--content current" id="tab-<?php echo $j; ?>" role="tabpanel" aria-labelledby="tab-title-<?php echo $j++; ?>">
-				<?php if ( isset( $product_tab['callback'] ) ) { call_user_func( $product_tab['callback'], $key, $product_tab ); } ?>
-			</div>
-		<?php endforeach; ?>
-
-		<?php do_action( 'woocommerce_product_after_tabs' ); ?>
+			<?php do_action( 'woocommerce_product_after_tabs' ); ?>
+		</div>
 	</div>
-
 <?php endif; ?>
