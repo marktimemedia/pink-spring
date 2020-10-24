@@ -142,6 +142,10 @@
     @media only screen and (min-width: $midBreakpoint) {
       margin-bottom: $headingMargin * 2;
     }
+
+    .has_sidebar & {
+      margin-top: 0;
+    }
 }
 
 .page--title {

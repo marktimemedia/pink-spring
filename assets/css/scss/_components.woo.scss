@@ -1,6 +1,6 @@
 // placeholders
 %price {
-  color: $brandColor3;
+  color: $Ndarkest;
   font-size: 1.2em !important;
 
     del { // old pre-sale price
@@ -12,13 +12,13 @@
 
     ins { // new sale price
         background-color: transparent;
-        color: $brandColor3;
+        color: $Ndarkest;
         font-weight: $baseWeightBold;
     }
 }
 
 %sale {
-  background-color: $brandColor3;
+  background-color: $Ndarkest;
   border: 0;
   border-radius: 0;
   color: $Nwhite;
@@ -53,12 +53,12 @@
 }
 
 %added {
-  background-color: $brandColor3;
-  border-color: $brandColor3_Dk;
+  background-color: $Ndark;
+  border-color: $Ndarkest;
 
-  &:hover {
-    background-color: $brandColor3_Dk;
-    border-color: $brandColor3;
+  &:hover, &:focus {
+    background-color: $Ndarkest;
+    border-color: $Ndark;
   }
 
 }
@@ -76,6 +76,10 @@
 
 // woocommerce body classes
 body.woocommerce, .woocommerce-page {
+
+  header.page--header {
+    margin-top: 0;
+  }
 
   form {
     max-width: $boxedMax;
@@ -152,7 +156,11 @@ body.woocommerce, .woocommerce-page {
         }
 
         p.price, span.price {
-          color: $brandColor3;
+          color: $Ndarkest;
+        }
+
+        .stock {
+          color: $alertColor;
         }
     }
 
@@ -162,6 +170,17 @@ body.woocommerce, .woocommerce-page {
 
     span.onsale {
         @extend %sale;
+    }
+
+    .product_meta {
+      background-color: #{'rgba('+$Ndarkest_RGB+', .1)'};
+      padding: .5em;
+      margin: 2em 0;
+
+      & > span {
+        display: block;
+        margin: .25em;
+      }
     }
 
     .woocommerce-breadcrumb {
@@ -248,7 +267,7 @@ body.woocommerce, .woocommerce-page {
                 color: $Nmid;
             }
         }
-
+// Product list
 // Make products display flex by default, with fallback to their floats.
     ul.products {
         align-items: stretch;
@@ -264,9 +283,12 @@ body.woocommerce, .woocommerce-page {
                 flex-grow: 1;
                 //justify-content: center;
 
+                &.add_to_cart_button.added {
+                  @extend %added;
+                }
+
                 &.added_to_cart.wc-forward {
                     @extend %button;
-                    @extend %added;
                     flex-grow: 0;
                     margin-top: .5em;
                     text-align: center;
@@ -342,6 +364,7 @@ body.woocommerce, .woocommerce-page {
 }
 
 .woocommerce-MyAccount-navigation {
+  position: relative;
     ul {
         list-style: none;
         margin-left: 0;
@@ -350,13 +373,29 @@ body.woocommerce, .woocommerce-page {
 
     li {
         border-bottom: 1px solid $tableBorderColor;
-        padding: .25em 0;
+        padding: .25em;
 
-        &.is-active a {
+        &.is-active {
+          background-color: $linkColor;
+          a {
+            color: $Nwhite;
             font-weight: $baseWeightBold;
             &:after {
                 content: ' »';
             }
+          }
+        }
+
+        @media only screen and (max-width: 768px) {
+          display: inline-block;
+          padding: .25em;
+          margin-right: .25em;
+
+          &.is-active a {
+              &:after {
+                  content: ' ↓';
+              }
+          }
         }
     }
 }
@@ -366,30 +405,56 @@ body.woocommerce, .woocommerce-page {
 
         a {
             margin-top: 1em;
-            @extend .button;
+            @extend %button;
+            @extend .neutral;
+        }
+
+        @media only screen and (max-width: 768px) {
+          position: absolute;
+          top: -4em;
+          right: 0;
+
+          a {
+            font-size: .75em;
+            padding: .75em;
+          }
         }
     }
 
 // block rules
-[class*="wp-block-woocommerce-"] {
+[class*="wc-block-"] {
 
   .wc-block-grid__product {
     @extend %product;
+    border-color: transparent;
+    border-left-width: .75em;
+    border-right-width: .75em;
+    border-bottom-width: 2em;
+
+    a {
+      color: $textColor;
+      text-decoration: none;
+
+      &:hover, &:focus {
+        text-decoration: underline;
+      }
+    }
   }
 
   .wc-block-components-product-title {
     @extend %product-title;
-
-    a {
-      color: $textColor;
-    }
+    color: $textColor;
+    text-decoration: none;
   }
 
-  .wp-block-button .wp-block-button__link {
+  .wp-block-button {
     width: 100% !important;
+    .wp-block-button__link {
+      width: 100% !important;
 
-    &.added {
-      @extend %added;
+      &.added {
+        @extend %added;
+      }
     }
   }
 
@@ -423,6 +488,37 @@ body.woocommerce, .woocommerce-page {
   }
 }
 
+.wc-block-featured-category {
+  min-height: 200px !important;
+  margin:0;
+  height: 100%;
+
+  .wc-block-featured-category__description, .wc-block-featured-category__link, .wc-block-featured-category__price, .wc-block-featured-category__title {
+    padding: 1em 1em 0;
+  }
+
+  &.has-background-dim {
+    &:before {
+      transition: all 0.3s;
+    }
+    &:hover, &:focus {
+      &:before {
+        opacity: 0.7;
+        transition: all 0.3s;
+      }
+    }
+  }
+}
+
+// Review block
+.wc-block-components-review-list-item__product+.wc-block-components-review-list-item__author {
+  color: $Ndark;
+}
+.wc-block-components-sort-select__select {
+  display: inline-block;
+}
+
+// pagination
 .wc-block-pagination-page {
   border: 0;
   &:hover, &:focus {
@@ -440,8 +536,6 @@ body.woocommerce, .woocommerce-page {
                 width: 46%;
             }
         }
-    }
-    .woocommerce, .woocommerce-page {
         & .has_sidebar {
             ul.products, ul.products[class*=columns-] {
                 li.product {
@@ -450,11 +544,47 @@ body.woocommerce, .woocommerce-page {
             }
         }
     }
+
+    table.shop_table.cart {
+      td {
+        border: 0;
+      }
+      tr {
+        border-bottom: $tableBorderWidth $tableBorderStyle $tableBorderColor;
+      }
+    }
+}
+
+@media only screen and (max-width:$smallBreakpoint) {
+  .woocommerce, .woocommerce-page {
+      ul.products, ul.products[class*=columns-] {
+          li.product {
+              margin-right: 0;
+              width: 100%;
+          }
+      }
+      & .has_sidebar {
+          ul.products, ul.products[class*=columns-] {
+              li.product {
+                  width: 100%;
+              }
+          }
+      }
+
+      table.shop_table.cart {
+          td {
+            border: 0;
+          }
+          tr {
+            border-bottom: $tableBorderWidth $tableBorderStyle $tableBorderColor;
+          }
+        }
+  }
 }
 
 @media only screen and (min-width: $midBreakpoint) {
   body.woocommerce, body.woocommerce-page {
-    .content {
+    .content:not(.has_sidebar) {
       .content--body {
         padding-top: $maxPadding;
       }

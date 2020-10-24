@@ -171,6 +171,11 @@ p.has-drop-cap {
 }
 
 // Column block
+.wp-block-columns {
+  &.has-background {
+    padding: 2em 3em;
+  }
+}
 .wp-block-column {
   & > .wp-block {
     margin-top: 0;
@@ -181,6 +186,10 @@ p.has-drop-cap {
 
   p:first-child {
     margin-top: 0;
+  }
+
+  @media only screen and (max-width: $midBreakpoint) {
+    margin-bottom: 1em;
   }
 }
 
