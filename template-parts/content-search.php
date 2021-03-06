@@ -19,5 +19,5 @@
 			</header>
 			<?php the_excerpt( '<p>Continue Reading...</p>' ); ?>
 		</section>
-		<?php get_template_part( 'templates/post-meta' ); ?>
+		<?php get_template_part( 'template-parts/post-meta' ); ?>
 </article>

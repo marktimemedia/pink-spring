@@ -9,7 +9,7 @@ function spring_template_path() {
 }
 
 function spring_sidebar_path() {
-	return new Spring_Wrapping( 'templates/sidebar.php' );
+	return new Spring_Wrapping( 'template-parts/sidebar.php' );
 }
 
 class Spring_Wrapping {

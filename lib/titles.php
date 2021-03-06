@@ -48,7 +48,6 @@ function spring_title() {
 }
 
 
-
 /**
  * Manage output of wp_title()
  */

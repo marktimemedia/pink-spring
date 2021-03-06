@@ -10,7 +10,7 @@ add_action( 'wp_enqueue_scripts', 'spring_search_scripts', 100 );
 function spring_search_bar() {
 	if ( get_theme_mod( 'header_search_bar' ) ) {
 		echo '<button aria-label="Toggle Search Bar" class="fa fa-search search-toggle run-toggle"></button>';
-		get_template_part( 'templates/searchform' );
+		get_template_part( 'template-parts/searchform' );
 	}
 }
 
@@ -56,7 +56,7 @@ add_filter( 'request', 'spring_request_filter' );
  */
 function spring_get_search_form( $form ) {
 	$form = '';
-	locate_template( '/templates/searchform.php', true, false );
+	locate_template( '/template-parts/searchform.php', true, false );
 	return $form;
 }
 add_filter( 'get_search_form', 'spring_get_search_form' );

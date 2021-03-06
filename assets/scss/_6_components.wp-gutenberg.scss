@@ -472,8 +472,9 @@ hr.wp-block-separator {
 .wp-block-latest-posts {
   margin-left: 0 !important;
   padding-left: 0 !important;
+  overflow: auto;
 
-  li a {
+  li > a {
     font-size: $h4Size;
     font-weight: $h4FontWeight;
   }

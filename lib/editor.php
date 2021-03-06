@@ -10,9 +10,9 @@ function spring_setup_editor() {
 
 	/** Gutenberg Features */
 	add_theme_support( 'align-wide' ); // gutenberg wide/full block support
-	//add_theme_support( 'wp-block-styles' ); // allow default block styles
-	add_theme_support( 'disable-custom-colors' ); // no custom picker
-	add_theme_support( 'disable-custom-gradients' ); // no custom gradients
+	// add_theme_support( 'wp-block-styles' ); // allow default block styles
+	// add_theme_support( 'disable-custom-colors' ); // no custom picker
+	// add_theme_support( 'disable-custom-gradients' ); // no custom gradients
 	add_theme_support( 'custom-line-height' );
 	add_theme_support( 'custom-units', 'px, em, vh' ); // supports px, em, rem, vh, vw
 

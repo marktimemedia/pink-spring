@@ -1,4 +1,4 @@
-<?php get_template_part( 'templates/header' ); ?>
+<?php get_template_part( 'template-parts/header' ); ?>
 <section class="content <?php echo ( spring_display_sidebar() ? 'has_sidebar' : 'has_no_sidebar' ); ?>" id="content">
 	<main class="content--body <?php echo esc_attr( spring_main_class() ); ?>" role="main">
 		<?php require spring_template_path(); ?>
@@ -11,7 +11,7 @@
 	<?php endif; ?>
 </section><!-- /.content -->
 
-<?php get_template_part( 'templates/footer' ); ?>
+<?php get_template_part( 'template-parts/footer' ); ?>
 
 </body>
 </html>

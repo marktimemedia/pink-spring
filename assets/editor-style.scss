@@ -1,0 +1,36 @@
+/* 01. SETTINGS */
+@import "scss/1_settings.breakpoints";
+@import "scss/1_settings.colors";
+@import "scss/1_settings.typography";
+@import "scss/1_settings.inputs";
+@import "scss/1_settings.tables";
+
+/* 02. TOOLS */
+@import "scss/sassquatch/sassquatch";
+@import "scss/pink-grid/pinkgrid";
+
+/* 03. GENERIC */
+@import "scss/3_generic.placeholders";
+
+/* 04. ELEMENTS */
+@import "scss/4_elements.typography";
+@import "scss/4_elements.inputs-gutenberg";
+@import "scss/4_elements.tables";
+@import "scss/4_elements.media";
+
+/* 05. OBJECTS */
+@import "scss/5_objects.structure";
+@import "scss/5_objects.layout";
+@import "scss/5_objects.inputs";
+@import "scss/5_objects.media";
+@import "scss/5_objects.wp-objects";
+
+/* 06. COMPONENTS */
+@import "scss/6_components.wp-content";
+@import "scss/6_components.wp-gutenberg";
+@import "scss/6_components.panels";
+@import "scss/6_components.blocks";
+@import "scss/6_components.plugins";
+@import "scss/6_components.woo";
+
+@import "scss/8_overrides.editor";

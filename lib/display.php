@@ -1,40 +1,5 @@
 <?php
-/**
- * .main classes
- */
-function spring_main_class() {
 
-	if ( spring_display_sidebar() ) {
-		// Classes on pages with the sidebar
-		$class = 'content-main';
-	} else {
-		// Classes on full width pages
-		$class = 'content-full';
-	}
-
-	return $class;
-}
-
-
-/**
- * .sidebar classes
- */
-function spring_sidebar_class() {
-	return 'sidebar-main';
-}
-
-function spring_sidebar_button() {
-
-	if ( spring_display_sidebar() ) {
-		// Show sidebar button on pages where sidebar is enabled
-		$sidebar_button = '<button aria-label="Open Sidebar" id="openSidebar" class="open-sidebar open-button"><span>Open Sidebar</span></button>';
-	} else {
-		// Disable sidebar button where sidebar is disabled
-		$sidebar_button = '';
-	}
-
-	return $sidebar_button;
-}
 
 /**
  * Define which pages should have the sidebar
@@ -71,7 +36,6 @@ function spring_display_sidebar() {
 	return apply_filters( 'spring_display_sidebar', $sidebar_config->display );
 }
 
-
 /**
  * $content_width is a global variable used by WordPress for max image upload sizes
  * and media embeds (in pixels).
@@ -83,6 +47,19 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 1140;
 }
 
+/**
+ * Clean up the_excerpt()
+ */
+define( 'POST_EXCERPT_LENGTH', 30 ); // Length in words for excerpt_length filter (http://codex.wordpress.org/Plugin_API/Filter_Reference/excerpt_length)
+function spring_excerpt_length( $length ) {
+	return POST_EXCERPT_LENGTH;
+}
+
+function spring_excerpt_more( $more ) {
+	return '... <a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Read More', 'spring' ) . '</a>';
+}
+add_filter( 'excerpt_length', 'spring_excerpt_length' );
+add_filter( 'excerpt_more', 'spring_excerpt_more' );
 
 /**
 * Email Notification Defaults
@@ -98,9 +75,3 @@ function mtm_mail_from( $email ) {
 function mtm_mail_name( $email ) {
 	return get_bloginfo( 'name' ); // new email name from sender.
 }
-
-
-/**
-* Use the following line to disable the admin bar
-*/
-// add_filter('show_admin_bar', '__return_false');

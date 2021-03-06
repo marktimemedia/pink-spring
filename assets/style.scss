@@ -1,0 +1,71 @@
+/*--
+    Theme Name:  Pink Spring Theme
+    Description:  Framework theme for development
+    Author: Marktime Media
+    Version: 1.0
+    License: GPLv2
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+--*/
+
+// Methodology from ITCSS http://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731
+
+/* 01. SETTINGS */
+@import "scss/1_settings.breakpoints";
+@import "scss/1_settings.colors";
+@import "scss/1_settings.typography";
+@import "scss/1_settings.inputs";
+@import "scss/1_settings.tables";
+
+
+/* 02. TOOLS */
+@import "scss/sassquatch/sassquatch";
+@import "scss/pink-grid/pinkgrid";
+
+
+/* 03. GENERIC */
+@import "scss/3_generic.normalize";
+@import "scss/3_generic.placeholders";
+
+/* 04. ELEMENTS */
+@import "scss/4_elements.global";
+@import "scss/4_elements.typography";
+@import "scss/4_elements.inputs";
+@import "scss/4_elements.tables";
+@import "scss/4_elements.media";
+
+
+/* 05. OBJECTS */
+@import "scss/5_objects.structure";
+@import "scss/5_objects.layout";
+@import "scss/5_objects.inputs";
+@import "scss/5_objects.tables";
+@import "scss/5_objects.media";
+@import "scss/5_objects.wp-objects";
+
+// Grid Mixin
+
+/* 06. COMPONENTS */
+@import "scss/6_components.woo"; // want this to be overridden by everything else
+@import "scss/6_components.navigation";
+@import "scss/6_components.navigation--subnav";
+@import "scss/6_components.header";
+@import "scss/6_components.mobile-menu";
+@import "scss/6_components.footer";
+@import "scss/6_components.sidebar";
+@import "scss/6_components.sidebar--widgets";
+@import "scss/6_components.search";
+@import "scss/6_components.pagination";
+@import "scss/6_components.comments";
+@import "scss/6_components.content";
+@import "scss/6_components.wp-content";
+@import "scss/6_components.wp-gutenberg";
+@import "scss/6_components.plugins";
+@import "scss/6_components.panels";
+@import "scss/6_components.blocks";
+
+/* 07. VENDOR */
+
+
+/* 08. TRUMPS */
+@import "scss/8_overrides.templates";
+@import "scss/8_overrides.admin-bar";

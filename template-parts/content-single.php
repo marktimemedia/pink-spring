@@ -5,7 +5,7 @@
 				<div class="post--content">
 					<?php the_content(); ?>
 				</div>
-				<?php get_template_part( 'templates/post-meta' ); ?>
-				<?php get_template_part( 'templates/nav-pager' ); ?>
+				<?php get_template_part( 'template-parts/post-meta' ); ?>
+				<?php get_template_part( 'template-parts/nav-pager' ); ?>
 		</article>
 <?php endwhile; ?>

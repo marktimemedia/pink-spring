@@ -4,6 +4,7 @@
 * {
   box-sizing: border-box; }
 
+/* 03. GENERIC */
 .block-editor-block-list__block-edit div[data-block] label {
   color: var(--neutral-darkest);
   font-family: var(--subheading-font-family), var(--body-font-family), sans-serif;
@@ -185,7 +186,6 @@
       margin-right: -3rem;
       width: calc( 100% + (2 * 3rem) ); } }
 
-/* 03. GENERIC */
 /* 04. ELEMENTS */
 p {
   line-height: 1.625em; }
@@ -1729,8 +1729,9 @@ hr.wp-block-separator {
 /* Latest Posts Block */
 .wp-block-latest-posts {
   margin-left: 0 !important;
-  padding-left: 0 !important; }
-  .wp-block-latest-posts li a {
+  padding-left: 0 !important;
+  overflow: auto; }
+  .wp-block-latest-posts li > a {
     font-size: 1.4em;
     font-weight: var(--subheading-font-weight); }
 

@@ -68,9 +68,3 @@ function spring_enqueue_sidebar_script() {
 	wp_enqueue_script( 'spring-app', get_template_directory_uri() . '/assets/js/build/' . $sidebarfile . '.js', '', 1, true );
 }
 add_action( 'wp_enqueue_scripts', 'spring_enqueue_sidebar_script', 100 );
-
-/** OLD Editor Styles **/
-// function spring_add_editor_styles() {
-//     add_editor_style( 'assets/css/editor-style.css' ); // enqueue style sheet
-// }
-// add_action( 'admin_init', 'spring_add_editor_styles' );
