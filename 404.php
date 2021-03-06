@@ -5,7 +5,7 @@
 	if ( $error_page ) :
 		$post = get_post( $error_page ); // override $post
 		setup_postdata( $post );
-		get_template_part( 'template-parts/page', 'header' );
+		get_template_part( 'template-parts/page-header' );
 		if ( get_theme_mod( 'error_page_search_bar' ) ) :
 				get_template_part( 'template-parts/searchform' );
 			endif;
@@ -13,7 +13,7 @@
 		wp_reset_postdata();
 
 	else :
-		get_template_part( 'template-parts/page', 'header' );
+		get_template_part( 'template-parts/page-header' );
 		if ( get_theme_mod( 'error_page_search_bar' ) ) :
 			get_template_part( 'template-parts/searchform' );
 		endif;
