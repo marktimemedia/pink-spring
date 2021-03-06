@@ -627,6 +627,7 @@ figcaption {
     max-width: 81rem;
     padding: 1rem; }
   .content .content--page.no-title {
+    padding-bottom: 0 !important;
     padding-top: 0 !important; }
   .content .content--inner {
     max-width: 1296px;
@@ -1426,6 +1427,10 @@ figcaption {
   font-weight: 300;
   line-height: 1.2; }
 
+.has-text-align-center {
+  margin-left: auto;
+  margin-right: auto; }
+
 p.wp-block-subhead {
   color: var(--neutral-dark);
   font-size: 1.3em;
@@ -1459,7 +1464,15 @@ p.has-drop-cap {
       padding-right: 0; } }
 
 .wp-block-columns.has-background {
-  padding: 2em 3em; }
+  padding: 2em 1rem; }
+@media only screen and (min-width: 30em) {
+  .wp-block-columns.has-background {
+    padding-left: 2em;
+    padding-right: 2em; } }
+@media only screen and (min-width: 62em) {
+  .wp-block-columns.has-background {
+    padding-left: 3rem;
+    padding-right: 3rem; } }
 
 .wp-block-column > .wp-block {
   margin-top: 0; }
@@ -1930,6 +1943,11 @@ ul.mtm-component--term-list {
     display: inline-block; }
 
 /* MEDIA QUERIES */
+@media only screen and (max-width: 30em) {
+  .mtm-module--grid {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px; } }
 @media only screen and (min-width: 30em) and (max-width: 49em) {
   .mtm-list--image {
     display: inline-block;
@@ -2119,6 +2137,8 @@ ul.mtm-component--term-list {
 
 .tribe-common span {
   vertical-align: middle; }
+.tribe-common .tribe-common-c-svgicon__svg-fill, .tribe-common .tribe-events-c-events-bar__search-button-icon-svg path {
+  fill: inherit; }
 
 .post-type-archive-tribe_events .content .content--page {
   width: 100%; }
@@ -2349,6 +2369,9 @@ ul.mtm-component--term-list {
   font-size: .875em;
   line-height: 1.2;
   margin-bottom: .5em; }
+.tribe-events .tribe-events-calendar-month button.tribe-events-calendar-month__day-cell {
+  border-radius: 0 !important;
+  border-color: var(--neutral-light) !important; }
 .tribe-events .tribe-events-calendar-month-mobile-events .tribe-events-calendar-month-mobile-events__mobile-event-datetime {
   font-weight: var(--body-font-weight-bold); }
 .tribe-events button.tribe-events-calendar-month__day-cell--mobile {
@@ -2721,7 +2744,7 @@ li.woocommerce-MyAccount-navigation-link--customer-logout {
     --track-background: linear-gradient(90deg, transparent var(--low), var(--brand-color-1) 0, var(--brand-color-1) var(--high), transparent 0) no-repeat 0 100%/100% 100%; }
 
 .wc-block-featured-category {
-  min-height: 200px !important;
+  min-height: 250px !important;
   margin: 0;
   height: 100%; }
   .wc-block-featured-category .wc-block-featured-category__description, .wc-block-featured-category .wc-block-featured-category__link, .wc-block-featured-category .wc-block-featured-category__price, .wc-block-featured-category .wc-block-featured-category__title {
@@ -2744,11 +2767,18 @@ li.woocommerce-MyAccount-navigation-link--customer-logout {
     background-color: var(--brand-links);
     border: 0; }
 
+.my_account_memberships .membership-discount-actions a.button, .my_account_memberships .membership-product-actions a.button {
+  font-size: .75em;
+  padding: .7em 1em;
+  margin-bottom: .25em; }
+  .my_account_memberships .membership-discount-actions a.button.view:before, .my_account_memberships .membership-product-actions a.button.view:before {
+    background-color: var(--neutral-darkest); }
+
 @media only screen and (max-width: 768px) {
-  .woocommerce ul.products li.product, .woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products li.product, .woocommerce-page ul.products[class*=columns-] li.product {
+  body.woocommerce ul.products li.product, body.woocommerce ul.products[class*=columns-] li.product, body.woocommerce-page ul.products li.product, body.woocommerce-page ul.products[class*=columns-] li.product {
     margin-right: 4%;
     width: 46%; }
-  .woocommerce .has_sidebar ul.products li.product, .woocommerce .has_sidebar ul.products[class*=columns-] li.product, .woocommerce-page .has_sidebar ul.products li.product, .woocommerce-page .has_sidebar ul.products[class*=columns-] li.product {
+  body.woocommerce .has_sidebar ul.products li.product, body.woocommerce .has_sidebar ul.products[class*=columns-] li.product, body.woocommerce-page .has_sidebar ul.products li.product, body.woocommerce-page .has_sidebar ul.products[class*=columns-] li.product {
     width: 46%; }
 
   table.shop_table.cart td {
@@ -2756,14 +2786,18 @@ li.woocommerce-MyAccount-navigation-link--customer-logout {
   table.shop_table.cart tr {
     border-bottom: 1px solid rgba(var(--neutral-darkest-rgb), 0.3); } }
 @media only screen and (max-width: 30em) {
-  .woocommerce ul.products li.product, .woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products li.product, .woocommerce-page ul.products[class*=columns-] li.product {
-    margin-right: 0;
+  body.woocommerce ul.products, body.woocommerce ul.products[class*=columns-], body.woocommerce-page ul.products, body.woocommerce-page ul.products[class*=columns-] {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px; }
+    body.woocommerce ul.products li.product, body.woocommerce ul.products[class*=columns-] li.product, body.woocommerce-page ul.products li.product, body.woocommerce-page ul.products[class*=columns-] li.product {
+      margin-right: 0;
+      width: 100%; }
+  body.woocommerce .has_sidebar ul.products li.product, body.woocommerce .has_sidebar ul.products[class*=columns-] li.product, body.woocommerce-page .has_sidebar ul.products li.product, body.woocommerce-page .has_sidebar ul.products[class*=columns-] li.product {
     width: 100%; }
-  .woocommerce .has_sidebar ul.products li.product, .woocommerce .has_sidebar ul.products[class*=columns-] li.product, .woocommerce-page .has_sidebar ul.products li.product, .woocommerce-page .has_sidebar ul.products[class*=columns-] li.product {
-    width: 100%; }
-  .woocommerce table.shop_table.cart td, .woocommerce-page table.shop_table.cart td {
+  body.woocommerce table.shop_table.cart td, body.woocommerce-page table.shop_table.cart td {
     border: 0; }
-  .woocommerce table.shop_table.cart tr, .woocommerce-page table.shop_table.cart tr {
+  body.woocommerce table.shop_table.cart tr, body.woocommerce-page table.shop_table.cart tr {
     border-bottom: 1px solid rgba(var(--neutral-darkest-rgb), 0.3); } }
 @media only screen and (min-width: 49em) {
   body.woocommerce .content:not(.has_sidebar) .content--body, body.woocommerce-page .content:not(.has_sidebar) .content--body {

@@ -113,6 +113,11 @@
     line-height: 1.2;
 }
 
+.has-text-align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 // Subhead
 p.wp-block-subhead {
     color: $Ndark;
@@ -173,7 +178,21 @@ p.has-drop-cap {
 // Column block
 .wp-block-columns {
   &.has-background {
-    padding: 2em 3em;
+    padding: 2em $smallPadding;
+  }
+
+  @media only screen and (min-width: $smallBreakpoint) {
+    &.has-background {
+      padding-left: 2em;
+      padding-right: 2em;
+    }
+  }
+
+  @media only screen and (min-width: $largeBreakpoint) {
+    &.has-background {
+      padding-left: $maxPadding;
+      padding-right: $maxPadding;
+    }
   }
 }
 .wp-block-column {

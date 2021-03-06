@@ -207,6 +207,10 @@
   span {
     vertical-align: middle;
   }
+
+  .tribe-common-c-svgicon__svg-fill, .tribe-events-c-events-bar__search-button-icon-svg path {
+    fill: inherit;
+  }
 }
 .post-type-archive-tribe_events {
   .content .content--page {
@@ -666,6 +670,10 @@
       font-size: .875em;
       line-height: 1.2;
       margin-bottom: .5em;
+    }
+    button.tribe-events-calendar-month__day-cell {
+      border-radius: 0 !important;
+      border-color: $Nlight !important;
     }
   }
 

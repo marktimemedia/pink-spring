@@ -207,5 +207,53 @@
             position: relative;
             @include text-overflow();
         }
+
+        .menu-item.megamenu {
+          position:inherit;
+          & > ul.sub-menu {
+            display: inline-block;
+            margin-left: -130px;
+            max-width: calc( #{$boxedMax - 2 * $maxPadding} );
+            top: 95%;
+            width: 90vw;
+            & > li { // first level drop menu items
+              min-width: 200px;
+              max-width: 300px;
+              margin-bottom: .5em;
+              vertical-align: top;
+              width: 19%;
+
+              & > a {
+                background-color: transparent !important;
+                font-weight: $baseWeightBold;
+                letter-spacing: 1px;
+                line-height: 1.1;
+                pointer-events: none;
+                text-decoration: none !important;
+                text-transform: uppercase;
+
+                .menu-toggle {
+                  display: none;
+                }
+              }
+
+              a {
+                white-space: normal;
+              }
+
+              & > ul {
+                background-color: transparent;
+                display: block;
+                height: auto;
+                max-height:none;
+              }
+
+              ul {
+                left: auto;
+                position: relative;
+              }
+            }
+          }
+        }
     }
 }

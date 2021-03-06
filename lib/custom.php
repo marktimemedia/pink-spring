@@ -90,8 +90,8 @@ function spring_author_bio_avatar_size() {
 * Yoast SSL Canonical
 * @see https://xeromediaservices.wordpress.com/2016/02/10/yoast-seo-canonical-urls-on-a-site-with-optional-ssl/
 */
-function mtb_canonical_ssl( $url ) {
+function spring_canonical_ssl( $url ) {
 	$url = preg_replace( '/^http:/i', 'https:', $url );
 	return $url;
 }
-// add_filter( 'wpseo_canonical', 'mtb_canonical_ssl' );
+// add_filter( 'wpseo_canonical', 'spring_canonical_ssl' );

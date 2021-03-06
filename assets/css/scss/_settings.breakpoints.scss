@@ -10,7 +10,8 @@ $maxPadding: 3rem;
 $midPadding: 2rem;
 $smallPadding: 1rem;
 
-$contentMax: 860px;
+$tinyGridMax: 360px; // individual grid items max size on stacked screens
+$contentMax: 860px; // paragraph line length max width
 
 $navBreakpoint: $midBreakpoint;
 

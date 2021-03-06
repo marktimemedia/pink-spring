@@ -15,7 +15,7 @@ $footerclass = is_active_sidebar( 'sidebar-footer' ) ? 'widgetized-footer footer
 											array(
 												'theme_location' => 'footer_navigation',
 												'menu_class' => 'footer--menu',
-											),
+											)
 										);
 								endif;
 								?>

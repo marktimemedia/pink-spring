@@ -47,3 +47,13 @@ function mtm_manage_woocommerce_styles() {
 		}
 	}
 }
+
+/** Disable Ajax Call from WooCommerce on front page for better loading (no products here)
+* @see https://www.webnots.com/fix-slow-page-loading-with-woocommerce-wc-ajaxget_refreshed_fragments/
+*/
+// add_action( 'wp_enqueue_scripts', 'mtm_dequeue_woocommerce_cart_fragments', 11 );
+function mtm_dequeue_woocommerce_cart_fragments() {
+	if ( is_front_page() ) {
+		wp_dequeue_script( 'wc-cart-fragments' );
+	}
+}

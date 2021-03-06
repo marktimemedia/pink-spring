@@ -8,7 +8,7 @@
 		border-bottom: 1px solid $Nlightest;
 		padding: 0;
 		position: relative;
-		top: 0;
+		opacity: 1;
 		@include transition(all .8s);
 		z-index:999;
 }
@@ -17,6 +17,7 @@
         padding: .5em;
         background: $Ndarkest;
         position: relative;
+				overflow: auto;
         @include transition(all .8s);
         z-index:1000;
     }
@@ -78,7 +79,7 @@
         }
 
         .header--inner {
-            top: -130px;
+            opacity: 0;
             overflow: hidden;
             @include transition(all .8s);
         }

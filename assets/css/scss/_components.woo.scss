@@ -489,7 +489,7 @@ body.woocommerce, .woocommerce-page {
 }
 
 .wc-block-featured-category {
-  min-height: 200px !important;
+  min-height: 250px !important;
   margin:0;
   height: 100%;
 
@@ -527,9 +527,29 @@ body.woocommerce, .woocommerce-page {
   }
 }
 
+// memberships
+.woocommerce-info.wc-memberships-member-discount-message {
+  // display: none;
+}
+
+.my_account_memberships {
+  .membership-discount-actions, .membership-product-actions {
+    a.button {
+      font-size: .75em;
+      padding: .7em 1em;
+      margin-bottom: .25em;
+      &.view {
+        &:before {
+          background-color: $Ndarkest;
+        }
+      }
+    }
+  }
+}
+
 // fix for weird WooCommerce margin/spacing issues
 @media only screen and (max-width:768px) {
-    .woocommerce, .woocommerce-page {
+    body.woocommerce, body.woocommerce-page {
         ul.products, ul.products[class*=columns-] {
             li.product {
                 margin-right: 4%;
@@ -556,8 +576,11 @@ body.woocommerce, .woocommerce-page {
 }
 
 @media only screen and (max-width:$smallBreakpoint) {
-  .woocommerce, .woocommerce-page {
+  body.woocommerce, body.woocommerce-page {
       ul.products, ul.products[class*=columns-] {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: $tinyGridMax;
           li.product {
               margin-right: 0;
               width: 100%;

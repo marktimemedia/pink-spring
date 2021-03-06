@@ -1,4 +1,4 @@
-.search-form {
+section.search-form {
     position: relative;
     width: 100%;
 
@@ -10,29 +10,33 @@
 
     input {
       display: inline-block;
-      width: 69%;
+      width: calc(100% - 90px);
     }
 
     .textbox.search--textbox {
         border-color: $Nlight;
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
         margin: 0;
         padding: .4em;
     }
 
-    button.search--button {
+    button.search--button.button {
         background: $buttonAltBackground;
-        border: 0;
+        border: 1px solid $buttonAltBackground;
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
         bottom: 0;
         color: $Nwhite;
         display: inline-block;
         font-weight: $baseWeightBold;
         margin-left: -6px;
-        padding: .51em;
+        padding: .5em .2em;
         width: 90px;
 
         &:hover {
             background: $buttonAltBackground2;
-            border: 0;
+            border-color: $buttonAltBackground2;
             color: $Nwhite;
         }
     }
@@ -71,19 +75,21 @@
 
 .header-main .search-form {
     margin: 0;
-    max-height: 0;
+    max-width: 0;
+    float: right;
+    width: 18em;
     overflow: hidden; // to account for the toggle
     padding-bottom: 0;
     @include transition(all .8s);
 
-    .textbox.search--textbox {
-
+    form {
+      width: 14em;
     }
 }
 
     .header-main .search-form.search-expanded {
-        max-height: 3em;
-        padding: .4em 0;
+        max-width: 15em;
+        padding: 0 0.4em;
         @include transition(all .8s);
     }
 
@@ -98,10 +104,7 @@
         // display: none !important; // if you want the search bar visible with no toggle
     }
 
-    .header-main .search-form {
-        float: right;
-        max-width: 0;
-        max-height: 3em;
+    .header-main section.search-form {
         width: 21em;
         // overflow: visible; // if you want the search bar visible with no toggle
 
@@ -110,9 +113,11 @@
         }
 
         &.search-expanded {
-          max-height: 3em;
           max-width: 21em;
-          padding: 0 .4em;
+        }
+
+        button.search--button.button {
+          padding: .5em;
         }
     }
 }
