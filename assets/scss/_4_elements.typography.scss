@@ -73,7 +73,7 @@ h1,
 .h1 {
     color: $h1Color;
     font-family: $headingFont;
-    @include rem-px('font-size', $h1Size * .9);
+    @include rem-px('font-size', $h1Size * .7);
     font-weight: $h1FontWeight;
     letter-spacing: $headingLetterSpace;
     line-height: $headingLineHeight;
@@ -89,7 +89,7 @@ h2,
 .h2 {
     color: $h2Color;
     font-family: $headingFont;
-    @include rem-px('font-size', $h2Size * .9);
+    @include rem-px('font-size', $h2Size * .7);
     font-weight: $h2FontWeight;
     letter-spacing: $headingLetterSpace;
     line-height: $headingLineHeight;
@@ -104,7 +104,7 @@ h3,
 .h3 {
     color: $h3Color;
     font-family: $subheadingFont;
-    @include rem-px('font-size', $h3Size * .9);
+    @include rem-px('font-size', $h3Size * .8);
     font-weight: $h3FontWeight;
     letter-spacing: $subheadingLetterSpace;
     line-height: $subheadingLineHeight;
@@ -119,7 +119,7 @@ h4,
 .h4 {
     color: $h4Color;
     font-family: $subheadingFont;
-    @include rem-px('font-size', $h4Size * .9);
+    @include rem-px('font-size', $h4Size * .8);
     font-weight: $h4FontWeight;
     letter-spacing: $subheadingLetterSpace;
     line-height: $subheadingLineHeight;
@@ -214,19 +214,24 @@ blockquote {
     font-style: $blockquoteFontStyle;
     font-weight: $blockquoteFontWeight;
     line-height: 1.3em;
-    margin: 0 0 #{$blockquoteMarginBottom} 0;
+    margin: 1em 0 #{$blockquoteMarginBottom} 0;
     padding-left: $blockquotePaddingLeft;
-    @include rem-px('font-size', $blockquoteFontSize);
+    font-size: $blockquoteFontSize;
 
     * {
         font-family: $blockquoteFontFamily;
         font-style: $blockquoteFontStyle;
-        @include rem-px('font-size', $blockquoteFontSize);
+        font-size: $blockquoteFontSize;
         font-weight: $blockquoteFontWeight;
+        line-height: 1.3rem;
+    }
+
+    p {
+      margin-bottom: 0.5rem;
     }
 
     cite {
-        font-size: 80%;
+        font-size: 1rem;
         font-style: normal;
     }
 }
@@ -383,22 +388,22 @@ nav {
 @media only screen and (min-width: #{$midBreakpoint}) {
     h1,
     .h1 {
-        @include rem-px('font-size', $h1Size);
+        @include rem-px('font-size', $h1Size * .8);
     }
 
     h2,
     .h2 {
-        @include rem-px('font-size', $h2Size);
+        @include rem-px('font-size', $h2Size * .8);
     }
 
     h3,
     .h3 {
-        @include rem-px('font-size', $h3Size);
+        @include rem-px('font-size', $h3Size * .9);
     }
 
     h4,
     .h4 {
-        @include rem-px('font-size', $h4Size);
+        @include rem-px('font-size', $h4Size * .9);
     }
 
     h5,
@@ -415,5 +420,27 @@ nav {
         li {
             line-height: 1;
         }
+    }
+}
+
+@media only screen and (min-width: #{$widescreenBreakpoint}) {
+    h1,
+    .h1 {
+        @include rem-px('font-size', $h1Size);
+    }
+
+    h2,
+    .h2 {
+        @include rem-px('font-size', $h2Size);
+    }
+
+    h3,
+    .h3 {
+        @include rem-px('font-size', $h3Size);
+    }
+
+    h4,
+    .h4 {
+        @include rem-px('font-size', $h4Size);
     }
 }

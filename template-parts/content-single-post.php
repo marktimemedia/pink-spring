@@ -16,6 +16,6 @@
 				</div>
 				<?php get_template_part( 'template-parts/post-meta' ); ?>
 				<?php get_template_part( 'template-parts/nav-postname-pager' ); ?>
-				<?php comments_template( 'template-parts/comments.php' ); ?>
+				<?php comments_template( '/template-parts/comments.php' ); ?>
 		</article>
 <?php endwhile; ?>

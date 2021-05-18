@@ -31,12 +31,20 @@ html, body {
   margin: 0;
   padding: 0; }
 
-h1, h2, h3, h4, h5, h6, blockquote, .wp-block-quote, .wp-block-pullquote, pre, a, abbr, acronym, address, cite, code, del, dfn, em, img, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td {
+h1, h2, h3, h4, h5, h6, blockquote, .wp-block-quote, .wp-block-pullquote, pre, a, abbr, acronym, address, cite, code, del, dfn, img, q, s, samp, small, strike, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td {
   border: 0;
   font-family: inherit;
   font-style: normal;
   font-size: 100%;
   font-weight: normal;
+  line-height: 1;
+  margin: 0;
+  padding: 0; }
+
+em, strong {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
   line-height: 1;
   margin: 0;
   padding: 0; }
@@ -483,8 +491,8 @@ h1,
 .h1 {
   color: var(--brand-heading);
   font-family: var(--heading-font-family), sans-serif;
-  font-size: 36px;
-  font-size: 2.25rem;
+  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: var(--heading-font-weight);
   letter-spacing: 0px;
   line-height: 1.1;
@@ -494,8 +502,8 @@ h2,
 .h2 {
   color: var(--brand-heading);
   font-family: var(--heading-font-family), sans-serif;
-  font-size: 28.8px;
-  font-size: 1.8rem;
+  font-size: 22.4px;
+  font-size: 1.4rem;
   font-weight: var(--heading-font-weight);
   letter-spacing: 0px;
   line-height: 1.1;
@@ -507,8 +515,8 @@ h3,
 .tribe-events .tribe-events-calendar-day .tribe-events-calendar-day__time-separator {
   color: var(--brand-subheading);
   font-family: var(--subheading-font-family), var(--body-font-family), sans-serif;
-  font-size: 23.04px;
-  font-size: 1.44rem;
+  font-size: 20.48px;
+  font-size: 1.28rem;
   font-weight: var(--subheading-font-weight);
   letter-spacing: 0px;
   line-height: 1.1;
@@ -518,8 +526,8 @@ h4,
 .h4 {
   color: var(--brand-subheading);
   font-family: var(--subheading-font-family), var(--body-font-family), sans-serif;
-  font-size: 20.16px;
-  font-size: 1.26rem;
+  font-size: 17.92px;
+  font-size: 1.12rem;
   font-weight: var(--subheading-font-weight);
   letter-spacing: 0px;
   line-height: 1.1;
@@ -590,18 +598,19 @@ blockquote, .wp-block-quote, .wp-block-pullquote {
   font-style: italic;
   font-weight: var(--heading-font-weight);
   line-height: 1.3em;
-  margin: 0 0 0.875rem 0;
+  margin: 1em 0 0.875rem 0;
   padding-left: 0.5em;
-  font-size: 20px;
   font-size: 1.25rem; }
   blockquote *, .wp-block-quote *, .wp-block-pullquote * {
     font-family: var(--heading-font-family), sans-serif;
     font-style: italic;
-    font-size: 20px;
     font-size: 1.25rem;
-    font-weight: var(--heading-font-weight); }
+    font-weight: var(--heading-font-weight);
+    line-height: 1.3rem; }
+  blockquote p, .wp-block-quote p, .wp-block-pullquote p {
+    margin-bottom: 0.5rem; }
   blockquote cite, .wp-block-quote cite, .wp-block-pullquote cite {
-    font-size: 80%;
+    font-size: 1rem;
     font-style: normal; }
 
 q {
@@ -726,6 +735,44 @@ nav ul {
 @media only screen and (min-width: 49em) {
   h1,
   .h1 {
+    font-size: 32px;
+    font-size: 2rem; }
+
+  h2,
+  .h2 {
+    font-size: 25.6px;
+    font-size: 1.6rem; }
+
+  h3,
+  .h3,
+  .tribe-events .tribe-events-calendar-list .tribe-events-calendar-list__month-separator,
+  .tribe-events .tribe-events-calendar-day .tribe-events-calendar-day__time-separator {
+    font-size: 23.04px;
+    font-size: 1.44rem; }
+
+  h4,
+  .h4 {
+    font-size: 20.16px;
+    font-size: 1.26rem; }
+
+  h5,
+  .h5,
+  #tribe-events-day .tribe-events-day-time-slot h5,
+  .tribe-events .tribe-events-calendar-month-mobile-events .tribe-events-calendar-month-mobile-events__day-marker,
+  .tribe-events .tribe-events-calendar-list .tribe-events-calendar-list__event-date-tag-datetime {
+    font-size: 17.6px;
+    font-size: 1.1rem; }
+
+  h6,
+  .h6 {
+    font-size: 14px;
+    font-size: 0.875rem; }
+
+  nav li {
+    line-height: 1; } }
+@media only screen and (min-width: 75em) {
+  h1,
+  .h1 {
     font-size: 40px;
     font-size: 2.5rem; }
 
@@ -744,23 +791,7 @@ nav ul {
   h4,
   .h4 {
     font-size: 22.4px;
-    font-size: 1.4rem; }
-
-  h5,
-  .h5,
-  #tribe-events-day .tribe-events-day-time-slot h5,
-  .tribe-events .tribe-events-calendar-month-mobile-events .tribe-events-calendar-month-mobile-events__day-marker,
-  .tribe-events .tribe-events-calendar-list .tribe-events-calendar-list__event-date-tag-datetime {
-    font-size: 17.6px;
-    font-size: 1.1rem; }
-
-  h6,
-  .h6 {
-    font-size: 14px;
-    font-size: 0.875rem; }
-
-  nav li {
-    line-height: 1; } }
+    font-size: 1.4rem; } }
 /* FORMS & BUTTONS*/
 form {
   max-width: 860px; }
@@ -855,7 +886,7 @@ img {
   vertical-align: middle; }
 
 figure {
-  margin-bottom: 1.625em; }
+  margin: 0 0 1.625em 0; }
 
 figcaption {
   display: block !important;
@@ -924,7 +955,7 @@ figcaption {
   .content-main {
     padding-right: 1em;
     display: inline-block;
-    margin-right: -.275em;
+    margin-right: -.3em;
     vertical-align: top;
     width: 75%;
     padding: 0 4%; }
@@ -946,7 +977,7 @@ figcaption {
 .mtm-per-row-2 {
   display: inline-block;
   vertical-align: top;
-  margin-right: -.275em;
+  margin-right: -.5em;
   width: 100%;
   padding: 1em 0; }
   @media only screen and (min-width: 30em) {
@@ -960,7 +991,7 @@ figcaption {
 .mtm-per-row-3 {
   display: inline-block;
   vertical-align: top;
-  margin-right: -.275em;
+  margin-right: -.5em;
   width: 100%;
   padding: 1em 0; }
   @media only screen and (min-width: 30em) and (max-width: 49em) {
@@ -981,7 +1012,7 @@ figcaption {
 .mtm-per-row-4 {
   display: inline-block;
   vertical-align: top;
-  margin-right: -.275em;
+  margin-right: -.5em;
   width: 100%;
   padding: 1em 0; }
   @media only screen and (min-width: 19em) and (max-width: 49em) {
@@ -1002,7 +1033,7 @@ figcaption {
 .mtm-per-row-5 {
   display: inline-block;
   vertical-align: top;
-  margin-right: -.275em;
+  margin-right: -.5em;
   width: 100%;
   padding: 1em 0; }
   @media only screen and (min-width: 19em) and (max-width: 49em) {
@@ -1023,7 +1054,7 @@ figcaption {
 .mtm-per-row-6 {
   display: inline-block;
   vertical-align: top;
-  margin-right: -.275em;
+  margin-right: -.5em;
   width: 100%;
   padding: 1em 0; }
   @media only screen and (min-width: 19em) and (max-width: 49em) {
@@ -1044,24 +1075,24 @@ figcaption {
 .mtm-per-row-7 {
   display: inline-block;
   vertical-align: top;
-  margin-right: -.275em;
+  margin-right: -.5em;
   width: 100%;
   padding: 1em 0; }
-  @media only screen and (min-width: 19em) and (max-width: 30em) {
+  @media only screen and (max-width: 30em) {
     .mtm-per-row-7 {
       width: 51.5%;
       padding-right: 3%; }
       .mtm-per-row-7:nth-of-type(2n+2) {
         padding-right: 0;
         width: 48.5%; } }
-  @media only screen and (min-width: 30em) and (max-width: 49em) {
+  @media only screen and (min-width: 30em) and (max-width: 62em) {
     .mtm-per-row-7 {
       width: 25.75%;
       padding-right: 3%; }
       .mtm-per-row-7:nth-of-type(4n+4) {
         padding-right: 0;
         width: 22.75%; } }
-  @media only screen and (min-width: 49em) {
+  @media only screen and (min-width: 62em) {
     .mtm-per-row-7 {
       width: 14.71429%;
       padding-right: 3%; }
@@ -1072,24 +1103,24 @@ figcaption {
 .mtm-per-row-8 {
   display: inline-block;
   vertical-align: top;
-  margin-right: -.275em;
+  margin-right: -.5em;
   width: 100%;
   padding: 1em 0; }
-  @media only screen and (min-width: 19em) and (max-width: 30em) {
+  @media only screen and (max-width: 30em) {
     .mtm-per-row-8 {
       width: 51.5%;
       padding-right: 3%; }
       .mtm-per-row-8:nth-of-type(2n+2) {
         padding-right: 0;
         width: 48.5%; } }
-  @media only screen and (min-width: 30em) and (max-width: 49em) {
+  @media only screen and (min-width: 30em) and (max-width: 62em) {
     .mtm-per-row-8 {
       width: 25.75%;
       padding-right: 3%; }
       .mtm-per-row-8:nth-of-type(4n+4) {
         padding-right: 0;
         width: 22.75%; } }
-  @media only screen and (min-width: 49em) {
+  @media only screen and (min-width: 62em) {
     .mtm-per-row-8 {
       width: 12.875%;
       padding-right: 3%; }
@@ -1100,24 +1131,24 @@ figcaption {
 .mtm-per-row-9 {
   display: inline-block;
   vertical-align: top;
-  margin-right: -.275em;
+  margin-right: -.5em;
   width: 100%;
   padding: 1em 0; }
-  @media only screen and (min-width: 19em) and (max-width: 30em) {
+  @media only screen and (max-width: 30em) {
     .mtm-per-row-9 {
       width: 34.33333%;
       padding-right: 3%; }
       .mtm-per-row-9:nth-of-type(3n+3) {
         padding-right: 0;
         width: 31.33333%; } }
-  @media only screen and (min-width: 30em) and (max-width: 49em) {
+  @media only screen and (min-width: 30em) and (max-width: 62em) {
     .mtm-per-row-9 {
       width: 20.6%;
       padding-right: 3%; }
       .mtm-per-row-9:nth-of-type(5n+5) {
         padding-right: 0;
         width: 17.6%; } }
-  @media only screen and (min-width: 49em) {
+  @media only screen and (min-width: 62em) {
     .mtm-per-row-9 {
       width: 11.44444%;
       padding-right: 3%; }
@@ -1128,44 +1159,38 @@ figcaption {
 .mtm-per-row-10 {
   display: inline-block;
   vertical-align: top;
-  margin-right: -.275em;
+  margin-right: -.5em;
   width: 100%;
   padding: 1em 0; }
-  @media only screen and (min-width: 19em) and (max-width: 30em) {
+  @media only screen and (max-width: 30em) {
     .mtm-per-row-10 {
-      width: 51.5%;
+      width: 25.75%;
       padding-right: 3%; }
-      .mtm-per-row-10:nth-of-type(2n+2) {
+      .mtm-per-row-10:nth-of-type(4n+4) {
         padding-right: 0;
-        width: 48.5%; } }
-  @media only screen and (min-width: 30em) and (max-width: 49em) {
-    .mtm-per-row-10 {
-      width: 34.33333%;
-      padding-right: 3%; }
-      .mtm-per-row-10:nth-of-type(3n+3) {
-        padding-right: 0;
-        width: 31.33333%; } }
-  @media only screen and (min-width: 62em) and (max-width: 75em) {
+        width: 22.75%; } }
+  @media only screen and (min-width: 30em) and (max-width: 62em) {
     .mtm-per-row-10 {
       width: 20.6%;
       padding-right: 3%; }
       .mtm-per-row-10:nth-of-type(5n+5) {
         padding-right: 0;
         width: 17.6%; } }
-  @media only screen and (min-width: 75em) {
+  @media only screen and (min-width: 62em) {
     .mtm-per-row-10 {
       width: 10.3%;
       padding-right: 3%; }
       .mtm-per-row-10:nth-of-type(10n+10) {
-        padding-right: 0; } }
+        padding-right: 0;
+        width: 7.3%; } }
 
 .mtm-per-row-11 {
   display: inline-block;
   vertical-align: top;
-  margin-right: -.275em;
+  margin-right: -.5em;
   width: 100%;
   padding: 1em 0; }
-  @media only screen and (min-width: 19em) and (max-width: 30em) {
+  @media only screen and (max-width: 30em) {
     .mtm-per-row-11 {
       width: 51.5%;
       padding-right: 3%; }
@@ -1179,27 +1204,28 @@ figcaption {
       .mtm-per-row-11:nth-of-type(3n+3) {
         padding-right: 0;
         width: 31.33333%; } }
-  @media only screen and (min-width: 62em) and (max-width: 75em) {
+  @media only screen and (min-width: 49em) and (max-width: 62em) {
     .mtm-per-row-11 {
       width: 17.16667%;
       padding-right: 3%; }
       .mtm-per-row-11:nth-of-type(6n+6) {
         padding-right: 0;
         width: 14.16667%; } }
-  @media only screen and (min-width: 75em) {
+  @media only screen and (min-width: 62em) {
     .mtm-per-row-11 {
       width: 9.36364%;
       padding-right: 3%; }
       .mtm-per-row-11:nth-of-type(11n+11) {
-        padding-right: 0; } }
+        padding-right: 0;
+        width: 6.36364%; } }
 
 .mtm-per-row-12 {
   display: inline-block;
   vertical-align: top;
-  margin-right: -.275em;
+  margin-right: -.5em;
   width: 100%;
   padding: 1em 0; }
-  @media only screen and (min-width: 19em) and (max-width: 30em) {
+  @media only screen and (max-width: 30em) {
     .mtm-per-row-12 {
       width: 51.5%;
       padding-right: 3%; }
@@ -1213,19 +1239,20 @@ figcaption {
       .mtm-per-row-12:nth-of-type(3n+3) {
         padding-right: 0;
         width: 31.33333%; } }
-  @media only screen and (min-width: 62em) and (max-width: 75em) {
+  @media only screen and (min-width: 49em) and (max-width: 62em) {
     .mtm-per-row-12 {
       width: 17.16667%;
       padding-right: 3%; }
       .mtm-per-row-12:nth-of-type(6n+6) {
         padding-right: 0;
         width: 14.16667%; } }
-  @media only screen and (min-width: 75em) {
+  @media only screen and (min-width: 62em) {
     .mtm-per-row-12 {
       width: 8.58333%;
       padding-right: 3%; }
       .mtm-per-row-12:nth-of-type(12n+12) {
-        padding-right: 0; } }
+        padding-right: 0;
+        width: 5.58333%; } }
 
 .alignright,
 .alignleft,
@@ -1379,7 +1406,7 @@ figcaption {
 .gallery-columns-2 .gallery-item {
   display: inline-block;
   vertical-align: top;
-  margin-right: -.275em;
+  margin-right: -.5em;
   width: 100%;
   padding: 1em 0; }
   @media only screen and (min-width: 30em) {
@@ -1393,7 +1420,7 @@ figcaption {
 .gallery-columns-3 .gallery-item {
   display: inline-block;
   vertical-align: top;
-  margin-right: -.275em;
+  margin-right: -.5em;
   width: 100%;
   padding: 1em 0; }
   @media only screen and (min-width: 30em) and (max-width: 49em) {
@@ -1414,7 +1441,7 @@ figcaption {
 .gallery-columns-4 .gallery-item {
   display: inline-block;
   vertical-align: top;
-  margin-right: -.275em;
+  margin-right: -.5em;
   width: 100%;
   padding: 1em 0; }
   @media only screen and (min-width: 19em) and (max-width: 49em) {
@@ -2326,7 +2353,8 @@ nav a {
   .header-main-small .header--inner {
     height: 2.2em;
     overflow: visible;
-    top: 0; }
+    top: 0;
+    opacity: 1; }
   .header-main-small .header--blog-name {
     font-size: 2rem;
     padding-bottom: .1em;
@@ -2633,7 +2661,7 @@ nav a {
   .sidebar-main {
     border: 0;
     display: inline-block;
-    margin-right: -.275em;
+    margin-right: -.3em;
     vertical-align: top;
     width: 100%;
     padding: 0 1%;
@@ -2658,7 +2686,7 @@ nav a {
 @media only screen and (min-width: 62em) {
   .sidebar-main {
     display: inline-block;
-    margin-right: -.275em;
+    margin-right: -.3em;
     vertical-align: top;
     width: 25%;
     padding: 0 1%;
@@ -3060,6 +3088,11 @@ article.archive {
       font-size: 3.3em; } }
 
 /* Gutenberg Block Styles */
+div[class^="wp-block-"] .alignwide, div[class^="wp-block-"] .alignfull {
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important; }
+
 .single--block {
   position: relative; }
 
@@ -3160,7 +3193,7 @@ p.has-drop-cap {
     max-width: 81rem;
     margin-left: auto;
     margin-right: auto;
-    overflow: auto; }
+    overflow: visible; }
     .wp-block-group .wp-block-group__inner-container .content--inner {
       padding: 0 !important; }
     .wp-block-group .wp-block-group__inner-container > * {
@@ -3410,6 +3443,8 @@ hr.wp-block-separator {
     display: flex !important; }
   .wp-block-cover.alignleft, .wp-block-cover.alignright {
     max-width: 100%; }
+  .wp-block-cover.has-custom-content-position, .wp-block-cover.has-custom-content-position.has-custom-content-position {
+    background-image: none; }
   @media only screen and (min-width: 49em) {
     .wp-block-cover.alignleft, .wp-block-cover.alignright {
       max-width: 50%; } }
@@ -3434,6 +3469,22 @@ hr.wp-block-separator {
       .alignfull .wp-block-cover__inner-container, .alignfull .wp-block-group__inner-container {
         padding-left: 3rem;
         padding-right: 3rem; } }
+  .wp-block-cover__inner-container [class^="wp-block-"].alignwide, .wp-block-group__inner-container [class^="wp-block-"].alignwide {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0; }
+  .wp-block-cover__inner-container [class^="wp-block-"].alignfull, .wp-block-group__inner-container [class^="wp-block-"].alignfull {
+    width: calc( 100% + 2 * 1rem ) !important;
+    margin-left: -1rem !important;
+    margin-right: -1rem !important;
+    max-width: none !important; }
+    .wp-block-cover__inner-container [class^="wp-block-"].alignfull img, .wp-block-group__inner-container [class^="wp-block-"].alignfull img {
+      max-width: none !important; }
+    @media only screen and (min-width: 49em) {
+      .wp-block-cover__inner-container [class^="wp-block-"].alignfull, .wp-block-group__inner-container [class^="wp-block-"].alignfull {
+        margin-left: -3rem !important;
+        margin-right: -3rem !important;
+        width: calc( 100% + 2 * 3rem ) !important; } }
 
 /* Latest Posts Block */
 .wp-block-latest-posts {
@@ -4101,7 +4152,7 @@ ul.mtm-component--term-list {
 @media only screen and (min-width: 30em) and (max-width: 49em) {
   .mtm-list--image {
     display: inline-block;
-    margin-right: -.275em;
+    margin-right: -.3em;
     vertical-align: top;
     width: 50%;
     padding: 0 1%; }
@@ -4112,7 +4163,7 @@ ul.mtm-component--term-list {
 @media only screen and (min-width: 49em) and (max-width: 62em) {
   .mtm-list--image {
     display: inline-block;
-    margin-right: -.275em;
+    margin-right: -.3em;
     vertical-align: top;
     width: 41.66667%;
     padding: 0 1%; }
@@ -4123,7 +4174,7 @@ ul.mtm-component--term-list {
 
   .mtm-list--post-content {
     display: inline-block;
-    margin-right: -.275em;
+    margin-right: -.3em;
     vertical-align: top;
     width: 58.33333%;
     padding: 0 2%; }
@@ -4161,7 +4212,7 @@ ul.mtm-component--term-list {
 @media only screen and (min-width: 62em) {
   .mtm-list--image {
     display: inline-block;
-    margin-right: -.275em;
+    margin-right: -.3em;
     vertical-align: top;
     width: 25%;
     padding: 0 1%; }
@@ -4172,7 +4223,7 @@ ul.mtm-component--term-list {
 
   .mtm-list--post-content {
     display: inline-block;
-    margin-right: -.275em;
+    margin-right: -.3em;
     vertical-align: top;
     width: 75%;
     padding: 0 1%; }
@@ -4223,6 +4274,8 @@ body.option-round .mtm-tabs--title {
       border-radius: 6px 6px 0 0 !important; } }
 body.option-round .mtm_module_call_to_action:not(.alignfull) {
   border-radius: 10px; }
+body.option-round .mtm-module--content-secondary-image {
+  border-radius: 50%; }
 body.option-round span.onsale, body.option-round .wc-block-components-product-sale-badge {
   border-radius: 3.5em !important;
   line-height: 3.5em !important;

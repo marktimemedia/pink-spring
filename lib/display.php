@@ -69,7 +69,7 @@ add_filter( 'wp_mail_from_name', 'mtm_mail_name' );
 
 function mtm_mail_from( $email ) {
 	$email = str_replace( 'http://', '', get_site_url( '', '', 'http' ) );
-	return 'noreply@'; // new email address from sender.
+	return 'noreply@' . $email; // new email address from sender.
 }
 
 function mtm_mail_name( $email ) {

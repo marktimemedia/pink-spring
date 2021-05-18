@@ -13,13 +13,14 @@ function spring_setup_editor() {
 	// add_theme_support( 'wp-block-styles' ); // allow default block styles
 	// add_theme_support( 'disable-custom-colors' ); // no custom picker
 	// add_theme_support( 'disable-custom-gradients' ); // no custom gradients
+	// add_theme_support( 'disable-custom-font-sizes' ); // no custom font sizes
 	add_theme_support( 'custom-line-height' );
 	add_theme_support( 'custom-units', 'px, em, vh' ); // supports px, em, rem, vh, vw
+	add_theme_support( 'custom-spacing' ); // custom padding controls
 
 	remove_theme_support( 'core-block-patterns' ); // no core block patterns
 
 	/* Experimental Features */
-	add_theme_support( 'experimental-custom-spacing' ); // https://developer.wordpress.org/block-editor/developers/themes/theme-support/#experimental-%e2%80%94-cover-block-padding
 	add_theme_support( 'experimental-link-color' );
 }
 add_action( 'after_setup_theme', 'spring_setup_editor' );
@@ -248,7 +249,14 @@ function spring_disable_classic_editor() {
 }
 add_action( 'admin_head', 'spring_disable_classic_editor' );
 
-
+/*
+* Disable Core Gutenberg styles on backend
+*/
+add_filter( 'block_editor_settings', 'spring_remove_guten_wrapper_styles' );
+function spring_remove_guten_wrapper_styles( $settings ) {
+	unset( $settings['styles'][0] );
+	return $settings;
+}
 
 /**
 * Remove certain blocks on page template

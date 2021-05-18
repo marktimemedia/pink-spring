@@ -20,7 +20,7 @@ $defaultpad: 1% !default;
 	$itemwidth: ( 100% / $totalcols * $colspan );
 
 	display:		inline-block;
-	margin-right: 	-.275em; // Cancels out margin px issue with display:inline-block, may need to adjust based on body font;
+	margin-right: 	-.3em; // Cancels out margin px issue with display:inline-block, may need to adjust based on body font;
 	vertical-align: $align;
 	width: 			$itemwidth;
 	padding: 		$padtop $padside;
@@ -86,7 +86,7 @@ $defaultpad: 1% !default;
 	$rowend: $rowitems + $before;
 
 	display:		inline-block;
-	margin-right: 	-.275em; // Cancels out margin px issue with display:inline-block, may need to adjust based on body font;
+	margin-right: 	-.3em; // Cancels out margin px issue with display:inline-block, may need to adjust based on body font;
 	vertical-align: $align;
 	padding: 		$padtop 0;
 
@@ -142,7 +142,7 @@ $xl-bp:			75em !default;		// Set your x-large breakpoint
 
 	display:		inline-block;
 	vertical-align:	$align;
-	margin-right: 	-.275em; // Cancels out margin px issue with display:inline-block, may need to adjust based on body font;
+	margin-right: 	-.5em; // Cancels out margin px issue with display:inline-block, may need to adjust based on body font;
 	width:			100%;
 	padding:		$padtop 0;
 
@@ -287,11 +287,11 @@ $xl-bp:			75em !default;		// Set your x-large breakpoint
 
 	} // end 4 to 6 items per row
 
-	@else if $rowitems > 6 and $rowitems <= 9 { // 7 to 9 items per row
+	@else if $rowitems > 6 and $rowitems <= 8 { // 7 to 8 items per row
 
-		@media only screen and ( min-width: $tiny-bp ) and ( max-width: $sm-bp ) {
+		@media only screen and ( max-width: $sm-bp ) {
 
-			$thisrow: 	ceil($rowitems/4); // intermediate row value, rounded up to nearest whole number
+			$thisrow: ceil($rowitems/4); // intermediate row value, rounded up to nearest whole number
 			$itemwidth2: ( ( 100%  + $padside ) / $thisrow );
 			$lastwidth2: ( $itemwidth2 - $padside );
 			$befrow: $before + $thisrow;
@@ -328,7 +328,7 @@ $xl-bp:			75em !default;		// Set your x-large breakpoint
 
 		} // end $sm-bp
 
-		@media only screen and ( min-width: $sm-bp ) and ( max-width: $med-bp ) {
+		@media only screen and ( min-width: $sm-bp ) and ( max-width: $lg-bp ) {
 
 			$thisrow: ceil($rowitems/2); // intermediate row value, rounded up to nearest whole number
 			$itemwidth2: ( ( 100%  + $padside ) / $thisrow );
@@ -362,7 +362,7 @@ $xl-bp:			75em !default;		// Set your x-large breakpoint
 
 		} // end $med-bp
 
-		@media only screen and ( min-width: $med-bp ) {
+		@media only screen and ( min-width: $lg-bp ) {
 
 			width: 	$itemwidth;
 			padding-right: $padside;
@@ -384,9 +384,108 @@ $xl-bp:			75em !default;		// Set your x-large breakpoint
 
 	} // end 7 to 10 items per row
 
-	@else if $rowitems > 9 { // 10+ items per row
+	@else if $rowitems >= 9 and $rowitems <= 10  { // 9-10 items per row
 
-		@media only screen and ( min-width: $tiny-bp ) and ( max-width: $sm-bp ) {
+		@media only screen and ( max-width: $sm-bp ) {
+
+			$thisrow: ceil($rowitems/3); // intermediate row value, rounded up to nearest whole number
+			$itemwidth2: ( ( 100%  + $padside ) / $thisrow );
+			$lastwidth2: ( $itemwidth2 - $padside );
+			$befrow: $before + $thisrow;
+
+			width: $itemwidth2;
+			padding-right: $padside;
+
+			@if $thisrow <=1 { // Prevent weird broken values
+				width:100%;
+			}
+
+			@if $before > 0 or $after > 0 {
+
+				@for $j from 1 through 2 {
+
+					$end:	$j * $thisrow;
+					$befend: $before + $end;
+
+					&:nth-of-type( #{$rowtotal}n+#{$befrow} ), &:nth-of-type( #{$rowtotal}n+#{$befrow} ), &:nth-of-type( #{$rowtotal}n+#{$befend} ){
+						padding-right:0;
+						width: $lastwidth2;
+					}
+				}
+			} // end before
+
+			@else { // no before or after value
+
+				&:nth-of-type( #{$thisrow}n+#{$thisrow} ){
+					padding-right:0;
+					width: $lastwidth2;
+				}
+
+			}
+
+		} // end $sm-bp
+
+		@media only screen and ( min-width: $sm-bp ) and ( max-width: $lg-bp ) {
+
+			$thisrow: ceil($rowitems/2); // intermediate row value, rounded up to nearest whole number
+			$itemwidth2: ( ( 100%  + $padside ) / $thisrow );
+			$lastwidth2: ( $itemwidth2 - $padside );
+			$befrow: $before + $thisrow;
+
+			width: $itemwidth2;
+			padding-right: $padside;
+
+			@if $rowitems <=1 { // Prevent weird broken values
+				width:100%;
+			}
+
+			@if $before > 0 or $after > 0 {
+
+				&:nth-of-type( #{$rowtotal}n+#{$befrow} ), &:nth-of-type( #{$rowtotal}n+#{$rowend} ) {
+					padding-right:0;
+					width: $lastwidth2;
+				}
+
+			}
+
+			@else { // no before or after value
+
+				&:nth-of-type( #{$thisrow}n+#{$thisrow} ){
+					padding-right:0;
+					width: $lastwidth2;
+				}
+
+			}
+
+		} // end $lg-bp
+
+
+
+		@media only screen and ( min-width: $lg-bp ) {
+
+			width: 	$itemwidth;
+			padding-right: $padside;
+
+			@if $rowitems <=1 { // Prevent weird broken values
+				width:100%;
+			}
+
+			@else { // all items
+
+				&:nth-of-type( #{$rowtotal}n+#{$rowend} ){
+					padding-right:0;
+					width: $lastwidth;
+				}
+
+			}
+
+		} // end $lg-bp
+
+	} // end 9-10 items per row
+
+	@else if $rowitems >= 11   { // 11+ items per row
+
+		@media only screen and ( max-width: $sm-bp ) {
 
 			$thisrow: ceil($rowitems/6); // intermediate row value, rounded up to nearest whole number
 			$itemwidth2: ( ( 100%  + $padside ) / $thisrow );
@@ -464,7 +563,7 @@ $xl-bp:			75em !default;		// Set your x-large breakpoint
 
 		} // end $med-bp
 
-		@media only screen and ( min-width: $lg-bp ) and ( max-width: $xl-bp ) {
+		@media only screen and ( min-width: $med-bp ) and ( max-width: $lg-bp ) {
 
 			$thisrow: ceil($rowitems/2); // intermediate row value, rounded up to nearest whole number
 			$itemwidth2: ( ( 100%  + $padside ) / $thisrow );
@@ -498,9 +597,9 @@ $xl-bp:			75em !default;		// Set your x-large breakpoint
 
 		} // end $lg-bp
 
-		@media only screen and ( min-width: $xl-bp ) {
+		@media only screen and ( min-width: $lg-bp ) {
 
-			width: $itemwidth;
+			width: 	$itemwidth;
 			padding-right: $padside;
 
 			@if $rowitems <=1 { // Prevent weird broken values
@@ -511,13 +610,14 @@ $xl-bp:			75em !default;		// Set your x-large breakpoint
 
 				&:nth-of-type( #{$rowtotal}n+#{$rowend} ){
 					padding-right:0;
+					width: $lastwidth;
 				}
 
 			}
 
 		} // end $xl-bp
 
-	} // end 10+ items per row
+	} // end 9+ items per row
 
 }
 
@@ -528,7 +628,7 @@ $xl-bp:			75em !default;		// Set your x-large breakpoint
 
 	display:		inline-block;
 	vertical-align:	$align;
-	margin-right: 	-.275em; // Cancels out margin px issue with display:inline-block, may need to adjust based on body font;
+	margin-right: 	-.3em; // Cancels out margin px issue with display:inline-block, may need to adjust based on body font;
 	width:			100%;
 	padding:		$padtop $padside;
 

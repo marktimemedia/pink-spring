@@ -1,7 +1,8 @@
 <?php
 /**
- * Page titles
- */
+* Page titles
+*/
+
 function spring_title() {
 	if ( is_home() ) {
 		// Settings > Reading > Front Page Displays > Static Page > Posts Page
@@ -12,9 +13,10 @@ function spring_title() {
 			return __( 'Latest Posts', 'spring' );
 		}
 	} elseif ( is_archive() ) {
-		$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
-		if ( $term ) {
-			return apply_filters( 'single_term_title', $term->name );
+		if ( is_tag() ) {
+			return '<span class="small-title">' . __( 'Tagged:', 'spring' ) . ' </span>' . apply_filters( 'single_term_title', get_queried_object()->name );
+		} elseif ( is_category() ) {
+			return apply_filters( 'single_term_title', get_queried_object()->name );
 		} elseif ( is_post_type_archive() ) {
 			return apply_filters( 'the_title', get_queried_object()->labels->name, get_queried_object_id() );
 		} elseif ( is_day() ) {
@@ -27,15 +29,14 @@ function spring_title() {
 			// translators: %s is archive year
 			return sprintf( __( 'Yearly Archives: %s', 'spring' ), get_the_date( 'Y' ) );
 		} elseif ( is_author() ) {
-			$author = get_queried_object();
 			// translators: %s is author name
-			return sprintf( __( 'Author Archives: %s', 'spring' ), $author->display_name );
+			return sprintf( __( 'All Posts by %s', 'spring' ), get_queried_object()->display_name );
 		} else {
-			return single_cat_title( '', false );
+			return single_term_title( '', false );
 		}
 	} elseif ( is_search() ) {
 		// translators: %s is search result name
-		return sprintf( __( 'Search Results for %s', 'spring' ), get_search_query() );
+		return sprintf( __( 'Search Results for:', 'spring' ) );
 	} elseif ( is_404() ) {
 		return __( 'Page Not Found', 'spring' );
 	} elseif ( get_the_title() ) {
@@ -46,7 +47,6 @@ function spring_title() {
 		return sprintf( __( '%s Title', 'spring' ), $obj->labels->singular_name );
 	}
 }
-
 
 /**
  * Manage output of wp_title()

@@ -1,5 +1,14 @@
 /* Gutenberg Block Styles */
 
+div[class^="wp-block-"] {
+  // if a child is bigger than its container
+  .alignwide, .alignfull {
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
 // Structure (to match editor)
 .single--block {
   position: relative;
@@ -147,7 +156,7 @@ p.has-drop-cap {
     max-width: $boxedMax;
     margin-left: auto;
     margin-right: auto;
-    overflow: auto; //for floats
+    overflow: visible; //for floats
 
     .content--inner {
       padding: 0 !important; // not needed if within a group
@@ -429,6 +438,10 @@ hr.wp-block-separator {
   &.alignleft, &.alignright {
     max-width: 100%;
   }
+
+  &.has-custom-content-position, &.has-custom-content-position.has-custom-content-position {
+    background-image:none;
+  }
   @media only screen and (min-width: $midBreakpoint) {
 
     &.alignleft, &.alignright {
@@ -464,6 +477,30 @@ hr.wp-block-separator {
     @media only screen and (min-width: $midBreakpoint) {
       padding-left: $maxPadding; // for a boxed width background with no sidebar
       padding-right: $maxPadding; // for a boxed width background with no sidebar
+    }
+  }
+
+  // nesting larger items within containers
+  [class^="wp-block-"].alignwide {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  [class^="wp-block-"].alignfull {
+    width: calc( 100% + 2 * #{$smallPadding} ) !important;
+    margin-left: -#{$smallPadding} !important;
+    margin-right: -#{$smallPadding} !important;
+    max-width: none !important;
+
+    img {
+      max-width: none !important;
+    }
+
+    @media only screen and (min-width: $midBreakpoint) {
+      margin-left: -#{$maxPadding} !important;
+      margin-right: -#{$maxPadding} !important;
+      width: calc( 100% + 2 * #{$maxPadding} ) !important;
     }
   }
 }
